@@ -1,0 +1,16 @@
+Nexia/
+├── Public/
+│   ├── index.html
+├── src/
+│   ├── assets/         # Imágenes, íconos, fuentes
+│   ├── components/     # Componentes reutilizables (botones, cards, etc.)
+│   ├── services/       # Comunicacion con el backend (Fetch, axios, endpoints.)
+│   ├── hooks/          # Logica reutilizable con estado
+│   ├── pages/          # Páginas (Inicio, Productos, Carrito, Login, etc.)
+│   ├── Styles/		    # Estilos css
+│   ├── utils/          # Funciones utilitarias (formateo, validaciones, etc.)
+│   ├── App.jsx
+│   └── main.jsx
+├── .env
+├── map.md
+└── README.md
