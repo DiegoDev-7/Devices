@@ -1,0 +1,110 @@
+/* Colors */
+$color-g1: #333333;
+$color-g2: #535353;
+$color-g3: #747474;
+$color-g4: #a7a7a762;
+
+$color-w1: #ffffff;
+$color-w2: #d3d3d3;
+$color-w3: #9e9e9e;
+
+$color-b1: #000000;
+$color-b2: #0a0a0a;
+$color-b3: #222222;
+
+
+
+/* Fonts */
+$font-mainO1: "Oxygen1", system-ui, -apple-system, sans-serif;
+$font-mainO2: "Oxygen2", system-ui, -apple-system, sans-serif;
+$font-mainO3: "Oxygen3", system-ui, -apple-system, sans-serif;
+
+$font-mainF1: "Faustina1", system-ui, -apple-system, sans-serif;
+$font-mainF2: "Faustina2", system-ui, -apple-system, sans-serif;
+$font-mainF3: "Faustina3", system-ui, -apple-system, sans-serif;
+
+$font-mainD1: "Doto1", system-ui, -apple-system, sans-serif;
+$font-mainD2: "Doto2", system-ui, -apple-system, sans-serif;
+$font-mainD3: "Doto3", system-ui, -apple-system, sans-serif;
+
+$font-mainS: "Shizuru", system-ui, -apple-system, sans-serif;
+
+
+
+/* Fonts */
+@font-face {
+  font-family: "Oxygen1";
+  src: url("../assets/Fonts/Oxygen-light.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Oxygen2";
+  src: url("../assets/Fonts/Oxygen-Regular.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Oxygen3";
+  src: url("../assets/Fonts/Oxygen-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: "Faustina1";
+  src: url("../assets/Fonts/Faustina-Regular.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Faustina2";
+  src: url("../assets/Fonts/Faustina-Medium.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Faustina3";
+  src: url("../assets/Fonts/Faustina-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: "Doto1";
+  src: url("../assets/Fonts/Doto-Regular.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Doto2";
+  src: url("../assets/Fonts/Doto-Medium.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Doto3";
+  src: url("../assets/Fonts/Doto-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: "Shizuru";
+  src: url("../assets/Fonts/Shizuru-Regular.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

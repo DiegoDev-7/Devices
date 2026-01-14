@@ -1,0 +1,9 @@
+/* Global settings default */
+@use "./global";
+
+/* Common */
+@use "./Common/Header";
+@use "./Common/Footer";
+
+/* Main Home */
+@use "./Home/mainHome";

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg1"
+   width="32"
+   height="32"
+   viewBox="0 0 32 32"
+   sodipodi:docname="bluetooth_light.svg"
+   inkscape:version="1.4.2 (2aeb623e1d, 2025-05-12)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <inkscape:path-effect
+       effect="fillet_chamfer"
+       id="path-effect3"
+       is_visible="true"
+       lpeversion="1"
+       nodesatellites_param="F,0,1,1,0,0.53241166,0,1 @ F,0,1,1,0,0.53241166,0,1 @ F,0,1,1,0,0.53241166,0,1 | F,0,1,1,0,0.53241166,0,1 @ F,0,1,1,0,0.53241166,0,1 @ F,0,1,1,0,0.53241166,0,1 @ F,0,0,1,0,0.53241166,0,1 @ F,0,1,1,0,0.53241166,0,1 @ F,0,1,1,0,0.53241166,0,1 @ F,0,1,1,0,0.53241166,0,1 @ F,0,1,1,0,0.53241166,0,1 @ F,0,1,1,0,0.53241166,0,1 @ F,0,1,1,0,0.53241166,0,1 | F,0,1,1,0,0.53241166,0,1 @ F,0,1,1,0,0.53241166,0,1 @ F,0,1,1,0,0.53241166,0,1 | F,0,1,1,0,0.53241166,0,1 @ F,0,1,1,0,0.53241166,0,1 @ F,0,1,1,0,0.53241166,0,1 @ F,0,1,1,0,0.53241166,0,1 @ F,0,1,1,0,0.53241166,0,1 @ F,0,1,1,0,0.53241166,0,1 @ F,0,1,1,0,0.53241166,0,1 @ F,0,1,1,0,0.53241166,0,1 @ F,0,1,1,0,0.53241166,0,1 @ F,0,1,1,0,0.53241166,0,1"
+       radius="0"
+       unit="px"
+       method="auto"
+       mode="F"
+       chamfer_steps="1"
+       flexible="false"
+       use_knot_distance="true"
+       apply_no_radius="true"
+       apply_with_radius="true"
+       only_selected="false"
+       hide_knots="false" />
+    <inkscape:path-effect
+       effect="fillet_chamfer"
+       id="path-effect2"
+       is_visible="true"
+       lpeversion="1"
+       nodesatellites_param="F,0,1,1,0,0.2177295,0,1 @ F,0,0,1,0,0.2177295,0,1 @ F,0,1,1,0,0.2177295,0,1"
+       radius="0"
+       unit="px"
+       method="auto"
+       mode="F"
+       chamfer_steps="1"
+       flexible="false"
+       use_knot_distance="true"
+       apply_no_radius="true"
+       apply_with_radius="true"
+       only_selected="false"
+       hide_knots="false" />
+    <inkscape:path-effect
+       effect="fillet_chamfer"
+       id="path-effect1"
+       is_visible="true"
+       lpeversion="1"
+       nodesatellites_param="F,0,0,1,0,0,0,1 @ F,0,0,1,0,0.40475632,0,1 @ F,0,1,1,0,0.40475632,0,1 @ F,0,1,1,0,0.40475632,0,1 @ F,0,1,1,0,0.40475632,0,1 @ F,0,1,1,0,0.40475632,0,1 @ F,0,1,1,0,0.40475632,0,1 @ F,0,1,1,0,0.40475632,0,1 @ F,0,1,1,0,0.40475632,0,1 @ F,0,1,1,0,0.40475632,0,1"
+       radius="0"
+       unit="px"
+       method="auto"
+       mode="F"
+       chamfer_steps="1"
+       flexible="false"
+       use_knot_distance="true"
+       apply_no_radius="true"
+       apply_with_radius="true"
+       only_selected="false"
+       hide_knots="false" />
+    <inkscape:path-effect
+       effect="fillet_chamfer"
+       id="path-effect1-1"
+       is_visible="true"
+       lpeversion="1"
+       nodesatellites_param="F,0,0,1,0,0,0,1 @ F,0,0,1,0,0.40475632,0,1 @ F,0,1,1,0,0.40475632,0,1 @ F,0,1,1,0,0.40475632,0,1 @ F,0,1,1,0,0.40475632,0,1 @ F,0,1,1,0,0.40475632,0,1 @ F,0,1,1,0,0.40475632,0,1 @ F,0,1,1,0,0.40475632,0,1 @ F,0,1,1,0,0.40475632,0,1 @ F,0,1,1,0,0.40475632,0,1"
+       radius="0"
+       unit="px"
+       method="auto"
+       mode="F"
+       chamfer_steps="1"
+       flexible="false"
+       use_knot_distance="true"
+       apply_no_radius="true"
+       apply_with_radius="true"
+       only_selected="false"
+       hide_knots="false" />
+    <inkscape:path-effect
+       effect="fillet_chamfer"
+       id="path-effect2-9"
+       is_visible="true"
+       lpeversion="1"
+       nodesatellites_param="F,0,1,1,0,0.2177295,0,1 @ F,0,0,1,0,0.2177295,0,1 @ F,0,1,1,0,0.2177295,0,1 | F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 | F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 | F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1"
+       radius="0"
+       unit="px"
+       method="auto"
+       mode="F"
+       chamfer_steps="1"
+       flexible="false"
+       use_knot_distance="true"
+       apply_no_radius="true"
+       apply_with_radius="true"
+       only_selected="false"
+       hide_knots="false" />
+  </defs>
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="12.546875"
+     inkscape:cx="12.79203"
+     inkscape:cy="11.35741"
+     inkscape:window-width="1920"
+     inkscape:window-height="1011"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g1" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="Image"
+     id="g1">
+    <path
+       id="path2-4"
+       style="fill:#ffffff"
+       transform="matrix(1,0,0,-1,-32.633404,31.484934)"
+       d="m 49.652743,6.6753428 0.02408,6.2616202 a 0.24267861,0.24267861 24.283599 0 0 0.402566,0.181627 l 3.51029,-3.07437 A 0.45073426,0.45073426 89.038488 0 0 53.578137,9.3562958 L 50.062759,6.4800782 A 0.25104612,0.25104612 154.53451 0 0 49.652743,6.6753428 Z M 47.452765,9.1328486 V 3.4348077 A 0.53241166,0.53241166 135 0 1 47.985177,2.902396 l 1.189464,0 a 1.2633335,1.2633335 22.85221 0 1 0.904227,0.3810718 l 6.047413,6.1979709 a 0.54027378,0.54027378 90.284485 0 1 -0.0038,0.7584323 l -5.194523,5.219142 a 1.2678964,1.2678964 157.64293 0 1 -0.907978,0.373446 l -2.767496,-0.02035 a 1.3585318,1.3585318 21.82163 0 1 -0.920369,-0.368525 l -5.50134,-5.17007 A 1.2363613,1.2363613 66.520013 0 1 40.441146,9.3764951 l -0.0031,-0.9822573 a 0.45942317,0.45942317 139.02684 0 1 0.52523,-0.4561441 l 1.087732,0.1574348 a 1.6340186,1.6340186 26.282761 0 1 0.90777,0.4483082 l 4.1132,4.0180973 a 0.22418436,0.22418436 157.16457 0 0 0.380842,-0.160369 l -3e-5,-2.203893 a 79104.677,79104.677 89.999614 0 1 -7e-6,-1.0648234 z m 2.371633,15.5640274 0.02408,-6.261619 a 0.24267862,0.24267862 155.7164 0 1 0.402566,-0.181627 l 3.51029,3.07437 a 0.45073421,0.45073421 90.961515 0 1 -0.01155,0.687924 l -3.515378,2.876217 a 0.25104615,0.25104615 25.465493 0 1 -0.410016,-0.195265 z m -2.199978,-2.457505 0,5.698041 a 0.53241166,0.53241166 45 0 0 0.532412,0.532412 h 1.189464 a 1.2633335,1.2633335 157.14779 0 0 0.904227,-0.381072 l 6.047413,-6.197971 a 0.54027378,0.54027378 89.715513 0 0 -0.0038,-0.758433 l -5.194523,-5.219141 a 1.2678965,1.2678965 22.357071 0 0 -0.907978,-0.373446 l -2.767496,0.02035 a 1.358532,1.358532 158.17837 0 0 -0.920369,0.368525 l -5.50134,5.170069 a 1.2363612,1.2363612 113.47999 0 0 -0.389663,0.897019 l -0.0031,0.982258 a 0.45942309,0.45942309 40.97315 0 0 0.52523,0.456144 l 1.087732,-0.157435 a 1.6340193,1.6340193 153.71724 0 0 0.90777,-0.448308 l 4.1132,-4.018097 a 0.22418438,0.22418438 22.835435 0 1 0.380842,0.160369 l -3e-5,2.203892 a 79104.66,79104.66 90.000386 0 0 -7e-6,1.064824 z"
+       inkscape:path-effect="#path-effect3"
+       inkscape:original-d="m 49.650695,6.1429351 0.02818,7.3264359 4.311326,-3.7759321 z m -2.19793,3.5223252 V 2.902396 h 2.254288 l 6.791043,6.9601145 -5.945685,5.9738635 -3.83229,-0.02818 -6.277284,-5.8992899 -0.0065,-2.0470753 2.141574,0.3099646 4.874898,4.7621836 z m 2.369585,15.5640237 0.02818,-7.326435 4.311326,3.775932 z m -2.19793,-3.522325 v 6.762865 h 2.254288 l 6.791043,-6.960115 -5.945685,-5.973863 -3.83229,0.02818 -6.277284,5.899289 -0.0065,2.047076 2.141574,-0.309965 4.874898,-4.762183 z"
+       sodipodi:nodetypes="cccccccccccccccccccccccccccccc" />
+    <rect
+       style="fill:#ffffff;stroke-width:1.276"
+       id="rect1"
+       width="4.135211"
+       height="0.64810771"
+       x="14.047032"
+       y="15.378471"
+       ry="0.25712973" />
+  </g>
+</svg>

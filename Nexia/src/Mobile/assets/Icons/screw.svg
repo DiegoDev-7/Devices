@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="60"
+   height="60"
+   viewBox="0 0 60 60"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.2 (2aeb623e1d, 2025-05-12)"
+   sodipodi:docname="screw.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:zoom="3.8522588"
+     inkscape:cx="-15.185895"
+     inkscape:cy="28.684469"
+     inkscape:window-width="1920"
+     inkscape:window-height="1011"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <filter
+       style="color-interpolation-filters:sRGB"
+       inkscape:label="Dark and Glow"
+       id="filter79"
+       x="-0.97805121"
+       y="-1.0181353"
+       width="2.9561024"
+       height="3.0362705"
+       inkscape:menu-tooltip="Darkens the edge with an inner blur and adds a flexible glow"
+       inkscape:menu="Shadows and Glows">
+      <feFlood
+         result="flood"
+         in="SourceGraphic"
+         flood-opacity="0.807843"
+         flood-color="rgb(42,42,42)"
+         id="feFlood78" />
+      <feGaussianBlur
+         result="blur"
+         in="SourceGraphic"
+         stdDeviation="14.000000"
+         id="feGaussianBlur78" />
+      <feOffset
+         result="offset"
+         in="blur"
+         dx="0.000000"
+         dy="0.000000"
+         id="feOffset78" />
+      <feComposite
+         result="comp1"
+         operator="out"
+         in="offset"
+         in2="flood"
+         id="feComposite78" />
+      <feComposite
+         result="fbSourceGraphic"
+         operator="atop"
+         in="comp1"
+         in2="SourceGraphic"
+         id="feComposite79" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix83" />
+      <feGaussianBlur
+         id="feGaussianBlur83"
+         stdDeviation="5"
+         result="result6"
+         in="fbSourceGraphic" />
+      <feComposite
+         id="feComposite83"
+         result="result8"
+         in="fbSourceGraphic"
+         operator="atop"
+         in2="result6" />
+      <feComposite
+         id="feComposite84"
+         result="result9"
+         operator="over"
+         in2="fbSourceGraphicAlpha"
+         in="result8" />
+      <feColorMatrix
+         id="feColorMatrix84"
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0 "
+         result="result10" />
+      <feBlend
+         id="feBlend84"
+         in="result10"
+         mode="normal"
+         in2="result6" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB"
+       inkscape:label="Drop Shadow"
+       id="filter86"
+       x="-1.2546079"
+       y="-1.2631132"
+       width="3.5092159"
+       height="3.5262264">
+      <feFlood
+         result="flood"
+         in="SourceGraphic"
+         flood-opacity="0.807843"
+         flood-color="rgb(252,252,252)"
+         id="feFlood84" />
+      <feGaussianBlur
+         result="blur"
+         in="SourceGraphic"
+         stdDeviation="14.000000"
+         id="feGaussianBlur84" />
+      <feOffset
+         result="offset"
+         in="blur"
+         dx="0.000000"
+         dy="0.000000"
+         id="feOffset84" />
+      <feComposite
+         result="comp1"
+         operator="out"
+         in="offset"
+         in2="flood"
+         id="feComposite85" />
+      <feComposite
+         result="fbSourceGraphic"
+         operator="atop"
+         in="comp1"
+         in2="SourceGraphic"
+         id="feComposite86" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix92" />
+      <feFlood
+         id="feFlood92"
+         result="flood"
+         in="fbSourceGraphic"
+         flood-opacity="0.807843"
+         flood-color="rgb(252,252,252)" />
+      <feGaussianBlur
+         id="feGaussianBlur92"
+         result="blur"
+         in="fbSourceGraphic"
+         stdDeviation="1.167022" />
+      <feOffset
+         id="feOffset92"
+         result="offset"
+         in="blur"
+         dx="0.000000"
+         dy="0.000000" />
+      <feComposite
+         id="feComposite92"
+         result="comp1"
+         operator="out"
+         in="offset"
+         in2="flood" />
+      <feComposite
+         id="feComposite93"
+         result="comp2"
+         operator="atop"
+         in="comp1"
+         in2="fbSourceGraphic" />
+    </filter>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <ellipse
+       style="fill:#666666;stroke-width:1.139;filter:url(#filter79)"
+       id="path1"
+       cx="30.286806"
+       cy="30.929255"
+       rx="23.311663"
+       ry="22.393881" />
+    <path
+       id="rect1-3"
+       style="fill:#2c2c2c;stroke-width:1.05526;filter:url(#filter86)"
+       d="m 44.715668,28.537493 0.01108,4.058697 c 0.0012,0.425315 -0.340306,0.76864 -0.765621,0.769787 l -27.467208,0.07403 c -0.425315,0.0011 -0.768651,-0.340329 -0.769812,-0.765644 l -0.01108,-4.058697 c -0.0012,-0.425315 0.340306,-0.76864 0.765621,-0.769786 l 27.467207,-0.07404 c 0.425315,-0.0011 0.768652,0.340333 0.769813,0.765648 z m -16.387462,-11.650304 4.104267,-2e-6 c 0.422613,-4e-5 0.76284,0.340226 0.76284,0.762839 l -2e-6,27.29268 c -4.7e-5,0.422612 -0.340227,0.762839 -0.76284,0.762839 l -4.104267,3e-6 c -0.422613,3.9e-5 -0.76284,-0.340227 -0.762839,-0.762839 l 2e-6,-27.29268 c 4.6e-5,-0.422613 0.340226,-0.762839 0.762839,-0.76284 z" />
+  </g>
+</svg>

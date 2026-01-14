@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="48"
+   height="48"
+   viewBox="0 0 48 48"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.2 (2aeb623e1d, 2025-05-12)"
+   sodipodi:docname="cirlce_light.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:zoom="8.3645833"
+     inkscape:cx="32.697385"
+     inkscape:cy="17.753425"
+     inkscape:window-width="1920"
+     inkscape:window-height="1011"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="path14"
+       style="fill:#ffffff;stroke-width:1.14897"
+       d="M 24.161251,10.254643 A 13.314389,13.441199 0 0 0 10.847803,23.696894 13.314389,13.441199 0 0 0 24.161251,37.137295 13.314389,13.441199 0 0 0 37.476549,23.696894 13.314389,13.441199 0 0 0 24.161251,10.254643 Z M 24.329719,7.6341478 A 16.019535,16.188606 0 0 0 8.3101866,23.8236 16.019535,16.188606 0 0 0 24.329719,40.0111 16.019535,16.188606 0 0 0 40.34925,23.8236 16.019535,16.188606 0 0 0 24.329719,7.6341478 Z M 42.379031,23.865616 A 18.090664,17.75252 0 0 1 24.288367,41.618135 18.090664,17.75252 0 0 1 6.1977026,23.865616 18.090664,17.75252 0 0 1 24.288367,6.1130964 18.090664,17.75252 0 0 1 42.379031,23.865616 Z" />
+  </g>
+</svg>
