@@ -1,18 +1,23 @@
 /* React */
-import { type ReactNode, type JSX } from "react"
+import { type ReactNode, type JSX, useEffect, useState } from "react"
 
 /* Hooks */
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { Routes, Route, useLocation } from "react-router-dom"
+
+
 
 /* Home page */
-import Home from "./Mobile/pages/Home/mainHome"
+import Home from "./Mobile/pages/Home/MainHome"
 
-/* Comoon page */
+/* Common page */
 import Header from "./Mobile/pages/Common/Header"
 import Footer from "./Mobile/pages/Common/Footer"
 
-/* Style */
-import "./Mobile/styles/main.css"
+/* Phone */
+import CellPhone from "./Mobile/pages/Phone/phoneHomeScreen"
+
+/* Components */
+import ReloadAnimation from "./Mobile/components/ReloadAnimation"
 
 
 
@@ -21,22 +26,65 @@ const Layout = ({ children }: { children: ReactNode }) => {
   return (
   <>
     <Header />
-    {children}
+
+    <main>
+      {children}
+    </main>
+    
     <Footer />
   </>
   )
 }
 
+/* Restart scroll */
+const ScrollToTop = () => {
+  const { pathname } = useLocation()
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "auto"
+    })
+  }, [pathname])
+
+  return null
+}
+
+
 
 /* Render elements */
 function App(): JSX.Element {
+  /* Loading page */
+  const location = useLocation()
+  const [loading, setLoading] = useState<boolean>(false)
+
+  /* Page load time */
+  useEffect(() => {
+    setLoading(true)
+
+    const timer = setTimeout(() => setLoading(false), 500)
+
+    return () => clearTimeout(timer)
+  }, [location.pathname])
+
+  if (loading) return <ReloadAnimation />
+
+
+
   return (
-    <BrowserRouter>
+    <>
+      {/* Restart scroll */}
+      <ScrollToTop />
+
       <Routes>
         {/* Home */}
         <Route path="/" element={<Layout><Home /></Layout>} />
+
+        {/* Devices */}
+        <Route path="/Phone" element={<Layout><CellPhone /></Layout>} />
       </Routes>
-    </BrowserRouter>
+    </>
   )
 }
 

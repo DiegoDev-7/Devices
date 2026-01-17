@@ -17,7 +17,12 @@ body {
   overflow-x: hidden;
 }
 
-/* Common */
+main {
+  width: 100dvw;
+  min-height: 100dvh;
+}
+
+/* components */
 /* Import mixin */
 /* Colors */
 /* Fonts */
@@ -92,6 +97,44 @@ body {
   font-style: normal;
   font-display: swap;
 }
+/* 
+====================
+      Container
+====================
+*/
+.container-reload-animation-nexia {
+  width: 100dvw;
+  min-height: 100dvh;
+  background-color: #1a1a1a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 
+====================
+      Images
+====================
+*/
+.image-reload-animation-nexia {
+  width: 600px;
+  height: 600px;
+  margin-top: 25px;
+  object-fit: cover;
+  animation: reload 0.5s ease-in-out alternate infinite;
+}
+
+@keyframes reload {
+  to {
+    opacity: 0;
+  }
+  from {
+    opacity: 1;
+  }
+}
+/* Common */
+/* Import mixin */
+/* Import mixin */
 /* 
 ====================
       Container
@@ -277,9 +320,8 @@ body {
      Container
 ====================
 */
-.container-main {
-  width: 100dvw;
-  min-height: 100dvh;
+.container-main-home {
+  background-color: #ffffff;
   display: grid;
   grid-template-rows: auto auto auto;
 }
@@ -289,14 +331,13 @@ body {
   min-height: 100dvh;
   grid-area: 1/1/2/2;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: auto auto;
   grid-template-rows: 1fr;
 }
 
 /* Left column: hero text + description */
 .content-main-1A {
-  width: 100%;
-  height: 100%;
+  width: 50dvw;
   grid-area: 1/1/2/2;
 }
 
@@ -312,8 +353,7 @@ body {
 
 /* Right column: cards + button */
 .content-main-2A {
-  width: 100%;
-  height: 100%;
+  width: 50dvw;
   grid-area: 1/2/2/3;
 }
 
@@ -412,15 +452,14 @@ body {
   grid-area: 2/1/3/2;
   background-color: #222222;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: auto auto;
   grid-template-rows: 1fr;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
   z-index: 100;
 }
 
 /* left column: card phone */
 .content-main-1B {
+  width: 50dvw;
   grid-area: 1/1/2/2;
   display: flex;
   justify-content: center;
@@ -524,6 +563,7 @@ body {
 
 /* Right column: text */
 .content-main-2B {
+  width: 50dvw;
   grid-area: 1/2/2/3;
   display: flex;
   justify-content: center;
@@ -540,14 +580,13 @@ body {
   background-color: #222222;
   grid-area: 3/1/4/2;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: auto auto;
   grid-template-rows: 1fr;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
 }
 
 /* left column: text, images */
 .box-content-main-1C {
+  margin-top: 25px;
   grid-area: 1/1/2/2;
 }
 
@@ -777,6 +816,7 @@ body {
 }
 /* Right column: images, text */
 .box-content-main-2C {
+  margin-top: 25px;
   grid-area: 1/2/2/3;
 }
 
@@ -1278,13 +1318,497 @@ body {
 
 .dot-item.active .dot {
   background: #ffffff;
-  transform: rotate(50deg) scale(1.5);
+  transform: rotate(140deg) scale(1.5);
 }
 
 .dot-item.active .font-dot-label {
   color: #ffffff;
   opacity: 1;
   font-weight: 600;
+}
+
+/* Phone */
+/* Import mixin */
+/* Importations */
+/* 
+====================
+     Container
+====================
+*/
+.container-main-phone {
+  background-color: #1a1a1a;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+}
+
+/* First box */
+.box-phone-a {
+  height: 100dvh;
+  display: flex;
+  position: relative;
+  grid-area: 1/1/2/2;
+}
+
+.box-title-phone {
+  width: 33dvw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Second box */
+.box-phone-b {
+  min-height: 100dvh;
+  grid-area: 2/1/3/2;
+}
+
+/* Third box */
+.box-phone-c {
+  grid-area: 3/1/4/2;
+  min-height: 100dvh;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 1fr;
+}
+
+/* Left column: title + description */
+.box-phone-C1 {
+  grid-area: 1/1/2/2;
+  width: 40dvw;
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-text-phone-C1 {
+  margin: 30px;
+}
+
+/* Right column: icons */
+.box-phone-C2 {
+  grid-area: 1/2/2/3;
+  min-width: 60dvw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-contain-image-phone-C2 {
+  margin: 25px;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contain-image-phone-C2 {
+  width: 100px;
+  height: 100px;
+  margin: 50px 25px;
+  background-color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 0 5px 3px #747474;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 
+====================
+      Images
+====================
+*/
+.rose-phone {
+  width: 100%;
+  height: 100%;
+  user-select: none;
+  object-fit: cover;
+}
+
+.image-phone-C2 {
+  width: 90%;
+  height: 90%;
+  user-select: none;
+  object-fit: cover;
+}
+
+/* 
+====================
+  Letters - Fonts
+====================
+*/
+/* Title rose */
+.title-phone {
+  color: #ffffff;
+  font-size: 120px;
+  font-style: italic;
+  font-weight: 200;
+  font-family: "Oxygen1", system-ui, -apple-system, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.content-text-phone-C1a {
+  color: #ffffff;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 200;
+  font-family: "Doto3", system-ui, -apple-system, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.content-text-phone-C1b {
+  color: #ffffff;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 200;
+  font-family: "Doto3", system-ui, -apple-system, sans-serif;
+  text-align: justify;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+/* Import mixin */
+/* Importations */
+/* 
+====================
+     Container
+====================
+*/
+.container-nexia-cellPhone {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 
+====================
+      CellPhone
+====================
+*/
+/* Center cellPhone edge */
+.container-cellPhone-border {
+  width: 300px;
+  height: 500px;
+  background: #000000;
+  border: solid 1px #000000;
+  border-radius: 35px;
+  box-shadow: 0 0 20px 5px #747474;
+  z-index: 1000;
+}
+
+/* Top cellPhone edge */
+.container-cellPhone-border-top {
+  width: 300px;
+  height: 15px;
+  background-color: rgba(167, 167, 167, 0.3843137255);
+  border: solid #535353;
+  border-radius: 50px;
+  box-shadow: 0 0 20px 1px #535353;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  position: relative;
+  top: -696px;
+}
+.container-cellPhone-border-top:hover {
+  transform: scale(1.05);
+}
+
+/* Bottom cellPhone edge */
+.container-cellPhone-border-bottom {
+  width: 300px;
+  height: 15px;
+  background-color: rgba(167, 167, 167, 0.3843137255);
+  border: solid #535353;
+  border-radius: 50px;
+  box-shadow: 0 0 20px 1px #535353;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  position: relative;
+  top: -120px;
+}
+.container-cellPhone-border-bottom:hover {
+  transform: scale(1.05);
+}
+
+/* Display */
+.display-cellPhone {
+  width: 100%;
+  height: 100%;
+  background: #212121;
+  border: solid #000000;
+  border-radius: 40px;
+  position: relative;
+  z-index: 10;
+}
+
+/* Screen */
+.screen-cellPhone {
+  width: 100%;
+  height: 100%;
+  background: #333333;
+  border: solid #000000;
+  border-radius: 35px;
+  position: relative;
+  z-index: 100;
+}
+
+/* Wallpaper */
+.screen-cellPhone-wallpaper {
+  width: 100%;
+  height: 100%;
+  border-radius: 35px;
+  transform-origin: center;
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+
+.screen-cellPhone-wallpaper.on {
+  transform: scaleX(1);
+}
+
+.screen-cellPhone-wallpaper.off {
+  transform: scaleX(0);
+}
+
+/* Bottom touchscreen for buttons */
+.screen-touch-cellPhone-buttons {
+  width: 100%;
+  height: 30px;
+  background-color: rgba(83, 83, 83, 0.1529411765);
+  border: solid 2px rgba(83, 83, 83, 0.0196078431);
+  border-radius: 0 0 50px 50px;
+  position: relative;
+  top: -30px;
+  z-index: 1000;
+  transition: all 100ms ease;
+  opacity: 0;
+  transform: translateY(15px);
+}
+.screen-touch-cellPhone-buttons:hover {
+  opacity: 1;
+  transform: translateY(-5px);
+}
+.screen-touch-cellPhone-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Signals from the buttons on the right of the image */
+.container-signal-image-more, .container-signal-image-less, .container-signal-image-power {
+  width: 25px;
+  height: 25px;
+  border-radius: 25px;
+}
+
+.container-signal-image-more {
+  position: relative;
+  top: -11px;
+  left: 110%;
+}
+
+.container-signal-image-less {
+  position: relative;
+  top: -11px;
+  left: 115%;
+}
+
+.container-signal-image-power {
+  position: relative;
+  top: -11px;
+  left: 130%;
+}
+
+/* 
+====================
+       Buttons
+====================
+*/
+/* Buttons border cellPhone: more, less, power */
+.button-cellPhone-more {
+  border-radius: 0 50px 0 0;
+  position: relative;
+  left: 298px;
+  top: -470px;
+}
+
+.button-cellPhone-less {
+  border-radius: 0 0 70px 0;
+  position: relative;
+  left: 298px;
+  top: -472px;
+}
+
+.Button-cellPhone-power {
+  border-radius: 0 50px 50px 0;
+  position: relative;
+  left: 298px;
+  top: -463px;
+}
+
+.button-cellPhone-more, .button-cellPhone-less, .Button-cellPhone-power {
+  width: 4px;
+  height: 40px;
+  background-color: #000000;
+  border: solid 1px;
+  transition: all 100ms ease-in;
+  cursor: pointer;
+  z-index: -1;
+}
+.button-cellPhone-more:active, .button-cellPhone-less:active, .Button-cellPhone-power:active {
+  left: 297px;
+}
+
+/* Bottom touchscreen with buttons */
+.button-screen-cellPhone {
+  width: 25%;
+  height: 110%;
+  cursor: pointer;
+  border: solid 0px rgba(167, 167, 167, 0.3843137255);
+  border-radius: 25px;
+  background-color: rgba(83, 83, 83, 0);
+  transition: all 25ms ease-in;
+  z-index: 10;
+}
+.button-screen-cellPhone:active {
+  border-radius: 25px;
+  background-color: rgba(83, 83, 83, 0.1568627451);
+}
+.button-screen-cellPhone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 
+====================
+       Images
+====================
+*/
+/* Camera */
+.camera-cellPhone {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  object-fit: cover;
+  user-select: none;
+  position: relative;
+  top: -485px;
+  left: 138.5px;
+  z-index: 100000;
+  filter: brightness(0.7);
+}
+
+/* Images bottom touch screen */
+.image-screen-touch-square {
+  width: 24px;
+  object-fit: cover;
+  user-select: none;
+}
+
+.image-screen-touch-circle {
+  width: 25px;
+  object-fit: cover;
+  user-select: none;
+}
+
+.image-screen-touch-triangle {
+  width: 20px;
+  object-fit: cover;
+  user-select: none;
+  transform: rotate(180deg);
+}
+
+/* Signals from the buttons on the right of the image */
+.image-signal {
+  width: 100%;
+  height: 100%;
+  user-select: none;
+  object-fit: cover;
+}
+
+/* Wallpaper */
+.image-wallpaper {
+  width: 100%;
+  height: 100%;
+  border-radius: 35px;
+  position: relative;
+  z-index: 100;
+  filter: blur(1px);
+}
+
+/* 
+====================
+        Other
+====================
+*/
+/* Lines */
+.signal-line-cellPhone-more, .signal-line-cellPhone-less, .signal-line-cellPhone-power {
+  height: 2px;
+  background-color: #ffffff;
+  border-radius: 50px;
+  box-shadow: 0 0 15px 1px #ffffff;
+}
+
+.signal-line-cellPhone-more {
+  width: 150px;
+  position: relative;
+  top: -605px;
+  left: 320px;
+}
+
+.signal-line-cellPhone-less {
+  width: 100px;
+  position: relative;
+  top: -565px;
+  left: 320px;
+}
+
+.signal-line-cellPhone-power {
+  width: 50px;
+  position: relative;
+  top: -520px;
+  left: 320px;
+}
+
+/* Circles */
+.signal-circle-cellPhone {
+  width: 7px;
+  height: 7px;
+  background-color: #ffffff;
+  border: solid #ffffff;
+  position: absolute;
+  left: 0;
+  top: -2px;
+  border-radius: 50px;
+}
+
+.signal-circle-cellPhone2 {
+  width: 7px;
+  height: 7px;
+  background-color: #ffffff;
+  border: solid #ffffff;
+  position: absolute;
+  left: 100%;
+  top: -2px;
+  border-radius: 50px;
 }
 
 /*# sourceMappingURL=main.css.map */

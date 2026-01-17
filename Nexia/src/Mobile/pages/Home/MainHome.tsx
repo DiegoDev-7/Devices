@@ -93,17 +93,17 @@ const Home = () => {
 
   return (
     <>
-      <main className="container-main">
+      <div className="container-main-home">
 
         {/* Scroll indicator window */}
         <ScrollIndicator />
 
 
         {/* Firts frame */}
-        <div id="start" className="box-main-a">
+        <section id="start" className="box-main-a">
           <div className="content-main-1A">
             <div className="content-main-center-1A">
-              <p className="letter-main-nexia-1A">NEXIA</p>
+              <h1 className="letter-main-nexia-1A">NEXIA</h1>
               <hr className="hr-divider-text-1A" />
               <p className="letter-main-basic-1A">Nexia es una plataforma que permite acceder a dispositivos moviles y computadores virtuales desde el navegador.</p>
             </div>
@@ -117,13 +117,12 @@ const Home = () => {
             )))}
 
             <button className="button-main-A2" onClick={() => goTo("devices")}>Explorar modelos</button>
-            
           </div>
-        </div>
+        </section>
 
 
         {/* Second frame */}
-        <div id="description" className="box-main-b">
+        <section id="description" className="box-main-b">
           {/* Phone rear */}
           <div className="content-main-1B">
             <div className="rear-mobile-main-1B">
@@ -166,11 +165,11 @@ const Home = () => {
               </p>
             </div>
           </div>
-        </div>
+        </section>
 
 
         {/* Third frame */}
-        <div id="apps" className="box-main-c">
+        <section id="apps" className="box-main-c">
           {/* Description + icons: music, calendar and calculator */}
           <div className="box-content-main-1C">
 
@@ -235,17 +234,21 @@ const Home = () => {
             </p>
 
           </div>
-        </div>
+        </section>
 
 
         {/* Fourd frame */}
-        <div id="devices" className="box-main-d">
+        <section id="devices" className="box-main-d">
           {/* Devices */}
           <div className="content-main-1D">
+
             {devices.map(device => (
+              
               <div key={device.id} className="card-device-main-1D">
+
                 <div className={device.boxClass}>
                   <div className={device.screenClass}>
+
                     <p className="title-device-main-1D">{device.title}</p>
 
                     {device.camera && (
@@ -278,18 +281,19 @@ const Home = () => {
                 )}
 
                 {!device.available && (
-                  <Link to="/mobile" className="box-avaliable-device-main-1D" />
+                  <Link to="/Phone" className="box-avaliable-device-main-1D" />
                 )}
-                
+
               </div>
+
             ))}
 
           </div>
-        </div>
+        </section>
 
 
         {/* Fifth frame */}
-        <div id="gratitude" className="content-main-2D">
+        <section id="gratitude" className="content-main-2D">
           <div className="box-main-2D">
 
             <div className="box-image-main-2D">
@@ -310,8 +314,8 @@ const Home = () => {
             </div>
             
           </div>
-        </div>
-      </main>
+        </section>
+      </div>
     </>
   )
 }
@@ -361,25 +365,27 @@ const ScrollIndicator = () => {
   }
 
   return (
-    <div className="scroll-progress">
-      <div className="dots">
-        {sections.map(section => (
-          <div
-            key={section.id}
-            className={`dot-item ${active === section.id ? "active" : ""}`}
-          >
-            <span className="font-dot-label">
-              {section.label}
-            </span>
+    <>
+      <div className="scroll-progress">
+        <div className="dots">
+          {sections.map(section => (
+            <div
+              key={section.id}
+              className={`dot-item ${active === section.id ? "active" : ""}`}
+            >
+              <span className="font-dot-label">
+                {section.label}
+              </span>
 
-            <button
-              className="dot"
-              onClick={() => goTo(section.id)}
-            />
-          </div>
-        ))}
+              <button
+                className="dot"
+                onClick={() => goTo(section.id)}
+              />
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   )
 }
 

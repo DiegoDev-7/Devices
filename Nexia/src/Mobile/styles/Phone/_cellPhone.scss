@@ -1,0 +1,338 @@
+/* Importations */
+@use "../mixin";
+@use "../variables" as v;
+
+
+
+/* 
+====================
+     Container
+====================
+*/
+.container-nexia-cellPhone {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  @include mixin.flex-center(flex, center, center)
+}
+
+
+
+/* 
+====================
+      CellPhone
+====================
+*/
+/* Center cellPhone edge */
+.container-cellPhone-border {
+  width: 300px;
+  height: 500px;
+  background: v.$color-b1;
+  border: solid 1px v.$color-b1;
+  border-radius: 35px;
+  box-shadow: 0 0 20px 5px v.$color-g3;
+  z-index: 1000;
+}
+
+  /* Top cellPhone edge */
+.container-cellPhone-border-top {
+  width: 300px;
+  height: 15px;
+  background-color: v.$color-g4;
+  border: solid v.$color-g2;
+  border-radius: 50px;
+  box-shadow: 0 0 20px 1px v.$color-g2;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+
+  position: relative;
+  top: -696px;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+  /* Bottom cellPhone edge */
+.container-cellPhone-border-bottom {
+  width: 300px;
+  height: 15px;
+  background-color: v.$color-g4;
+  border: solid v.$color-g2;
+  border-radius: 50px;
+  box-shadow: 0 0 20px 1px v.$color-g2;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+
+  position: relative;
+  top: -120px;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+
+  /* Display */
+.display-cellPhone {
+  width: 100%;
+  height: 100%;
+  background: v.$color-b5;
+  border: solid v.$color-b1;
+  border-radius: 40px;
+
+  position: relative;
+  z-index: 10;
+}
+
+  /* Screen */
+.screen-cellPhone {
+  width: 100%;
+  height: 100%;
+  background: v.$color-g1;
+  border: solid v.$color-b1;
+  border-radius: 35px;
+  position: relative;
+  z-index: 100;
+}
+
+  /* Wallpaper */
+.screen-cellPhone-wallpaper {
+  width: 100%;
+  height: 100%;
+  border-radius: 35px;
+
+  transform-origin: center;
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+.screen-cellPhone-wallpaper.on {
+  transform: scaleX(1);
+}
+.screen-cellPhone-wallpaper.off {
+  transform: scaleX(0);
+}
+
+  /* Bottom touchscreen for buttons */
+.screen-touch-cellPhone-buttons {
+  width: 100%;
+  height: 30px;
+  background-color: #53535327;
+  border: solid 2px #53535305;
+  border-radius: 0 0 50px 50px;
+
+  position: relative;
+  top: -30px;
+  z-index: 1000;
+
+  transition: all 100ms ease;
+  opacity: 0;
+  transform: translateY(15px);
+
+  &:hover {
+    opacity: 1;
+    transform: translateY(-5px);
+  }
+
+  @include mixin.flex-center(flex, center, center)
+}
+
+  /* Signals from the buttons on the right of the image */
+.container-signal-image-more, .container-signal-image-less, .container-signal-image-power {
+  width: 25px;
+  height: 25px;
+  border-radius: 25px;
+}
+.container-signal-image-more {
+  position: relative;
+  top: -11px;
+  left: 110%;
+}
+.container-signal-image-less {
+  position: relative;
+  top: -11px;
+  left: 115%;
+}
+.container-signal-image-power {
+  position: relative;
+  top: -11px;
+  left: 130%;
+}
+
+/* 
+====================
+       Buttons
+====================
+*/
+/* Buttons border cellPhone: more, less, power */
+.button-cellPhone-more {
+  border-radius: 0 50px 0 0;
+  position: relative;
+  left: 298px;
+  top: -470px;
+}
+.button-cellPhone-less {
+  border-radius: 0 0 70px 0;
+  position: relative;
+  left: 298px;
+  top: -472px;
+}
+.Button-cellPhone-power {
+  border-radius: 0 50px 50px 0;
+  position: relative;
+  left: 298px;
+  top: -463px;
+}
+.button-cellPhone-more, .button-cellPhone-less, .Button-cellPhone-power {
+  width: 4px;
+  height: 40px;
+  background-color: v.$color-b1;
+  border: solid 1px;
+  transition: all 100ms ease-in;
+  cursor: pointer;
+  z-index: -1;
+
+  &:active {
+    left: 297px;
+  }
+}
+
+/* Bottom touchscreen with buttons */
+.button-screen-cellPhone {
+  width: 25%;
+  height: 110%;
+  cursor: pointer;
+  border: solid 0px v.$color-g4;
+  border-radius: 25px;
+  background-color: #53535300;
+  transition: all 25ms ease-in;
+  z-index: 10;
+
+  &:active {
+    border-radius: 25px;
+    background-color: #53535328;
+  }
+
+  @include mixin.flex-center(flex, center, center);
+}
+
+
+
+/* 
+====================
+       Images
+====================
+*/
+/* Camera */
+.camera-cellPhone {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  object-fit: cover;
+  user-select: none;
+  position: relative;
+  top: -485px;
+  left: 138.5px;
+  z-index: 100000;
+
+  filter: brightness(0.7);
+}
+
+/* Images bottom touch screen */
+.image-screen-touch-square {
+  width: 24px;
+
+  object-fit: cover;
+  user-select: none;
+}
+.image-screen-touch-circle {
+  width: 25px;
+
+  object-fit: cover;
+  user-select: none;
+}
+.image-screen-touch-triangle {
+  width: 20px;
+
+  object-fit: cover;
+  user-select: none;
+
+  transform: rotate(180deg);
+}
+
+/* Signals from the buttons on the right of the image */
+.image-signal {
+  width: 100%;
+  height: 100%;
+  user-select: none;
+  object-fit: cover;
+}
+
+/* Wallpaper */
+.image-wallpaper {
+  width: 100%;
+  height: 100%;
+  border-radius: 35px;
+
+  position: relative;
+  z-index: 100;
+
+  filter: blur(1px);
+}
+
+
+
+/* 
+====================
+        Other
+====================
+*/
+/* Lines */
+.signal-line-cellPhone-more, .signal-line-cellPhone-less, .signal-line-cellPhone-power {
+  height: 2px;
+  background-color: v.$color-w1;
+  border-radius: 50px;
+  box-shadow: 0 0 15px 1px v.$color-w1;
+}
+.signal-line-cellPhone-more {
+  width: 150px;
+  position: relative;
+  top: -605px;
+  left: 320px;
+}
+.signal-line-cellPhone-less {
+  width: 100px;
+  position: relative;
+  top: -565px;
+  left: 320px;
+}
+.signal-line-cellPhone-power {
+  width: 50px;
+  position: relative;
+  top: -520px;
+  left: 320px;
+}
+
+/* Circles */
+.signal-circle-cellPhone {
+  width: 7px;
+  height: 7px;
+  background-color: v.$color-w1;
+  border: solid v.$color-w1;
+  position: absolute;
+  left: 0;
+  top: -2px;
+  border-radius: 50px;
+}
+.signal-circle-cellPhone2 {
+  width: 7px;
+  height: 7px;
+  background-color: v.$color-w1;
+  border: solid v.$color-w1;
+  position: absolute;
+  left: 100%;
+  top: -2px;
+  border-radius: 50px;
+}

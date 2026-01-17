@@ -9,10 +9,8 @@
      Container
 ====================
 */
-.container-main {
-  width: 100dvw;
-  min-height: 100dvh;
-
+.container-main-home {
+  background-color: v.$color-w1;
   display: grid;
   grid-template-rows: auto auto auto;
 }
@@ -23,14 +21,13 @@
   grid-area: 1 / 1 / 2 / 2;
 
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: auto auto;
   grid-template-rows: 1fr;
 }
 
   /* Left column: hero text + description */
 .content-main-1A { 
-  width: 100%;
-  height: 100%;
+  width: 50dvw;
   grid-area: 1 / 1 / 2 / 2;
 }
 .content-main-center-1A {
@@ -44,8 +41,7 @@
 
   /* Right column: cards + button */
 .content-main-2A { 
-  width: 100%;
-  height: 100%;
+  width: 50dvw;
   grid-area: 1 / 2 / 2 / 3;
 }
   /* Cards */
@@ -141,16 +137,15 @@
   background-color: v.$color-b3;
 
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: auto auto;
   grid-template-rows: 1fr;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
 
   z-index: 100;
 }
 
   /* left column: card phone */
 .content-main-1B {
+  width: 50dvw;
   grid-area: 1 / 1 / 2 / 2;
 
   @include mixin.flex-center(flex, center, center);
@@ -246,6 +241,7 @@
 
   /* Right column: text */
 .content-main-2B {
+  width: 50dvw;
   grid-area: 1 / 2 / 2 / 3;
 
   @include mixin.flex-center(flex, center, center);
@@ -262,13 +258,12 @@
   grid-area: 3 / 1 / 4 / 2;
 
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: auto auto;
   grid-template-rows: 1fr;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
 }
   /* left column: text, images */
 .box-content-main-1C {
+  margin-top: 25px;
   grid-area: 1 / 1 / 2 / 2;
 }
 .card-apps-main-1C {
@@ -490,6 +485,7 @@
 
   /* Right column: images, text */
 .box-content-main-2C {
+  margin-top: 25px;
   grid-area: 1 / 2 / 2 / 3;
 }
 .card-apps-main-2C {
@@ -974,7 +970,7 @@
 }
 .dot-item.active .dot {
   background: v.$color-w1;
-  transform: rotate(50deg) scale(1.5);
+  transform: rotate(140deg) scale(1.5);
 }
 .dot-item.active .font-dot-label {
   color: v.$color-w1;

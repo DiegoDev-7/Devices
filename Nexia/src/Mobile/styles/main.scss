@@ -1,9 +1,16 @@
 /* Global settings default */
 @use "./global";
 
+/* components */
+@use "./components/ReloadAnimation";
+
 /* Common */
 @use "./Common/Header";
 @use "./Common/Footer";
 
 /* Main Home */
-@use "./Home/mainHome";
+@use "./Home/MainHome";
+
+/* Phone */
+@use "./Phone/phoneHomeScreen";
+@use "./Phone/cellPhone";
