@@ -1,0 +1,29 @@
+/* Global settings default */
+@use "./global";
+@use "./mixin";
+
+
+/* 
+======================
+        Pages
+======================
+*/
+/* components */
+@use "./components/ReloadAnimation";
+
+/* Common */
+@use "./pages/Common/Header";
+@use "./pages/Common/Footer";
+
+/* Main Home */
+@use "./pages/Home/MainHome";
+
+
+/* 
+======================
+        Pages
+======================
+*/
+/* Phone */
+@use "./pages/devices/devices";
+@use "./PhoneSystem/PhoneSys";

@@ -1,0 +1,1903 @@
+/* Global settings default */
+/* Body base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+main {
+  width: 100dvw;
+  min-height: 100dvh;
+}
+
+/* 
+======================
+        Pages
+======================
+*/
+/* components */
+/* Import mixin */
+/* Colors */
+/* Fonts */
+/* Fonts */
+@font-face {
+  font-family: "Oxygen1";
+  src: url("../../assets/Fonts/Oxygen-light.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Oxygen2";
+  src: url("../../assets/Fonts/Oxygen-Regular.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Oxygen3";
+  src: url("../../assets/Fonts/Oxygen-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Faustina1";
+  src: url("../../assets/Fonts/Faustina-Regular.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Faustina2";
+  src: url("../../assets/Fonts/Faustina-Medium.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Faustina3";
+  src: url("../../assets/Fonts/Faustina-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Doto1";
+  src: url("../../assets/Fonts/Doto-Regular.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Doto2";
+  src: url("../../assets/Fonts/Doto-Medium.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Doto3";
+  src: url("../../assets/Fonts/Doto-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Shizuru";
+  src: url("../../assets/Fonts/Shizuru-Regular.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+/* 
+====================
+      Container
+====================
+*/
+.container-reload-animation-nexia {
+  width: 100dvw;
+  min-height: 100dvh;
+  background-color: #1a1a1a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 
+====================
+      Images
+====================
+*/
+.image-reload-animation-nexia {
+  width: 600px;
+  height: 600px;
+  margin-top: 25px;
+  object-fit: cover;
+  animation: reload 0.5s ease-in-out alternate infinite;
+}
+
+@keyframes reload {
+  to {
+    opacity: 0;
+  }
+  from {
+    opacity: 1;
+  }
+}
+/* Common */
+/* Import mixin */
+/* Import mixin */
+/* 
+====================
+      Container
+====================
+*/
+.cntnrHeader {
+  width: 100dvw;
+  min-height: 50px;
+  border-bottom: solid 2px #222222;
+  position: fixed;
+  background-color: #ffffff;
+  z-index: 100000000;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 50px;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+/* Boxes */
+.boxHeaderA {
+  grid-area: 1/1/2/2;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.boxHeaderB {
+  width: 100%;
+  height: 100%;
+  grid-area: 1/2/2/3;
+  display: flex;
+}
+
+/* Content of the boxes */
+.contentHeader1 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.contentHeader1 .lnkheader {
+  font-weight: 400;
+  margin: 10px;
+  color: #333333;
+  transition: all 0.1s ease-in;
+}
+.contentHeader1 .lnkheader:hover {
+  color: #747474;
+}
+
+.contentHeader2 {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contentHeader3 {
+  width: 25%;
+  height: 100%;
+  margin: 0 20px 0 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* 
+====================
+      Images 
+====================
+*/
+.ImageNexia {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Language */
+.ImageL {
+  height: 22px;
+  margin: 10px;
+  object-fit: cover;
+  transition: all 0.1s ease-in-out;
+}
+.ImageL:hover {
+  scale: 1.1;
+}
+
+/* Discord */
+.ImageDc {
+  height: 17px;
+  margin: 0 10px 0 5px;
+  object-fit: cover;
+  transition: all 0.1s ease-in-out;
+}
+.ImageDc:hover {
+  scale: 1.1;
+}
+
+/* X */
+.ImageX {
+  height: 17px;
+  margin: 0 10px 0 5px;
+  object-fit: cover;
+  transition: all 0.1s ease-in-out;
+}
+.ImageX:hover {
+  scale: 1.1;
+}
+
+/* GitHub */
+.ImageGH {
+  height: 20px;
+  margin: 0 20px 0 5px;
+  object-fit: cover;
+  transition: all 0.1s ease-in-out;
+}
+.ImageGH:hover {
+  scale: 1.1;
+}
+
+/* 
+====================
+      Links
+====================
+*/
+.lnkheader {
+  text-decoration: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* Import mixin */
+/* 
+====================
+     Container
+====================
+*/
+.cntnrFooter {
+  min-height: 60px;
+  padding: 8px 0;
+  background-color: #333333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.cntnrFooter p {
+  color: white;
+  margin: 0;
+  font-size: 0.9em;
+}
+
+/* 
+====================
+       Links
+====================
+*/
+.lnkFooter {
+  color: #ffffff;
+  font-size: 0.9em;
+  text-decoration: none;
+  transition: all 0.1s ease;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.lnkFooter:hover {
+  text-decoration: underline;
+}
+
+/* Main Home */
+/* Import mixin */
+/* Importations */
+/* 
+====================
+     Container
+====================
+*/
+.container-main-home {
+  background-color: #ffffff;
+  display: grid;
+  grid-template-rows: auto auto auto;
+}
+
+/* First box */
+.box-main-a {
+  min-height: 100dvh;
+  grid-area: 1/1/2/2;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 1fr;
+}
+
+/* Left column: hero text + description */
+.content-main-1A {
+  width: 50dvw;
+  grid-area: 1/1/2/2;
+}
+
+.content-main-center-1A {
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  gap: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Right column: cards + button */
+.content-main-2A {
+  width: 50dvw;
+  grid-area: 1/2/2/3;
+}
+
+/* Cards */
+.card-main-A2 {
+  width: 250px;
+  height: 300px;
+  border: solid #ffffff;
+  border-radius: 25px;
+  background-color: #222222;
+  box-shadow: 0 0 10px 5px #333333;
+  transition: all 0.1s ease-in-out;
+  rotate: -5deg;
+}
+.card-main-A2:hover {
+  scale: 1.05;
+}
+
+/* Position cards */
+.position-card-1 {
+  position: absolute;
+  top: 45%;
+  left: 78%;
+  transform: translate(-50%, -50%);
+  transition: all 0.2s ease-in-out;
+  z-index: 1;
+}
+.position-card-1:hover {
+  scale: 1.05;
+  rotate: 5deg;
+}
+.position-card-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.position-card-2 {
+  position: absolute;
+  top: 40%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  transition: all 0.2s ease-in-out;
+  z-index: 2;
+}
+.position-card-2:hover {
+  scale: 1.05;
+  rotate: 5deg;
+}
+.position-card-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.position-card-3 {
+  position: absolute;
+  top: 35%;
+  left: 72%;
+  transform: translate(-50%, -50%);
+  transition: all 0.2s ease-in-out;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Button */
+.button-main-A2 {
+  width: 380px;
+  height: 75px;
+  color: #ffffff;
+  background-color: #222222;
+  border: none;
+  border-radius: 50px;
+  font-family: "Doto3", system-ui, -apple-system, sans-serif;
+  font-size: 2em;
+  position: absolute;
+  top: 85%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  cursor: pointer;
+  transition: all 0.03s ease-in;
+}
+.button-main-A2:active {
+  color: #ffffff;
+  background-color: #222222;
+  width: 375px;
+  height: 70px;
+}
+
+/* Second box */
+.box-main-b {
+  min-height: 100dvh;
+  grid-area: 2/1/3/2;
+  background-color: #222222;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 1fr;
+  z-index: 100;
+}
+
+/* left column: card phone */
+.content-main-1B {
+  width: 50dvw;
+  grid-area: 1/1/2/2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Rear phone */
+.rear-mobile-main-1B {
+  width: 240px;
+  height: 450px;
+  border: solid 2px #333333;
+  border-radius: 40px;
+  background-color: #747474;
+  box-shadow: 0 0 25px 1px #9e9e9e;
+  display: flex;
+  justify-content: center;
+  align-items: none;
+}
+
+.rear-box-mobile-main-1B {
+  width: 220px;
+  height: 100px;
+  margin-top: 10px;
+  border: solid 2px #333333;
+  border-radius: 30px;
+  background-color: #535353;
+}
+
+/* Rear phone camera */
+.rear-box-camera-main-1B {
+  width: 27px;
+  height: 27px;
+  margin-top: 10px;
+  margin-left: 10px;
+  border: solid 2px #747474;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Rear phone flash */
+.rear-box-flash-main-1B {
+  width: 10px;
+  height: 10px;
+  margin-top: -25px;
+  margin-left: 40px;
+  border: solid 2px #747474;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Nexia logo in phone rear */
+.rear-box-nexia-main-1B {
+  width: 250px;
+  height: 250px;
+  position: absolute;
+}
+
+/* Buttons */
+.button-more-main-1B {
+  width: 10px;
+  height: 35px;
+  background-color: #535353;
+  border: solid 2px #000000;
+  border-radius: 10px 0 0 0;
+  box-shadow: 0 0 25px 1px #9e9e9e;
+  position: relative;
+  top: 45%;
+  left: -7.7%;
+  z-index: -1;
+}
+
+.button-less-main-1B {
+  width: 10px;
+  height: 35px;
+  background-color: #535353;
+  border: solid 2px #000000;
+  border-radius: 0 0 0 10px;
+  box-shadow: 0 0 25px 1px #9e9e9e;
+  position: relative;
+  top: 80%;
+  left: -12.3%;
+  z-index: -1;
+}
+
+.button-power-main-1B {
+  width: 10px;
+  height: 35px;
+  background-color: #535353;
+  border: solid 2px #000000;
+  border-radius: 10px 0 0 10px;
+  box-shadow: 0 0 25px 1px #9e9e9e;
+  position: relative;
+  top: 120%;
+  left: -17%;
+  z-index: -1;
+}
+
+/* Right column: text */
+.content-main-2B {
+  width: 50dvw;
+  grid-area: 1/2/2/3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-content-main-2B {
+  margin: 120px;
+}
+
+/* Third box */
+.box-main-c {
+  min-height: 100dvh;
+  background-color: #222222;
+  grid-area: 3/1/4/2;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 1fr;
+}
+
+/* left column: text, images */
+.box-content-main-1C {
+  margin-top: 25px;
+  grid-area: 1/1/2/2;
+}
+
+.card-apps-main-1C {
+  height: 70%;
+  position: relative;
+}
+
+.box-image-music-1C {
+  width: 125px;
+  height: 125px;
+  border-radius: 25px;
+  box-shadow: 0 0 25px 3px #747474;
+  position: absolute;
+  top: 15%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-image-calendar-1C {
+  width: 125px;
+  height: 125px;
+  border-radius: 25px;
+  box-shadow: 0 0 25px 3px #747474;
+  position: absolute;
+  top: 45%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-image-calculator-1C {
+  width: 125px;
+  height: 125px;
+  border-radius: 25px;
+  box-shadow: 0 0 25px 3px #747474;
+  position: absolute;
+  top: 75%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-image-settings-2C {
+  width: 125px;
+  height: 125px;
+  border-radius: 25px;
+  box-shadow: 0 0 25px 3px #747474;
+  position: absolute;
+  top: 35%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-image-phone-2C {
+  width: 125px;
+  height: 125px;
+  border-radius: 25px;
+  box-shadow: 0 0 25px 3px #747474;
+  position: absolute;
+  top: 70%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Lines for the points */
+.line-music-1C {
+  width: 200px;
+  height: 3px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+}
+
+.line-calendar-1C {
+  width: 200px;
+  height: 3px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+}
+
+.line-calculator-1C {
+  width: 200px;
+  height: 3px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+}
+
+.line-settings-2C {
+  width: 200px;
+  height: 3px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  z-index: -1;
+}
+
+.line-phone-2C {
+  width: 200px;
+  height: 3px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  z-index: -1;
+}
+
+/* Points */
+.point-music-1C {
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  top: -3px;
+  left: 98%;
+  cursor: pointer;
+}
+
+.point-calendar-1C {
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  top: -3px;
+  left: 98%;
+  cursor: pointer;
+}
+
+.point-calculator-1C {
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  top: -3px;
+  left: 98%;
+  cursor: pointer;
+}
+
+.point-settings-2C {
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  top: -3px;
+  right: 98%;
+  cursor: pointer;
+}
+
+.point-phone-2C {
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  top: -3px;
+  right: 98%;
+  cursor: pointer;
+}
+
+/* Bubble effect */
+.bubble {
+  background-color: #9e9e9e;
+  border-radius: 50%;
+  position: absolute;
+  top: -3px;
+  left: 98%;
+  z-index: -1;
+  animation: pointBlink 0.9s ease-out infinite alternate;
+}
+
+.bubble-2C {
+  background-color: #9e9e9e;
+  border-radius: 50%;
+  position: absolute;
+  top: -3px;
+  right: 98%;
+  z-index: -1;
+  animation: pointBlink 0.9s ease-out infinite alternate;
+}
+
+/* Point blink animation */
+@keyframes pointBlink {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(2);
+    opacity: 0.5;
+  }
+}
+/* Right column: images, text */
+.box-content-main-2C {
+  margin-top: 25px;
+  grid-area: 1/2/2/3;
+}
+
+.card-apps-main-2C {
+  height: 60%;
+  position: relative;
+}
+
+/* Fourd box */
+.box-main-d {
+  min-height: 100dvh;
+  display: grid;
+  grid-template-rows: auto auto;
+}
+
+/* Top devices */
+.content-main-1D {
+  min-height: 100dvh;
+  background-color: #222222;
+  grid-area: 1/1/2/2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card mobile */
+.card-device-main-1D {
+  width: 250px;
+  height: 250px;
+  margin: 30px;
+  background-color: #747474;
+  border-radius: 30px 30px 30px 30px;
+  box-shadow: 0 0 15px 5px rgba(167, 167, 167, 0.3843137255);
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  z-index: 10000;
+}
+.card-device-main-1D:hover {
+  scale: 1.1;
+  box-shadow: none;
+}
+
+/* mobile */
+.box-device-mobile-main-1D {
+  width: 150px;
+  height: 180px;
+  background-color: #333333;
+  position: absolute;
+  border-radius: 50px 0 30px 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-16.5%, -30.5%);
+}
+
+.content-screen-mobile-main-1D {
+  width: 145px;
+  height: 175px;
+  background-color: #535353;
+  position: absolute;
+  border-radius: 50px 0 27px 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-48.3%, -48.8%);
+}
+
+/* Tablet */
+.box-device-tablet-main-1D {
+  width: 190px;
+  height: 180px;
+  background-color: #333333;
+  position: absolute;
+  border-radius: 50px 0 30px 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-33.9%, -30.5%);
+}
+
+.content-screen-tablet-main-1D {
+  width: 185px;
+  height: 175px;
+  background-color: #535353;
+  position: absolute;
+  border-radius: 50px 0 27px 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-48.8%, -48.8%);
+}
+
+.front-audio-tablet-main-1D {
+  width: 120px;
+  height: 5px;
+  background-color: #222222;
+  border: solid 2px #222222;
+  border-radius: 25px 0 0 25px;
+  position: absolute;
+  top: 0%;
+  left: 67.7%;
+  transform: translate(-50%, -50%);
+}
+
+/* Computer */
+.box-device-computer-main-1D {
+  width: 220px;
+  height: 180px;
+  background-color: #333333;
+  position: absolute;
+  border-radius: 50px 0 30px 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-43%, -30.5%);
+}
+
+.content-screen-computer-main-1D {
+  width: 215px;
+  height: 175px;
+  background-color: #535353;
+  position: absolute;
+  border-radius: 50px 0 27px 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-48.8%, -48.8%);
+}
+
+.front-audio-computer-main-1D {
+  width: 150px;
+  height: 5px;
+  background-color: #222222;
+  border: solid 2px #222222;
+  border-radius: 25px 0 0 25px;
+  position: absolute;
+  top: 0%;
+  left: 64%;
+  transform: translate(-48.4%, -50%);
+}
+
+/* ATM */
+.box-device-atm-main-1D {
+  width: 220px;
+  height: 180px;
+  background-color: #333333;
+  position: absolute;
+  border-radius: 15px 0 30px 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-43.3%, -30.5%);
+}
+
+.content-screen-atm-main-1D {
+  width: 195px;
+  height: 155px;
+  background-color: #535353;
+  position: absolute;
+  border-radius: 25px 0 27px 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-43.8%, -42%);
+}
+
+/* Available boxes to enter the device */
+.box-avaliable-device-main-1D {
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  box-shadow: 0 0 0 5px #333333;
+  position: absolute;
+}
+
+.box-noavailable-device-main-1D {
+  width: 100%;
+  height: 100%;
+  background-color: #333333;
+  opacity: 0.7;
+  border-radius: 25px;
+  box-shadow: 0 0 0 5px #333333;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box-noavailable-device-main-1D p {
+  color: #ffffff;
+  font-family: "Doto3", system-ui, -apple-system, sans-serif;
+  font-size: 30px;
+  text-align: justify;
+  margin: 50px 70px;
+  user-select: none;
+}
+
+/* Bottom */
+.content-main-2D {
+  min-height: 100dvh;
+  background-color: #222222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-main-2D {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto auto;
+}
+
+.box-image-main-2D {
+  grid-area: 1/1/2/2;
+  height: 100%;
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-main-text-2D {
+  grid-area: 2/1/3/2;
+  height: 100%;
+  margin-bottom: 120px;
+}
+
+/* 
+====================
+      Images
+====================
+*/
+/* Tree card images */
+.card-image-main-A2 {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+  margin-right: 20px;
+  user-select: none;
+  animation: blink 1.5s ease-in-out infinite alternate;
+}
+
+/* Blink animation for main card image */
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* Phone rear camera */
+.rear-box-image-main-1B {
+  width: 25px;
+  height: 25px;
+  object-fit: cover;
+  user-select: none;
+}
+
+.flash-box-image-main-1B {
+  width: 10px;
+  height: 10px;
+  object-fit: cover;
+  user-select: none;
+}
+
+/* Nexia logo in phone rear */
+.rear-box-image-nexia-1B {
+  width: 220px;
+  height: 250px;
+  object-fit: cover;
+  user-select: none;
+  position: relative;
+  top: 100%;
+  left: 47%;
+  transform: translate(-50%, -50%);
+  animation: rearImage 1s ease-in-out infinite alternate;
+}
+
+/* Blink animation for main card image */
+@keyframes rearImage {
+  0% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* Card images apps */
+.card-image-music-1C {
+  width: 125px;
+  height: 125px;
+  background-color: #ffffff;
+  border-radius: 25px;
+  box-shadow: 0 0 25px 3px #747474;
+}
+
+.card-image-calendar-1C {
+  width: 125px;
+  height: 125px;
+  background-color: #ffffff;
+  border-radius: 25px;
+  box-shadow: 0 0 25px 3px #747474;
+}
+
+.card-image-calculator-1C {
+  width: 125px;
+  height: 125px;
+  background-color: #ffffff;
+  border-radius: 25px;
+  box-shadow: 0 0 25px 3px #747474;
+}
+
+.card-image-settings-2C {
+  width: 125px;
+  height: 125px;
+  background-color: #ffffff;
+  border-radius: 25px;
+  box-shadow: 0 0 25px 3px #747474;
+}
+
+.card-image-phone-2C {
+  width: 125px;
+  height: 125px;
+  background-color: #ffffff;
+  border-radius: 25px;
+  box-shadow: 0 0 25px 3px #747474;
+}
+
+/* Front camera */
+.front-camera-main-1D {
+  width: 20px;
+  user-select: none;
+  position: absolute;
+  top: 10%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+}
+
+/* Heart image */
+.heart-image-2D {
+  width: 65px;
+  height: 65px;
+}
+
+/* Screw decoration */
+.screw-device-main-1D {
+  width: 25px;
+  height: 25px;
+  user-select: none;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transform: translate(-70%, -70%);
+}
+
+/* 
+====================
+  Letters - Fonts
+====================
+*/
+/* Nexia */
+.letter-main-nexia-1A {
+  width: 500px;
+  color: #333333;
+  font-size: 160px;
+  font-style: italic;
+  font-weight: 200;
+  font-family: "Oxygen1", system-ui, -apple-system, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Description nexia */
+.letter-main-basic-1A {
+  width: 400px;
+  color: #747474;
+  margin-top: -85px;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  text-align: justify;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Description App */
+.font-main-1B {
+  color: #ffffff;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  font-size: 18px;
+  text-align: center;
+}
+
+.font-main-2B {
+  color: #ffffff;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  font-size: 18px;
+  text-align: center;
+}
+
+/* Description Nexia */
+.font-main-1C {
+  color: #ffffff;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  font-size: 18px;
+  text-align: justify;
+  margin: 50px 70px;
+}
+
+/* Title device */
+.title-device-main-1D {
+  color: #ffffff;
+  font-family: "Doto3", system-ui, -apple-system, sans-serif;
+  font-size: 20px;
+  text-align: center;
+  user-select: none;
+  animation: title 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes title {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* Description Nexia end */
+.font-main-2D {
+  color: #ffffff;
+  font-family: "Oxygen1", system-ui, -apple-system, sans-serif;
+  opacity: 0.7;
+  font-size: 18px;
+  text-align: center;
+  font-weight: 800;
+  margin: 20px 350px;
+}
+
+/* Scroll spy */
+.font-dot-label {
+  opacity: 0.2;
+  color: #ffffff;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  font-size: 13px;
+  text-align: center;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  user-select: none;
+  text-shadow: 0 0 5px black;
+}
+
+/* 
+====================
+      Others
+====================
+*/
+/* Hr */
+.hr-divider-text-1A {
+  width: 420px;
+  height: 4px;
+  background-color: #333333;
+  border: none;
+  border-radius: 50px;
+  color: #333333;
+  position: relative;
+  top: -75px;
+}
+
+/* Scroll spy */
+.scroll-progress {
+  position: fixed;
+  top: 50%;
+  left: 35px;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+/* Spaces */
+.dots {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.dot-item {
+  display: flex;
+  align-items: center;
+}
+
+/* Icon */
+.dot {
+  width: 10px;
+  height: 10px;
+  background: #333;
+  border: solid 2px #ffffff;
+  box-shadow: 0 0 10px 3px #535353;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  transform: rotate(50deg);
+  position: absolute;
+  right: 85px;
+}
+
+.dot-item.active .dot {
+  background: #ffffff;
+  transform: rotate(140deg) scale(1.5);
+}
+
+.dot-item.active .font-dot-label {
+  color: #ffffff;
+  opacity: 1;
+  font-weight: 600;
+}
+
+/* 
+======================
+        Pages
+======================
+*/
+/* Phone */
+/* Import mixin */
+/* Importations */
+/* 
+====================
+     Container
+====================
+*/
+.container-main-phone {
+  background-color: #1a1a1a;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+}
+
+/* First box */
+.box-phone-a {
+  height: 100dvh;
+  display: flex;
+  position: relative;
+  grid-area: 1/1/2/2;
+}
+
+.box-title-phone {
+  width: 33dvw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Second box */
+.box-phone-b {
+  min-height: 100dvh;
+  grid-area: 2/1/3/2;
+}
+
+/* Third box */
+.box-phone-c {
+  grid-area: 3/1/4/2;
+  min-height: 100dvh;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 1fr;
+}
+
+/* Left column: title + description */
+.box-phone-C1 {
+  grid-area: 1/1/2/2;
+  width: 40dvw;
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-text-phone-C1 {
+  margin: 30px;
+}
+
+/* Right column: icons */
+.box-phone-C2 {
+  grid-area: 1/2/2/3;
+  min-width: 60dvw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-contain-image-phone-C2 {
+  margin: 25px;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contain-image-phone-C2 {
+  width: 100px;
+  height: 100px;
+  margin: 50px 25px;
+  background-color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 0 5px 3px #747474;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 
+====================
+      Images
+====================
+*/
+.rose-phone {
+  width: 100%;
+  height: 100%;
+  user-select: none;
+  object-fit: cover;
+}
+
+.image-phone-C2 {
+  width: 90%;
+  height: 90%;
+  user-select: none;
+  object-fit: cover;
+}
+
+/* 
+====================
+  Letters - Fonts
+====================
+*/
+/* Title rose */
+.title-phone {
+  color: #ffffff;
+  font-size: 120px;
+  font-style: italic;
+  font-weight: 200;
+  font-family: "Oxygen1", system-ui, -apple-system, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.content-text-phone-C1a {
+  color: #ffffff;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 200;
+  font-family: "Doto3", system-ui, -apple-system, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.content-text-phone-C1b {
+  color: #ffffff;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 200;
+  font-family: "Doto3", system-ui, -apple-system, sans-serif;
+  text-align: justify;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+/* Import mixin */
+/* Importations */
+/* 
+====================
+     Container
+====================
+*/
+.container-nexia-cellPhone {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 
+====================
+      CellPhone
+====================
+*/
+/* Center cellPhone edge */
+.container-cellPhone-border {
+  width: 300px;
+  height: 550px;
+  background: #000000;
+  border: solid 1px #000000;
+  border-radius: 35px;
+  box-shadow: 0 0 20px 5px #747474;
+  z-index: 1000;
+}
+
+/* Top cellPhone edge */
+.container-cellPhone-border-top {
+  width: 300px;
+  height: 15px;
+  background-color: rgba(167, 167, 167, 0.3843137255);
+  border: solid #535353;
+  border-radius: 50px;
+  box-shadow: 0 0 20px 1px #535353;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  position: relative;
+  top: -745px;
+}
+.container-cellPhone-border-top:hover {
+  transform: scale(1.05);
+}
+
+/* Bottom cellPhone edge */
+.container-cellPhone-border-bottom {
+  width: 300px;
+  height: 15px;
+  background-color: rgba(167, 167, 167, 0.3843137255);
+  border: solid #535353;
+  border-radius: 50px;
+  box-shadow: 0 0 20px 1px #535353;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  position: relative;
+  top: -125px;
+}
+.container-cellPhone-border-bottom:hover {
+  transform: scale(1.05);
+}
+
+/* Display */
+.display-cellPhone {
+  width: 100%;
+  height: 100%;
+  background: #212121;
+  border: solid #000000;
+  border-radius: 40px;
+  position: relative;
+  z-index: 10;
+}
+
+/* Screen */
+.screen-cellPhone {
+  width: 100%;
+  height: 100%;
+  background: #333333;
+  border: solid #000000;
+  border-radius: 35px;
+  position: relative;
+  z-index: 100;
+}
+
+/* Wallpaper */
+.screen-cellPhone-wallpaper {
+  width: 100%;
+  height: 100%;
+  border-radius: 35px;
+  transform-origin: center;
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+
+.screen-cellPhone-wallpaper.on {
+  transform: scaleX(1);
+}
+
+.screen-cellPhone-wallpaper.off {
+  transform: scaleX(0);
+}
+
+/* Bottom touchscreen for buttons */
+.screen-touch-cellPhone-buttons {
+  width: 100%;
+  height: 30px;
+  background-color: rgba(83, 83, 83, 0.1529411765);
+  border: solid 2px rgba(83, 83, 83, 0.0196078431);
+  border-radius: 0 0 50px 50px;
+  position: relative;
+  top: -30px;
+  z-index: 1000;
+  transition: all 100ms ease;
+  opacity: 0;
+  transform: translateY(15px);
+}
+.screen-touch-cellPhone-buttons:hover {
+  opacity: 1;
+  transform: translateY(-5px);
+}
+.screen-touch-cellPhone-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Signals from the buttons on the right of the image */
+.container-signal-image-more, .container-signal-image-less, .container-signal-image-power {
+  width: 25px;
+  height: 25px;
+  border-radius: 25px;
+}
+
+.container-signal-image-more {
+  position: relative;
+  top: -11px;
+  left: 110%;
+}
+
+.container-signal-image-less {
+  position: relative;
+  top: -11px;
+  left: 115%;
+}
+
+.container-signal-image-power {
+  position: relative;
+  top: -11px;
+  left: 130%;
+}
+
+/* 
+====================
+       Buttons
+====================
+*/
+/* Buttons border cellPhone: more, less, power */
+.button-cellPhone-more {
+  border-radius: 0 50px 0 0;
+  position: relative;
+  left: 298px;
+  top: -490px;
+}
+
+.button-cellPhone-less {
+  border-radius: 0 0 70px 0;
+  position: relative;
+  left: 298px;
+  top: -492px;
+}
+
+.Button-cellPhone-power {
+  border-radius: 0 50px 50px 0;
+  position: relative;
+  left: 298px;
+  top: -483px;
+}
+
+.button-cellPhone-more, .button-cellPhone-less, .Button-cellPhone-power {
+  width: 4px;
+  height: 40px;
+  background-color: #000000;
+  border: solid 1px;
+  transition: all 100ms ease-in;
+  cursor: pointer;
+  z-index: -1;
+}
+.button-cellPhone-more:active, .button-cellPhone-less:active, .Button-cellPhone-power:active {
+  left: 297px;
+}
+
+/* Bottom touchscreen with buttons */
+.button-screen-cellPhone {
+  width: 25%;
+  height: 110%;
+  cursor: pointer;
+  border: solid 0px rgba(167, 167, 167, 0.3843137255);
+  border-radius: 25px;
+  background-color: rgba(83, 83, 83, 0);
+  transition: all 25ms ease-in;
+  z-index: 10;
+}
+.button-screen-cellPhone:active {
+  border-radius: 25px;
+  background-color: rgba(83, 83, 83, 0.1568627451);
+}
+.button-screen-cellPhone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 
+====================
+       Images
+====================
+*/
+/* Camera */
+.camera-cellPhone {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  object-fit: cover;
+  user-select: none;
+  position: relative;
+  top: -530px;
+  left: 138.5px;
+  z-index: 100000;
+  filter: brightness(0.7);
+}
+
+/* Images bottom touch screen */
+.image-screen-touch-square {
+  width: 24px;
+  object-fit: cover;
+  user-select: none;
+}
+
+.image-screen-touch-circle {
+  width: 25px;
+  object-fit: cover;
+  user-select: none;
+}
+
+.image-screen-touch-triangle {
+  width: 20px;
+  object-fit: cover;
+  user-select: none;
+  transform: rotate(180deg);
+}
+
+/* Signals from the buttons on the right of the image */
+.image-signal {
+  width: 100%;
+  height: 100%;
+  user-select: none;
+  object-fit: cover;
+}
+
+/* Image music for the sound up/down */
+.image-bar-fill-music {
+  width: 15px;
+  height: 15px;
+  user-select: none;
+  object-fit: cover;
+  position: absolute;
+  top: 13px;
+  left: 13px;
+  transform: translateY(-50%) rotate(90deg);
+  opacity: 0.7;
+}
+
+/* Wallpaper */
+.image-wallpaper {
+  width: 100%;
+  height: 100%;
+  border-radius: 35px;
+  user-select: none;
+  object-fit: cover;
+  position: relative;
+  z-index: 100;
+  filter: blur(1px);
+}
+
+/* 
+====================
+        Other
+====================
+*/
+/* Lines */
+.signal-line-cellPhone-more, .signal-line-cellPhone-less, .signal-line-cellPhone-power {
+  height: 2px;
+  background-color: #ffffff;
+  border-radius: 50px;
+  box-shadow: 0 0 15px 1px #ffffff;
+}
+
+.signal-line-cellPhone-more {
+  width: 150px;
+  position: relative;
+  top: -625px;
+  left: 315px;
+}
+
+.signal-line-cellPhone-less {
+  width: 100px;
+  position: relative;
+  top: -585px;
+  left: 315px;
+}
+
+.signal-line-cellPhone-power {
+  width: 50px;
+  position: relative;
+  top: -540px;
+  left: 315px;
+}
+
+/* Circles */
+.signal-circle-cellPhone-left {
+  width: 7px;
+  height: 7px;
+  background-color: #ffffff;
+  border: solid #ffffff;
+  box-shadow: 0 0 15px 1px #ffffff;
+  position: absolute;
+  left: 0;
+  top: -2px;
+  border-radius: 50px;
+}
+
+.signal-circle-cellPhone-right {
+  width: 7px;
+  height: 7px;
+  background-color: #ffffff;
+  border: solid #ffffff;
+  box-shadow: 0 0 15px 1px #ffffff;
+  position: absolute;
+  left: 100%;
+  top: -2px;
+  border-radius: 50px;
+}
+
+/* Bar volume position */
+.container-volume {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  top: -490px;
+  left: 120px;
+  z-index: 100;
+  transform: rotate(270deg);
+  pointer-events: none;
+}
+
+/* Animation in of the phone */
+.container-volume.in {
+  animation: volume-in 0.25s ease forwards;
+}
+
+/* Animation out of the phone */
+.container-volume.out {
+  animation: volume-out 0.25s ease forwards;
+}
+
+/* Keyframse for the phone in/out */
+@keyframes volume-in {
+  from {
+    opacity: 0;
+    transform: rotate(270deg) translateY(15px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(270deg) translateY(0) scale(1);
+  }
+}
+@keyframes volume-out {
+  from {
+    opacity: 1;
+    transform: rotate(270deg) translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: rotate(270deg) translateY(15px) scale(0.95);
+  }
+}
+/* Bar volume back transparent */
+.volume-bar {
+  width: 150px;
+  height: 28px;
+  background: rgba(70, 70, 70, 0.4862745098);
+  border-radius: 5px;
+  position: relative;
+  left: 20px;
+}
+
+/* Fill volume front white */
+.volume-bar-fill {
+  height: 100%;
+  background: #ffffff;
+  border-radius: 5px;
+  transition: width 0.2s ease;
+}
+
+/*# sourceMappingURL=main.css.map */

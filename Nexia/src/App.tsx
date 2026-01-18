@@ -7,17 +7,17 @@ import { Routes, Route, useLocation } from "react-router-dom"
 
 
 /* Home page */
-import Home from "./Mobile/pages/Home/MainHome"
+import Home from "./Nexia/pages/Home/MainHome"
 
 /* Common page */
-import Header from "./Mobile/pages/Common/Header"
-import Footer from "./Mobile/pages/Common/Footer"
+import Header from "./Nexia/pages/Common/Header"
+import Footer from "./Nexia/pages/Common/Footer"
 
 /* Phone */
-import CellPhone from "./Mobile/pages/Phone/phoneHomeScreen"
+import DeviceRender from "./Nexia/pages/devices/devices"
 
 /* Components */
-import ReloadAnimation from "./Mobile/components/ReloadAnimation"
+import ReloadAnimation from "./Nexia/components/ReloadAnimation"
 
 
 
@@ -82,7 +82,7 @@ function App(): JSX.Element {
         <Route path="/" element={<Layout><Home /></Layout>} />
 
         {/* Devices */}
-        <Route path="/Phone" element={<Layout><CellPhone /></Layout>} />
+        <Route path="/Phone" element={<Layout><DeviceRender /></Layout>} />
       </Routes>
     </>
   )

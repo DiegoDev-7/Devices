@@ -1,16 +1,23 @@
 Nexia/
-├── Public/
-│   ├── index.html
+├── assets/             # Imágenes, íconos, fuentes
+├── styles/		          # Estilos css
 ├── src/
-│   ├── assets/         # Imágenes, íconos, fuentes
 │   ├── components/     # Componentes reutilizables (botones, cards, etc.)
 │   ├── services/       # Comunicacion con el backend (Fetch, axios, endpoints.)
 │   ├── hooks/          # Logica reutilizable con estado
-│   ├── pages/          # Páginas (Inicio, Productos, Carrito, Login, etc.)
-│   ├── styles/		      # Estilos css
+│   ├── pages/          # Páginas (Inicio, Login, error404 etc.)
 │   ├── utils/          # Funciones utilitarias (formateo, validaciones, etc.)
-│   ├── App.jsx
-│   └── main.jsx
+│   ├── App.tsx
+│   └── main.tsx
+├── PhoneSystem
+│   ├── Apps/           # Apps del telefono
+│   ├── Ui/             # Estados visuales sin funciones
+│   ├── core/           # cerebro del sistema
+│   ├── hardware/       # botones, sensores, fisico
+│   ├── hooks/          # estados reutilizables
+│   ├── screens/        # pantallas completas
+│   ├── styles/         # estilos propios del sistema
+│   └── PhoneSys.tsx    # ensamblador
 ├── .env
 ├── map.md
 └── README.md
