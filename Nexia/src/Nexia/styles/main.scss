@@ -5,25 +5,47 @@
 
 /* 
 ======================
-        Pages
+      Components
 ======================
 */
-/* components */
+// components
 @use "./components/ReloadAnimation";
-
-/* Common */
-@use "./pages/Common/Header";
-@use "./pages/Common/Footer";
-
-/* Main Home */
-@use "./pages/Home/MainHome";
-
 
 /* 
 ======================
         Pages
 ======================
 */
-/* Phone */
-@use "./pages/devices/devices";
+// Phone
+@use "./pages/device/device";
+
+// Common
+@use "./pages/Common/Header";
+@use "./pages/Common/Footer";
+
+// Home
+@use "./pages/Home/MainHome";
+
+
+
+/* 
+======================
+     Phone System
+======================
+*/
+
+// PhoneSystem
 @use "./PhoneSystem/PhoneSys";
+
+// Apps
+@use "./PhoneSystem/Apps/CaculatorApp";
+@use "./PhoneSystem/Apps/NotesApp.scss";
+
+// hardware
+@use "./PhoneSystem/hardware/hardware";
+
+// screens
+@use "./PhoneSystem/screens/screens";
+
+// ui
+@use "./PhoneSystem/ui/ui";

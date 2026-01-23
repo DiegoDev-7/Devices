@@ -105,7 +105,7 @@ const Home = () => {
             <div className="content-main-center-1A">
               <h1 className="letter-main-nexia-1A">NEXIA</h1>
               <hr className="hr-divider-text-1A" />
-              <p className="letter-main-basic-1A">Nexia es una plataforma que permite acceder a dispositivos moviles y computadores virtuales desde el navegador.</p>
+              <p className="letter-main-basic-1A">Nexia es una plataforma que permite acceder a dispositivos moviles y computadores virtuales desde el navegador totalmente gratis.</p>
             </div>
           </div>
 
