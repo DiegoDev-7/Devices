@@ -22,10 +22,7 @@ import comment from "../../../assets/Icons/comment_light.svg"
 
 
 /* Render */
-type Props = {
-  onBack: () => void
-}
-const SettingsApp = ({ onBack }: Props) => {
+const SettingsApp = () => {
   /* Container from icons */
   type Options = {
     id: number

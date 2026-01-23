@@ -4,10 +4,7 @@ import user from "../../../assets/Icons/user_light.svg"
 
 
 /* Render */
-type Props = {
-  onBack: () => void
-}
-const MessageApp = ({ onBack }: Props) => {
+const MessageApp = () => {
   return (
     <>
       <div className="Container-app-screen-message">

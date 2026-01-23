@@ -7,10 +7,7 @@ import trash from "../../../assets/Icons/trash_light.svg"
 
 
 /* Render */
-type Props = {
-  onBack: () => void
-}
-const NotesApp = ({ onBack }: Props) => {
+const NotesApp = () => {
   const [text, setText] = useState<string>("")
   const [note, setNote] = useState([{ id: 1, title: "Nota 1", description: "Sin descripción" }])
 

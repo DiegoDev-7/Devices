@@ -26,6 +26,7 @@ const VolumeIndicator: React.FC<Props> = ({ volume, setVolume, closing }) => {
 
   return (
     <div className={`container-volume ${closing ? "out" : "in"}`}>
+      
       <div className="volume-bar">
         <input
           className="volume-bar-fill"
@@ -42,6 +43,7 @@ const VolumeIndicator: React.FC<Props> = ({ volume, setVolume, closing }) => {
           alt="music"
         />
       </div>
+      
     </div>
   )
 }

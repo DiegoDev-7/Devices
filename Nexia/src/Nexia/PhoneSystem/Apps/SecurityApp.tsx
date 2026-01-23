@@ -11,7 +11,6 @@ import cleaner from "../../../assets/Icons/cleaner_dark.svg"
 
 /* Render */
 const SecurityApp = () => {
-  /*  */
   let [randomNumber, setRandomNumber] = useState<number>(0)
   let [randomGb, setRandomGb] = useState<number>(0)
   const [activateBttn, setActivateBttn] = useState<boolean>(true)
@@ -19,7 +18,7 @@ const SecurityApp = () => {
   let textSize: any = randomGb >= 1000 ? `${(randomGb / 1000).toFixed(1)} GB` : `${randomGb} MB`
   
 
-  /*  */
+  /* Random numbers */
   useEffect(() => {
     const idn = setTimeout(() => {
       setRandomNumber(Math.floor(Math.random() * (60 - 40 + 1)) + 40)
@@ -29,7 +28,7 @@ const SecurityApp = () => {
     return () => clearTimeout(idn)
   }, [])
 
-  /*  */
+  /* Button for clean the interfaz */
   const activateButtonClean = () => {
     let value = randomNumber
     let gb = randomGb
@@ -49,7 +48,7 @@ const SecurityApp = () => {
     }, 1)
   }
 
-  /*  */
+  /* Activate screen hidden */
   useEffect(() => {
     if (randomNumber >= 100 && randomGb <= 0) {
       setActivateBttn(false)
@@ -116,7 +115,8 @@ const SecurityApp = () => {
           </div>
         </div>
 
-        {/*  */}
+
+        {/* Contain for the icons */}
         <div className="box-app-screen-security-b">
           {securityItems.map(v => (
             <div key={v.id} className="contain-app-screen-security">
@@ -132,7 +132,8 @@ const SecurityApp = () => {
           ))}
         </div>
 
-        {/*  */}
+
+        {/* Screen clean interfaz */}
         {activateScreen && (
           <div className="invisible-security-complete">
             <div className={`container-screen-security-complete ${activateScreen ? "on" : ""}`}>

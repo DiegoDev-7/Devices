@@ -6,7 +6,6 @@ import triangle from "../../../assets/Icons/triangleArrow_light.svg"
 
 
 /* Virtual buttons */
-
 type Props = {
   onBack: () => void
   onHome: () => void

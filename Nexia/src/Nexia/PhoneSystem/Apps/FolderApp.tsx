@@ -4,10 +4,7 @@ import folder from "../../../assets/Apps/folder.svg"
 
 
 /* Render */
-type Props = {
-  onBack: () => void
-}
-const FolderApp = ({ onBack }: Props) => {
+const FolderApp = () => {
   const dates: Date = new Date()
 
   type Files = {

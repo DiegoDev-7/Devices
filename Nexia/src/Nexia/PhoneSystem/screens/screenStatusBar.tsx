@@ -2,15 +2,16 @@
 import { type JSX, useEffect, useRef, useState } from "react"
 
 /* Images */
-import batteryLowLight from "../../../assets/Icons/batterylow_light.svg"
+import forward from "../../../assets/Icons/forward_dark.svg"
 import batteryFullLight from "../../../assets/Icons/batteryfull_light.svg"
+import wifiLight from "../../../assets/Icons/Wifi_light.svg"
+import networklight from "../../../assets/Icons/Network_light.svg"
+
+/* import batteryLowLight from "../../../assets/Icons/batterylow_light.svg"
 import batteryLowDark from "../../../assets/Icons/batterylow_dark.svg"
 import batteryFullDark from "../../../assets/Icons/batteryfull_dark.svg"
-import wifiLight from "../../../assets/Icons/Wifi_light.svg"
 import wifiDark from "../../../assets/Icons/Wifi_dark.svg"
-import networklight from "../../../assets/Icons/Network_light.svg"
-import networkDark from "../../../assets/Icons/Network_dark.svg"
-import forward from "../../../assets/Icons/forward_dark.svg"
+import networkDark from "../../../assets/Icons/Network_dark.svg" */
 
 import moon from "../../../assets/Icons/moon_dark.svg"
 import plane from "../../../assets/Icons/plane_dark.svg"

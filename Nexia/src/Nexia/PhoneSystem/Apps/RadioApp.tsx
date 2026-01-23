@@ -10,9 +10,9 @@ import eeuu from "../../../assets/Icons/United_States.jpg"
 import japan from "../../../assets/Icons/Japan.jpg"
 
 /* Api Radio */
-import { radioColombia } from "../../services/external/radio/radio.colombia"
+/* import { radioColombia } from "../../services/external/radio/radio.colombia"
 import { radioEEUU } from "../../services/external/radio/radio.eeuu"
-import { radioJapanese } from "../../services/external/radio/radio.japanese"
+import { radioJapanese } from "../../services/external/radio/radio.japanese" */
 
 /* ui */
 import Vinyl from "../ui/Vinyl"

@@ -88,11 +88,11 @@ const Apps = () => {
     string,
     (onBack: () => void) => JSX.Element
   > = {
-    settings: onBack => <SettingsApp onBack={onBack} />,
-    folder: onBack => <FolderApp onBack={onBack} />,
-    contact: onBack => <ContactApp onBack={onBack} />,
-    message: onBack => <MessageApp onBack={onBack} />,
-    notes: onBack => <NotesApp onBack={onBack} />,
+    settings: () => <SettingsApp />,
+    folder: () => <FolderApp />,
+    contact: () => <ContactApp />,
+    message: () => <MessageApp />,
+    notes: () => <NotesApp />,
     calculator: () => <CalculatorApp />,
     radio: () => <RadioApp />,
     sim: () => <SimApp />,
