@@ -1,0 +1,114 @@
+/* Importations */
+@use "../../mixin";
+@use "../../variables" as v;
+
+
+
+/* 
+====================
+    screenUnlock
+====================
+*/
+  /* container */
+.container-cellPhone-lock {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  z-index: 100;
+
+  @include mixin.flex-center(flex, center, center);
+}
+  /* Sliding bottom unlock screen */
+.container-screen-sliding-unlock {
+  position: relative;
+  overflow: hidden;
+  top: 100px;
+}
+.box-screen-unlock {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  cursor: "grab";
+  
+  @include mixin.flex-center(flex, center, center)
+}
+
+/* TEXT */
+  /* Text hour */
+.text-hour-cellPhone-wallpaper {
+  color: v.$color-w1;
+  font-family: v.$font-mainO2;
+  font-size: 4rem;
+  user-select: none;
+  text-shadow: 0 0 5px 15px v.$color-w1;
+  position: absolute;
+  top: 60px;
+
+  @include mixin.flex-center(flex, center, center);
+}
+  /* Text date */
+.text-date-cellPhone-wallpaper {
+  color: v.$color-w1;
+  font-family: v.$font-mainO2;
+  font-size: 1rem;
+  font-weight: 600;
+  user-select: none;
+  text-shadow: 0 0 5px 15px v.$color-w1;
+  position: absolute;
+  top: 140px;
+
+  @include mixin.flex-center(flex, center, center);
+}
+  /* Text Bottom Slider Arrow */
+.text-screen-sliding-arrow {
+  width: 150px;
+  color: v.$color-w1;
+  font-family: v.$font-mainO3;
+  font-size: 1em;
+  font-weight: 600;
+  text-align: center;
+  user-select: none;
+  position: relative;
+  top: 20px;
+}
+
+/* IMAGES */
+  /* Image arrow Firts */
+.image-screen-sliding-arrow-A {
+  width: 40px;
+  height: 40px;
+  transform: rotate(270deg);
+  position: absolute;
+  top: 0px;
+  user-select: none;
+  object-fit: cover;
+
+  animation: arrowO 1.5s ease infinite alternate;
+
+  @include mixin.drag();
+}
+  /* Image arrow Second */
+.image-screen-sliding-arrow-B {
+  width: 40px;
+  height: 40px;
+  transform: rotate(270deg);
+  position: absolute;
+  top: 10px;
+  user-select: none;
+  object-fit: cover;
+
+  animation: arrowO 1.5s ease infinite alternate;
+
+  @include mixin.drag();
+}
+  /* Animated blinking arrow */
+@keyframes arrowO {
+  to {
+    opacity: 0;
+  }
+  from {
+    opacity: 1;
+  }
+}

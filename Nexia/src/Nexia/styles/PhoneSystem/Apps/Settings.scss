@@ -1,0 +1,215 @@
+/* Importations */
+@use "../../mixin";
+@use "../../variables" as v;
+
+
+
+/* 
+=====================
+      Container
+=====================
+*/
+.Container-app-screen-settings {
+  width: 100%;
+  height: 100%;
+}
+
+
+/* Input */
+  /* Container Input */
+.container-app-input-settings {
+  margin: 15px 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  input {
+    color: v.$color-w1;
+    font-size: 1.1rem;
+    font-family: v.$font-mainO2;
+    border: none;
+    outline: none;
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+
+    &::placeholder {
+      color: v.$color-w1;
+    }
+
+    &::-webkit-input-placeholder {
+      color: v.$color-w1;
+    }
+
+    &::-moz-placeholder {
+      color: v.$color-w1;
+    }
+  }
+}
+.input-app-settings {
+  width: 95%;
+  height: 50px;
+  background: v.$color-g5;
+  border: solid 3px v.$color-g5;
+  border-radius: 25px;
+  padding-left: 32px;
+}
+
+
+  /* Option boxes */
+.box-app-screen-settings {
+  width: 100%;
+  height: 70%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.contain-app-settings-options {
+  width: 100%;
+  height: 50px;
+  margin: 10px 0 10px 5px;
+  display: flex;
+  cursor: pointer;
+
+  &:hover {
+    background: v.$color-g4;
+  }
+}
+
+
+  /* Icon */
+.box-image-settings-options {
+  width: 18%;
+  height: 100%;
+
+  @include mixin.flex-center(flex, center, center);
+}
+.contain-image-settings-options {
+  width: 35px;
+  height: 35px;
+  border-radius: 10px;
+
+  &.settings-phone {
+    background: #00b5bb;
+    border: solid 5px #00b5bb;
+  }
+  &.settings-arrow {
+    background: #eeb005;
+    border: solid 7px #eeb005;
+    transform: rotate(270deg);
+  }
+  &.settings-secure {
+    background: #00ca11;
+    border: solid 5px #00ca11;
+  }
+  &.settings-sim {
+    background: #e6e200;
+    border: solid 5px #e6e200;
+  }
+  &.settings-wifi {
+    background: #008dc5;
+    border: solid 7px #008dc5;
+  }
+  &.settings-bluetooth {
+    background: #008dc5;
+    border: solid 5px #008dc5;
+  }
+  &.settings-sun {
+    background: #dad601da;
+    border: solid 5px #dad601da;
+  }
+  &.settings-rose {
+    background: #e072bf;
+    border: solid 5px #e072bf;
+  }
+  &.settings-bookmark {
+    background: #46ced3;
+    border: solid 5px #46ced3;
+  }
+  &.settings-lock {
+    background: v.$color-g3;
+    border: solid 5px v.$color-g3;
+  }
+  &.settings-View {
+    background: #3a859c;
+    border: solid 3px #3a859c;
+  }
+  &.settings-user {
+    background: #1aadb3;
+    border: solid 5px #1aadb3;
+  }
+  &.settings-comments {
+    background: #ff6702;
+    border: solid 7px #ff6702;
+  }
+}
+
+  /* Icon Forward */
+.box-image-forward-settings-options {
+  width: 15%;
+  height: 100%;
+
+  @include mixin.flex-center(flex, center, center);
+}
+.contain-image-forward-settings {
+  width: 20px;
+  height: 20px;
+}
+
+
+/* Text */
+.box-text-settings-options {
+  width: 85%;
+  height: 100%;
+  margin-left: 10px; 
+
+  @include mixin.flex-center(flex, flex-start, center);
+}
+.title-app-settings {
+  width: 90%;
+  height: 60px;
+  font-size: 1.5rem;
+  margin-left: 10px;
+  font-family: v.$font-mainO3;
+
+  @include mixin.flex-center(flex, flex-start, flex-end);
+}
+
+
+/* Images */
+.search-input-icon-settings {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 14px;
+  pointer-events: none;
+}
+.image-forward-settings {
+  width: 100%;
+  height: 100%;
+  user-select: none;
+  opacity: 0.7;
+
+  @include mixin.drag();
+}
+.image-settings-options {
+  width: 100%;
+  height: 100%;
+  user-select: none;
+
+  @include mixin.drag();
+}
+
+
+/* Others */
+.hr-settings-options {
+  width: 95%;
+  height: 2px;
+  background: v.$color-g1;
+  border: none;
+  border-radius: 25px;
+  position: relative;
+  left: 5px;
+}

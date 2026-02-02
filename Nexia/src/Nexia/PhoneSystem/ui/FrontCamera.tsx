@@ -1,5 +1,5 @@
 /* Icons */
-import camera from "../../../../assets/Icons/Camera.svg"
+import camera from "../../../assets/Icons/Camera.svg"
 
 
 

@@ -6,7 +6,6 @@ import BorderButtons from "./BorderButtons"
 import VolumeIndicator from "./volumeIndicator"
 import ScreenStatusBar from "../screens/screenStatusBar"
 
-
 /* Screens */
 import ScreenUnlock from "../screens/screenUnlock"
 
@@ -39,7 +38,6 @@ const ScreenApps = ({
         {power && (
           <>
             <ScreenStatusBar />
-
 
             {showVolume && (
               <VolumeIndicator

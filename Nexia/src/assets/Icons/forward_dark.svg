@@ -7,8 +7,8 @@
    width="66.666664"
    height="66.666664"
    viewBox="0 0 66.666664 66.666664"
-   sodipodi:docname="forward_dark.svg.svg"
-   inkscape:version="1.4.2 (2aeb623e1d, 2025-05-12)"
+   sodipodi:docname="forward_dark.svg"
+   inkscape:version="1.4.3 (fcd0343856, 2026-01-01)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -24,38 +24,25 @@
      inkscape:pageopacity="0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="4"
-     inkscape:cx="47.125"
-     inkscape:cy="28.625"
-     inkscape:window-width="1920"
-     inkscape:window-height="1011"
+     inkscape:zoom="5.6568542"
+     inkscape:cx="30.49398"
+     inkscape:cy="30.317203"
+     inkscape:window-width="1280"
+     inkscape:window-height="731"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g1" />
+     inkscape:current-layer="g1"
+     showguides="true" />
   <g
      inkscape:groupmode="layer"
      inkscape:label="Image"
      id="g1">
-    <rect
-       style="fill:#000000;stroke-width:0.553497"
-       id="rect13"
-       width="3.5485365"
-       height="37.4972"
-       x="9.527523"
-       y="20.583302"
-       transform="matrix(0.71039772,-0.70380046,0.71202886,0.7021502,0,0)"
-       inkscape:transform-center-x="-0.5832676"
-       inkscape:transform-center-y="-0.26203428" />
-    <rect
-       style="fill:#000000;stroke-width:0.553612"
+    <path
        id="rect13-3"
-       width="3.5499618"
-       height="37.497681"
-       x="54.553951"
-       y="-12.16008"
-       transform="matrix(0.72350492,0.69031922,-0.71244875,0.70172415,0,0)"
-       inkscape:transform-center-x="-0.27163939"
-       inkscape:transform-center-y="0.56915161" />
+       style="fill:#000000;stroke-width:0.581421"
+       inkscape:transform-center-x="-0.27307561"
+       inkscape:transform-center-y="0.62476208"
+       d="M 22.847656 2.8339844 L 20.037109 5.6289062 L 20.097656 5.6894531 L 19.197266 6.6269531 L 43.580078 32.847656 L 19.210938 59.054688 L 20.123047 60.005859 L 20.050781 60.080078 L 22.863281 62.875 L 52.083984 32.875 L 52.056641 32.847656 L 52.070312 32.833984 L 22.847656 2.8339844 z " />
   </g>
 </svg>

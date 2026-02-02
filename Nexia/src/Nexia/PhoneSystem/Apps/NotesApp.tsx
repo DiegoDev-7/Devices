@@ -10,8 +10,8 @@ import trash from "../../../assets/Icons/trash_light.svg"
 type Props = {
   onBack: () => void
 }
-const Notes = ({ onBack }: Props) => {
-  const [text, setText] = useState("")
+const NotesApp = ({ onBack }: Props) => {
+  const [text, setText] = useState<string>("")
   const [note, setNote] = useState([{ id: 1, title: "Nota 1", description: "Sin descripción" }])
 
 
@@ -55,9 +55,10 @@ const Notes = ({ onBack }: Props) => {
         </div>
 
         <button className="button-screen-notes" onClick={AddNote}>+</button>
+        
       </div>
     </>
   )
 }
 
-export default Notes
+export default NotesApp

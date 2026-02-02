@@ -1,0 +1,290 @@
+/* Importations */
+@use "../../mixin";
+@use "../../variables" as v;
+
+
+
+/* 
+====================
+  screenStatusBar
+====================
+*/
+/* CONTAINERS */
+  /* Screen status bar slide */
+.container-sliding-status-bar {
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  left: 0;
+  z-index: 1000;
+}
+.box-status-settings {
+  width: 100%;
+  border-radius: 35px;
+  background: v.$color-g5;
+  color: v.$color-w1;
+  user-select: none;
+  position: relative;
+  z-index: 1000;
+  
+  @include mixin.flex-center(flex, center, center);
+}
+
+  /* Container for the status bar slipped */
+.container-status-bar-Apps {
+  width: 95%;
+  height: 95%;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+.box-status-wifi {
+  width: 95%;
+  height: 75%;
+  background: v.$color-g5;
+  border: solid 2px v.$color-g5;
+  border-radius: 20px;
+  display: flex;
+  flex-wrap: wrap;
+
+  position: relative;
+  top: 10%;
+  left: 2%;
+  cursor: pointer;
+
+  transition: all .1s ease;
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  p {
+    margin-left: 5px;
+    color: v.$color-w1;
+    font-size: 1.1rem;
+    font-family: v.$font-mainO2;
+    opacity: .8;
+  }
+  .description {
+    margin-left: 5px;
+    color: v.$color-w1;
+    font-size: .9rem;
+    font-family: v.$font-mainO2;
+    opacity: .8;
+  }
+
+  @include mixin.flex-center(flex, center, center);
+}
+.box-status-wifi.on {
+  border: solid #006cb4;
+  background: #006cb4;
+}
+.box-image-status-wifi {
+  width: 30px;
+  height: 30px;
+}
+
+  /* The status bar of mini icons slipped */
+.box-status-bar-buttons {
+  width: 95%;
+  height: 50%;
+  flex-wrap: wrap;
+
+  @include mixin.flex-center(flex, center, center);
+}
+.button-status-bar {
+  width: 50px;
+  height: 50px;
+  background: v.$color-g4;
+  border: solid v.$color-g4;
+  border-radius: 50px;
+  margin: 7px;
+  cursor: pointer;
+
+  transition: all .05s ease-in;
+
+  &:active {
+    transform: scale(0.95);
+    border: solid v.$color-g5;
+    background-color: v.$color-g5;
+  }
+
+  @include mixin.flex-center(flex, center, center);
+}
+.button-status-bar.on {
+  background: v.$color-g2;
+  border: solid v.$color-g1;
+}
+
+  /* Container Status bar */
+.container-status-bar {
+  width: 90%;
+  height: 20px;
+  position: absolute;
+  top: 2px;
+  left: 15px;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 1fr;
+
+  z-index: 101;
+
+  @include mixin.flex-center(flex, center, center);
+}
+  /* Left status bar */
+.box-stats-barA {
+  grid-area: 1 / 1 / 2 / 2;
+  width: 100%;
+  height: 25px;
+  position: relative;
+  
+  @include mixin.flex-center(flex, flex-start, center);
+}
+  /* Right status bar */
+.box-stats-barB {
+  grid-area: 1 / 2 / 2 / 3;
+  width: 100%;
+  height: 25px;
+  
+  @include mixin.flex-center(flex, flex-end, center);
+}
+.container-image-network {
+  width: 23px;
+  height: 90%;
+
+  @include mixin.flex-center(flex, center, center);
+  @include mixin.drag();
+}
+
+/* TEXT */
+  /* Text status bar hour */
+.text-hour-status-bar {
+  color: v.$color-w1;
+  font-family: v.$font-mainO1;
+  font-size: .8em;
+  font-weight: 600;
+  position: relative;
+  top: 2px;
+  left: 3px;
+  user-select: none;
+}
+  /* Text status bar network */
+.text-download-network {
+  color: v.$color-w1;
+  font-family: v.$font-mainO1;
+  font-size: .8em;
+  position: relative;
+  top: 2px;
+  left: 3px;
+  user-select: none;
+}
+
+/* IMAGES */
+  /* Network */
+.image-network {
+  width: 60%;
+  height: 60%;
+  object-fit: cover;
+  user-select: none;
+
+  @include mixin.drag();
+}
+  /* Wifi */
+.image-wifi {
+  width: 63%;
+  height: 63%;
+  object-fit: cover;
+  user-select: none;
+
+  @include mixin.drag();
+}
+  /* Wifi Light */
+.image-status-wifi {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  user-select: none;
+
+  @include mixin.drag();
+}
+  /* Batery */
+.image-battery {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+  user-select: none;
+
+  @include mixin.drag();
+}
+  /* Icons for the status bar slipped */
+.image-status-bar {
+  width: 60%;
+  height: 60%;
+  object-fit: cover;
+  user-select: none;
+
+  @include mixin.drag();
+}
+  /* Forwards */
+.image-guie-status-bar-a {
+  width: 30px;
+  position: absolute;
+  top: -50px;
+  left: 43.3%;
+  transform: rotate(270deg);
+
+  object-fit: cover;
+  user-select: none;
+
+  animation: forwardStatusBar 1.5s infinite alternate;
+
+  @include mixin.drag();
+}
+.image-guie-status-bar-b {
+  width: 30px;
+  position: absolute;
+  top: -40px;
+  left: 43.3%;
+  transform: rotate(270deg);
+
+  object-fit: cover;
+  user-select: none;
+
+  animation: forwardStatusBar 1.5s infinite alternate;
+
+  @include mixin.drag();
+}
+  /* Animation for forwards and the divider gude */
+@keyframes forwardStatusBar {
+  to {
+    opacity: 0;
+  }
+  from {
+    opacity: 1;
+  }
+}
+
+/* OTHERS */
+  /* Divider text */
+.divider-status-bar {
+  width: 2px;
+  height: 70%;
+  margin: 0 5px;
+  background-color: v.$color-w1;
+  position: relative;
+  top: 1px;
+  left: 3px;
+  user-select: none;
+}
+
+  /* Divider status bar slipped */
+.divider-guide-status-bar {
+  width: 90%;
+  position: absolute;
+  top: 95%;
+  border: solid 2px v.$color-g1;
+  border-radius: 50px;
+
+  animation: forwardStatusBar 1.5s infinite alternate;
+}

@@ -1,10 +1,10 @@
 /* Ui components */
-import Signals from "../PhoneSystem/ui/Signals/Signals"
-import FrontCamera from "../PhoneSystem/ui/Camera/FrontCamera"
-import CellPhoneEdge from "./ui/CellPhoneEdge/CellPhoneEdge"
+import Signals from "../PhoneSystem/ui/Signals"
+import FrontCamera from "../PhoneSystem/ui/FrontCamera"
+import CellPhoneEdge from "./ui/CellPhoneEdge"
 
 /* Hardware */
-import ScreenApps, { ButtonsVolumePower } from "./hardware/ScreenApps"
+import ScreenApps, { ButtonsVolumePower } from "./hardware/contentPhone"
 
 /* Hooks */
 import { usePower } from "../PhoneSystem/hooks/usePower"

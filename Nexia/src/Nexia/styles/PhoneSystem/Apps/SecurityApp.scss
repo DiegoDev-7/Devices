@@ -1,0 +1,226 @@
+/* Importations */
+@use "../../mixin";
+@use "../../variables" as v;
+
+
+
+/* 
+=====================
+      Container
+=====================
+*/
+.Container-app-screen-security {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+  /* First box with cicle and button */
+.box-app-screen-security-a {
+  width: 100%;
+
+  @include mixin.flex-center(flex, center, center);
+}
+  /* Big circle */
+.cicle-app-screen-security {
+  width: 175px;
+  height: 175px;
+  background: transparent;
+  border: solid 2px v.$color-w1;
+  border-radius: 50%;
+  box-shadow: 0 0 20px 10px #006c70ab;
+  opacity: .97;
+
+  @include mixin.flex-center(flex, center, center);
+}
+.circle-text-app-screen-security {
+  color: v.$color-b1;
+  font-size: 2.5rem;
+  font-family: v.$font-mainO2;
+  user-select: none;
+}
+
+  /* Second box with more boxes and text */
+.box-app-screen-security-b {
+  width: 100%;
+  flex-wrap: wrap;
+
+  @include mixin.flex-center(flex, center, center);
+}
+.contain-app-screen-security {
+  width: 40%;
+  height: 35%;
+  margin: 10px;
+  background: #006c70ab;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all .1s ease;
+
+  &:hover {
+    background: #00757998;
+  }
+  &:active {
+    transform: scale(.95);
+  }
+}
+
+  /* Container for when the percentage is complete */
+.invisible-security-complete {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.container-screen-security-complete {
+  width: 250px;
+  height: 250px;
+  background: v.$color-w1;
+  border: solid 2px #005c5fce;
+  border-radius: 50%;
+  position: absolute;
+  top: 28%;
+  left: 6%;
+  transform: traslateY(-50%, -50%);
+
+  h2 {
+    font-family: v.$font-mainO2;
+    font-size: 1.9rem;
+    text-align: center;
+    color: v.$color-b1;
+    position: absolute;
+    top: 25%;
+    left: 18%;
+    user-select: none;
+  }
+  p {
+    font-family: v.$font-mainO2;
+    font-size: 1.5rem;
+    text-align: center;
+    color: v.$color-b1;
+    position: absolute;
+    top: 70%;
+    left: 40%;
+    user-select: none;
+  }
+}
+.container-screen-security-complete.on {
+  animation: securityComplete 0.6s ease forwards;
+}
+  /* activate animation when complete the percent */
+@keyframes securityComplete {
+  from {
+    opacity: 0;
+    transform: translate(-0%, 50%);
+    box-shadow: 0 0 15px 5px ;
+  }
+  to {
+    opacity: 1;
+    transform: translate(-0%, 0px);
+  }
+}
+
+
+
+/* Images */
+.box-security-trash {
+  width: 100%;
+  height: 60%;
+
+  @include mixin.flex-center(flex, flex-start, center);
+}
+.image-security-trash {
+  width: 25%;
+  height: 55%;
+  background: orange;
+  border: solid orange;
+  border-radius: 25px;
+  margin-left: 5px;
+  user-select: none;
+
+  @include mixin.drag();
+}
+.image-security-batery {
+  width: 25%;
+  height: 55%;
+  background: greenyellow;
+  border: solid greenyellow;
+  border-radius: 25px;
+  margin-left: 5px;
+  user-select: none;
+
+  @include mixin.drag();
+}
+.image-security-scaner {
+  width: 25%;
+  height: 55%;
+  background: v.$color-w1;
+  border: solid v.$color-w1;
+  border-radius: 25px;
+  margin-left: 5px;
+  user-select: none;
+
+  @include mixin.drag();
+}
+.image-security-cleaner {
+  width: 25%;
+  height: 55%;
+  background: lightblue;
+  border: solid lightblue;
+  border-radius: 25px;
+  margin-left: 5px;
+  user-select: none;
+
+  @include mixin.drag();
+}
+
+
+/* Text */
+.box-security-trash-text {
+  width: 100%;
+  height: 50%;
+  position: relative;
+  top: -12px;
+}
+.text-tilte-security {
+  width: 90%;
+  color: v.$color-w1;
+  font-size: .9rem;
+  font-family: v.$font-mainO2;
+  margin-left: 5px;
+}
+.text-content-security {
+  width: 90%;
+  color: v.$color-w1;
+  font-size: .7rem;
+  font-family: v.$font-mainO2;
+  margin-left: 5px;
+  text-align: justify;
+}
+
+
+/* Buttons */
+.circle-button-app-screen-security {
+  width: 100px;
+  height: 50px;
+  border: none;
+  border-radius: 25px;
+  background: #006c70ab;
+  color: v.$color-w1;
+  font-family: v.$font-mainO1;
+  font-size: 1.3rem;
+  position: absolute;
+  top: 43%;
+  cursor: pointer;
+  transition: all .2s ease;
+
+  &:hover {
+    opacity: .96;
+  }
+  &:active {
+    transform: scale(.95);
+  }
+}

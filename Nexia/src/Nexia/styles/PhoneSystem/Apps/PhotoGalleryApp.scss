@@ -1,0 +1,81 @@
+/* Importations */
+@use "../../mixin";
+@use "../../variables" as v;
+
+
+
+/* 
+=====================
+      Container
+=====================
+*/
+.Container-app-screen-photogallery {
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+  /* Title from gallery */
+.box-app-screen-photogallery-a {
+  width: 100%;
+  height: 60%;
+
+  p {
+    font-size: 1.2rem;
+    font-family: v.$font-mainO2;
+  }
+
+  @include mixin.flex-center(flex, center, flex-end);
+}
+
+  /* Flex bottom from pictures */
+.box-app-screen-photogallery-b {
+  width: 100%;
+  height: 110%;
+  position: relative;
+  top: -40px;
+}
+  /* Text */
+.contain-title-date-photogallery {
+  width: 100%;
+  height: 30px;
+
+  p {
+    color: v.$color-b1;
+    font-size: 1.1rem;
+    font-family: v.$font-mainO2;
+    margin-left: 15px;
+  }
+
+  @include mixin.flex-center(flex, flex-start, center);
+}
+.contain-photos-photogallery {
+  width: 98%;
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: auto;
+}
+
+  /* Images */
+.box-image-photogallery {
+  width: 100px;
+  height: 100px;
+  margin: 15px;
+  border: solid 1px;
+  border-radius: 3px;
+  cursor: pointer;
+
+  @include mixin.flex-center(flex, flex-start, center);
+}
+.image-photogallery {
+  width: 100%;
+  height: 100%;
+  display: block;
+  user-select: none;
+  object-fit: cover;
+
+  @include mixin.drag();
+}

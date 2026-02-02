@@ -1,6 +1,11 @@
-import Bmore from "../../../../assets/Icons/more_light.svg"
-import Bless from "../../../../assets/Icons/less_light.svg"
-import Bpower from "../../../../assets/Icons/power_light.svg"
+/* Images */
+import Bmore from "../../../assets/Icons/more_light.svg"
+import Bless from "../../../assets/Icons/less_light.svg"
+import Bpower from "../../../assets/Icons/power_light.svg"
+
+
+
+/* Render */
 type Props = {
   onIncrease: () => void
   onDecrease: () => void

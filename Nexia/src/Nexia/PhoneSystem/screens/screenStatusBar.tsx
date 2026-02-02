@@ -1,5 +1,5 @@
 /* Hooks */
-import { useEffect, useRef, useState } from "react"
+import { type JSX, useEffect, useRef, useState } from "react"
 
 /* Images */
 import batteryLowLight from "../../../assets/Icons/batterylow_light.svg"
@@ -11,6 +11,16 @@ import wifiDark from "../../../assets/Icons/Wifi_dark.svg"
 import networklight from "../../../assets/Icons/Network_light.svg"
 import networkDark from "../../../assets/Icons/Network_dark.svg"
 import forward from "../../../assets/Icons/forward_dark.svg"
+
+import moon from "../../../assets/Icons/moon_dark.svg"
+import plane from "../../../assets/Icons/plane_dark.svg"
+import wifi from "../../../assets/Icons/Wifi_dark.svg"
+import flashlight from "../../../assets/Icons/flashlight_dark.svg"
+import bluetooth from "../../../assets/Icons/bluetooth_dark.svg"
+import lock from "../../../assets/Icons/lock_dark.svg"
+import eye from "../../../assets/Icons/eye.svg"
+import batterySaving from "../../../assets/Icons/batterySaving.svg"
+import mobileData from "../../../assets/Icons/mobileData_light.svg"
 
 
 
@@ -56,6 +66,8 @@ const StatusBarIcons = () => {
     { id: "battery", containerImage: "container-image-network", classImage: "image-battery", src: batteryFullLight, alt: "Bateria" },
   ]
 
+
+  
   return (
     <>  
       <div className="container-status-bar">
@@ -163,80 +175,76 @@ const StatusBarSliding = () => {
 }
 
 const StatusBarApps = () => {
+  /* Active and desactive class */
+  const [activeId, setActiveId] = useState<number[]>([])
+  const [activeWifi, setActiveWifi] = useState<boolean>(true)
+  const [activeData, setActiveData] = useState<boolean>(false)
+
+  /* Container from buttons */
+  type ButtonsOptions = {
+    id: number
+    src: string
+    alt: string
+  } 
+  const ButtonsOptions = [
+    { id: 1, src: bluetooth, alt: "icon Bluetooth" },
+    { id: 2, src: wifi, alt: "icon Wifi" },
+    { id: 3, src: moon, alt: "icon Luna" },
+    { id: 4, src: flashlight, alt: "icon Linterna" },
+    { id: 5, src: plane, alt: "icon Avión" },
+    { id: 6, src: eye, alt: "icon ojo" },
+    { id: 7, src: batterySaving, alt: "icon ahorro de bateria" },
+    { id: 8, src: lock, alt: "icon candado" },
+  ]
+
+
+
   return (
     <>
       <div className="container-status-bar-Apps">
-        <div className="box-status-wifi">
-          <p>ola1</p>
-          <p>ola1</p>
-        </div>
-        <div className="box-status-wifi">
-          ola
-        </div>
+        <button className={`box-status-wifi ${activeWifi ? "on" : ""}`} onClick={() => setActiveWifi(prev => !prev)}>
+          <div className="box-image-status-wifi">
+            <img className="image-status-wifi" src={wifiLight} alt="Icon wifi" />
+          </div>
+          <p>Wifi</p>
+          <p className="description">{activeWifi ? "Conectado" : "Desactivado"}</p>
+        </button>
         
-        <div className="box-status-bar-buttons">
-          <button className="button-status-bar">
-            <img className="image-status-bar" src="" alt="" />
-          </button>
-          <button className="button-status-bar">
-            <img className="image-status-bar" src="" alt="" />
-          </button>
-          <button className="button-status-bar">
-            <img className="image-status-bar" src="" alt="" />
-          </button>
-          <button className="button-status-bar">
-            <img className="image-status-bar" src="" alt="" />
-          </button>
-        </div>
-        <div className="box-status-bar-buttons">
-          <button className="button-status-bar">
-            <img className="image-status-bar" src="" alt="" />
-          </button>
-          <button className="button-status-bar">
-            <img className="image-status-bar" src="" alt="" />
-          </button>
-          <button className="button-status-bar">
-            <img className="image-status-bar" src="" alt="" />
-          </button>
-          <button className="button-status-bar">
-            <img className="image-status-bar" src="" alt="" />
-          </button>
-        </div>
-        <div className="box-status-bar-buttons">
-          <button className="button-status-bar">
-            <img className="image-status-bar" src="" alt="" />
-          </button>
-          <button className="button-status-bar">
-            <img className="image-status-bar" src="" alt="" />
-          </button>
-          <button className="button-status-bar">
-            <img className="image-status-bar" src="" alt="" />
-          </button>
-          <button className="button-status-bar">
-            <img className="image-status-bar" src="" alt="" />
-          </button>
-        </div>
-        <div className="box-status-bar-buttons">
-          <button className="button-status-bar">
-            <img className="image-status-bar" src="" alt="" />
-          </button>
-          <button className="button-status-bar">
-            <img className="image-status-bar" src="" alt="" />
-          </button>
-          <button className="button-status-bar">
-            <img className="image-status-bar" src="" alt="" />
-          </button>
-          <button className="button-status-bar">
-            <img className="image-status-bar" src="" alt="" />
-          </button>
-        </div>
+        <button className={`box-status-wifi ${activeData ? "on" : ""}`} onClick={() => setActiveData(prev => !prev)}>
+          <div className="box-image-status-wifi">
+            <img className="image-status-wifi" src={mobileData} alt="Icon datos mobiles" />
+          </div>
+          <p>Clara</p>
+          <p className="description">{activeData ? "Conectado" : "Desactivado"}</p>
+        </button>
+        
+        {ButtonsOptions.reduce((acc: JSX.Element[], _, i) => {
+          if (i % 4 !== 0) return acc
+
+          acc.push(
+            <div key={i} className="box-status-bar-buttons">
+              {ButtonsOptions.slice(i, i + 4).map(v => (
+                <button key={v.id} className={`button-status-bar ${activeId.includes(v.id) ? "on" : ""}`} onClick={() =>
+                  setActiveId(prev =>
+                    prev.includes(v.id)
+                      ? prev.filter(id => id !== v.id) // Desactive
+                      : [...prev, v.id]                // Active
+                  )
+                }>
+                  <img className="image-status-bar" src={v.src} alt={v.alt} />
+                </button>
+              ))}
+            </div>
+          )
+
+          return acc
+        }, [])}
       </div>
 
       <div className="divider-guide-status-bar">
         <img className="image-guie-status-bar-a" src={forward} alt="forward" />
         <img className="image-guie-status-bar-b" src={forward} alt="forward" />
       </div>
-
     </>
   )
 }

@@ -1,9 +1,28 @@
+@use "./mixin";
+@use "./variables" as v;
+
 /* Body base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+/* * {
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  &::-webkit-scrollbar-track {
+    background: v.$color-g1;
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: v.$color-w3;
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: v.$color-g2;
+  }
+} */
 
 html, body {
   width: 100%;

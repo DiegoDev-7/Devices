@@ -1,0 +1,43 @@
+/* Importations */
+@use "../../mixin";
+@use "../../variables" as v;
+
+
+
+/* 
+====================
+       Buttons
+====================
+*/
+/* Buttons border cellPhone: more, less, power */
+.button-cellPhone-more {
+  border-radius: 0 50px 0 0;
+  position: relative;
+  left: 298px;
+  top: -490px;
+}
+.button-cellPhone-less {
+  border-radius: 0 0 70px 0;
+  position: relative;
+  left: 298px;
+  top: -492px;
+}
+.Button-cellPhone-power {
+  border-radius: 0 50px 50px 0;
+  position: relative;
+  left: 298px;
+  top: -483px;
+}
+.button-cellPhone-more, .button-cellPhone-less, .Button-cellPhone-power {
+  width: 4px;
+  height: 40px;
+  background-color: v.$color-b1;
+  border: solid 1px;
+  transition: all 100ms ease-in;
+  cursor: pointer;
+  z-index: -1;
+
+  &:active {
+    left: 297px;
+  }
+}

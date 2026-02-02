@@ -1,0 +1,92 @@
+/* Importations */
+@use "../../mixin";
+@use "../../variables" as v;
+
+
+
+/* 
+=====================
+      Container
+=====================
+*/
+.Container-app-screen-rewards {
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+  /* First grid: View of money */
+.box-app-screen-rewards-a {
+  height: 100%;
+
+  h2 {
+    width: 90%;
+    font-size: 1.5rem;
+    font-family: v.$font-mainO1;
+    position: absolute;
+    top: 5%;
+    left: 15px;
+  }
+  span {
+    width: 90%;
+    font-size: 2rem;
+    font-family: v.$font-mainO1;
+    position: absolute;
+    top: 12%;
+    left: 15px;
+  }
+  p {
+    width: 90%;
+    font-size: .9rem;
+    font-family: v.$font-mainO1;
+    position: absolute;
+    top: 22%;
+    left: 15px;
+  }
+  
+  @include mixin.flex-center(flex, flex-start, center);
+}
+
+  /* Second grid: Button */
+.box-app-screen-rewards-b {
+  height: 40%;
+
+  @include mixin.flex-center(flex, center, center);
+}
+  /* Button */
+.button-app-screen-rewards {
+  width: 150px;
+  height: 50px;
+  background: v.$color-b1;
+  border: none;
+  border-radius: 50px;
+  color: v.$color-w1;
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-family: v.$font-mainO1;
+  transition: all .1s ease;
+  box-shadow: 0 0 15px 5px v.$color-w3;
+
+  &:hover {
+    background: v.$color-b2;
+  }
+  &:active {
+    background: v.$color-b1;
+    transform: scale(.95);
+  }
+}
+
+  /* Third grid: text of help */
+.box-app-screen-rewards-c {
+  height: 150%;
+  position: relative;
+  top: -110px;
+  overflow-y: auto;
+  margin: 5px;
+  padding: 20px;
+  text-align: justify;
+  font-size: 1rem;
+  font-family: v.$font-mainO1;
+}

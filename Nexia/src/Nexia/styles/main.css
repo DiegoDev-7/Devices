@@ -1,35 +1,6 @@
 /* Global settings default */
-/* Body base */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html, body {
-  width: 100%;
-  height: 100%;
-}
-
-body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  line-height: 1.5;
-  overflow-x: hidden;
-}
-
-main {
-  width: 100dvw;
-  min-height: 100dvh;
-}
-
 /* Flex center */
 /* No drag */
-/* 
-======================
-      Components
-======================
-*/
-/* Import mixin */
 /* Colors */
 /* Fonts */
 /* Fonts */
@@ -103,6 +74,51 @@ main {
   font-style: normal;
   font-display: swap;
 }
+/* Body base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* * {
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  &::-webkit-scrollbar-track {
+    background: v.$color-g1;
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: v.$color-w3;
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: v.$color-g2;
+  }
+} */
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+main {
+  width: 100dvw;
+  min-height: 100dvh;
+}
+
+/* 
+======================
+      Components
+======================
+*/
+/* Import mixin */
 /* 
 ====================
       Container
@@ -143,7 +159,6 @@ main {
         Pages
 ======================
 */
-/* Import mixin */
 /* Importations */
 /* 
 ====================
@@ -295,7 +310,6 @@ main {
 }
 
 /* Import mixin */
-/* Import mixin */
 /* 
 ====================
       Container
@@ -433,7 +447,6 @@ main {
   align-items: center;
 }
 
-/* Import mixin */
 /* 
 ====================
      Container
@@ -473,7 +486,6 @@ main {
   text-decoration: underline;
 }
 
-/* Import mixin */
 /* Importations */
 /* 
 ====================
@@ -1492,7 +1504,6 @@ main {
      Phone System
 ======================
 */
-/* Import mixin */
 /* Importations */
 /* 
 ====================
@@ -1546,7 +1557,6 @@ main {
   z-index: 100;
 }
 
-/* Import mixin */
 /* Importations */
 /* 
 =====================
@@ -1688,7 +1698,6 @@ main {
   pointer-events: none;
 }
 
-/* Import mixin */
 /* Importations */
 /* 
 =====================
@@ -1724,7 +1733,7 @@ main {
   background: #535353;
 }
 
-/*  */
+/* Text box position */
 .box-app-notes {
   width: 90%;
   height: 15%;
@@ -1803,44 +1812,1494 @@ main {
   opacity: 0.7;
 }
 
-/* Import mixin */
 /* Importations */
 /* 
 =====================
- Container wallpaper
+      Container
 =====================
 */
-.screen-cellPhone-wallpaper {
+.Container-app-screen-folder {
+  width: 100%;
+  height: 95%;
+  position: relative;
+  top: 5%;
+}
+
+/* Box Title Top */
+.box-app-screen-folder-a {
+  width: 100%;
+  height: 10%;
+}
+
+.box-app-screen-folder-title {
   width: 100%;
   height: 100%;
-  border-radius: 35px;
-  transform-origin: center;
-  transform: scaleX(0);
-  transition: transform 0.4s ease;
+}
+.box-app-screen-folder-title p {
+  color: #333333;
+  margin: 0 0 0 10px;
+  font-size: 1.1rem;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+}
+.box-app-screen-folder-title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-.screen-cellPhone-wallpaper.on {
-  transform: scaleX(1);
+/* Boxes content */
+.box-app-screen-folder-b {
+  width: 100%;
+  height: 85%;
+  overflow-y: auto;
 }
 
-.screen-cellPhone-wallpaper.off {
-  transform: scaleX(0);
+.box-app-folder {
+  width: 98%;
+  height: 50px;
+  border-top: solid 1px #333333;
+  border-bottom: solid 1px #333333;
+  margin: 0 2.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Wallpaper */
-.image-wallpaper {
+/* box image */
+.contain-app-folder-image {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Text */
+.contain-app-text {
+  width: 80%;
+  height: 100%;
+}
+.contain-app-text h4 {
+  font-size: 1rem;
+  font-family: "Oxygen1", system-ui, -apple-system, sans-serif;
+  font-weight: 500;
+  margin: 0 0 0 5px;
+}
+.contain-app-text p {
+  font-size: 0.85rem;
+  font-family: "Oxygen1", system-ui, -apple-system, sans-serif;
+  margin: 0 0 0 5px;
+}
+
+/* Image */
+.image-app-folder {
+  width: 75%;
+  height: 75%;
+  object-fit: cover;
+}
+
+/* Importations */
+/* 
+=====================
+      Container
+=====================
+*/
+.Container-app-screen-radio {
+  width: 100%;
+  height: 90%;
+  position: relative;
+  top: 10%;
+  border: solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Importations */
+/* 
+=====================
+      Container
+=====================
+*/
+.Container-app-screen-simcard {
   width: 100%;
   height: 100%;
-  border-radius: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* SIM card design template container */
+.contain-image-app-simcard {
+  width: 120px;
+  height: 75px;
+  background: #333;
+  border: none;
+  border-radius: 3px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%, 0 70%);
+  cursor: pointer;
+}
+.contain-image-app-simcard:hover {
+  transform: scale(0.98);
+}
+.contain-image-app-simcard:active {
+  transform: scale(1);
+}
+.contain-image-app-simcard {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.box-image-app-simcard {
+  width: 75px;
+  height: 75px;
+  box-shadow: 0 0 100px 55px #333333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contain-number-app-simcard {
+  position: absolute;
+  top: 65%;
+}
+.contain-number-app-simcard p:first-child {
+  user-select: none;
+}
+
+/* Contain information */
+.contain-app-simcard-info {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: none;
+  position: absolute;
+  top: 48%;
+  left: 75%;
+  cursor: pointer;
+}
+
+.contain-app-info {
+  width: 250px;
+  height: 150px;
+  padding: 10px;
+  background: #747474;
+  border: solid #747474;
+  border-radius: 25px;
+  position: absolute;
+  top: 10%;
+}
+.contain-app-info p {
+  color: #ffffff;
+  text-align: justify;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  font-size: 0.5;
+}
+
+/* Image */
+/* Sim */
+.image-app-simcard {
+  width: 70%;
+  height: 70%;
   user-select: none;
   object-fit: cover;
-  position: relative;
-  z-index: 100;
-  filter: blur(1px);
   -webkit-user-drag: none;
   pointer-events: none;
 }
 
+/* Info */
+.image-app-simcard-info {
+  width: 70%;
+  height: 70%;
+  user-select: none;
+  object-fit: cover;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* Text */
+.text-number-app-simcard {
+  margin: 10px;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+/* Importations */
+/* 
+=====================
+      Container
+=====================
+*/
+.Container-app-screen-phone {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2fr, 1fr);
+}
+
+/* Top contact phone grid */
+.contain-app-phone-a {
+  width: 101%;
+  height: 175px;
+  position: relative;
+  top: 15%;
+  left: -2px;
+  flex-wrap: wrap;
+  z-index: 50;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Content of the contact */
+.box-app-phone-contact {
+  width: 80%;
+  height: 75px;
+  background: #535353;
+  border: solid #535353;
+  border-radius: 25px;
+  margin: 15px 0;
+  display: flex;
+}
+
+.app-phone-contact {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+.app-phone-contact h2 {
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  margin: 5px 0 0 5px;
+}
+.app-phone-contact p {
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  margin: 5px 0 0 5px;
+}
+
+/* Bottom contact phone grid numbers */
+.contain-app-phone-b {
+  width: 101%;
+  height: 350px;
+  background: #ffffff;
+  border: solid 2px;
+  border-radius: 35px;
+  z-index: 100;
+  position: relative;
+  top: 2.5%;
+  left: -1px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2fr, 1fr);
+}
+
+/* Input numbers */
+.box-app-text-phone {
+  width: 90%;
+  height: 100%;
+  border-bottom: solid #000000;
+  position: relative;
+  left: 5%;
+}
+.box-app-text-phone p {
+  color: #000000;
+  font-size: 1.5rem;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  font-weight: 500;
+  letter-spacing: 5px;
+}
+.box-app-text-phone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* X - Delete number */
+.box-delete-phone {
+  width: 30px;
+  height: 30px;
+  color: #ffffff;
+  font-size: 1.1rem;
+  background: #e70000;
+  border: solid 2px rgba(190, 0, 0, 0.8431372549);
+  border-radius: 25px;
+  position: absolute;
+  left: 90%;
+  user-select: none;
+  cursor: pointer;
+}
+.box-delete-phone:active {
+  transform: scale(0.95);
+  background: rgba(241, 22, 22, 0.8156862745);
+  border: solid 2px rgba(177, 42, 42, 0.6235294118);
+}
+.box-delete-phone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Buttons */
+.box-app-buttons-phone {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.contain-app-button-phone {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Numbers */
+.button-app-phone {
+  width: 70px;
+  height: 45px;
+  color: #ffffff;
+  background: #222222;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  position: relative;
+  top: 25%;
+  user-select: none;
+}
+.button-app-phone:hover {
+  background: #333333;
+}
+.button-app-phone:active {
+  transform: scale(0.95);
+}
+
+/* Button call */
+.button-app-phone-call {
+  width: 100px;
+  height: 45px;
+  color: #ffffff;
+  background: #25d425;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  position: relative;
+  top: 10%;
+}
+.button-app-phone-call:hover {
+  background: rgba(47, 192, 47, 0.9921568627);
+}
+.button-app-phone-call:active {
+  transform: scale(0.95);
+}
+.button-app-phone-call {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Image */
+/* Phone */
+.image-app-phone-call {
+  width: 80%;
+  height: 80%;
+  transform: rotate(270deg);
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* User contact */
+.app-phone-image {
+  width: 30%;
+  height: 100%;
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* Importations */
+/* 
+=====================
+      Container
+=====================
+*/
+.Container-app-screen-rewards {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+/* First grid: View of money */
+.box-app-screen-rewards-a {
+  height: 100%;
+}
+.box-app-screen-rewards-a h2 {
+  width: 90%;
+  font-size: 1.5rem;
+  font-family: "Oxygen1", system-ui, -apple-system, sans-serif;
+  position: absolute;
+  top: 5%;
+  left: 15px;
+}
+.box-app-screen-rewards-a span {
+  width: 90%;
+  font-size: 2rem;
+  font-family: "Oxygen1", system-ui, -apple-system, sans-serif;
+  position: absolute;
+  top: 12%;
+  left: 15px;
+}
+.box-app-screen-rewards-a p {
+  width: 90%;
+  font-size: 0.9rem;
+  font-family: "Oxygen1", system-ui, -apple-system, sans-serif;
+  position: absolute;
+  top: 22%;
+  left: 15px;
+}
+.box-app-screen-rewards-a {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* Second grid: Button */
+.box-app-screen-rewards-b {
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Button */
+.button-app-screen-rewards {
+  width: 150px;
+  height: 50px;
+  background: #000000;
+  border: none;
+  border-radius: 50px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-family: "Oxygen1", system-ui, -apple-system, sans-serif;
+  transition: all 0.1s ease;
+  box-shadow: 0 0 15px 5px #9e9e9e;
+}
+.button-app-screen-rewards:hover {
+  background: #0a0a0a;
+}
+.button-app-screen-rewards:active {
+  background: #000000;
+  transform: scale(0.95);
+}
+
+/* Third grid: text of help */
+.box-app-screen-rewards-c {
+  height: 150%;
+  position: relative;
+  top: -110px;
+  overflow-y: auto;
+  margin: 5px;
+  padding: 20px;
+  text-align: justify;
+  font-size: 1rem;
+  font-family: "Oxygen1", system-ui, -apple-system, sans-serif;
+}
+
+/* Importations */
+/* 
+=====================
+      Container
+=====================
+*/
+.Container-app-screen-cash {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+/* Top grid: Money */
+.box-app-screen-cash-a {
+  height: 50%;
+}
+.box-app-screen-cash-a h2 {
+  font-size: 1.2rem;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+}
+.box-app-screen-cash-a span {
+  font-size: 1.8rem;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  position: relative;
+  top: 20%;
+  left: -1%;
+}
+.box-app-screen-cash-a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Bottom trid: Buttom */
+.box-app-screen-cash-b {
+  height: 150%;
+  position: relative;
+  top: -135px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Button */
+.button-app-cash {
+  width: 200px;
+  height: 200px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  top: -5%;
+}
+.button-app-cash:active {
+  transform: scale(0.95);
+}
+
+/* Image */
+.image-app-cash {
+  width: 100%;
+  height: 100%;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* Importations */
+/* 
+=====================
+      Container
+=====================
+*/
+.Container-app-bank {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+/* Top grid: Money */
+.box-app-screen-bank-a {
+  width: 101%;
+  height: 101%;
+  border-radius: 30px;
+  background: #001558;
+  position: relative;
+  top: -1px;
+  left: -1px;
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 75% 100%, 25% 100%, 0 52%);
+}
+.box-app-screen-bank-a h3 {
+  color: #ffffff;
+  font-size: 1rem;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  position: absolute;
+  top: 50%;
+}
+.box-app-screen-bank-a span {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  position: relative;
+  top: 20%;
+}
+.box-app-screen-bank-a p {
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  position: absolute;
+  top: 80%;
+}
+.box-app-screen-bank-a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Bottom grid: Button */
+.box-app-screen-bank-b {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Button */
+.button-app-screen-bank {
+  width: 150px;
+  height: 50px;
+  background: #001558;
+  border: none;
+  border-radius: 50px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-family: "Oxygen1", system-ui, -apple-system, sans-serif;
+  transition: all 0.1s ease;
+  box-shadow: 0 0 15px 5px #9e9e9e;
+}
+.button-app-screen-bank:hover {
+  background: rgba(0, 21, 88, 0.9647058824);
+}
+.button-app-screen-bank:active {
+  background: #001558;
+  transform: scale(0.95);
+}
+
+/* Card */
+.contain-app-card-bank {
+  width: 90%;
+  height: 150px;
+  background: #0a0a0a;
+  border: solid 2px #000000;
+  border-radius: 15px;
+  position: absolute;
+  top: 60%;
+}
+
+.box-app-card-sim {
+  width: 35px;
+  height: 35px;
+  margin: 10px;
+  position: relative;
+  left: 5%;
+}
+
+.box-app-card-visa {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 5px;
+  right: 15px;
+}
+
+/* Buttons */
+/* Eye */
+.button-app-screen-bank-eye {
+  width: 25px;
+  height: 25px;
+  border: solid #ffffff;
+  border-radius: 25px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 75%;
+}
+
+/* View card */
+.text-view-card-bank {
+  background: none;
+  border: none;
+  border-radius: 25px;
+  color: #000000;
+  text-decoration: underline;
+  font-size: 1rem;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  position: absolute;
+  top: 90%;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Text */
+.title-app-card-bank {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  text-align: justify;
+  margin-left: 5%;
+  user-select: none;
+}
+
+.text-app-card {
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  text-align: justify;
+  margin-left: 5%;
+}
+
+/* Image */
+.image-app-screen-eye {
+  width: 100%;
+  height: 100%;
+}
+
+.image-card-sim {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  user-select: none;
+  transform: rotate(180deg);
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+.image-card-visa {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* Importations */
+/* 
+=====================
+      Container
+=====================
+*/
+.Container-app-screen-message {
+  width: 100%;
+  height: 100%;
+}
+
+/* Top text */
+.box-app-screen-message-a {
+  width: 100%;
+  height: 10%;
+}
+.box-app-screen-message-a h3 {
+  color: #000000;
+  font-size: 1.5rem;
+  font-family: "Oxygen1", system-ui, -apple-system, sans-serif;
+  margin-left: 6px;
+  user-select: none;
+}
+.box-app-screen-message-a {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+/* Bottom container messages */
+.box-app-screen-message-b {
+  width: 100%;
+  height: 90%;
+  background: #d3d3d3;
+  border: solid #d3d3d3;
+  border-radius: 25px;
+  flex-wrap: wrap;
+  overflow-y: auto;
+}
+
+/* Container from messages */
+.contain-app-screen-message {
+  width: 90%;
+  height: 20%;
+  margin: 10px 0;
+  background: #9e9e9e;
+  border-radius: 25px;
+  display: flex;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  top: 0;
+  left: 5%;
+  transform: translateY(-50%, -50%);
+}
+.contain-app-screen-message:hover {
+  background-color: rgba(143, 143, 143, 0.8980392157);
+}
+.contain-app-screen-message:active {
+  background: #9e9e9e;
+}
+
+.box-image-app-message {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Circle gray from image */
+.box-circle-image-message {
+  width: 60%;
+  height: 43%;
+  background-color: #333333;
+  border: solid #333333;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Text */
+.box-text-app-message {
+  width: 80%;
+  height: 100%;
+}
+
+.text-title-message {
+  width: 95%;
+  height: 40%;
+  margin-left: 5px;
+  color: #000000;
+  font-size: 1.4rem;
+}
+
+.text-app-message {
+  width: 95%;
+  height: 60%;
+  margin-left: 5px;
+  color: #000000;
+  font-size: 0.9rem;
+  text-align: justify;
+}
+
+/* Images */
+.image-user-message {
+  width: 75%;
+  height: 75%;
+  user-select: none;
+  object-fit: cover;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* Importations */
+/* 
+=====================
+      Container
+=====================
+*/
+.Container-app-screen-security {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+/* First box with cicle and button */
+.box-app-screen-security-a {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Big circle */
+.cicle-app-screen-security {
+  width: 175px;
+  height: 175px;
+  background: transparent;
+  border: solid 2px #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 20px 10px rgba(0, 108, 112, 0.6705882353);
+  opacity: 0.97;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle-text-app-screen-security {
+  color: #000000;
+  font-size: 2.5rem;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  user-select: none;
+}
+
+/* Second box with more boxes and text */
+.box-app-screen-security-b {
+  width: 100%;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contain-app-screen-security {
+  width: 40%;
+  height: 35%;
+  margin: 10px;
+  background: rgba(0, 108, 112, 0.6705882353);
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+.contain-app-screen-security:hover {
+  background: rgba(0, 117, 121, 0.5960784314);
+}
+.contain-app-screen-security:active {
+  transform: scale(0.95);
+}
+
+/* Container for when the percentage is complete */
+.invisible-security-complete {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.container-screen-security-complete {
+  width: 250px;
+  height: 250px;
+  background: #ffffff;
+  border: solid 2px rgba(0, 92, 95, 0.8078431373);
+  border-radius: 50%;
+  position: absolute;
+  top: 28%;
+  left: 6%;
+  transform: traslateY(-50%, -50%);
+}
+.container-screen-security-complete h2 {
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  font-size: 1.9rem;
+  text-align: center;
+  color: #000000;
+  position: absolute;
+  top: 25%;
+  left: 18%;
+  user-select: none;
+}
+.container-screen-security-complete p {
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #000000;
+  position: absolute;
+  top: 70%;
+  left: 40%;
+  user-select: none;
+}
+
+.container-screen-security-complete.on {
+  animation: securityComplete 0.6s ease forwards;
+}
+
+/* activate animation when complete the percent */
+@keyframes securityComplete {
+  from {
+    opacity: 0;
+    transform: translate(0%, 50%);
+    box-shadow: 0 0 15px 5px;
+  }
+  to {
+    opacity: 1;
+    transform: translate(0%, 0px);
+  }
+}
+/* Images */
+.box-security-trash {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.image-security-trash {
+  width: 25%;
+  height: 55%;
+  background: orange;
+  border: solid orange;
+  border-radius: 25px;
+  margin-left: 5px;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+.image-security-batery {
+  width: 25%;
+  height: 55%;
+  background: greenyellow;
+  border: solid greenyellow;
+  border-radius: 25px;
+  margin-left: 5px;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+.image-security-scaner {
+  width: 25%;
+  height: 55%;
+  background: #ffffff;
+  border: solid #ffffff;
+  border-radius: 25px;
+  margin-left: 5px;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+.image-security-cleaner {
+  width: 25%;
+  height: 55%;
+  background: lightblue;
+  border: solid lightblue;
+  border-radius: 25px;
+  margin-left: 5px;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* Text */
+.box-security-trash-text {
+  width: 100%;
+  height: 50%;
+  position: relative;
+  top: -12px;
+}
+
+.text-tilte-security {
+  width: 90%;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  margin-left: 5px;
+}
+
+.text-content-security {
+  width: 90%;
+  color: #ffffff;
+  font-size: 0.7rem;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  margin-left: 5px;
+  text-align: justify;
+}
+
+/* Buttons */
+.circle-button-app-screen-security {
+  width: 100px;
+  height: 50px;
+  border: none;
+  border-radius: 25px;
+  background: rgba(0, 108, 112, 0.6705882353);
+  color: #ffffff;
+  font-family: "Oxygen1", system-ui, -apple-system, sans-serif;
+  font-size: 1.3rem;
+  position: absolute;
+  top: 43%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.circle-button-app-screen-security:hover {
+  opacity: 0.96;
+}
+.circle-button-app-screen-security:active {
+  transform: scale(0.95);
+}
+
+/* Importations */
+/* 
+=====================
+      Container
+=====================
+*/
+.Container-app-screen-photogallery {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+/* Title from gallery */
+.box-app-screen-photogallery-a {
+  width: 100%;
+  height: 60%;
+}
+.box-app-screen-photogallery-a p {
+  font-size: 1.2rem;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+}
+.box-app-screen-photogallery-a {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+/* Flex bottom from pictures */
+.box-app-screen-photogallery-b {
+  width: 100%;
+  height: 110%;
+  position: relative;
+  top: -40px;
+}
+
+/* Text */
+.contain-title-date-photogallery {
+  width: 100%;
+  height: 30px;
+}
+.contain-title-date-photogallery p {
+  color: #000000;
+  font-size: 1.1rem;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  margin-left: 15px;
+}
+.contain-title-date-photogallery {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.contain-photos-photogallery {
+  width: 98%;
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: auto;
+}
+
+/* Images */
+.box-image-photogallery {
+  width: 100px;
+  height: 100px;
+  margin: 15px;
+  border: solid 1px;
+  border-radius: 3px;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.image-photogallery {
+  width: 100%;
+  height: 100%;
+  display: block;
+  user-select: none;
+  object-fit: cover;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* Importations */
+/* 
+=====================
+      Container
+=====================
+*/
+.Container-app-screen-contact {
+  width: 100%;
+  height: 100%;
+}
+
+.box-app-screen-contact {
+  width: 100%;
+  max-height: 90%;
+  margin-top: 10%;
+  overflow-y: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Container from contact */
+.contain-app-screen-contact {
+  width: 80%;
+  height: 75px;
+  background: rgba(77, 77, 77, 0.6901960784);
+  border: solid 2px rgba(77, 77, 77, 0.6901960784);
+  border-radius: 25px;
+  margin: 25px 0;
+  display: flex;
+}
+
+.box-image-contact {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-text-contact {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  left: 10px;
+}
+.box-text-contact h3 {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  text-align: justify;
+}
+.box-text-contact p {
+  color: #ffffff;
+  font-size: 1rem;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  text-align: justify;
+}
+
+/* Images */
+.image-contact {
+  background-color: #535353;
+  border: solid 5px #535353;
+  border-radius: 25px;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* Text */
+.title-contact {
+  width: 50%;
+  height: 50px;
+  border-bottom: solid;
+  color: #000000;
+  position: relative;
+  margin: 10px 0 0 0;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/* Importations */
+/* 
+=====================
+      Container
+=====================
+*/
+.Container-app-screen-settings {
+  width: 100%;
+  height: 100%;
+}
+
+/* Input */
+/* Container Input */
+.container-app-input-settings {
+  margin: 15px 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container-app-input-settings input {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  border: none;
+  outline: none;
+}
+.container-app-input-settings input:focus {
+  outline: none;
+  box-shadow: none;
+}
+.container-app-input-settings input::placeholder {
+  color: #ffffff;
+}
+.container-app-input-settings input::-webkit-input-placeholder {
+  color: #ffffff;
+}
+.container-app-input-settings input::-moz-placeholder {
+  color: #ffffff;
+}
+
+.input-app-settings {
+  width: 95%;
+  height: 50px;
+  background: rgba(77, 77, 77, 0.6901960784);
+  border: solid 3px rgba(77, 77, 77, 0.6901960784);
+  border-radius: 25px;
+  padding-left: 32px;
+}
+
+/* Option boxes */
+.box-app-screen-settings {
+  width: 100%;
+  height: 70%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.contain-app-settings-options {
+  width: 100%;
+  height: 50px;
+  margin: 10px 0 10px 5px;
+  display: flex;
+  cursor: pointer;
+}
+.contain-app-settings-options:hover {
+  background: rgba(167, 167, 167, 0.3843137255);
+}
+
+/* Icon */
+.box-image-settings-options {
+  width: 18%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contain-image-settings-options {
+  width: 35px;
+  height: 35px;
+  border-radius: 10px;
+}
+.contain-image-settings-options.settings-phone {
+  background: #00b5bb;
+  border: solid 5px #00b5bb;
+}
+.contain-image-settings-options.settings-arrow {
+  background: #eeb005;
+  border: solid 7px #eeb005;
+  transform: rotate(270deg);
+}
+.contain-image-settings-options.settings-secure {
+  background: #00ca11;
+  border: solid 5px #00ca11;
+}
+.contain-image-settings-options.settings-sim {
+  background: #e6e200;
+  border: solid 5px #e6e200;
+}
+.contain-image-settings-options.settings-wifi {
+  background: #008dc5;
+  border: solid 7px #008dc5;
+}
+.contain-image-settings-options.settings-bluetooth {
+  background: #008dc5;
+  border: solid 5px #008dc5;
+}
+.contain-image-settings-options.settings-sun {
+  background: rgba(218, 214, 1, 0.8549019608);
+  border: solid 5px rgba(218, 214, 1, 0.8549019608);
+}
+.contain-image-settings-options.settings-rose {
+  background: #e072bf;
+  border: solid 5px #e072bf;
+}
+.contain-image-settings-options.settings-bookmark {
+  background: #46ced3;
+  border: solid 5px #46ced3;
+}
+.contain-image-settings-options.settings-lock {
+  background: #747474;
+  border: solid 5px #747474;
+}
+.contain-image-settings-options.settings-View {
+  background: #3a859c;
+  border: solid 3px #3a859c;
+}
+.contain-image-settings-options.settings-user {
+  background: #1aadb3;
+  border: solid 5px #1aadb3;
+}
+.contain-image-settings-options.settings-comments {
+  background: #ff6702;
+  border: solid 7px #ff6702;
+}
+
+/* Icon Forward */
+.box-image-forward-settings-options {
+  width: 15%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contain-image-forward-settings {
+  width: 20px;
+  height: 20px;
+}
+
+/* Text */
+.box-text-settings-options {
+  width: 85%;
+  height: 100%;
+  margin-left: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.title-app-settings {
+  width: 90%;
+  height: 60px;
+  font-size: 1.5rem;
+  margin-left: 10px;
+  font-family: "Oxygen3", system-ui, -apple-system, sans-serif;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+/* Images */
+.search-input-icon-settings {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 14px;
+  pointer-events: none;
+}
+
+.image-forward-settings {
+  width: 100%;
+  height: 100%;
+  user-select: none;
+  opacity: 0.7;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+.image-settings-options {
+  width: 100%;
+  height: 100%;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* Others */
+.hr-settings-options {
+  width: 95%;
+  height: 2px;
+  background: #333333;
+  border: none;
+  border-radius: 25px;
+  position: relative;
+  left: 5px;
+}
+
+/* Importations */
 /* 
 ====================
        Buttons
@@ -1881,6 +3340,44 @@ main {
   left: 297px;
 }
 
+/* Importations */
+/* 
+=====================
+ Container wallpaper
+=====================
+*/
+.screen-cellPhone-wallpaper {
+  width: 100%;
+  height: 100%;
+  border-radius: 35px;
+  transform-origin: center;
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+
+.screen-cellPhone-wallpaper.on {
+  transform: scaleX(1);
+}
+
+.screen-cellPhone-wallpaper.off {
+  transform: scaleX(0);
+}
+
+/* Wallpaper */
+.image-wallpaper {
+  width: 100%;
+  height: 100%;
+  border-radius: 35px;
+  user-select: none;
+  object-fit: cover;
+  position: relative;
+  z-index: 100;
+  filter: blur(1px);
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* Importations */
 /* 
 ====================
   Volume indicator
@@ -1962,7 +3459,126 @@ main {
   pointer-events: none;
 }
 
-/* Import mixin */
+/* Importations */
+/* 
+=================================
+  Aplications screens container
+=================================
+*/
+.Container-apps-screens {
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  border-radius: 35px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 100;
+}
+
+/* Importations */
+/* 
+====================
+     screnApps
+====================
+*/
+/* Containers */
+.container-screen-cellPhone-Apps {
+  width: 100%;
+  height: 80%;
+  position: absolute;
+  top: 100px;
+  z-index: 200;
+  gap: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Box positions apps */
+.box-positions-cellPhone-Apps-A {
+  width: 100%;
+  height: 80%;
+  display: grid;
+  grid-template-columns: repeat(4, 50px);
+  grid-template-rows: repeat(3, 60px);
+  grid-column-gap: 25px;
+  grid-row-gap: 25px;
+  position: relative;
+  overflow: hidden;
+  z-index: 200;
+}
+
+.box-cellPhone-Apps {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  margin: 10px;
+}
+.box-cellPhone-Apps:hover {
+  background: #9e9e9e;
+}
+.box-cellPhone-Apps:active {
+  transform: scale(0.95);
+}
+.box-cellPhone-Apps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* BUTTONS */
+.button-cellPhone-Apps {
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  border: none;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* IMAGES */
+.image-cellPhone-Apps {
+  width: 90%;
+  height: 90%;
+  border-radius: 10px;
+  object-fit: cover;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* TEXT */
+.text-cellPhone-Apps {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Oxygen1", system-ui, -apple-system, sans-serif;
+  font-size: 1em;
+  font-weight: 600;
+  position: absolute;
+  margin-top: 70px;
+  user-select: none;
+}
+
+.box-positions-cellPhone-Apps-B {
+  width: 80%;
+  height: 10%;
+  position: relative;
+  top: -10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Importations */
 /* 
 ====================
@@ -2041,6 +3657,7 @@ main {
   pointer-events: none;
 }
 
+/* Importations */
 /* 
 ====================
   screenStatusBar
@@ -2081,9 +3698,11 @@ main {
 .box-status-wifi {
   width: 95%;
   height: 75%;
-  background: #024ff5;
-  border: solid 2px #024ff5;
+  background: rgba(77, 77, 77, 0.6901960784);
+  border: solid 2px rgba(77, 77, 77, 0.6901960784);
   border-radius: 20px;
+  display: flex;
+  flex-wrap: wrap;
   position: relative;
   top: 10%;
   left: 2%;
@@ -2093,10 +3712,34 @@ main {
 .box-status-wifi:active {
   transform: scale(0.95);
 }
+.box-status-wifi p {
+  margin-left: 5px;
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  opacity: 0.8;
+}
+.box-status-wifi .description {
+  margin-left: 5px;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  opacity: 0.8;
+}
 .box-status-wifi {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.box-status-wifi.on {
+  border: solid #006cb4;
+  background: #006cb4;
+}
+
+.box-image-status-wifi {
+  width: 30px;
+  height: 30px;
 }
 
 /* The status bar of mini icons slipped */
@@ -2112,17 +3755,27 @@ main {
 .button-status-bar {
   width: 50px;
   height: 50px;
-  background: #333333;
-  border: solid #333333;
+  background: rgba(167, 167, 167, 0.3843137255);
+  border: solid rgba(167, 167, 167, 0.3843137255);
   border-radius: 50px;
-  margin: 5px;
+  margin: 7px;
   cursor: pointer;
-  transition: all 0.1s ease-in;
+  transition: all 0.05s ease-in;
 }
 .button-status-bar:active {
   transform: scale(0.95);
-  border: solid #535353;
-  background-color: #535353;
+  border: solid rgba(77, 77, 77, 0.6901960784);
+  background-color: rgba(77, 77, 77, 0.6901960784);
+}
+.button-status-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-status-bar.on {
+  background: #535353;
+  border: solid #333333;
 }
 
 /* Container Status bar */
@@ -2217,6 +3870,16 @@ main {
   pointer-events: none;
 }
 
+/* Wifi Light */
+.image-status-wifi {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
 /* Batery */
 .image-battery {
   width: 80%;
@@ -2229,6 +3892,8 @@ main {
 
 /* Icons for the status bar slipped */
 .image-status-bar {
+  width: 60%;
+  height: 60%;
   object-fit: cover;
   user-select: none;
   -webkit-user-drag: none;
@@ -2294,6 +3959,7 @@ main {
   animation: forwardStatusBar 1.5s infinite alternate;
 }
 
+/* Importations */
 /* 
 ====================
     screenUnlock
@@ -2410,125 +4076,6 @@ main {
     opacity: 1;
   }
 }
-/* 
-====================
-     screnApps
-====================
-*/
-/* Containers */
-.container-screen-cellPhone-Apps {
-  width: 100%;
-  height: 80%;
-  position: absolute;
-  top: 100px;
-  z-index: 200;
-  gap: 5%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-/* Box positions apps */
-.box-positions-cellPhone-Apps-A {
-  width: 100%;
-  height: 80%;
-  display: grid;
-  grid-template-columns: repeat(4, 50px);
-  grid-template-rows: repeat(3, 60px);
-  grid-column-gap: 25px;
-  grid-row-gap: 25px;
-  position: relative;
-  overflow: hidden;
-  z-index: 200;
-}
-
-.box-cellPhone-Apps {
-  width: 40px;
-  height: 40px;
-  border-radius: 12px;
-  margin: 10px;
-}
-.box-cellPhone-Apps:hover {
-  background: #9e9e9e;
-}
-.box-cellPhone-Apps:active {
-  transform: scale(0.95);
-}
-.box-cellPhone-Apps {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* BUTTONS */
-.button-cellPhone-Apps {
-  width: 100%;
-  height: 100%;
-  background: #ffffff;
-  border: none;
-  border-radius: 10px;
-  transition: all 0.2s ease;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* IMAGES */
-.image-cellPhone-Apps {
-  width: 90%;
-  height: 90%;
-  border-radius: 10px;
-  object-fit: cover;
-  user-select: none;
-  -webkit-user-drag: none;
-  pointer-events: none;
-}
-
-/* TEXT */
-.text-cellPhone-Apps {
-  color: #ffffff;
-  text-align: center;
-  font-family: "Oxygen1", system-ui, -apple-system, sans-serif;
-  font-size: 1em;
-  font-weight: 600;
-  position: absolute;
-  margin-top: 70px;
-  user-select: none;
-}
-
-.box-positions-cellPhone-Apps-B {
-  width: 80%;
-  height: 10%;
-  position: relative;
-  top: -10px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* 
-=================================
-  Aplications screens container
-=================================
-*/
-.Container-apps-screens {
-  width: 100%;
-  height: 100%;
-  background: #ffffff;
-  border-radius: 35px;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  z-index: 100;
-}
-
-/* Import mixin */
 /* Importations */
 /* 
 ====================

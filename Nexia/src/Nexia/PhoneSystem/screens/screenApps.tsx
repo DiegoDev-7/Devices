@@ -6,28 +6,38 @@ import settings from "../../../assets/Apps/settings_dark.svg"
 import calculator from "../../../assets/Apps/calculator.svg"
 import weater from "../../../assets/Apps/weather.svg"
 import calendar from "../../../assets/Apps/calendar.svg"
-import folder from "../../../assets/Apps/folder.svg"
+import folder from "../../../assets/Apps/archive.svg"
 import music from "../../../assets/Apps/music.svg"
 import notes from "../../../assets/Apps/notes.svg"
 import cash from "../../../assets/Apps/cash.svg"
-import chat from "../../../assets/Apps/chat.svg"
+import simson from "../../../assets/Apps/simsons2.jpg"
 import gallery from "../../../assets/Apps/gallery.svg"
 import radio from "../../../assets/Apps/radio.svg"
 import rewards from "../../../assets/Apps/rewards.svg"
 import security from "../../../assets/Apps/security.svg"
 import simcard from "../../../assets/Apps/simcard.svg"
-import sudoku from "../../../assets/Apps/sudoku.svg"
+import bank from "../../../assets/Apps/bank.svg"
 import tictactoe from "../../../assets/Apps/tic-tac-toe.svg"
 import message from "../../../assets/Apps/message.svg"
 import phone from "../../../assets/Apps/phone.svg"
 import contact from "../../../assets/Apps/contact.svg"
 
 /* Apps */
+import ScreenButtons from "./screenButtons"
 import RadioApp from "../Apps/RadioApp"
 import FolderApp from "../Apps/FolderApp"
 import CalculatorApp from "../Apps/CalculatorApp"
-import ScreenButtons from "./screenButtons"
-import Notes from "../Apps/NotesApp"
+import NotesApp from "../Apps/NotesApp"
+import SimApp from "../Apps/SimApp"
+import PhoneApp from "../Apps/PhoneApp"
+import RewardsApp from "../Apps/RewardsApp"
+import CashApp from "../Apps/CashApp"
+import BankApp from "../Apps/BankApp"
+import MessageApp from "../Apps/MessageApp"
+import SecurityApp from "../Apps/SecurityApp"
+import PhotoGalleryApp from "../Apps/PhotoGalleryApp"
+import ContactApp from "../Apps/ContactApp"
+import SettingsApp from "../Apps/Settings"
 
 
 
@@ -53,12 +63,12 @@ const Apps = () => {
     { id: "gallery", classGrid: "box-cellPhone-Apps", buttonApp: "button-cellPhone-Apps", classText: "text-cellPhone-Apps", classImage:"image-cellPhone-Apps", imageApp: gallery, alt: "Galeria" },
     { id: "cash", classGrid: "box-cellPhone-Apps", buttonApp: "button-cellPhone-Apps", classText: "text-cellPhone-Apps", classImage:"image-cellPhone-Apps", imageApp: cash, alt: "Dinero" },
     { id: "rewards", classGrid: "box-cellPhone-Apps", buttonApp: "button-cellPhone-Apps", classText: "text-cellPhone-Apps", classImage:"image-cellPhone-Apps", imageApp: rewards, alt: "Rewards" },
-    { id: "chat", classGrid: "box-cellPhone-Apps", buttonApp: "button-cellPhone-Apps", classText: "text-cellPhone-Apps", classImage:"image-cellPhone-Apps", imageApp: chat, alt: "Chat" },
+    { id: "bank", classGrid: "box-cellPhone-Apps", buttonApp: "button-cellPhone-Apps", classText: "text-cellPhone-Apps", classImage:"image-cellPhone-Apps", imageApp: bank, alt: "Banco" },
+    { id: "security", classGrid: "box-cellPhone-Apps", buttonApp: "button-cellPhone-Apps", classText: "text-cellPhone-Apps", classImage:"image-cellPhone-Apps", imageApp: security, alt: "Seguridad" },
+    { id: "simsons", classGrid: "box-cellPhone-Apps", buttonApp: "button-cellPhone-Apps", classText: "text-cellPhone-Apps", classImage:"image-cellPhone-Apps", imageApp: simson, alt: "The Simpsons" },
     
     { id: "radio", classGrid: "box-cellPhone-Apps", buttonApp: "button-cellPhone-Apps", classText: "text-cellPhone-Apps", classImage:"image-cellPhone-Apps", imageApp: radio, alt: "Radio" },
-    { id: "simcard", classGrid: "box-cellPhone-Apps", buttonApp: "button-cellPhone-Apps", classText: "text-cellPhone-Apps", classImage:"image-cellPhone-Apps", imageApp: simcard, alt: "Sim" },
-    { id: "security", classGrid: "box-cellPhone-Apps", buttonApp: "button-cellPhone-Apps", classText: "text-cellPhone-Apps", classImage:"image-cellPhone-Apps", imageApp: security, alt: "Seguridad" },
-    { id: "sudoku", classGrid: "box-cellPhone-Apps", buttonApp: "button-cellPhone-Apps", classText: "text-cellPhone-Apps", classImage:"image-cellPhone-Apps", imageApp: sudoku, alt: "Sudoku" },
+    { id: "sim", classGrid: "box-cellPhone-Apps", buttonApp: "button-cellPhone-Apps", classText: "text-cellPhone-Apps", classImage:"image-cellPhone-Apps", imageApp: simcard, alt: "Sim" },
     { id: "tictactoe", classGrid: "box-cellPhone-Apps", buttonApp: "button-cellPhone-Apps", classText: "text-cellPhone-Apps", classImage:"image-cellPhone-Apps", imageApp: tictactoe, alt: "Tic Tac Toe" },
   ]
 
@@ -77,24 +87,29 @@ const Apps = () => {
   ]
 
 
-  
-
-  
-
 
   const appScreens: Record<
     string,
     (onBack: () => void) => JSX.Element
   > = {
-    notes: onBack => <Notes onBack={onBack} />,
     calculator: onBack => <CalculatorApp onBack={onBack} />,
-    radio: onBack => <RadioApp onBack={onBack} />,
     folder: onBack => <FolderApp onBack={onBack} />,
+    notes: onBack => <NotesApp onBack={onBack} />,
+    radio: onBack => <RadioApp onBack={onBack} />,
+    sim: onBack => <SimApp onBack={onBack} />,
+    phone: onBack => <PhoneApp onBack={onBack} />,
+    rewards: onBack => <RewardsApp onBack={onBack} />,
+    cash: onBack => <CashApp onBack={onBack} />,
+    bank: onBack => <BankApp onBack={onBack} />,
+    message: onBack => <MessageApp onBack={onBack} />,
+    security: onBack => <SecurityApp onBack={onBack} />,
+    gallery: onBack => <PhotoGalleryApp onBack={onBack} />,
+    contact: onBack => <ContactApp onBack={onBack} />,
+    settings: onBack => <SettingsApp onBack={onBack} />,
   }
 
-
-
-  const [openApp, setOpenApp] = useState<string | null>(null)
+  type AppKey = keyof typeof appScreens
+  const [openApp, setOpenApp] = useState<AppKey | null>(null)
 
   const goHome = () => {
     setOpenApp(null)
@@ -110,11 +125,7 @@ const Apps = () => {
       {/* CONTENIDO */}
       {openApp ? (
         <div className="Container-apps-screens">
-          {appScreens[openApp]?.(goHome) ?? (
-            <>
-
-            </>
-          )}
+          {appScreens[openApp](goHome)}
         </div>
       ) : (
         <div className="container-screen-cellPhone-Apps">

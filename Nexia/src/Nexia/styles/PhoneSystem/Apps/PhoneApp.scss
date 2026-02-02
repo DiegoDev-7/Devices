@@ -1,0 +1,206 @@
+/* Importations */
+@use "../../mixin";
+@use "../../variables" as v;
+
+
+
+/* 
+=====================
+      Container
+=====================
+*/
+.Container-app-screen-phone {
+  width: 100%;
+  height: 100%;
+  
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2fr, 1fr);
+}
+  /* Top contact phone grid */
+.contain-app-phone-a {
+  width: 101%;
+  height: 175px;
+  position: relative;
+  top: 15%;
+  left: -2px;
+  flex-wrap: wrap;
+
+  z-index: 50;
+  overflow-y: auto;
+
+  @include mixin.flex-center(flex, center, flex-start);
+}
+  /* Content of the contact */
+.box-app-phone-contact {
+  width: 80%;
+  height: 75px;
+  background: v.$color-g2;
+  border: solid v.$color-g2;
+  border-radius: 25px;
+  margin: 15px 0;
+
+  display: flex;
+}
+.app-phone-contact {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+
+  h2 {
+    color: v.$color-w1;
+    font-size: .9rem;
+    font-weight: 600;
+    font-family: v.$font-mainO2;
+    margin: 5px 0 0 5px;
+  }
+  p {
+    color: v.$color-w1;
+    font-size: .9rem;
+    font-family: v.$font-mainO2;
+    margin: 5px 0 0 5px;
+  }
+}
+
+  /* Bottom contact phone grid numbers */
+.contain-app-phone-b {
+  width: 101%;
+  height: 350px;
+  background: v.$color-w1;
+  border: solid 2px;
+  border-radius: 35px;
+  z-index: 100;
+  position: relative;
+  top: 2.5%;
+  left: -1px;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2fr, 1fr);
+}
+  /* Input numbers */
+.box-app-text-phone {
+  width: 90%;
+  height: 100%;
+  border-bottom: solid v.$color-b1;
+  position: relative;
+  left: 5%;
+
+  p {
+    color: v.$color-b1;
+    font-size: 1.5rem;
+    font-family: v.$font-mainO2;
+    font-weight: 500;
+    letter-spacing: 5px;
+  }
+  
+  @include mixin.flex-center(flex, center, center);
+}
+  /* X - Delete number */
+.box-delete-phone {
+  width: 30px;
+  height: 30px;
+  color: v.$color-w1;
+  font-size: 1.1rem;
+  background: #e70000;
+  border: solid 2px #be0000d7;
+  border-radius: 25px;
+
+  position: absolute;
+  left: 90%;
+  
+  user-select: none;
+  cursor: pointer;
+
+  &:active {
+    transform: scale(.95);
+    background: #f11616d0;
+    border: solid 2px #b12a2a9f;
+  }
+
+  @include mixin.flex-center(flex, center, center);
+}
+  /* Buttons */
+.box-app-buttons-phone {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0%;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+.contain-app-button-phone {
+  width: 100%;
+  height: 100%;
+
+  @include mixin.flex-center(flex, center, center);
+}
+  /* Numbers */
+.button-app-phone {
+  width: 70px;
+  height: 45px;
+  color: v.$color-w1;
+  background: v.$color-b3;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: all .2s ease;
+  cursor: pointer;
+  position: relative;
+  top: 25%;
+  user-select: none;
+
+  &:hover {
+    background: v.$color-g1;
+  }
+  &:active {
+    transform: scale(.95);
+  }
+}
+  /* Button call */
+.button-app-phone-call {
+  width: 100px;
+  height: 45px;
+  color: v.$color-w1;
+  background: #25d425;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all .2s ease;
+  cursor: pointer;
+  position: relative;
+  top: 10%;
+
+  &:hover {
+    background: #2fc02ffd;
+  }
+  &:active {
+    transform: scale(.95);
+  }
+
+  @include mixin.flex-center(flex, center, center);
+}
+
+/* Image */
+  /* Phone */
+.image-app-phone-call {
+  width: 80%;
+  height: 80%;
+  transform: rotate(270deg);
+  user-select: none;
+
+  @include mixin.drag();
+}
+  /* User contact */
+.app-phone-image {
+  width: 30%;
+  height: 100%;
+  user-select: none;
+
+  @include mixin.flex-center(flex, center, center);
+  @include mixin.drag();
+}

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg1"
+   width="40"
+   height="40"
+   viewBox="0 0 40 40"
+   sodipodi:docname="battery_green.svg"
+   inkscape:version="1.4.3 (fcd0343856, 2026-01-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="10.0375"
+     inkscape:cx="15.491905"
+     inkscape:cy="11.407223"
+     inkscape:window-width="1920"
+     inkscape:window-height="1011"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g1" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="Image"
+     id="g1">
+    <path
+       id="rect37"
+       style="fill:#008000;stroke-width:1.139;paint-order:stroke markers fill"
+       d="M 9.0039062 6.7753906 C 8.3212376 6.7753906 7.7714844 7.3251438 7.7714844 8.0078125 L 7.7714844 36.625 C 7.7714844 37.307669 8.3212376 37.857422 9.0039062 37.857422 L 32.242188 37.857422 C 32.924855 37.857422 33.474609 37.307669 33.474609 36.625 L 33.474609 8.0078125 C 33.474609 7.3251438 32.924855 6.7753906 32.242188 6.7753906 L 9.0039062 6.7753906 z M 11.494141 10.759766 L 29.851562 10.759766 C 30.534231 10.759766 31.083984 11.309519 31.083984 11.992188 L 31.083984 18.195312 C 31.083984 18.877981 30.534232 19.427734 29.851562 19.427734 L 16.599609 19.427734 C 16.624948 19.554846 16.636719 19.688681 16.636719 19.826172 L 16.636719 31.78125 C 16.636719 32.664338 16.082491 33.375 15.392578 33.375 C 14.702665 33.375 14.146484 32.664338 14.146484 31.78125 L 14.146484 19.826172 C 14.146484 19.688681 14.160208 19.554846 14.185547 19.427734 L 11.494141 19.427734 C 10.811472 19.427734 10.261719 18.877981 10.261719 18.195312 L 10.261719 11.992188 C 10.261719 11.309518 10.811472 10.759766 11.494141 10.759766 z " />
+    <rect
+       style="fill:#008000;stroke-width:1.03523;paint-order:stroke markers fill"
+       id="rect40"
+       width="17.7335"
+       height="3.7858031"
+       x="11.820318"
+       y="2.0619376"
+       ry="1.017949" />
+  </g>
+</svg>
