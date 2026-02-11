@@ -9,7 +9,7 @@ import camera from "../../assets/Icons/Camera.svg"
 import square from "../../assets/Icons/square_light.svg"
 import circle from "../../assets/Icons/cirlce_light.svg"
 import triangle from "../../assets/Icons/triangleArrow_light.svg"
-import music from "../../assets/Icons/music.svg"
+import clock from "../../assets/Icons/clock.svg"
 
 /* ui components */
 import SignalGroup from "../PhoneSystem/ui/Signals/SignalGroup"
@@ -108,7 +108,7 @@ const CellPhone = () => {
                   <div className={`container-volume ${closingVolume ? "out" : "in"}`}>
                     <div className="volume-bar">
                       <div className="volume-bar-fill" style={{ width: `${volume}%` }} />
-                      <img className="image-bar-fill-music" src={music} alt="music" />
+                      <img className="image-bar-fill-music" src={clock} alt="clock" />
                     </div>
                   </div>
                 )}

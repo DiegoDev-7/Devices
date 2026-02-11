@@ -8,7 +8,7 @@ import calendar from "../../../assets/Apps/calendar.svg"
 import contact from "../../../assets/Apps/contact.svg"
 import folder from "../../../assets/Apps/folder.svg"
 import gallery from "../../../assets/Apps/gallery.svg"
-import music from "../../../assets/Apps/music.svg"
+import clock from "../../../assets/Apps/clock.svg"
 import message from "../../../assets/Apps/message.svg"
 import notes from "../../../assets/Apps/notes.svg"
 
@@ -27,7 +27,7 @@ const DeviceRender = () => {
     { src: contact, alt: "Contact"},
     { src: folder, alt: "Folder"},
     { src: gallery, alt: "Gallery"},
-    { src: music, alt: "Music"},
+    { src: clock, alt: "Clock"},
     { src: message, alt: "Message"},
     { src: notes, alt: "Notes" }, 
   ]
@@ -68,14 +68,14 @@ const DeviceRender = () => {
               
               <p className="content-text-phone-C1b">
                 El dispositivo movil de Nexia cuenta con un conjunto de aplicaciones integradas que simulan las funciones esenciales de un telefono real. 
-                Entre ellas se incluyen calculadora, ToDo, notas, configuracion, clima, archivos, musica, reloj y otras utilidades del sistema.
+                Entre ellas se incluyen calculadora, ToDo, notas, configuracion, clima, archivos, reloj y otras utilidades del sistema.
               </p>
               
               <br />
               
               <p className="content-text-phone-C1b">
                 Cada una de estas aplicaciones es completamente funcional y permite al usuario interactuar de forma realista, ya sea gestionando tareas, 
-                creando notas, explorando archivos, reproducir musica o ajustar la configuracion del dispositivo. Todo el entorno esta diseñado 
+                creando notas, explorando archivos, consultar el reloj o ajustar la configuracion del dispositivo. Todo el entorno esta diseñado 
                 para ofrecer una experiencia coherente e intuitiva, similar al uso de un dispositivo movil fisico.
               </p>
             </div>
