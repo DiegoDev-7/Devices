@@ -1,0 +1,126 @@
+/* Importations */
+@use "../../mixin";
+@use "../../variables" as v;
+
+
+
+/* 
+=====================
+      Container
+=====================
+*/
+.Container-app-screen-notes {
+  width: 100%;
+  height: 90%;
+  position: relative;
+  top: 10%;
+
+  @include mixin.flex-center(flex, center, center);
+}
+.contain-app-text-notes {
+  width: 95%;
+  height: 95%;
+
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: v.$color-g3;
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: v.$color-g2;
+  }
+}
+
+
+/* Text box position */
+.box-app-notes {
+  width: 90%;
+  height: 15%;
+  background: v.$color-w3;
+  border: solid 2px v.$color-w3;
+  border-radius: 25px;
+  margin: 10px 0;
+  cursor: pointer;
+  position: relative;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all .2s ease;
+
+
+  &:hover {
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+  &:active {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+/* Button */
+.button-screen-notes {
+  width: 50px;
+  height: 50px;
+  background: orange;
+  color: v.$color-w1;
+  border: none;
+  border-radius: 50px;
+  font-size: 2.6rem;
+  cursor: pointer;
+  user-select: none;
+
+  position: absolute;
+  top: 85%;
+  left: 80%;
+  
+  transition: all .1s ease;
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+/* Text */
+.title-app-screen-notes {
+  color: v.$color-b1;
+  font-size: 1.6rem;
+  font-family: v.$font-mainO1;
+  user-select: none;
+  
+  position: absolute;
+  top: -3%;
+  left: 10%;
+}
+
+.title-app-notes {
+  color: v.$color-b1;
+  font-size: 1.2rem;
+  font-family: v.$font-mainO1;
+  user-select: none;
+  margin: 5px 0 0 12px;
+}
+.text-app-notes {
+  color: v.$color-b1;
+  font-size: .9rem;
+  font-family: v.$font-mainO1;
+  user-select: none;
+  margin-left: 12px;
+}
+
+/* Images */
+.image-app-trash-note {
+  width: 25px;
+  height: 25px;
+
+  position: relative;
+  top: -55%;
+  left: 85%;
+
+  opacity: .7;
+}

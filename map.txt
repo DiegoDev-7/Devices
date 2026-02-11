@@ -12,7 +12,7 @@ Nexia/
 ├── PhoneSystem
 │   ├── Apps/           # Apps del telefono
 │   ├── Ui/             # Estados visuales sin funciones
-│   ├── core/           # cerebro del sistema
+│   ├── core/           # Cerebro del sistema
 │   ├── hardware/       # botones, sensores, fisico
 │   ├── hooks/          # estados reutilizables
 │   ├── screens/        # pantallas completas

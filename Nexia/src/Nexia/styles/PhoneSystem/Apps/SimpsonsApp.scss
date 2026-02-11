@@ -1,0 +1,277 @@
+/* Importations */
+@use "../../mixin";
+@use "../../variables" as v;
+
+
+
+/* 
+=====================
+      Container
+=====================
+*/
+.Container-app-screen-simpsons {
+  width: 100%;
+  height: 100%;
+  
+  @include mixin.flex-center(flex, center, center);
+}
+.box-app-screen-simpsons-a {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  background: #fed420;
+
+  @include mixin.flex-center(flex, center, center);
+}
+
+  /* Contain options sections */
+.box-app-screen-simpsons-b {
+  width: 100%;
+  height: 100%;
+}
+
+  /* Section buttons Button */
+.contain-buttons-section-simpsons {
+  width: 100%;
+  height: 25%;
+
+  @include mixin.flex-center(flex, space-evenly, flex-end);
+}
+.contain-image-sections-simpsons {
+  width: 150px;
+  height: 60px;
+  position: absolute;
+  top: 32px;
+}
+.button-section-simpsons {
+  width: 80px;
+  height: 25px;
+  background: none;
+  border: none;
+  margin-bottom: 15px;
+
+  font-size: 1rem;
+  font-family: v.$font-mainO2;
+  font-weight: 600;
+
+  transition: all 10ms ease;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+
+  /* cards */
+.card-screen-simpsons {
+  width: 100%;
+  height: 75%;
+
+  @include mixin.flex-center(flex, center, center);
+}
+.contain-buttons-page-simpsons {
+  width: 100%;
+  position: absolute;
+  top: 130px;
+
+  span {
+    color: v.$color-b1;
+    font-family: v.$font-mainO3;
+    text-align: center;
+  }
+
+  @include mixin.flex-center(flex, center, center);
+}
+  /* Buttons */
+.button-simpsons {
+  width: 35px;
+  height: 30px;
+  background: #fab700;
+  border: 2px solid v.$color-b1;
+  border-radius: 25px;
+  position: absolute;
+  cursor: pointer;
+  transition: all 10ms ease;
+
+  &:active {
+    transform: scale(.95); 
+  }
+
+  @include mixin.flex-center(flex, center, center);
+}
+  /* Pages */
+.button-simpsons--page {
+  top: -3px;
+}
+.button-simpsons--page-less {
+  left: 30%;
+
+}
+.button-simpsons--page-more {
+  right: 30%;
+  transform: rotate(180deg);
+
+  &:active {
+    transform: rotate(180deg) scale(.95); 
+  }
+}
+  /* Cards */
+.button-simpsons--inner-less {
+  left: 3px;
+
+  
+}
+.button-simpsons--inner-more {
+  right: 3px;
+}
+
+
+
+  /* Box card characteristics */
+.card-things-simpsons {
+  width: 70%;
+  height: 80%;
+  background: v.$color-w1;
+  border: solid 1px v.$color-w2;
+  border-radius: 25px;
+  transition: all .3s ease;
+
+  &:hover {
+    transform: scale(1.03);
+  }
+}
+.card-box-simpsons-a {
+  width: 100%;
+  height: 50%;
+  cursor: pointer;
+  transition: all 1ms ease;
+
+  &:active {
+    transform: scale(.97);
+  }
+
+  @include mixin.flex-center(flex, center, center);
+}
+  /* Card Text */
+.card-box-simpsons-b {
+  width: 100%;
+  height: 50%;
+  flex-wrap: wrap;
+
+  h3 {
+    width: 100%;
+    margin: 3px 0;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: v.$font-mainO2;
+  }
+
+  p {
+    width: 100%;
+    margin: 3px 0;
+    text-align: center;
+    font-size: 1rem;
+    font-family: v.$font-mainO2;
+  }
+
+  div {
+    width: 100%;
+    margin: 3px 0;
+    user-select: none;
+
+    @include mixin.flex-center(flex, center, center);
+  }
+
+  span {
+    width: auto;
+    padding: 0 10px;
+    border-radius: 25px;
+    font-family: v.$font-mainO3;
+    text-align: center;
+  }
+  .status-alive {
+    background: #18d318c4;
+    border: solid 2px #127212ef;
+  }
+  .status-deceased {
+    background: #ff3232b6;
+    border: solid 2px #d60101f1;
+  }
+
+  @include mixin.flex-center(flex, center, center);
+}
+
+/* Images */
+  /* Logo face simpsons */
+.image-app-face-simpsons {
+  width: 100%;
+  height: 50%;
+  user-select: none;
+
+  animation: simpson .8s infinite alternate;
+
+  @include mixin.drag();
+}
+/* Animation from face of homer */
+@keyframes simpson {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+  /* Logo loading screen The Simpsons */
+.image-logo-app-simpsons {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: -15px;
+  user-select: none;
+
+  @include mixin.drag();
+}
+
+  /* Logo sections The Simpsons */
+.image-sections-simpsons {
+  width: 100%;
+  height: 100%;
+  user-select: none;
+
+  @include mixin.drag();
+}
+
+  /* Image */
+.card-image-simpsons {
+  width: 70%;
+  height: 90%;
+  user-select: none;
+
+  @include mixin.drag();
+}
+
+  /* Arrow */
+.image-triangle-arrow-less-simpsons {
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
+  user-select: none;
+  transform: rotate(180deg);
+  opacity: .8;
+
+  @include mixin.drag();
+}
+.image-triangle-arrow-more-simpsons {
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
+  user-select: none;
+  opacity: .8;
+
+  @include mixin.drag();
+}

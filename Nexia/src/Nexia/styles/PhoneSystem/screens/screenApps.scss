@@ -1,0 +1,113 @@
+/* Importations */
+@use "../../mixin";
+@use "../../variables" as v;
+
+
+
+/* 
+====================
+     screnApps
+====================
+*/
+/* Containers */
+.container-screen-cellPhone-Apps {
+  width: 100%;
+  height: 80%;
+  position: absolute;
+  top: 100px;
+  z-index: 200;
+  gap: 5%;
+
+  @include mixin.flex-center(flex, center, center);
+  flex-direction: column;
+}
+  /* Box positions apps */
+.box-positions-cellPhone-Apps-A {
+  width: 100%;
+  height: 80%;
+
+  display: grid;
+  grid-template-columns: repeat(4, 50px);
+  grid-template-rows: repeat(3, 60px);
+  grid-column-gap: 25px;
+  grid-row-gap: 25px;
+  
+  position: relative;
+  overflow: hidden;
+  z-index: 200;
+}
+.box-cellPhone-Apps {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  margin: 10px;
+  background-color: v.$color-w1;
+  transition: all .1s ease;
+
+  &:hover {
+    background: v.$color-w2;
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+
+  &:nth-child(13) {
+    background-color: #f6d526;
+  }
+
+  @include mixin.flex-center(flex, center, center);
+}
+.box-cellPhone-Apps.phone {
+  transform: rotate(270deg);
+}
+
+
+/* BUTTONS */
+.button-cellPhone-Apps {
+  width: 85%;
+  height: 85%;
+  background: transparent;
+  border: none;
+  border-radius: 10px;
+  transition: all .2s ease;
+  cursor: pointer;
+
+  @include mixin.flex-center(flex, center, center);
+}
+
+/* IMAGES */
+.image-cellPhone-Apps {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  user-select: none;
+  
+  @include mixin.drag();
+}
+
+/* TEXT */
+.text-cellPhone-Apps {
+  color: v.$color-w1;
+  text-align: center;
+  font-family: v.$font-mainO1;
+  font-size: 1em;
+  font-weight: 600;
+  position: absolute;
+  margin-top: 70px;
+  user-select: none;
+}
+
+.box-positions-cellPhone-Apps-B {
+  width: 80%;
+  height: 10%;
+  position: relative;
+  top: -10px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 25px;
+
+  @include mixin.flex-center(flex, center, center)
+}

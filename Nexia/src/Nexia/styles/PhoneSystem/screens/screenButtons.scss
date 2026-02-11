@@ -1,0 +1,82 @@
+/* Importations */
+@use "../../mixin";
+@use "../../variables" as v;
+
+
+
+/* 
+====================
+   screenButtons
+====================
+*/
+/* Bottom touchscreen for buttons */
+.screen-touch-cellPhone-buttons {
+  width: 100%;
+  height: 30px;
+  background-color: #53535327;
+  border: solid 2px #53535305;
+  border-radius: 0 0 50px 50px;
+
+  position: relative;
+  top: -30px;
+  z-index: 2000;
+
+  transition: all 100ms ease;
+  opacity: 0;
+  transform: translateY(15px);
+
+  &:hover {
+    opacity: 1;
+    transform: translateY(-5px);
+  }
+
+  @include mixin.flex-center(flex, center, center)
+}
+
+/* Bottom touchscreen with buttons */
+.button-screen-cellPhone {
+  width: 25%;
+  height: 110%;
+  cursor: pointer;
+  border: solid 0px v.$color-g4;
+  border-radius: 25px;
+  background-color: #53535300;
+  transition: all 25ms ease-in;
+  z-index: 10;
+
+  &:active {
+    border-radius: 25px;
+    background-color: #53535328;
+  }
+
+  @include mixin.flex-center(flex, center, center);
+}
+
+/* IMAGES */
+/* Images bottom touch screen */
+.image-screen-touch-square {
+  width: 24px;
+
+  object-fit: cover;
+  user-select: none;
+
+  @include mixin.drag();
+}
+.image-screen-touch-circle {
+  width: 25px;
+
+  object-fit: cover;
+  user-select: none;
+
+  @include mixin.drag();
+}
+.image-screen-touch-triangle {
+  width: 20px;
+
+  object-fit: cover;
+  user-select: none;
+
+  transform: rotate(180deg);
+
+  @include mixin.drag();
+}

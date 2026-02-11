@@ -1,17 +1,5432 @@
-/* Error: Can't find stylesheet to import.
- *    ,
- * 28 | @use "./pages/devices/devices";
- *    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
- *    '
- *   main.scss 28:1  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a    \2577 \a 28 \2502  @use \"./pages/devices/devices\";\a    \2502  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   main.scss 28:1  root stylesheet";
+/* Global settings default */
+/* Flex center */
+/* No drag */
+/* Colors */
+/* Fonts */
+/* Fonts */
+@font-face {
+  font-family: "Oxygen1";
+  src: url("../../assets/Fonts/Oxygen-light.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
+@font-face {
+  font-family: "Oxygen2";
+  src: url("../../assets/Fonts/Oxygen-Regular.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Oxygen3";
+  src: url("../../assets/Fonts/Oxygen-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Faustina1";
+  src: url("../../assets/Fonts/Faustina-Regular.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Faustina2";
+  src: url("../../assets/Fonts/Faustina-Medium.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Faustina3";
+  src: url("../../assets/Fonts/Faustina-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Doto1";
+  src: url("../../assets/Fonts/Doto-Regular.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Doto2";
+  src: url("../../assets/Fonts/Doto-Medium.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Doto3";
+  src: url("../../assets/Fonts/Doto-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Shizuru";
+  src: url("../../assets/Fonts/Shizuru-Regular.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+/* Body base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* * {
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  &::-webkit-scrollbar-track {
+    background: v.$color-g1;
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: v.$color-w3;
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: v.$color-g2;
+  }
+} */
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+main {
+  width: 100dvw;
+  min-height: 100dvh;
+}
+
+/* 
+======================
+      Components
+======================
+*/
+/* Import mixin */
+/* 
+====================
+      Container
+====================
+*/
+.container-reload-animation-nexia {
+  width: 100dvw;
+  min-height: 100dvh;
+  background-color: #1a1a1a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 
+====================
+      Images
+====================
+*/
+.image-reload-animation-nexia {
+  width: 600px;
+  height: 600px;
+  margin-top: 25px;
+  object-fit: cover;
+  animation: reload 0.5s ease-in-out alternate infinite;
+}
+
+@keyframes reload {
+  to {
+    opacity: 0;
+  }
+  from {
+    opacity: 1;
+  }
+}
+/* 
+======================
+        Pages
+======================
+*/
+/* Importations */
+/* 
+====================
+     Container
+====================
+*/
+.container-main-phone {
+  background-color: #1a1a1a;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+}
+
+/* First box */
+.box-phone-a {
+  height: 100dvh;
+  display: flex;
+  position: relative;
+  grid-area: 1/1/2/2;
+}
+
+.box-title-phone {
+  width: 33dvw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Second box */
+.box-phone-b {
+  min-height: 100dvh;
+  grid-area: 2/1/3/2;
+}
+
+/* Third box */
+.box-phone-c {
+  grid-area: 3/1/4/2;
+  min-height: 100dvh;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 1fr;
+}
+
+/* Left column: title + description */
+.box-phone-C1 {
+  grid-area: 1/1/2/2;
+  width: 40dvw;
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-text-phone-C1 {
+  margin: 30px;
+}
+
+/* Right column: icons */
+.box-phone-C2 {
+  grid-area: 1/2/2/3;
+  min-width: 60dvw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-contain-image-phone-C2 {
+  margin: 25px;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contain-image-phone-C2 {
+  width: 100px;
+  height: 100px;
+  margin: 50px 25px;
+  background-color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 0 5px 3px #747474;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 
+====================
+      Images
+====================
+*/
+.rose-phone {
+  width: 100%;
+  height: 100%;
+  user-select: none;
+  object-fit: cover;
+}
+
+.image-phone-C2 {
+  width: 90%;
+  height: 90%;
+  user-select: none;
+  object-fit: cover;
+}
+
+/* 
+====================
+  Letters - Fonts
+====================
+*/
+/* Title rose */
+.title-phone {
+  color: #ffffff;
+  font-size: 120px;
+  font-style: italic;
+  font-weight: 200;
+  font-family: "Oxygen1", system-ui, -apple-system, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.content-text-phone-C1a {
+  color: #ffffff;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 200;
+  font-family: "Doto3", system-ui, -apple-system, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.content-text-phone-C1b {
+  color: #ffffff;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 200;
+  font-family: "Doto3", system-ui, -apple-system, sans-serif;
+  text-align: justify;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+/* Import mixin */
+/* 
+====================
+      Container
+====================
+*/
+.cntnrHeader {
+  width: 100dvw;
+  min-height: 50px;
+  border-bottom: solid 2px #222222;
+  position: fixed;
+  background-color: #ffffff;
+  z-index: 100000000;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 50px;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+/* Boxes */
+.boxHeaderA {
+  grid-area: 1/1/2/2;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.boxHeaderB {
+  width: 100%;
+  height: 100%;
+  grid-area: 1/2/2/3;
+  display: flex;
+}
+
+/* Content of the boxes */
+.contentHeader1 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.contentHeader1 .lnkheader {
+  font-weight: 400;
+  margin: 10px;
+  color: #333333;
+  transition: all 0.1s ease-in;
+}
+.contentHeader1 .lnkheader:hover {
+  color: #747474;
+}
+
+.contentHeader2 {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contentHeader3 {
+  width: 25%;
+  height: 100%;
+  margin: 0 20px 0 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* 
+====================
+      Images 
+====================
+*/
+.ImageNexia {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Language */
+.ImageL {
+  height: 22px;
+  margin: 10px;
+  object-fit: cover;
+  transition: all 0.1s ease-in-out;
+}
+.ImageL:hover {
+  scale: 1.1;
+}
+
+/* Discord */
+.ImageDc {
+  height: 17px;
+  margin: 0 10px 0 5px;
+  object-fit: cover;
+  transition: all 0.1s ease-in-out;
+}
+.ImageDc:hover {
+  scale: 1.1;
+}
+
+/* X */
+.ImageX {
+  height: 17px;
+  margin: 0 10px 0 5px;
+  object-fit: cover;
+  transition: all 0.1s ease-in-out;
+}
+.ImageX:hover {
+  scale: 1.1;
+}
+
+/* GitHub */
+.ImageGH {
+  height: 20px;
+  margin: 0 20px 0 5px;
+  object-fit: cover;
+  transition: all 0.1s ease-in-out;
+}
+.ImageGH:hover {
+  scale: 1.1;
+}
+
+/* 
+====================
+      Links
+====================
+*/
+.lnkheader {
+  text-decoration: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* 
+====================
+     Container
+====================
+*/
+.cntnrFooter {
+  min-height: 60px;
+  padding: 8px 0;
+  background-color: #333333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.cntnrFooter p {
+  color: white;
+  margin: 0;
+  font-size: 0.9em;
+}
+
+/* 
+====================
+       Links
+====================
+*/
+.lnkFooter {
+  color: #ffffff;
+  font-size: 0.9em;
+  text-decoration: none;
+  transition: all 0.1s ease;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.lnkFooter:hover {
+  text-decoration: underline;
+}
+
+/* Importations */
+/* 
+====================
+     Container
+====================
+*/
+.container-main-home {
+  background-color: #ffffff;
+  display: grid;
+  grid-template-rows: auto auto auto;
+}
+
+/* First box */
+.box-main-a {
+  min-height: 100dvh;
+  grid-area: 1/1/2/2;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 1fr;
+}
+
+/* Left column: hero text + description */
+.content-main-1A {
+  width: 50dvw;
+  grid-area: 1/1/2/2;
+}
+
+.content-main-center-1A {
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  gap: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Right column: cards + button */
+.content-main-2A {
+  width: 50dvw;
+  grid-area: 1/2/2/3;
+}
+
+/* Cards */
+.card-main-A2 {
+  width: 250px;
+  height: 300px;
+  border: solid #ffffff;
+  border-radius: 25px;
+  background-color: #222222;
+  box-shadow: 0 0 10px 5px #333333;
+  transition: all 0.1s ease-in-out;
+  rotate: -5deg;
+}
+.card-main-A2:hover {
+  scale: 1.05;
+}
+
+/* Position cards */
+.position-card-1 {
+  position: absolute;
+  top: 45%;
+  left: 78%;
+  transform: translate(-50%, -50%);
+  transition: all 0.2s ease-in-out;
+  z-index: 1;
+}
+.position-card-1:hover {
+  scale: 1.05;
+  rotate: 5deg;
+}
+.position-card-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.position-card-2 {
+  position: absolute;
+  top: 40%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  transition: all 0.2s ease-in-out;
+  z-index: 2;
+}
+.position-card-2:hover {
+  scale: 1.05;
+  rotate: 5deg;
+}
+.position-card-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.position-card-3 {
+  position: absolute;
+  top: 35%;
+  left: 72%;
+  transform: translate(-50%, -50%);
+  transition: all 0.2s ease-in-out;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Button */
+.button-main-A2 {
+  width: 380px;
+  height: 75px;
+  color: #ffffff;
+  background-color: #222222;
+  border: none;
+  border-radius: 50px;
+  font-family: "Doto3", system-ui, -apple-system, sans-serif;
+  font-size: 2em;
+  position: absolute;
+  top: 85%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  cursor: pointer;
+  transition: all 0.03s ease-in;
+}
+.button-main-A2:active {
+  color: #ffffff;
+  background-color: #222222;
+  width: 375px;
+  height: 70px;
+}
+
+/* Second box */
+.box-main-b {
+  min-height: 100dvh;
+  grid-area: 2/1/3/2;
+  background-color: #222222;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 1fr;
+  z-index: 100;
+}
+
+/* left column: card phone */
+.content-main-1B {
+  width: 50dvw;
+  grid-area: 1/1/2/2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Rear phone */
+.rear-mobile-main-1B {
+  width: 240px;
+  height: 450px;
+  border: solid 2px #333333;
+  border-radius: 40px;
+  background-color: #747474;
+  box-shadow: 0 0 25px 1px #9e9e9e;
+  display: flex;
+  justify-content: center;
+  align-items: none;
+}
+
+.rear-box-mobile-main-1B {
+  width: 220px;
+  height: 100px;
+  margin-top: 10px;
+  border: solid 2px #333333;
+  border-radius: 30px;
+  background-color: #535353;
+}
+
+/* Rear phone camera */
+.rear-box-camera-main-1B {
+  width: 27px;
+  height: 27px;
+  margin-top: 10px;
+  margin-left: 10px;
+  border: solid 2px #747474;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Rear phone flash */
+.rear-box-flash-main-1B {
+  width: 10px;
+  height: 10px;
+  margin-top: -25px;
+  margin-left: 40px;
+  border: solid 2px #747474;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Nexia logo in phone rear */
+.rear-box-nexia-main-1B {
+  width: 250px;
+  height: 250px;
+  position: absolute;
+}
+
+/* Buttons */
+.button-more-main-1B {
+  width: 10px;
+  height: 35px;
+  background-color: #535353;
+  border: solid 2px #000000;
+  border-radius: 10px 0 0 0;
+  box-shadow: 0 0 25px 1px #9e9e9e;
+  position: relative;
+  top: 45%;
+  left: -7.7%;
+  z-index: -1;
+}
+
+.button-less-main-1B {
+  width: 10px;
+  height: 35px;
+  background-color: #535353;
+  border: solid 2px #000000;
+  border-radius: 0 0 0 10px;
+  box-shadow: 0 0 25px 1px #9e9e9e;
+  position: relative;
+  top: 80%;
+  left: -12.3%;
+  z-index: -1;
+}
+
+.button-power-main-1B {
+  width: 10px;
+  height: 35px;
+  background-color: #535353;
+  border: solid 2px #000000;
+  border-radius: 10px 0 0 10px;
+  box-shadow: 0 0 25px 1px #9e9e9e;
+  position: relative;
+  top: 120%;
+  left: -17%;
+  z-index: -1;
+}
+
+/* Right column: text */
+.content-main-2B {
+  width: 50dvw;
+  grid-area: 1/2/2/3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-content-main-2B {
+  margin: 120px;
+}
+
+/* Third box */
+.box-main-c {
+  min-height: 100dvh;
+  background-color: #222222;
+  grid-area: 3/1/4/2;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 1fr;
+}
+
+/* left column: text, images */
+.box-content-main-1C {
+  margin-top: 25px;
+  grid-area: 1/1/2/2;
+}
+
+.card-apps-main-1C {
+  height: 70%;
+  position: relative;
+}
+
+.box-image-clock-1C {
+  width: 125px;
+  height: 125px;
+  border-radius: 25px;
+  box-shadow: 0 0 25px 3px #747474;
+  position: absolute;
+  top: 15%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-image-calendar-1C {
+  width: 125px;
+  height: 125px;
+  border-radius: 25px;
+  box-shadow: 0 0 25px 3px #747474;
+  position: absolute;
+  top: 45%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-image-calculator-1C {
+  width: 125px;
+  height: 125px;
+  border-radius: 25px;
+  box-shadow: 0 0 25px 3px #747474;
+  position: absolute;
+  top: 75%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-image-settings-2C {
+  width: 125px;
+  height: 125px;
+  border-radius: 25px;
+  box-shadow: 0 0 25px 3px #747474;
+  position: absolute;
+  top: 35%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-image-phone-2C {
+  width: 125px;
+  height: 125px;
+  border-radius: 25px;
+  box-shadow: 0 0 25px 3px #747474;
+  position: absolute;
+  top: 70%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Lines for the points */
+.line-clock-1C {
+  width: 200px;
+  height: 3px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+}
+
+.line-calendar-1C {
+  width: 200px;
+  height: 3px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+}
+
+.line-calculator-1C {
+  width: 200px;
+  height: 3px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+}
+
+.line-settings-2C {
+  width: 200px;
+  height: 3px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  z-index: -1;
+}
+
+.line-phone-2C {
+  width: 200px;
+  height: 3px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  z-index: -1;
+}
+
+/* Points */
+.point-clock-1C {
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  top: -3px;
+  left: 98%;
+  cursor: pointer;
+}
+
+.point-calendar-1C {
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  top: -3px;
+  left: 98%;
+  cursor: pointer;
+}
+
+.point-calculator-1C {
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  top: -3px;
+  left: 98%;
+  cursor: pointer;
+}
+
+.point-settings-2C {
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  top: -3px;
+  right: 98%;
+  cursor: pointer;
+}
+
+.point-phone-2C {
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  top: -3px;
+  right: 98%;
+  cursor: pointer;
+}
+
+/* Bubble effect */
+.bubble {
+  background-color: #9e9e9e;
+  border-radius: 50%;
+  position: absolute;
+  top: -3px;
+  left: 98%;
+  z-index: -1;
+  animation: pointBlink 0.9s ease-out infinite alternate;
+}
+
+.bubble-2C {
+  background-color: #9e9e9e;
+  border-radius: 50%;
+  position: absolute;
+  top: -3px;
+  right: 98%;
+  z-index: -1;
+  animation: pointBlink 0.9s ease-out infinite alternate;
+}
+
+/* Point blink animation */
+@keyframes pointBlink {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(2);
+    opacity: 0.5;
+  }
+}
+/* Right column: images, text */
+.box-content-main-2C {
+  margin-top: 25px;
+  grid-area: 1/2/2/3;
+}
+
+.card-apps-main-2C {
+  height: 60%;
+  position: relative;
+}
+
+/* Fourd box */
+.box-main-d {
+  min-height: 100dvh;
+  display: grid;
+  grid-template-rows: auto auto;
+}
+
+/* Top devices */
+.content-main-1D {
+  min-height: 100dvh;
+  background-color: #222222;
+  grid-area: 1/1/2/2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card mobile */
+.card-device-main-1D {
+  width: 250px;
+  height: 250px;
+  margin: 30px;
+  background-color: #747474;
+  border-radius: 30px 30px 30px 30px;
+  box-shadow: 0 0 15px 5px rgba(167, 167, 167, 0.3843137255);
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  z-index: 10000;
+}
+.card-device-main-1D:hover {
+  scale: 1.1;
+  box-shadow: none;
+}
+
+/* mobile */
+.box-device-mobile-main-1D {
+  width: 150px;
+  height: 180px;
+  background-color: #333333;
+  position: absolute;
+  border-radius: 50px 0 30px 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-16.5%, -30.5%);
+}
+
+.content-screen-mobile-main-1D {
+  width: 145px;
+  height: 175px;
+  background-color: #535353;
+  position: absolute;
+  border-radius: 50px 0 27px 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-48.3%, -48.8%);
+}
+
+/* Tablet */
+.box-device-tablet-main-1D {
+  width: 190px;
+  height: 180px;
+  background-color: #333333;
+  position: absolute;
+  border-radius: 50px 0 30px 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-33.9%, -30.5%);
+}
+
+.content-screen-tablet-main-1D {
+  width: 185px;
+  height: 175px;
+  background-color: #535353;
+  position: absolute;
+  border-radius: 50px 0 27px 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-48.8%, -48.8%);
+}
+
+.front-audio-tablet-main-1D {
+  width: 120px;
+  height: 5px;
+  background-color: #222222;
+  border: solid 2px #222222;
+  border-radius: 25px 0 0 25px;
+  position: absolute;
+  top: 0%;
+  left: 67.7%;
+  transform: translate(-50%, -50%);
+}
+
+/* Computer */
+.box-device-computer-main-1D {
+  width: 220px;
+  height: 180px;
+  background-color: #333333;
+  position: absolute;
+  border-radius: 50px 0 30px 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-43%, -30.5%);
+}
+
+.content-screen-computer-main-1D {
+  width: 215px;
+  height: 175px;
+  background-color: #535353;
+  position: absolute;
+  border-radius: 50px 0 27px 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-48.8%, -48.8%);
+}
+
+.front-audio-computer-main-1D {
+  width: 150px;
+  height: 5px;
+  background-color: #222222;
+  border: solid 2px #222222;
+  border-radius: 25px 0 0 25px;
+  position: absolute;
+  top: 0%;
+  left: 64%;
+  transform: translate(-48.4%, -50%);
+}
+
+/* ATM */
+.box-device-atm-main-1D {
+  width: 220px;
+  height: 180px;
+  background-color: #333333;
+  position: absolute;
+  border-radius: 15px 0 30px 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-43.3%, -30.5%);
+}
+
+.content-screen-atm-main-1D {
+  width: 195px;
+  height: 155px;
+  background-color: #535353;
+  position: absolute;
+  border-radius: 25px 0 27px 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-43.8%, -42%);
+}
+
+/* Available boxes to enter the device */
+.box-avaliable-device-main-1D {
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  box-shadow: 0 0 0 5px #333333;
+  position: absolute;
+}
+
+.box-noavailable-device-main-1D {
+  width: 100%;
+  height: 100%;
+  background-color: #333333;
+  opacity: 0.7;
+  border-radius: 25px;
+  box-shadow: 0 0 0 5px #333333;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box-noavailable-device-main-1D p {
+  color: #ffffff;
+  font-family: "Doto3", system-ui, -apple-system, sans-serif;
+  font-size: 30px;
+  text-align: justify;
+  margin: 50px 70px;
+  user-select: none;
+}
+
+/* Bottom */
+.content-main-2D {
+  min-height: 100dvh;
+  background-color: #222222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-main-2D {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto auto;
+}
+
+.box-image-main-2D {
+  grid-area: 1/1/2/2;
+  height: 100%;
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-main-text-2D {
+  grid-area: 2/1/3/2;
+  height: 100%;
+  margin-bottom: 120px;
+}
+
+/* 
+====================
+      Images
+====================
+*/
+/* Tree card images */
+.card-image-main-A2 {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+  margin-right: 20px;
+  user-select: none;
+  animation: blink 1.5s ease-in-out infinite alternate;
+}
+
+/* Blink animation for main card image */
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* Phone rear camera */
+.rear-box-image-main-1B {
+  width: 25px;
+  height: 25px;
+  object-fit: cover;
+  user-select: none;
+}
+
+.flash-box-image-main-1B {
+  width: 10px;
+  height: 10px;
+  object-fit: cover;
+  user-select: none;
+}
+
+/* Nexia logo in phone rear */
+.rear-box-image-nexia-1B {
+  width: 220px;
+  height: 250px;
+  object-fit: cover;
+  user-select: none;
+  position: relative;
+  top: 100%;
+  left: 47%;
+  transform: translate(-50%, -50%);
+  animation: rearImage 1s ease-in-out infinite alternate;
+}
+
+/* Blink animation for main card image */
+@keyframes rearImage {
+  0% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* Card images apps */
+.card-image-clock-1C {
+  width: 125px;
+  height: 125px;
+  background-color: #ffffff;
+  border-radius: 25px;
+  box-shadow: 0 0 25px 3px #747474;
+}
+
+.card-image-calendar-1C {
+  width: 125px;
+  height: 125px;
+  background-color: #ffffff;
+  border-radius: 25px;
+  box-shadow: 0 0 25px 3px #747474;
+}
+
+.card-image-calculator-1C {
+  width: 125px;
+  height: 125px;
+  background-color: #ffffff;
+  border-radius: 25px;
+  box-shadow: 0 0 25px 3px #747474;
+}
+
+.card-image-settings-2C {
+  width: 125px;
+  height: 125px;
+  background-color: #ffffff;
+  border-radius: 25px;
+  box-shadow: 0 0 25px 3px #747474;
+}
+
+.card-image-phone-2C {
+  width: 125px;
+  height: 125px;
+  background-color: #ffffff;
+  border-radius: 25px;
+  box-shadow: 0 0 25px 3px #747474;
+}
+
+/* Front camera */
+.front-camera-main-1D {
+  width: 20px;
+  user-select: none;
+  position: absolute;
+  top: 10%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+}
+
+/* Heart image */
+.heart-image-2D {
+  width: 65px;
+  height: 65px;
+}
+
+/* Screw decoration */
+.screw-device-main-1D {
+  width: 25px;
+  height: 25px;
+  user-select: none;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transform: translate(-70%, -70%);
+}
+
+/* 
+====================
+  Letters - Fonts
+====================
+*/
+/* Nexia */
+.letter-main-nexia-1A {
+  width: 500px;
+  color: #333333;
+  font-size: 160px;
+  font-style: italic;
+  font-weight: 200;
+  font-family: "Oxygen1", system-ui, -apple-system, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Description nexia */
+.letter-main-basic-1A {
+  width: 400px;
+  color: #747474;
+  margin-top: -85px;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  text-align: justify;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Description App */
+.font-main-1B {
+  color: #ffffff;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  font-size: 18px;
+  text-align: center;
+}
+
+.font-main-2B {
+  color: #ffffff;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  font-size: 18px;
+  text-align: center;
+}
+
+/* Description Nexia */
+.font-main-1C {
+  color: #ffffff;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  font-size: 18px;
+  text-align: justify;
+  margin: 50px 70px;
+}
+
+/* Title device */
+.title-device-main-1D {
+  color: #ffffff;
+  font-family: "Doto3", system-ui, -apple-system, sans-serif;
+  font-size: 20px;
+  text-align: center;
+  user-select: none;
+  animation: title 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes title {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* Description Nexia end */
+.font-main-2D {
+  color: #ffffff;
+  font-family: "Oxygen1", system-ui, -apple-system, sans-serif;
+  opacity: 0.7;
+  font-size: 18px;
+  text-align: center;
+  font-weight: 800;
+  margin: 20px 350px;
+}
+
+/* Scroll spy */
+.font-dot-label {
+  opacity: 0.2;
+  color: #ffffff;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  font-size: 13px;
+  text-align: center;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  user-select: none;
+  text-shadow: 0 0 5px black;
+}
+
+/* 
+====================
+      Others
+====================
+*/
+/* Hr */
+.hr-divider-text-1A {
+  width: 420px;
+  height: 4px;
+  background-color: #333333;
+  border: none;
+  border-radius: 50px;
+  color: #333333;
+  position: relative;
+  top: -75px;
+}
+
+/* Scroll spy */
+.scroll-progress {
+  position: fixed;
+  top: 50%;
+  left: 35px;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+/* Spaces */
+.dots {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.dot-item {
+  display: flex;
+  align-items: center;
+}
+
+/* Icon */
+.dot {
+  width: 10px;
+  height: 10px;
+  background: #333;
+  border: solid 2px #ffffff;
+  box-shadow: 0 0 10px 3px #535353;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  transform: rotate(50deg);
+  position: absolute;
+  right: 85px;
+}
+
+.dot-item.active .dot {
+  background: #ffffff;
+  transform: rotate(140deg) scale(1.5);
+}
+
+.dot-item.active .font-dot-label {
+  color: #ffffff;
+  opacity: 1;
+  font-weight: 600;
+}
+
+/* 
+======================
+     Phone System
+======================
+*/
+/* Importations */
+/* 
+====================
+     Container
+====================
+*/
+.container-nexia-cellPhone {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 
+====================
+      CellPhone
+====================
+*/
+/* Center cellPhone edge */
+.container-cellPhone-border {
+  width: 300px;
+  height: 550px;
+  background: #000000;
+  border: solid 1px #000000;
+  border-radius: 35px;
+  box-shadow: 0 0 20px 5px #747474;
+  z-index: 1000;
+}
+
+/* Display screen */
+.display-cellPhone {
+  width: 100%;
+  height: 100%;
+  background: #212121;
+  border: solid #000000;
+  border-radius: 40px;
+  position: relative;
+  z-index: 10;
+}
+
+/* Screen touch */
+.screen-cellPhone-touch {
+  width: 100%;
+  height: 100%;
+  background: #333333;
+  border: solid #000000;
+  border-radius: 35px;
+  position: relative;
+  z-index: 100;
+}
+
+/* Importations */
+/* 
+=====================
+      Container
+=====================
+*/
+.Container-app-calculator {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+/* Top section of the screen calculator */
+.box-app-screen-calculator-a {
+  grid-area: 1/1/2/2;
+  width: 100%;
+  height: 80%;
+  position: relative;
+  top: 20%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+/* Top container for notes */
+.contain-note-counter-screen-calculator {
+  width: 90%;
+  height: 60%;
+  position: absolute;
+  margin-left: 7%;
+}
+
+.box-note-calculator {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-y: auto;
+}
+.box-note-calculator p {
+  text-align: end;
+  font-family: "Oxygen1", system-ui, -apple-system, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-right: 5px;
+  user-select: none;
+}
+
+/* Bottom container for text */
+.contain-text-screen-calculator {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-text-screen-calculator {
+  width: 90%;
+  height: 70%;
+  border-bottom: solid 2px #0a0a0a;
+  font-family: "Oxygen1", system-ui, -apple-system, sans-serif;
+  font-size: 2.2rem;
+  position: relative;
+  top: 110px;
+  user-select: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* Bottom section of the screen calculator */
+.box-app-screen-calculator-b {
+  grid-area: 2/1/3/2;
+  align-items: center;
+  justify-items: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+.box-app-screen-calculator-b * {
+  user-select: none;
+}
+
+/* Buttons */
+.button-screen-calculartor {
+  width: 45px;
+  height: 45px;
+  padding: 20px;
+  background: none;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-family: "Faustina1", system-ui, -apple-system, sans-serif;
+  font-size: 1.2rem;
+  transition: all 0.1s ease;
+}
+.button-screen-calculartor:nth-child(n+5):nth-child(-n+7), .button-screen-calculartor:nth-child(n+9):nth-child(-n+11), .button-screen-calculartor:nth-child(n+13):nth-child(-n+16), .button-screen-calculartor:nth-child(n+18):nth-child(-n+18) {
+  color: #000000;
+}
+.button-screen-calculartor:nth-child(n+5):nth-child(-n+7):hover, .button-screen-calculartor:nth-child(n+9):nth-child(-n+11):hover, .button-screen-calculartor:nth-child(n+13):nth-child(-n+16):hover, .button-screen-calculartor:nth-child(n+18):nth-child(-n+18):hover {
+  color: #ffffff;
+  background: #535353;
+}
+.button-screen-calculartor:nth-child(n+5):nth-child(-n+7):active, .button-screen-calculartor:nth-child(n+9):nth-child(-n+11):active, .button-screen-calculartor:nth-child(n+13):nth-child(-n+16):active, .button-screen-calculartor:nth-child(n+18):nth-child(-n+18):active {
+  transform: scale(0.9);
+  background: #747474;
+}
+.button-screen-calculartor:nth-child(n+1):nth-child(-n+4), .button-screen-calculartor:nth-child(n+8):nth-child(-n+8), .button-screen-calculartor:nth-child(n+12):nth-child(-n+12), .button-screen-calculartor:nth-child(n+16):nth-child(-n+16), .button-screen-calculartor:nth-child(n+19):nth-child(-n+19) {
+  color: orange;
+}
+.button-screen-calculartor:nth-child(n+1):nth-child(-n+4):hover, .button-screen-calculartor:nth-child(n+8):nth-child(-n+8):hover, .button-screen-calculartor:nth-child(n+12):nth-child(-n+12):hover, .button-screen-calculartor:nth-child(n+16):nth-child(-n+16):hover, .button-screen-calculartor:nth-child(n+19):nth-child(-n+19):hover {
+  color: #ffffff;
+  background: orange;
+}
+.button-screen-calculartor:nth-child(n+1):nth-child(-n+4):active, .button-screen-calculartor:nth-child(n+8):nth-child(-n+8):active, .button-screen-calculartor:nth-child(n+12):nth-child(-n+12):active, .button-screen-calculartor:nth-child(n+16):nth-child(-n+16):active, .button-screen-calculartor:nth-child(n+19):nth-child(-n+19):active {
+  transform: scale(0.9);
+}
+.button-screen-calculartor:nth-child(n+20):nth-child(-n+20) {
+  color: orange;
+  background: orange;
+  color: #ffffff;
+}
+.button-screen-calculartor:nth-child(n+20):nth-child(-n+20):active {
+  transform: scale(0.9);
+}
+.button-screen-calculartor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Image */
+.image-nexia-calculator {
+  width: 50px;
+  height: 50px;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* Importations */
+/* 
+=====================
+      Container
+=====================
+*/
+.Container-app-screen-notes {
+  width: 100%;
+  height: 90%;
+  position: relative;
+  top: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contain-app-text-notes {
+  width: 95%;
+  height: 95%;
+  overflow-y: auto;
+}
+.contain-app-text-notes::-webkit-scrollbar {
+  width: 5px;
+}
+.contain-app-text-notes::-webkit-scrollbar-track {
+  background: transparent;
+}
+.contain-app-text-notes::-webkit-scrollbar-thumb {
+  background: #747474;
+  border-radius: 10px;
+}
+.contain-app-text-notes::-webkit-scrollbar-thumb:hover {
+  background: #535353;
+}
+
+/* Text box position */
+.box-app-notes {
+  width: 90%;
+  height: 15%;
+  background: #9e9e9e;
+  border: solid 2px #9e9e9e;
+  border-radius: 25px;
+  margin: 10px 0;
+  cursor: pointer;
+  position: relative;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.2s ease;
+}
+.box-app-notes:hover {
+  transform: translate(-50%, -50%) scale(1.05);
+}
+.box-app-notes:active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Button */
+.button-screen-notes {
+  width: 50px;
+  height: 50px;
+  background: orange;
+  color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  font-size: 2.6rem;
+  cursor: pointer;
+  user-select: none;
+  position: absolute;
+  top: 85%;
+  left: 80%;
+  transition: all 0.1s ease;
+}
+.button-screen-notes:active {
+  transform: scale(0.95);
+}
+
+/* Text */
+.title-app-screen-notes {
+  color: #000000;
+  font-size: 1.6rem;
+  font-family: "Oxygen1", system-ui, -apple-system, sans-serif;
+  user-select: none;
+  position: absolute;
+  top: -3%;
+  left: 10%;
+}
+
+.title-app-notes {
+  color: #000000;
+  font-size: 1.2rem;
+  font-family: "Oxygen1", system-ui, -apple-system, sans-serif;
+  user-select: none;
+  margin: 5px 0 0 12px;
+}
+
+.text-app-notes {
+  color: #000000;
+  font-size: 0.9rem;
+  font-family: "Oxygen1", system-ui, -apple-system, sans-serif;
+  user-select: none;
+  margin-left: 12px;
+}
+
+/* Images */
+.image-app-trash-note {
+  width: 25px;
+  height: 25px;
+  position: relative;
+  top: -55%;
+  left: 85%;
+  opacity: 0.7;
+}
+
+/* Importations */
+/* 
+=====================
+      Container
+=====================
+*/
+.Container-app-screen-folder {
+  width: 100%;
+  height: 95%;
+  position: relative;
+  top: 5%;
+}
+
+/* Box Title Top */
+.box-app-screen-folder-a {
+  width: 100%;
+  height: 10%;
+}
+
+.box-app-screen-folder-title {
+  width: 100%;
+  height: 100%;
+}
+.box-app-screen-folder-title p {
+  color: #333333;
+  margin: 0 0 0 10px;
+  font-size: 1.1rem;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+}
+.box-app-screen-folder-title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* Boxes content */
+.box-app-screen-folder-b {
+  width: 100%;
+  height: 85%;
+  overflow-y: auto;
+}
+
+.box-app-folder {
+  width: 98%;
+  height: 50px;
+  border-top: solid 1px #333333;
+  border-bottom: solid 1px #333333;
+  margin: 0 2.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* box image */
+.contain-app-folder-image {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Text */
+.contain-app-text {
+  width: 80%;
+  height: 100%;
+}
+.contain-app-text h4 {
+  font-size: 1rem;
+  font-family: "Oxygen1", system-ui, -apple-system, sans-serif;
+  font-weight: 500;
+  margin: 0 0 0 5px;
+}
+.contain-app-text p {
+  font-size: 0.85rem;
+  font-family: "Oxygen1", system-ui, -apple-system, sans-serif;
+  margin: 0 0 0 5px;
+}
+
+/* Image */
+.image-app-folder {
+  width: 75%;
+  height: 75%;
+  user-select: none;
+  object-fit: cover;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* Importations */
+/* 
+=====================
+      Container
+=====================
+*/
+/* Countries */
+.country-select-screen-radio {
+  width: 50px;
+  height: 35px;
+  position: absolute;
+  top: 360px;
+  right: 10px;
+}
+
+.button-select-app-radio {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.button-select-app-radio img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+.list-country-app-radio {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  list-style: none;
+  transform: translateY(-150px);
+  position: relative;
+  z-index: 100;
+}
+.list-country-app-radio li {
+  width: 50px;
+  height: 35px;
+  margin: 7px 0;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.list-country-app-radio li img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* App Background */
+.Contain-app-screen-radio {
+  width: 100%;
+  height: 100%;
+  border-radius: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Contain-app-screen-radio.co {
+  background: radial-gradient(circle, #fb3f3f 0%, #8a4ab2 20%, #5967ff 62%, #e1be60 76%, #ffd342 100%);
+}
+
+.Contain-app-screen-radio.us {
+  background: radial-gradient(circle, #FF7D7D 0%, #ff4a4a 50%, #468cfc 100%);
+}
+
+.Contain-app-screen-radio.ja {
+  background: radial-gradient(circle, rgb(255, 255, 255) 0%, rgb(254, 163, 181) 65%, rgb(252, 70, 107) 100%);
+}
+
+/* Content text */
+.box-content-app-screen-radio {
+  width: 57%;
+  height: 90%;
+  background: rgba(51, 51, 51, 0.8078431373);
+  border-radius: 25px 0 0 25px;
+  position: absolute;
+  left: 5px;
+  overflow: hidden;
+}
+
+/* glow */
+.radio-glow {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  position: absolute;
+  right: -100px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: radial-gradient(circle, #313131 0%, #2b2b2b 40%, #000000 80%, #000000 100%);
+  filter: blur(25px);
+}
+
+/* Contain title */
+.contain-title-app-radio {
+  width: 70%;
+  height: 35px;
+  margin-top: 10px;
+  padding: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: solid 2px #ffffff;
+}
+.contain-title-app-radio h3 {
+  display: inline-block;
+  padding-left: 100%;
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-family: "Doto3", system-ui, -apple-system, sans-serif;
+  font-weight: 900;
+  animation: marquee 10s linear infinite;
+}
+.contain-title-app-radio {
+  display: inline-block;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+/* Contain image */
+.contain-image-station-app-radio {
+  width: 25%;
+  height: 35px;
+  position: absolute;
+  top: 10px;
+  right: 0;
+}
+.contain-image-station-app-radio img {
+  width: 100%;
+  height: 100%;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+.contain-image-station-app-radio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contain text */
+.contain-text-app-radio {
+  width: 100%;
+  height: 50%;
+  padding: 5px;
+  position: relative;
+  z-index: 100;
+}
+.contain-text-app-radio p {
+  color: #ffffff;
+  font-size: 1rem;
+  font-family: "Oxygen1", system-ui, -apple-system, sans-serif;
+  text-align: justify;
+}
+
+/* Contain tags */
+.contain-context-title-app-radio {
+  width: 100%;
+  height: 5%;
+  padding: 5px;
+  position: relative;
+  z-index: 100;
+}
+.contain-context-title-app-radio p {
+  color: #ffffff;
+  font-size: 1rem;
+  font-family: "Oxygen1", system-ui, -apple-system, sans-serif;
+  text-align: justify;
+}
+.contain-context-title-app-radio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contain context */
+.contain-context-app-radio {
+  width: 100%;
+  height: 12%;
+  padding: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 100;
+}
+.contain-context-app-radio p {
+  width: 50%;
+  height: 55%;
+  color: #ffffff;
+  font-size: 1rem;
+  font-family: "Oxygen1", system-ui, -apple-system, sans-serif;
+  text-align: justify;
+}
+.contain-context-app-radio p:nth-child(2), .contain-context-app-radio p:nth-child(4) {
+  text-align: end;
+}
+
+/* Controls */
+.box-controls-app-screen-radio {
+  width: 96%;
+  height: 20%;
+  background: #000000;
+  border-radius: 25px;
+  position: absolute;
+  bottom: 5%;
+  gap: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Buttons */
+.button-controls-back-radio, .button-controls-pause-radio, .button-controls-forward-radio {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 1ms ease;
+}
+.button-controls-back-radio:active, .button-controls-pause-radio:active, .button-controls-forward-radio:active {
+  transform: scale(0.95);
+}
+.button-controls-back-radio, .button-controls-pause-radio, .button-controls-forward-radio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Point decoration */
+.sound-controls-app-screen-radio-a, .sound-controls-app-screen-radio-b, .sound-controls-app-screen-radio-c {
+  width: 95%;
+  height: 5%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sound-controls-app-screen-radio-a li, .sound-controls-app-screen-radio-b li, .sound-controls-app-screen-radio-c li {
+  width: 5px;
+  height: 5px;
+  background: #747474;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sound-controls-app-screen-radio-a {
+  position: absolute;
+  bottom: 22px;
+}
+
+.sound-controls-app-screen-radio-b {
+  position: absolute;
+  bottom: 30px;
+}
+
+.sound-controls-app-screen-radio-c {
+  position: absolute;
+  bottom: 38px;
+}
+
+/* Text */
+.text-fm-app-radio {
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  font-size: 1.5rem;
+  font-family: "Doto3", system-ui, -apple-system, sans-serif;
+  user-select: none;
+}
+
+/* Images */
+.button-controls-back-radio .image-controls-radio {
+  transform: rotate(180deg);
+}
+
+.image-controls-radio {
+  width: 50%;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* Importations */
+/* 
+=====================
+      Container
+=====================
+*/
+.Container-app-screen-simcard {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* SIM card design template container */
+.contain-image-app-simcard {
+  width: 120px;
+  height: 75px;
+  background: #333;
+  border: none;
+  border-radius: 3px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%, 0 70%);
+  cursor: pointer;
+}
+.contain-image-app-simcard:hover {
+  transform: scale(0.98);
+}
+.contain-image-app-simcard:active {
+  transform: scale(1);
+}
+.contain-image-app-simcard {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.box-image-app-simcard {
+  width: 75px;
+  height: 75px;
+  box-shadow: 0 0 100px 55px #333333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contain-number-app-simcard {
+  position: absolute;
+  top: 65%;
+}
+.contain-number-app-simcard p:first-child {
+  user-select: none;
+}
+
+/* Contain information */
+.contain-app-simcard-info {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: none;
+  position: absolute;
+  top: 48%;
+  left: 75%;
+  cursor: pointer;
+}
+
+.contain-app-info {
+  width: 250px;
+  height: 150px;
+  padding: 10px;
+  background: #747474;
+  border: solid #747474;
+  border-radius: 25px;
+  position: absolute;
+  top: 10%;
+}
+.contain-app-info p {
+  color: #ffffff;
+  text-align: justify;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  font-size: 0.5;
+}
+
+/* Image */
+/* Sim */
+.image-app-simcard {
+  width: 70%;
+  height: 70%;
+  user-select: none;
+  object-fit: cover;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* Info */
+.image-app-simcard-info {
+  width: 70%;
+  height: 70%;
+  user-select: none;
+  object-fit: cover;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* Text */
+.text-number-app-simcard {
+  margin: 10px;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+/* Importations */
+/* 
+=====================
+      Container
+=====================
+*/
+.Container-app-screen-phone {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2fr, 1fr);
+}
+
+/* Top contact phone grid */
+.contain-app-phone-a {
+  width: 101%;
+  height: 175px;
+  position: relative;
+  top: 15%;
+  left: -2px;
+  flex-wrap: wrap;
+  z-index: 50;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Content of the contact */
+.box-app-phone-contact {
+  width: 80%;
+  height: 75px;
+  background: #535353;
+  border: solid #535353;
+  border-radius: 25px;
+  margin: 15px 0;
+  display: flex;
+}
+
+.app-phone-contact {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+.app-phone-contact h2 {
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  margin: 5px 0 0 5px;
+}
+.app-phone-contact p {
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  margin: 5px 0 0 5px;
+}
+
+/* Bottom contact phone grid numbers */
+.contain-app-phone-b {
+  width: 101%;
+  height: 350px;
+  background: #ffffff;
+  border: solid 2px;
+  border-radius: 35px;
+  z-index: 100;
+  position: relative;
+  top: 2.5%;
+  left: -1px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2fr, 1fr);
+}
+
+/* Input numbers */
+.box-app-text-phone {
+  width: 90%;
+  height: 100%;
+  border-bottom: solid #000000;
+  position: relative;
+  left: 5%;
+}
+.box-app-text-phone p {
+  color: #000000;
+  font-size: 1.5rem;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  font-weight: 500;
+  letter-spacing: 5px;
+}
+.box-app-text-phone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* X - Delete number */
+.box-delete-phone {
+  width: 30px;
+  height: 30px;
+  color: #ffffff;
+  font-size: 1.1rem;
+  background: #e70000;
+  border: solid 2px rgba(190, 0, 0, 0.8431372549);
+  border-radius: 25px;
+  position: absolute;
+  left: 90%;
+  user-select: none;
+  cursor: pointer;
+}
+.box-delete-phone:active {
+  transform: scale(0.95);
+  background: rgba(241, 22, 22, 0.8156862745);
+  border: solid 2px rgba(177, 42, 42, 0.6235294118);
+}
+.box-delete-phone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Buttons */
+.box-app-buttons-phone {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.contain-app-button-phone {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Numbers */
+.button-app-phone {
+  width: 70px;
+  height: 45px;
+  color: #ffffff;
+  background: #222222;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  position: relative;
+  top: 25%;
+  user-select: none;
+}
+.button-app-phone:hover {
+  background: #333333;
+}
+.button-app-phone:active {
+  transform: scale(0.95);
+}
+
+/* Button call */
+.button-app-phone-call {
+  width: 100px;
+  height: 45px;
+  color: #ffffff;
+  background: #25d425;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  position: relative;
+  top: 10%;
+}
+.button-app-phone-call:hover {
+  background: rgba(47, 192, 47, 0.9921568627);
+}
+.button-app-phone-call:active {
+  transform: scale(0.95);
+}
+.button-app-phone-call {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Image */
+/* Phone */
+.image-app-phone-call {
+  width: 80%;
+  height: 80%;
+  transform: rotate(270deg);
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* User contact */
+.app-phone-image {
+  width: 30%;
+  height: 100%;
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* Importations */
+/* 
+=====================
+      Container
+=====================
+*/
+.Container-app-screen-rewards {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+/* First grid: View of money */
+.box-app-screen-rewards-a {
+  height: 100%;
+}
+.box-app-screen-rewards-a h2 {
+  width: 90%;
+  font-size: 1.5rem;
+  font-family: "Oxygen1", system-ui, -apple-system, sans-serif;
+  position: absolute;
+  top: 5%;
+  left: 15px;
+}
+.box-app-screen-rewards-a span {
+  width: 90%;
+  font-size: 2rem;
+  font-family: "Oxygen1", system-ui, -apple-system, sans-serif;
+  position: absolute;
+  top: 12%;
+  left: 15px;
+}
+.box-app-screen-rewards-a p {
+  width: 90%;
+  font-size: 0.9rem;
+  font-family: "Oxygen1", system-ui, -apple-system, sans-serif;
+  position: absolute;
+  top: 22%;
+  left: 15px;
+}
+.box-app-screen-rewards-a {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* Second grid: Button */
+.box-app-screen-rewards-b {
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Button */
+.button-app-screen-rewards {
+  width: 150px;
+  height: 50px;
+  background: #000000;
+  border: none;
+  border-radius: 50px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-family: "Oxygen1", system-ui, -apple-system, sans-serif;
+  transition: all 0.1s ease;
+  box-shadow: 0 0 15px 5px #9e9e9e;
+}
+.button-app-screen-rewards:hover {
+  background: #0a0a0a;
+}
+.button-app-screen-rewards:active {
+  background: #000000;
+  transform: scale(0.95);
+}
+
+/* Third grid: text of help */
+.box-app-screen-rewards-c {
+  height: 150%;
+  position: relative;
+  top: -110px;
+  overflow-y: auto;
+  margin: 5px;
+  padding: 20px;
+  text-align: justify;
+  font-size: 1rem;
+  font-family: "Oxygen1", system-ui, -apple-system, sans-serif;
+}
+
+/* Importations */
+/* 
+=====================
+      Container
+=====================
+*/
+.Container-app-screen-cash {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+/* Top grid: Money */
+.box-app-screen-cash-a {
+  height: 50%;
+}
+.box-app-screen-cash-a h2 {
+  font-size: 1.2rem;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+}
+.box-app-screen-cash-a span {
+  font-size: 1.8rem;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  position: relative;
+  top: 20%;
+  left: -1%;
+}
+.box-app-screen-cash-a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Bottom trid: Buttom */
+.box-app-screen-cash-b {
+  height: 150%;
+  position: relative;
+  top: -135px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Button */
+.button-app-cash {
+  width: 200px;
+  height: 200px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  top: -5%;
+}
+.button-app-cash:active {
+  transform: scale(0.95);
+}
+
+/* Image */
+.image-app-cash {
+  width: 100%;
+  height: 100%;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* Importations */
+/* 
+=====================
+      Container
+=====================
+*/
+.Container-app-bank {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+/* Top grid: Money */
+.box-app-screen-bank-a {
+  width: 101%;
+  height: 101%;
+  border-radius: 30px;
+  background: #001558;
+  position: relative;
+  top: -1px;
+  left: -1px;
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 75% 100%, 25% 100%, 0 52%);
+}
+.box-app-screen-bank-a h3 {
+  color: #ffffff;
+  font-size: 1rem;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  position: absolute;
+  top: 50%;
+}
+.box-app-screen-bank-a span {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  position: relative;
+  top: 20%;
+}
+.box-app-screen-bank-a p {
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  position: absolute;
+  top: 80%;
+}
+.box-app-screen-bank-a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Bottom grid: Button */
+.box-app-screen-bank-b {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Button */
+.button-app-screen-bank {
+  width: 150px;
+  height: 50px;
+  background: #001558;
+  border: none;
+  border-radius: 50px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-family: "Oxygen1", system-ui, -apple-system, sans-serif;
+  transition: all 0.1s ease;
+  box-shadow: 0 0 15px 5px #9e9e9e;
+}
+.button-app-screen-bank:hover {
+  background: rgba(0, 21, 88, 0.9647058824);
+}
+.button-app-screen-bank:active {
+  background: #001558;
+  transform: scale(0.95);
+}
+
+/* Card */
+.contain-app-card-bank {
+  width: 90%;
+  height: 150px;
+  background: #0a0a0a;
+  border: solid 2px #000000;
+  border-radius: 15px;
+  position: absolute;
+  top: 60%;
+}
+
+.box-app-card-sim {
+  width: 35px;
+  height: 35px;
+  margin: 10px;
+  position: relative;
+  left: 5%;
+}
+
+.box-app-card-visa {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 5px;
+  right: 15px;
+}
+
+/* Buttons */
+/* Eye */
+.button-app-screen-bank-eye {
+  width: 25px;
+  height: 25px;
+  border: solid #ffffff;
+  border-radius: 25px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 75%;
+}
+
+/* View card */
+.text-view-card-bank {
+  background: none;
+  border: none;
+  border-radius: 25px;
+  color: #000000;
+  text-decoration: underline;
+  font-size: 1rem;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  position: absolute;
+  top: 90%;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Text */
+.title-app-card-bank {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  text-align: justify;
+  margin-left: 5%;
+  user-select: none;
+}
+
+.text-app-card {
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  text-align: justify;
+  margin-left: 5%;
+}
+
+/* Image */
+.image-app-screen-eye {
+  width: 100%;
+  height: 100%;
+}
+
+.image-card-sim {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  user-select: none;
+  transform: rotate(180deg);
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+.image-card-visa {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* Importations */
+/* 
+=====================
+      Container
+=====================
+*/
+.Container-app-screen-message {
+  width: 100%;
+  height: 100%;
+}
+
+/* Top text */
+.box-app-screen-message-a {
+  width: 100%;
+  height: 10%;
+}
+.box-app-screen-message-a h3 {
+  color: #000000;
+  font-size: 1.5rem;
+  font-family: "Oxygen1", system-ui, -apple-system, sans-serif;
+  margin-left: 6px;
+  user-select: none;
+}
+.box-app-screen-message-a {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+/* Bottom container messages */
+.box-app-screen-message-b {
+  width: 100%;
+  height: 90%;
+  background: #d3d3d3;
+  border: solid #d3d3d3;
+  border-radius: 25px;
+  flex-wrap: wrap;
+  overflow-y: auto;
+}
+
+/* Container from messages */
+.contain-app-screen-message {
+  width: 90%;
+  height: 20%;
+  margin: 10px 0;
+  background: #9e9e9e;
+  border-radius: 25px;
+  display: flex;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  top: 0;
+  left: 5%;
+  transform: translateY(-50%, -50%);
+}
+.contain-app-screen-message:hover {
+  background-color: rgba(143, 143, 143, 0.8980392157);
+}
+.contain-app-screen-message:active {
+  background: #9e9e9e;
+}
+
+.box-image-app-message {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Circle gray from image */
+.box-circle-image-message {
+  width: 60%;
+  height: 43%;
+  background-color: #333333;
+  border: solid #333333;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Text */
+.box-text-app-message {
+  width: 80%;
+  height: 100%;
+}
+
+.text-title-message {
+  width: 95%;
+  height: 40%;
+  margin-left: 5px;
+  color: #000000;
+  font-size: 1.4rem;
+}
+
+.text-app-message {
+  width: 95%;
+  height: 60%;
+  margin-left: 5px;
+  color: #000000;
+  font-size: 0.9rem;
+  text-align: justify;
+}
+
+/* Images */
+.image-user-message {
+  width: 75%;
+  height: 75%;
+  user-select: none;
+  object-fit: cover;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* Importations */
+/* 
+=====================
+      Container
+=====================
+*/
+.Container-app-screen-security {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+/* First box with cicle and button */
+.box-app-screen-security-a {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Big circle */
+.cicle-app-screen-security {
+  width: 175px;
+  height: 175px;
+  background: transparent;
+  border: solid 2px #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 20px 10px rgba(0, 108, 112, 0.6705882353);
+  opacity: 0.97;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle-text-app-screen-security {
+  color: #000000;
+  font-size: 2.5rem;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  user-select: none;
+}
+
+/* Second box with more boxes and text */
+.box-app-screen-security-b {
+  width: 100%;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contain-app-screen-security {
+  width: 40%;
+  height: 35%;
+  margin: 10px;
+  background: rgba(0, 108, 112, 0.6705882353);
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+.contain-app-screen-security:hover {
+  background: rgba(0, 117, 121, 0.5960784314);
+}
+.contain-app-screen-security:active {
+  transform: scale(0.95);
+}
+
+/* Container for when the percentage is complete */
+.invisible-security-complete {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.container-screen-security-complete {
+  width: 250px;
+  height: 250px;
+  background: #ffffff;
+  border: solid 2px rgba(0, 92, 95, 0.8078431373);
+  border-radius: 50%;
+  position: absolute;
+  top: 28%;
+  left: 6%;
+  transform: traslateY(-50%, -50%);
+}
+.container-screen-security-complete h2 {
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  font-size: 1.9rem;
+  text-align: center;
+  color: #000000;
+  position: absolute;
+  top: 25%;
+  left: 18%;
+  user-select: none;
+}
+.container-screen-security-complete p {
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #000000;
+  position: absolute;
+  top: 70%;
+  left: 40%;
+  user-select: none;
+}
+
+.container-screen-security-complete.on {
+  animation: securityComplete 0.6s ease forwards;
+}
+
+/* activate animation when complete the percent */
+@keyframes securityComplete {
+  from {
+    opacity: 0;
+    transform: translate(0%, 50%);
+    box-shadow: 0 0 15px 5px;
+  }
+  to {
+    opacity: 1;
+    transform: translate(0%, 0px);
+  }
+}
+/* Images */
+.box-security-trash {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.image-security-trash {
+  width: 25%;
+  height: 55%;
+  background: orange;
+  border: solid orange;
+  border-radius: 25px;
+  margin-left: 5px;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+.image-security-batery {
+  width: 25%;
+  height: 55%;
+  background: greenyellow;
+  border: solid greenyellow;
+  border-radius: 25px;
+  margin-left: 5px;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+.image-security-scaner {
+  width: 25%;
+  height: 55%;
+  background: #ffffff;
+  border: solid #ffffff;
+  border-radius: 25px;
+  margin-left: 5px;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+.image-security-cleaner {
+  width: 25%;
+  height: 55%;
+  background: lightblue;
+  border: solid lightblue;
+  border-radius: 25px;
+  margin-left: 5px;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* Text */
+.box-security-trash-text {
+  width: 100%;
+  height: 50%;
+  position: relative;
+  top: -12px;
+}
+
+.text-tilte-security {
+  width: 90%;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  margin-left: 5px;
+}
+
+.text-content-security {
+  width: 90%;
+  color: #ffffff;
+  font-size: 0.7rem;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  margin-left: 5px;
+  text-align: justify;
+}
+
+/* Buttons */
+.circle-button-app-screen-security {
+  width: 100px;
+  height: 50px;
+  border: none;
+  border-radius: 25px;
+  background: rgba(0, 108, 112, 0.6705882353);
+  color: #ffffff;
+  font-family: "Oxygen1", system-ui, -apple-system, sans-serif;
+  font-size: 1.3rem;
+  position: absolute;
+  top: 43%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.circle-button-app-screen-security:hover {
+  opacity: 0.96;
+}
+.circle-button-app-screen-security:active {
+  transform: scale(0.95);
+}
+
+/* Importations */
+/* 
+=====================
+      Container
+=====================
+*/
+.Container-app-screen-photogallery {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+/* Title from gallery */
+.box-app-screen-photogallery-a {
+  width: 100%;
+  height: 60%;
+}
+.box-app-screen-photogallery-a p {
+  font-size: 1.2rem;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+}
+.box-app-screen-photogallery-a {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+/* Flex bottom from pictures */
+.box-app-screen-photogallery-b {
+  width: 100%;
+  height: 110%;
+  position: relative;
+  top: -40px;
+}
+
+/* Text */
+.contain-title-date-photogallery {
+  width: 100%;
+  height: 10px;
+}
+.contain-title-date-photogallery p {
+  color: #000000;
+  font-size: 1.1rem;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  margin-left: 15px;
+}
+.contain-title-date-photogallery {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.contain-photos-photogallery {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+
+/* Box big image */
+.box-app-screen-photogallery-c {
+  width: 100%;
+  height: 100%;
+  border-radius: 35px;
+  background: rgba(77, 77, 77, 0.6901960784);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contain-image-photogallery {
+  width: 80%;
+  height: 80%;
+}
+.contain-image-photogallery img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+.contain-image-photogallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Button */
+.button-text-x-photogallery {
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border: none;
+  border-radius: 25px;
+  position: absolute;
+  top: 250px;
+  right: 0px;
+  z-index: 10010;
+  cursor: pointer;
+  transition: all 0.1ms ease;
+}
+.button-text-x-photogallery:hover {
+  transform: scale(1.1);
+}
+.button-text-x-photogallery:active {
+  transform: scale(1.05);
+}
+.button-text-x-photogallery p {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  font-weight: 500;
+}
+
+/* Images */
+.box-image-photogallery {
+  width: 100px;
+  height: 100px;
+  margin: 15px;
+  border: solid 1px;
+  border-radius: 3px;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.image-photogallery {
+  width: 100%;
+  height: 100%;
+  display: block;
+  user-select: none;
+  object-fit: cover;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* Importations */
+/* 
+=====================
+      Container
+=====================
+*/
+.Container-app-screen-contact {
+  width: 100%;
+  height: 100%;
+}
+
+.box-app-screen-contact {
+  width: 100%;
+  max-height: 90%;
+  margin-top: 10%;
+  overflow-y: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Container from contact */
+.contain-app-screen-contact {
+  width: 80%;
+  height: 75px;
+  background: rgba(77, 77, 77, 0.6901960784);
+  border: solid 2px rgba(77, 77, 77, 0.6901960784);
+  border-radius: 25px;
+  margin: 25px 0;
+  display: flex;
+}
+
+.box-image-contact {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-text-contact {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  left: 10px;
+}
+.box-text-contact h3 {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  text-align: justify;
+}
+.box-text-contact p {
+  color: #ffffff;
+  font-size: 1rem;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  text-align: justify;
+}
+
+/* Images */
+.image-contact {
+  background-color: #535353;
+  border: solid 5px #535353;
+  border-radius: 25px;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* Text */
+.title-contact {
+  width: 50%;
+  height: 50px;
+  border-bottom: solid;
+  color: #000000;
+  position: relative;
+  margin: 10px 0 0 0;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/* Importations */
+/* 
+=====================
+      Container
+=====================
+*/
+.Container-app-screen-settings {
+  width: 100%;
+  height: 100%;
+}
+
+/* Input */
+/* Container Input */
+.container-app-input-settings {
+  margin: 15px 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container-app-input-settings input {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  border: none;
+  outline: none;
+}
+.container-app-input-settings input:focus {
+  outline: none;
+  box-shadow: none;
+}
+.container-app-input-settings input::placeholder {
+  color: #ffffff;
+}
+.container-app-input-settings input::-webkit-input-placeholder {
+  color: #ffffff;
+}
+.container-app-input-settings input::-moz-placeholder {
+  color: #ffffff;
+}
+
+.input-app-settings {
+  width: 95%;
+  height: 50px;
+  background: rgba(77, 77, 77, 0.6901960784);
+  border: solid 3px rgba(77, 77, 77, 0.6901960784);
+  border-radius: 25px;
+  padding-left: 32px;
+}
+
+/* Option boxes */
+.box-app-screen-settings {
+  width: 100%;
+  height: 70%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.contain-app-settings-options {
+  width: 100%;
+  height: 50px;
+  margin: 10px 0 10px 5px;
+  display: flex;
+  cursor: pointer;
+}
+.contain-app-settings-options:hover {
+  background: rgba(167, 167, 167, 0.3843137255);
+}
+
+/* Icon */
+.box-image-settings-options {
+  width: 18%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contain-image-settings-options {
+  width: 35px;
+  height: 35px;
+  border-radius: 10px;
+}
+.contain-image-settings-options.settings-phone {
+  background: #00b5bb;
+  border: solid 5px #00b5bb;
+}
+.contain-image-settings-options.settings-arrow {
+  background: #eeb005;
+  border: solid 7px #eeb005;
+  transform: rotate(270deg);
+}
+.contain-image-settings-options.settings-secure {
+  background: #00ca11;
+  border: solid 5px #00ca11;
+}
+.contain-image-settings-options.settings-sim {
+  background: #e6e200;
+  border: solid 5px #e6e200;
+}
+.contain-image-settings-options.settings-wifi {
+  background: #008dc5;
+  border: solid 7px #008dc5;
+}
+.contain-image-settings-options.settings-bluetooth {
+  background: #008dc5;
+  border: solid 5px #008dc5;
+}
+.contain-image-settings-options.settings-sun {
+  background: rgba(218, 214, 1, 0.8549019608);
+  border: solid 5px rgba(218, 214, 1, 0.8549019608);
+}
+.contain-image-settings-options.settings-rose {
+  background: #e072bf;
+  border: solid 5px #e072bf;
+}
+.contain-image-settings-options.settings-bookmark {
+  background: #46ced3;
+  border: solid 5px #46ced3;
+}
+.contain-image-settings-options.settings-lock {
+  background: #747474;
+  border: solid 5px #747474;
+}
+.contain-image-settings-options.settings-View {
+  background: #3a859c;
+  border: solid 3px #3a859c;
+}
+.contain-image-settings-options.settings-user {
+  background: #1aadb3;
+  border: solid 5px #1aadb3;
+}
+.contain-image-settings-options.settings-comments {
+  background: #ff6702;
+  border: solid 7px #ff6702;
+}
+
+/* Icon Forward */
+.box-image-forward-settings-options {
+  width: 15%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contain-image-forward-settings {
+  width: 20px;
+  height: 20px;
+}
+
+/* Text */
+.box-text-settings-options {
+  width: 85%;
+  height: 100%;
+  margin-left: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.title-app-settings {
+  width: 90%;
+  height: 60px;
+  font-size: 1.5rem;
+  margin-left: 10px;
+  font-family: "Oxygen3", system-ui, -apple-system, sans-serif;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+/* Images */
+.search-input-icon-settings {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 14px;
+  pointer-events: none;
+}
+
+.image-forward-settings {
+  width: 100%;
+  height: 100%;
+  user-select: none;
+  opacity: 0.7;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+.image-settings-options {
+  width: 100%;
+  height: 100%;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* Others */
+.hr-settings-options {
+  width: 95%;
+  height: 2px;
+  background: #333333;
+  border: none;
+  border-radius: 25px;
+  position: relative;
+  left: 5px;
+}
+
+/* Importations */
+/* 
+=====================
+      Container
+=====================
+*/
+.Container-app-screen-simpsons {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-app-screen-simpsons-a {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  background: #fed420;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contain options sections */
+.box-app-screen-simpsons-b {
+  width: 100%;
+  height: 100%;
+}
+
+/* Section buttons Button */
+.contain-buttons-section-simpsons {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+}
+
+.contain-image-sections-simpsons {
+  width: 150px;
+  height: 60px;
+  position: absolute;
+  top: 32px;
+}
+
+.button-section-simpsons {
+  width: 80px;
+  height: 25px;
+  background: none;
+  border: none;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  font-weight: 600;
+  transition: all 10ms ease;
+  cursor: pointer;
+}
+.button-section-simpsons:hover {
+  text-decoration: underline;
+}
+.button-section-simpsons:active {
+  transform: scale(0.95);
+}
+
+/* cards */
+.card-screen-simpsons {
+  width: 100%;
+  height: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contain-buttons-page-simpsons {
+  width: 100%;
+  position: absolute;
+  top: 130px;
+}
+.contain-buttons-page-simpsons span {
+  color: #000000;
+  font-family: "Oxygen3", system-ui, -apple-system, sans-serif;
+  text-align: center;
+}
+.contain-buttons-page-simpsons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Buttons */
+.button-simpsons {
+  width: 35px;
+  height: 30px;
+  background: #fab700;
+  border: 2px solid #000000;
+  border-radius: 25px;
+  position: absolute;
+  cursor: pointer;
+  transition: all 10ms ease;
+}
+.button-simpsons:active {
+  transform: scale(0.95);
+}
+.button-simpsons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Pages */
+.button-simpsons--page {
+  top: -3px;
+}
+
+.button-simpsons--page-less {
+  left: 30%;
+}
+
+.button-simpsons--page-more {
+  right: 30%;
+  transform: rotate(180deg);
+}
+.button-simpsons--page-more:active {
+  transform: rotate(180deg) scale(0.95);
+}
+
+/* Cards */
+.button-simpsons--inner-less {
+  left: 3px;
+}
+
+.button-simpsons--inner-more {
+  right: 3px;
+}
+
+/* Box card characteristics */
+.card-things-simpsons {
+  width: 70%;
+  height: 80%;
+  background: #ffffff;
+  border: solid 1px #d3d3d3;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+.card-things-simpsons:hover {
+  transform: scale(1.03);
+}
+
+.card-box-simpsons-a {
+  width: 100%;
+  height: 50%;
+  cursor: pointer;
+  transition: all 1ms ease;
+}
+.card-box-simpsons-a:active {
+  transform: scale(0.97);
+}
+.card-box-simpsons-a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card Text */
+.card-box-simpsons-b {
+  width: 100%;
+  height: 50%;
+  flex-wrap: wrap;
+}
+.card-box-simpsons-b h3 {
+  width: 100%;
+  margin: 3px 0;
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+}
+.card-box-simpsons-b p {
+  width: 100%;
+  margin: 3px 0;
+  text-align: center;
+  font-size: 1rem;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+}
+.card-box-simpsons-b div {
+  width: 100%;
+  margin: 3px 0;
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-box-simpsons-b span {
+  width: auto;
+  padding: 0 10px;
+  border-radius: 25px;
+  font-family: "Oxygen3", system-ui, -apple-system, sans-serif;
+  text-align: center;
+}
+.card-box-simpsons-b .status-alive {
+  background: rgba(24, 211, 24, 0.768627451);
+  border: solid 2px rgba(18, 114, 18, 0.937254902);
+}
+.card-box-simpsons-b .status-deceased {
+  background: rgba(255, 50, 50, 0.7137254902);
+  border: solid 2px rgba(214, 1, 1, 0.9450980392);
+}
+.card-box-simpsons-b {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Images */
+/* Logo face simpsons */
+.image-app-face-simpsons {
+  width: 100%;
+  height: 50%;
+  user-select: none;
+  animation: simpson 0.8s infinite alternate;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* Animation from face of homer */
+@keyframes simpson {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+/* Logo loading screen The Simpsons */
+.image-logo-app-simpsons {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: -15px;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* Logo sections The Simpsons */
+.image-sections-simpsons {
+  width: 100%;
+  height: 100%;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* Image */
+.card-image-simpsons {
+  width: 70%;
+  height: 90%;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* Arrow */
+.image-triangle-arrow-less-simpsons {
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
+  user-select: none;
+  transform: rotate(180deg);
+  opacity: 0.8;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+.image-triangle-arrow-more-simpsons {
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
+  user-select: none;
+  opacity: 0.8;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* Importations */
+/* 
+=====================
+      Container
+=====================
+*/
+.container-app-calendar {
+  width: 100%;
+  height: 100%;
+}
+
+.calendar {
+  background: #ffffff;
+  color: #1a1a1a;
+  height: 100%;
+  border-radius: 30px;
+  font-family: "Oxygen1", system-ui, -apple-system, sans-serif;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.box-calendar-app {
+  width: 100%;
+  border: solid #333333;
+  padding: 10px;
+  background: rgba(167, 167, 167, 0.3843137255);
+  border-radius: 25px;
+  position: relative;
+  top: -50px;
+  transform: scale(0.95);
+}
+
+/* Buttons */
+.calendar section {
+  width: 100%;
+  height: 40%;
+  margin-bottom: 14px;
+  gap: 30px;
+}
+.calendar section h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+.calendar section .button-calendar-a, .calendar section .button-calendar-b {
+  background: #222222;
+  border: none;
+  color: #ffffff;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  padding: 3px 12px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.calendar section .button-calendar-a:hover, .calendar section .button-calendar-b:hover {
+  background: #535353;
+}
+.calendar section .button-calendar-a {
+  position: absolute;
+  top: 90px;
+  left: 25px;
+}
+.calendar section .button-calendar-b {
+  position: absolute;
+  top: 90px;
+  right: 25px;
+}
+.calendar section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Name of the days*/
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  margin-bottom: 6px;
+}
+.weekdays div {
+  font-size: 13px;
+  font-family: "Oxygen1", system-ui, -apple-system, sans-serif;
+  font-weight: 500;
+  color: #000000;
+}
+
+/* Grid days */
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+}
+.days div {
+  padding: 10px 0;
+  margin: 4px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.days div:hover {
+  background: rgba(77, 77, 77, 0.6901960784);
+}
+
+/* Today */
+.today {
+  background: #535353;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* Empty days */
+.empty {
+  visibility: hidden;
+}
+
+/* Importations */
+/* 
+====================
+       Buttons
+====================
+*/
+/* Buttons border cellPhone: more, less, power */
+.button-cellPhone-more {
+  border-radius: 0 50px 0 0;
+  position: relative;
+  left: 298px;
+  top: -490px;
+}
+
+.button-cellPhone-less {
+  border-radius: 0 0 70px 0;
+  position: relative;
+  left: 298px;
+  top: -492px;
+}
+
+.Button-cellPhone-power {
+  border-radius: 0 50px 50px 0;
+  position: relative;
+  left: 298px;
+  top: -483px;
+}
+
+.button-cellPhone-more, .button-cellPhone-less, .Button-cellPhone-power {
+  width: 4px;
+  height: 40px;
+  background-color: #000000;
+  border: solid 1px;
+  transition: all 100ms ease-in;
+  cursor: pointer;
+  z-index: -1;
+}
+.button-cellPhone-more:active, .button-cellPhone-less:active, .Button-cellPhone-power:active {
+  left: 297px;
+}
+
+/* Importations */
+/* 
+=====================
+ Container wallpaper
+=====================
+*/
+.screen-cellPhone-wallpaper {
+  width: 100%;
+  height: 100%;
+  border-radius: 35px;
+  transform-origin: center;
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+
+.screen-cellPhone-wallpaper.on {
+  transform: scaleX(1);
+}
+
+.screen-cellPhone-wallpaper.off {
+  transform: scaleX(0);
+}
+
+/* Wallpaper */
+.image-wallpaper {
+  width: 100%;
+  height: 100%;
+  border-radius: 35px;
+  user-select: none;
+  object-fit: cover;
+  position: relative;
+  z-index: 100;
+  filter: blur(1px);
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* Importations */
+/* 
+====================
+  Volume indicator
+====================
+*/
+.container-volume {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  top: -490px;
+  left: 120px;
+  z-index: 1000;
+  transform: rotate(270deg);
+  pointer-events: none;
+}
+
+/* Animation in of the phone */
+.container-volume.in {
+  animation: volume-in 0.25s ease forwards;
+}
+
+/* Animation out of the phone */
+.container-volume.out {
+  animation: volume-out 0.25s ease forwards;
+}
+
+/* Keyframse for the phone in/out */
+@keyframes volume-in {
+  from {
+    opacity: 0;
+    transform: rotate(270deg) translateY(15px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(270deg) translateY(0) scale(1);
+  }
+}
+@keyframes volume-out {
+  from {
+    opacity: 1;
+    transform: rotate(270deg) translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: rotate(270deg) translateY(15px) scale(0.95);
+  }
+}
+/* Bar volume back transparent */
+.volume-bar {
+  width: 150px;
+  height: 28px;
+  background: rgba(70, 70, 70, 0.4862745098);
+  border-radius: 5px;
+  position: relative;
+  left: 20px;
+}
+
+/* Fill volume front white */
+.volume-bar-fill {
+  height: 100%;
+  border: none;
+  border-radius: 5px;
+  background: #ffffff;
+  transition: width 0.2s ease;
+}
+
+/* Image music for the sound up/down */
+.image-bar-fill-music {
+  width: 15px;
+  height: 15px;
+  user-select: none;
+  object-fit: cover;
+  position: absolute;
+  top: 13px;
+  left: 13px;
+  transform: translateY(-50%) rotate(90deg);
+  opacity: 0.7;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* Importations */
+/* 
+=================================
+  Aplications screens container
+=================================
+*/
+.Container-apps-screens {
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  border-radius: 35px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 100;
+}
+
+/* Importations */
+/* 
+====================
+     screnApps
+====================
+*/
+/* Containers */
+.container-screen-cellPhone-Apps {
+  width: 100%;
+  height: 80%;
+  position: absolute;
+  top: 100px;
+  z-index: 200;
+  gap: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Box positions apps */
+.box-positions-cellPhone-Apps-A {
+  width: 100%;
+  height: 80%;
+  display: grid;
+  grid-template-columns: repeat(4, 50px);
+  grid-template-rows: repeat(3, 60px);
+  grid-column-gap: 25px;
+  grid-row-gap: 25px;
+  position: relative;
+  overflow: hidden;
+  z-index: 200;
+}
+
+.box-cellPhone-Apps {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  margin: 10px;
+  background-color: #ffffff;
+  transition: all 0.1s ease;
+}
+.box-cellPhone-Apps:hover {
+  background: #d3d3d3;
+}
+.box-cellPhone-Apps:active {
+  transform: scale(0.95);
+}
+.box-cellPhone-Apps:nth-child(13) {
+  background-color: #f6d526;
+}
+.box-cellPhone-Apps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-cellPhone-Apps.phone {
+  transform: rotate(270deg);
+}
+
+/* BUTTONS */
+.button-cellPhone-Apps {
+  width: 85%;
+  height: 85%;
+  background: transparent;
+  border: none;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* IMAGES */
+.image-cellPhone-Apps {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* TEXT */
+.text-cellPhone-Apps {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Oxygen1", system-ui, -apple-system, sans-serif;
+  font-size: 1em;
+  font-weight: 600;
+  position: absolute;
+  margin-top: 70px;
+  user-select: none;
+}
+
+.box-positions-cellPhone-Apps-B {
+  width: 80%;
+  height: 10%;
+  position: relative;
+  top: -10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Importations */
+/* 
+====================
+   screenButtons
+====================
+*/
+/* Bottom touchscreen for buttons */
+.screen-touch-cellPhone-buttons {
+  width: 100%;
+  height: 30px;
+  background-color: rgba(83, 83, 83, 0.1529411765);
+  border: solid 2px rgba(83, 83, 83, 0.0196078431);
+  border-radius: 0 0 50px 50px;
+  position: relative;
+  top: -30px;
+  z-index: 2000;
+  transition: all 100ms ease;
+  opacity: 0;
+  transform: translateY(15px);
+}
+.screen-touch-cellPhone-buttons:hover {
+  opacity: 1;
+  transform: translateY(-5px);
+}
+.screen-touch-cellPhone-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Bottom touchscreen with buttons */
+.button-screen-cellPhone {
+  width: 25%;
+  height: 110%;
+  cursor: pointer;
+  border: solid 0px rgba(167, 167, 167, 0.3843137255);
+  border-radius: 25px;
+  background-color: rgba(83, 83, 83, 0);
+  transition: all 25ms ease-in;
+  z-index: 10;
+}
+.button-screen-cellPhone:active {
+  border-radius: 25px;
+  background-color: rgba(83, 83, 83, 0.1568627451);
+}
+.button-screen-cellPhone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* IMAGES */
+/* Images bottom touch screen */
+.image-screen-touch-square {
+  width: 24px;
+  object-fit: cover;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+.image-screen-touch-circle {
+  width: 25px;
+  object-fit: cover;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+.image-screen-touch-triangle {
+  width: 20px;
+  object-fit: cover;
+  user-select: none;
+  transform: rotate(180deg);
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* Importations */
+/* 
+====================
+  screenStatusBar
+====================
+*/
+/* CONTAINERS */
+/* Screen status bar slide */
+.container-sliding-status-bar {
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  left: 0;
+  z-index: 1000;
+}
+
+.box-status-settings {
+  width: 100%;
+  border-radius: 35px;
+  background: rgba(77, 77, 77, 0.6901960784);
+  color: #ffffff;
+  user-select: none;
+  position: relative;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container for the status bar slipped */
+.container-status-bar-Apps {
+  width: 95%;
+  height: 95%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.box-status-wifi {
+  width: 95%;
+  height: 75%;
+  background: rgba(77, 77, 77, 0.6901960784);
+  border: solid 2px rgba(77, 77, 77, 0.6901960784);
+  border-radius: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  top: 10%;
+  left: 2%;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+.box-status-wifi:active {
+  transform: scale(0.95);
+}
+.box-status-wifi p {
+  margin-left: 5px;
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  opacity: 0.8;
+}
+.box-status-wifi .description {
+  margin-left: 5px;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  opacity: 0.8;
+}
+.box-status-wifi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-status-wifi.on {
+  border: solid #0b87ad;
+  background: #0b87ad;
+}
+
+.box-image-status-wifi {
+  width: 30px;
+  height: 30px;
+}
+
+/* The status bar of mini icons slipped */
+.box-status-bar-buttons {
+  width: 95%;
+  height: 50%;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-status-bar {
+  width: 50px;
+  height: 50px;
+  background: rgba(167, 167, 167, 0.3843137255);
+  border: solid rgba(167, 167, 167, 0.3843137255);
+  border-radius: 50px;
+  margin: 7px;
+  cursor: pointer;
+  transition: all 0.05s ease-in;
+}
+.button-status-bar:active {
+  transform: scale(0.95);
+  border: solid rgba(77, 77, 77, 0.6901960784);
+  background-color: rgba(77, 77, 77, 0.6901960784);
+}
+.button-status-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-status-bar.on {
+  background: #535353;
+  border: solid #333333;
+}
+
+/* Container Status bar */
+.container-status-bar {
+  width: 90%;
+  height: 20px;
+  position: absolute;
+  top: 2px;
+  left: 15px;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 1fr;
+  z-index: 101;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Left status bar */
+.box-stats-barA {
+  grid-area: 1/1/2/2;
+  width: 100%;
+  height: 25px;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* Right status bar */
+.box-stats-barB {
+  grid-area: 1/2/2/3;
+  width: 100%;
+  height: 25px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.container-image-network {
+  width: 23px;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* TEXT */
+/* Text status bar hour */
+.text-hour-status-bar {
+  color: #ffffff;
+  font-family: "Oxygen1", system-ui, -apple-system, sans-serif;
+  font-size: 0.8em;
+  font-weight: 600;
+  position: relative;
+  top: 2px;
+  left: 3px;
+  user-select: none;
+}
+
+/* Text status bar network */
+.text-download-network {
+  color: #ffffff;
+  font-family: "Oxygen1", system-ui, -apple-system, sans-serif;
+  font-size: 0.8em;
+  position: relative;
+  top: 2px;
+  left: 3px;
+  user-select: none;
+}
+
+/* IMAGES */
+/* Network */
+.image-network {
+  width: 60%;
+  height: 60%;
+  object-fit: cover;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* Wifi */
+.image-wifi {
+  width: 63%;
+  height: 63%;
+  object-fit: cover;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* Wifi Light */
+.image-status-wifi {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* Batery */
+.image-battery {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* Icons for the status bar slipped */
+.image-status-bar {
+  width: 60%;
+  height: 60%;
+  object-fit: cover;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* Forwards */
+.image-guie-status-bar-a {
+  width: 30px;
+  position: absolute;
+  top: -50px;
+  left: 43.3%;
+  transform: rotate(270deg);
+  object-fit: cover;
+  user-select: none;
+  animation: forwardStatusBar 1.5s infinite alternate;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+.image-guie-status-bar-b {
+  width: 30px;
+  position: absolute;
+  top: -40px;
+  left: 43.3%;
+  transform: rotate(270deg);
+  object-fit: cover;
+  user-select: none;
+  animation: forwardStatusBar 1.5s infinite alternate;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* Animation for forwards and the divider gude */
+@keyframes forwardStatusBar {
+  to {
+    opacity: 0;
+  }
+  from {
+    opacity: 1;
+  }
+}
+/* OTHERS */
+/* Divider text */
+.divider-status-bar {
+  width: 2px;
+  height: 70%;
+  margin: 0 5px;
+  background-color: #ffffff;
+  position: relative;
+  top: 1px;
+  left: 3px;
+  user-select: none;
+}
+
+/* Divider status bar slipped */
+.divider-guide-status-bar {
+  width: 90%;
+  position: absolute;
+  top: 95%;
+  border: solid 2px #333333;
+  border-radius: 50px;
+  animation: forwardStatusBar 1.5s infinite alternate;
+}
+
+/* Importations */
+/* 
+====================
+    screenUnlock
+====================
+*/
+/* container */
+.container-cellPhone-lock {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Sliding bottom unlock screen */
+.container-screen-sliding-unlock {
+  position: relative;
+  overflow: hidden;
+  top: 100px;
+}
+
+.box-screen-unlock {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  cursor: "grab";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* TEXT */
+/* Text hour */
+.text-hour-cellPhone-wallpaper {
+  color: #ffffff;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  font-size: 4rem;
+  user-select: none;
+  text-shadow: 0 0 5px 15px #ffffff;
+  position: absolute;
+  top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Text date */
+.text-date-cellPhone-wallpaper {
+  color: #ffffff;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  user-select: none;
+  text-shadow: 0 0 5px 15px #ffffff;
+  position: absolute;
+  top: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Text Bottom Slider Arrow */
+.text-screen-sliding-arrow {
+  width: 150px;
+  color: #ffffff;
+  font-family: "Oxygen3", system-ui, -apple-system, sans-serif;
+  font-size: 1em;
+  font-weight: 600;
+  text-align: center;
+  user-select: none;
+  position: relative;
+  top: 20px;
+}
+
+/* IMAGES */
+/* Image arrow Firts */
+.image-screen-sliding-arrow-A {
+  width: 40px;
+  height: 40px;
+  transform: rotate(270deg);
+  position: absolute;
+  top: 0px;
+  user-select: none;
+  object-fit: cover;
+  animation: arrowO 1.5s ease infinite alternate;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* Image arrow Second */
+.image-screen-sliding-arrow-B {
+  width: 40px;
+  height: 40px;
+  transform: rotate(270deg);
+  position: absolute;
+  top: 10px;
+  user-select: none;
+  object-fit: cover;
+  animation: arrowO 1.5s ease infinite alternate;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* Animated blinking arrow */
+@keyframes arrowO {
+  to {
+    opacity: 0;
+  }
+  from {
+    opacity: 1;
+  }
+}
+/* Importations */
+/* 
+====================
+   CellPhoneEdge
+====================
+*/
+/* Top cellPhone edge */
+.container-cellPhone-border-top {
+  width: 300px;
+  height: 15px;
+  background-color: rgba(167, 167, 167, 0.3843137255);
+  border: solid #535353;
+  border-radius: 50px;
+  box-shadow: 0 0 20px 1px #535353;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  position: relative;
+  top: -745px;
+}
+.container-cellPhone-border-top:hover {
+  transform: scale(1.05);
+}
+
+/* Bottom cellPhone edge */
+.container-cellPhone-border-bottom {
+  width: 300px;
+  height: 15px;
+  background-color: rgba(167, 167, 167, 0.3843137255);
+  border: solid #535353;
+  border-radius: 50px;
+  box-shadow: 0 0 20px 1px #535353;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  position: relative;
+  top: -125px;
+}
+.container-cellPhone-border-bottom:hover {
+  transform: scale(1.05);
+}
+
+/* Importations */
+/* 
+====================
+    Front Camera
+====================
+*/
+/* Camera Image */
+.camera-cellPhone {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  object-fit: cover;
+  user-select: none;
+  position: relative;
+  top: -530px;
+  left: 138.5px;
+  z-index: 100000;
+  filter: brightness(0.7);
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* Importations */
+/* 
+====================
+      Signals
+====================
+*/
+/* Lines */
+.signal-line-cellPhone-more, .signal-line-cellPhone-less, .signal-line-cellPhone-power {
+  height: 2px;
+  background-color: #ffffff;
+  border-radius: 50px;
+  box-shadow: 0 0 15px 1px #ffffff;
+}
+
+.signal-line-cellPhone-more {
+  width: 150px;
+  position: relative;
+  top: -625px;
+  left: 315px;
+}
+
+.signal-line-cellPhone-less {
+  width: 100px;
+  position: relative;
+  top: -585px;
+  left: 315px;
+}
+
+.signal-line-cellPhone-power {
+  width: 50px;
+  position: relative;
+  top: -540px;
+  left: 315px;
+}
+
+/* Container of Signals from the buttons on the right of the image */
+.container-signal-image-more, .container-signal-image-less, .container-signal-image-power {
+  width: 25px;
+  height: 25px;
+  border-radius: 25px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+.container-signal-image-more:hover, .container-signal-image-less:hover, .container-signal-image-power:hover {
+  transform: scale(1.1);
+}
+.container-signal-image-more:active, .container-signal-image-less:active, .container-signal-image-power:active {
+  transform: scale(1);
+}
+
+.container-signal-image-more {
+  position: relative;
+  top: -11px;
+  left: 110%;
+}
+
+.container-signal-image-less {
+  position: relative;
+  top: -11px;
+  left: 115%;
+}
+
+.container-signal-image-power {
+  position: relative;
+  top: -11px;
+  left: 130%;
+}
+
+/* Circles */
+.signal-circle-cellPhone-left {
+  width: 7px;
+  height: 7px;
+  background-color: #ffffff;
+  border: solid #ffffff;
+  box-shadow: 0 0 15px 1px #ffffff;
+  position: absolute;
+  left: 0;
+  top: -2px;
+  border-radius: 50px;
+}
+
+.signal-circle-cellPhone-right {
+  width: 7px;
+  height: 7px;
+  background-color: #ffffff;
+  border: solid #ffffff;
+  box-shadow: 0 0 15px 1px #ffffff;
+  position: absolute;
+  left: 100%;
+  top: -2px;
+  border-radius: 50px;
+}
+
+/* Image */
+/* Signals from the buttons on the right of the image */
+.image-signal {
+  width: 100%;
+  height: 100%;
+  user-select: none;
+  object-fit: cover;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* Importations */
+/* 
+=====================
+       Vinyl
+=====================
+*/
+.loader {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  /* smooth background */
+  background: #000000;
+  overflow: hidden;
+  padding: 90px;
+}
+
+/* outside circle */
+.loader::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 5px solid transparent;
+  border-top-color: #ffffff;
+  animation: loader-spin 2s linear infinite;
+}
+
+/* rotating circle */
+.loader::after {
+  content: "";
+  position: absolute;
+  inset: 10%;
+  border-radius: 50%;
+  background: conic-gradient(from 90deg, rgba(255, 255, 255, 0.2), transparent);
+  filter: blur(2px);
+  animation: loader-spin-reverse 1.5s linear infinite;
+}
+
+/* center circle */
+.loader__inner {
+  width: 30px;
+  height: 30px;
+  background: #ffffff;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  animation: loader-pulse 1s ease-in-out infinite;
+}
+
+/* Container */
+.loader__orbit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: orbit-rotate 3s linear infinite;
+}
+
+/* dots */
+.loader__dot {
+  position: absolute;
+  left: 48%;
+  top: 48%;
+  width: 7px;
+  height: 7px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+}
+
+/* 4 dots */
+.loader__dot:nth-child(1) {
+  transform: rotate(0deg) translate(50px);
+}
+
+.loader__dot:nth-child(2) {
+  transform: rotate(90deg) translate(50px);
+}
+
+.loader__dot:nth-child(3) {
+  transform: rotate(180deg) translate(50px);
+}
+
+.loader__dot:nth-child(4) {
+  transform: rotate(270deg) translate(50px);
+}
+
+/* Animations */
+@keyframes loader-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loader-spin-reverse {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes loader-pulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+}
+@keyframes orbit-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* Importations */
+/* 
+====================
+      Cassete
+====================
+*/
+/* Container */
+.main-cassete {
+  width: 100%;
+  height: 100%;
+  background: rgba(77, 77, 77, 0.6901960784);
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contain-card-cassete {
+  width: 300px;
+  height: 200px;
+  background: #212121;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.9803921569) 0px 2px 4px, rgba(0, 0, 0, 0.3019607843) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  transform: scale(0.8);
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+.contain-card-cassete:hover {
+  transform: scale(0.82);
+}
+.contain-card-cassete:active {
+  transform: scale(0.81);
+}
+
+/* Boxes */
+/* Box 1 */
+.box-card-1-cassete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Box 2 */
+.box-card-2-cassete {
+  width: 230px;
+  height: 115px;
+  background-color: #FFFDD0;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-left: 30px;
+  clip-path: polygon(5% 0, 95% 0, 100% 10%, 100% 100%, 100% 100%, 0 100%, 0 100%, 0 10%);
+}
+
+/* Lines */
+.line-1-cassete {
+  position: relative;
+  width: 200px;
+  height: 1px;
+  background-color: #000000;
+  top: 16px;
+  left: 14px;
+}
+
+.line-2-cassete {
+  position: relative;
+  width: 200px;
+  height: 1px;
+  background-color: #000000;
+  top: 32px;
+  left: 14px;
+}
+
+/* Background */
+.background-line-3-cassete {
+  width: 228px;
+  height: 50px;
+  background-color: #f2bc00;
+  margin-top: 2.5em;
+  margin-left: 0.06em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.screen-view-cassete {
+  width: 125px;
+  height: 32px;
+  margin-left: 48px;
+  border-radius: 15px;
+  background-color: #0a0a0a;
+  display: flex;
+}
+
+.screen-tape-cassete {
+  width: 48px;
+  height: 20px;
+  position: relative;
+  left: 15px;
+  background-color: #252525;
+}
+
+/* Swheel */
+.screen-swheel-cassete-1 {
+  position: relative;
+  top: 4px;
+  left: 1px;
+  width: 25px;
+  height: 25px;
+  border: 2px dashed #ffffff;
+  box-shadow: 0 0 0 4.4px #ffffff;
+  border-radius: 50%;
+  animation: 2s run infinite linear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.screen-swheel-cassete-2 {
+  position: relative;
+  top: 4px;
+  left: 28px;
+  width: 25px;
+  height: 25px;
+  border: 2px dashed #fff;
+  box-shadow: 0 0 0 4.4px #fff;
+  border-radius: 50%;
+  animation: 2s run infinite linear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Animation for swheel */
+@keyframes run {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* Contain time */
+.contain-letter-time-cassete {
+  width: 230px;
+  height: 18px;
+  background-color: #f15a25;
+  margin-top: 3px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Box 3 */
+.box-card-3-cassete {
+  filter: drop-shadow(4px 4px 14px #000000);
+}
+
+.contain-decoration-cassete {
+  width: 150px;
+  height: 50px;
+  margin-left: 4.6em;
+  background-color: #252525;
+  clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+}
+
+/* Cirlce */
+.decoration-c1-cassete {
+  position: relative;
+  width: 0.5em;
+  height: 0.5em;
+  background-color: #bebebe;
+  border-radius: 50%;
+  left: 25px;
+  top: 35px;
+}
+
+.decoration-c2-cassete {
+  position: relative;
+  width: 0.5em;
+  height: 0.5em;
+  background-color: #bebebe;
+  border-radius: 50%;
+  left: 115px;
+  top: -2px;
+}
+
+/* Square */
+.decoration-t1-cassete {
+  position: relative;
+  width: 0.5em;
+  height: 0.5em;
+  background-color: #bebebe;
+  border-radius: 2px;
+  left: 48px;
+  top: 15px;
+}
+
+.decoration-t2-cassete {
+  position: relative;
+  width: 0.5em;
+  height: 0.5em;
+  background-color: #bebebe;
+  border-radius: 2px;
+  left: 95px;
+  top: -5px;
+}
+
+/* Box 4 */
+.box-card-4-cassete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Screews */
+.contain-screw1-cassete {
+  width: 15px;
+  height: 15px;
+  margin: 10px;
+  color: #000000;
+  background-color: lightgrey;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contain-screw2-cassete {
+  width: 15px;
+  height: 15px;
+  margin: 10px 10px 10px 230px;
+  color: #000000;
+  background-color: lightgrey;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contain-screw3-cassete {
+  width: 15px;
+  height: 15px;
+  margin: -50px 120px 0 0;
+  color: #000000;
+  background-color: lightgrey;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contain-screw4-cassete {
+  width: 15px;
+  height: 15px;
+  color: #000000;
+  margin: -50px 0 0 120px;
+  background-color: lightgrey;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contain-screw5-cassete {
+  position: relative;
+  color: #000000;
+  background-color: lightgrey;
+  height: 12px;
+  width: 12px;
+  left: 70px;
+  top: -0.5em;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Letters */
+.letter-time-cassete {
+  font-size: 0.7em;
+  user-select: none;
+}
+
+.letter-num-cassete {
+  margin-left: 1.5em;
+  align-self: center;
+  user-select: none;
+}
+
+/* Images */
+.screw-image-cassete {
+  width: 100%;
+  height: 100%;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,86 @@
+/* Importations */
+@use "../../mixin";
+@use "../../variables" as v;
+
+
+
+/* 
+=====================
+      Container
+=====================
+*/
+.Container-app-screen-folder {
+  width: 100%;
+  height: 95%;
+  position: relative;
+  top: 5%;
+}
+  /* Box Title Top */
+.box-app-screen-folder-a {
+  width: 100%;
+  height: 10%;
+}
+.box-app-screen-folder-title {
+  width: 100%;
+  height: 100%;
+
+  p {
+    color: v.$color-g1;
+    margin: 0 0 0 10px;
+    font-size: 1.1rem;
+    font-family: v.$font-mainO2;
+  }
+
+  @include mixin.flex-center(flex, flex-start, center);
+}
+
+  /* Boxes content */
+.box-app-screen-folder-b {
+  width: 100%;
+  height: 85%;
+  overflow-y: auto;
+}
+.box-app-folder {
+  width: 98%;
+  height: 50px;
+  border-top: solid 1px v.$color-g1;
+  border-bottom: solid 1px v.$color-g1;
+  margin: 0 2.5px;
+
+  @include mixin.flex-center(flex, center, center);
+}
+  /* box image */
+.contain-app-folder-image {
+  width: 20%;
+  height: 100%;
+
+  @include mixin.flex-center(flex, center, center);
+}
+
+/* Text */
+.contain-app-text {
+  width: 80%;
+  height: 100%;
+
+  h4 {
+    font-size: 1rem;
+    font-family: v.$font-mainO1;
+    font-weight: 500;
+    margin: 0 0 0 5px;
+  }
+  p {
+    font-size: 0.85rem;
+    font-family: v.$font-mainO1;
+    margin: 0 0 0 5px;
+  }
+}
+
+/* Image */
+.image-app-folder {
+  width: 75%;
+  height: 75%;
+  user-select: none;
+  object-fit: cover;
+
+  @include mixin.drag();
+}

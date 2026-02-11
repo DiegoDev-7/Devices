@@ -1,0 +1,160 @@
+/* Importations */
+@use "../../mixin";
+@use "../../variables" as v;
+
+
+
+/* 
+=====================
+      Container
+=====================
+*/
+.Container-app-calculator {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+  /* Top section of the screen calculator */
+.box-app-screen-calculator-a {
+  grid-area: 1 / 1 / 2 / 2;
+  width: 100%;
+  height: 80%;
+  position: relative;
+  top: 20%;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+}
+  /* Top container for notes */
+.contain-note-counter-screen-calculator {
+  width: 90%;
+  height: 60%;
+  position: absolute;
+  margin-left: 7%;
+}
+.box-note-calculator {
+  width: 100%;
+  height: 90%;
+
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  overflow-y: auto;
+
+  p {
+    text-align: end;
+    font-family: v.$font-mainO1;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-right: 5px;
+    user-select: none;
+  }
+}
+  /* Bottom container for text */
+.contain-text-screen-calculator {
+  width: 100%;
+  height: 100%;
+  
+  @include mixin.flex-center(flex, center, center);
+}
+.box-text-screen-calculator {
+  width: 90%;
+  height: 70%;
+  border-bottom: solid 2px v.$color-b2;
+  font-family: v.$font-mainO1;
+  font-size: 2.2rem;
+  position: relative;
+  top: 110px;
+  user-select: none;
+
+  @include mixin.flex-center(flex, flex-end, center);
+}
+
+
+  /* Bottom section of the screen calculator */
+.box-app-screen-calculator-b {
+  grid-area: 2 / 1 / 3 / 2;
+  align-items: center;
+  justify-items: center;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+
+  * {
+    user-select: none;
+  }
+}
+  /* Buttons */
+.button-screen-calculartor {
+  width: 45px;
+  height: 45px;
+  padding: 20px;
+  background: none;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+
+  font-family: v.$font-mainF1;
+  font-size: 1.2rem;
+
+  transition: all .1s ease;
+
+
+  // Number elements
+  &:nth-child(n+5):nth-child(-n+7),
+  &:nth-child(n+9):nth-child(-n+11),
+  &:nth-child(n+13):nth-child(-n+16),
+  &:nth-child(n+18):nth-child(-n+18) {
+    color: v.$color-b1;
+
+    &:hover {
+      color: v.$color-w1;
+      background: v.$color-g2;
+    }
+    &:active {
+      transform: scale(.9);
+      background: v.$color-g3;
+    }
+  }
+
+  // Elements with the symbols: AC C % / x - .
+  &:nth-child(n+1):nth-child(-n+4),
+  &:nth-child(n+8):nth-child(-n+8),
+  &:nth-child(n+12):nth-child(-n+12),
+  &:nth-child(n+16):nth-child(-n+16),
+  &:nth-child(n+19):nth-child(-n+19) {
+    color: orange;
+
+    &:hover {
+      color: v.$color-w1;
+      background: orange;
+    }
+    &:active {
+      transform: scale(.9);
+    }
+  }
+  
+  // Last element with the symbol: =
+  &:nth-child(n+20):nth-child(-n+20) {
+    color: orange;
+    background: orange;
+    color: v.$color-w1;
+
+    &:active {
+      transform: scale(.9);
+    }
+  }
+  
+  @include mixin.flex-center(flex, center, center)
+}
+  /* Image */
+.image-nexia-calculator {
+  width: 50px;
+  height: 50px;
+
+  @include mixin.drag();
+}

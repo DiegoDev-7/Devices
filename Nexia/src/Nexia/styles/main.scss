@@ -5,25 +5,71 @@
 
 /* 
 ======================
-        Pages
+      Components
 ======================
 */
-/* components */
+// components
 @use "./components/ReloadAnimation";
-
-/* Common */
-@use "./pages/Common/Header";
-@use "./pages/Common/Footer";
-
-/* Main Home */
-@use "./pages/Home/MainHome";
-
 
 /* 
 ======================
         Pages
 ======================
 */
-/* Phone */
-@use "./pages/devices/devices";
+// Phone
+@use "./pages/device/device";
+
+// Common
+@use "./pages/Common/Header";
+@use "./pages/Common/Footer";
+
+// Home
+@use "./pages/Home/MainHome";
+
+
+
+/* 
+======================
+     Phone System
+======================
+*/
+
+// PhoneSystem
 @use "./PhoneSystem/PhoneSys";
+
+// Apps
+@use "./PhoneSystem/Apps/CaculatorApp";
+@use "./PhoneSystem/Apps/NotesApp";
+@use "./PhoneSystem/Apps/FolderApp";
+@use "./PhoneSystem/Apps/RadioApp";
+@use "./PhoneSystem/Apps/SimApp";
+@use "./PhoneSystem/Apps/PhoneApp";
+@use "./PhoneSystem/Apps/RewardsApp";
+@use "./PhoneSystem/Apps/CashApp";
+@use "./PhoneSystem/Apps/BankApp";
+@use "./PhoneSystem/Apps/MessageApp";
+@use "./PhoneSystem/Apps/SecurityApp";
+@use "./PhoneSystem/Apps/PhotoGalleryApp";
+@use "./PhoneSystem/Apps/ContactApp";
+@use "./PhoneSystem/Apps/Settings";
+@use "./PhoneSystem/Apps/SimpsonsApp";
+@use "./PhoneSystem/Apps/CalendarApp";
+
+// hardware
+@use "./PhoneSystem/hardware/borderButtons";
+@use "./PhoneSystem/hardware/contentPhone";
+@use "./PhoneSystem/hardware/volumeIndicator";
+
+// screens
+@use "./PhoneSystem/screens/screens";
+@use "./PhoneSystem/screens/screenApps";
+@use "./PhoneSystem/screens/screenButtons";
+@use "./PhoneSystem/screens/screenStatusBar";
+@use "./PhoneSystem/screens/screenUnlock";
+
+// ui
+@use "./PhoneSystem/ui/cellPhoneEdge";
+@use "./PhoneSystem/ui/frontCamera";
+@use "./PhoneSystem/ui/signals";
+@use "./PhoneSystem/ui/Vinyl";
+@use "./PhoneSystem/ui/Cassette";

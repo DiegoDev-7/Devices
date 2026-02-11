@@ -1,0 +1,113 @@
+/* Importations */
+@use "../../mixin";
+@use "../../variables" as v;
+
+
+
+/* 
+=====================
+      Container
+=====================
+*/
+.Container-app-screen-message {
+  width: 100%;
+  height: 100%;
+}
+
+  /* Top text */
+.box-app-screen-message-a {
+  width: 100%;
+  height: 10%;
+
+  h3 {
+    color: v.$color-b1;
+    font-size: 1.5rem;
+    font-family: v.$font-mainO1;
+    margin-left: 6px;
+    user-select: none;
+  }
+
+  @include mixin.flex-center(flex, flex-start, flex-end);
+}
+  /* Bottom container messages */
+.box-app-screen-message-b {
+  width: 100%;
+  height: 90%;
+  background: v.$color-w2;
+  border: solid v.$color-w2;
+  border-radius: 25px;
+  flex-wrap: wrap;
+  overflow-y: auto;
+}
+
+  /* Container from messages */
+.contain-app-screen-message {
+  width: 90%;
+  height: 20%;
+  margin: 10px 0;
+  background: v.$color-w3;
+  border-radius: 25px;
+  display: flex;
+  cursor: pointer;
+  transition: all .2s ease;
+  position: relative;
+  top: 0;
+  left: 5%;
+  transform: translateY(-50%, -50%);
+
+  &:hover {
+    background-color: v.$color-w4;
+  }
+  &:active {
+    background: v.$color-w3;
+  }
+}
+.box-image-app-message {
+  width: 30%;
+  height: 100%;
+
+  @include mixin.flex-center(flex, center, center);
+}
+
+  /* Circle gray from image */
+.box-circle-image-message {
+  width: 60%;
+  height: 43%;
+  background-color: v.$color-g1;
+  border: solid v.$color-g1;
+  border-radius: 50px;
+
+  @include mixin.flex-center(flex, center, center);
+}
+
+  /* Text */
+.box-text-app-message {
+  width: 80%;
+  height: 100%;
+}
+.text-title-message {
+  width: 95%;
+  height: 40%;
+  margin-left: 5px;
+  color: v.$color-b1;
+  font-size: 1.4rem;
+}
+.text-app-message {
+  width: 95%;
+  height: 60%;
+  margin-left: 5px;
+  color: v.$color-b1;
+  font-size: .9rem;
+  text-align: justify;
+}
+
+/* Images */
+.image-user-message {
+  width: 75%;
+  height: 75%;
+
+  user-select: none;
+  object-fit: cover;
+
+  @include mixin.drag();
+}
