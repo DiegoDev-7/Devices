@@ -179,11 +179,11 @@ const Home = () => {
             </p>
 
             <div className="card-apps-main-1C">  
-              <div className="box-image-music-1C">
-                <img className="card-image-music-1C" src={clock} alt="Clock app" />
-                <div className="line-music-1C">
-                  <div className="point-music-1C" />
-                  <div className="point-music-1C bubble" />
+              <div className="box-image-clock-1C">
+                <img className="card-image-clock-1C" src={clock} alt="Clock app" />
+                <div className="line-clock-1C">
+                  <div className="point-clock-1C" />
+                  <div className="point-clock-1C bubble" />
                 </div>
               </div>
               

@@ -108,7 +108,7 @@ const CellPhone = () => {
                   <div className={`container-volume ${closingVolume ? "out" : "in"}`}>
                     <div className="volume-bar">
                       <div className="volume-bar-fill" style={{ width: `${volume}%` }} />
-                      <img className="image-bar-fill-music" src={clock} alt="clock" />
+                      <img className="image-bar-fill-clock" src={clock} alt="clock" />
                     </div>
                   </div>
                 )}
