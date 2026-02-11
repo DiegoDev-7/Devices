@@ -2,6 +2,7 @@
 import Bmore from "../../../assets/Icons/more_light.svg"
 import Bless from "../../../assets/Icons/less_light.svg"
 import Bpower from "../../../assets/Icons/power_light.svg"
+import { useAudio } from "../core/AudioContext"
 
 
 
@@ -13,6 +14,9 @@ type Props = {
 }
 /* Class to render the signal of the help component */
 const Signals = ({ onIncrease, onDecrease, onPower }: Props) => {
+  const { volumeUp, volumeDown } = useAudio()
+
+
   /* Type and class for render the html y css */
   type Signal = {
     id: string
@@ -24,6 +28,7 @@ const Signals = ({ onIncrease, onDecrease, onPower }: Props) => {
     icon: string
     alt: string
     onclick: any
+    onVolume: any
   }
   const signals: Signal[] = [
     { 
@@ -35,7 +40,8 @@ const Signals = ({ onIncrease, onDecrease, onPower }: Props) => {
       imageSignal: "image-signal",
       icon: Bmore,
       alt: "Más",
-      onclick: onIncrease
+      onclick: onIncrease,
+      onVolume: volumeUp
     },
     { 
       id: "less", 
@@ -46,7 +52,8 @@ const Signals = ({ onIncrease, onDecrease, onPower }: Props) => {
       imageSignal: "image-signal",
       icon: Bless,
       alt: "Menos",
-      onclick: onDecrease
+      onclick: onDecrease,
+      onVolume: volumeDown
     },
     { 
       id: "power", 
@@ -57,7 +64,8 @@ const Signals = ({ onIncrease, onDecrease, onPower }: Props) => {
       imageSignal: "image-signal",
       icon: Bpower,
       alt: "Encender / Apagar",
-      onclick: onPower
+      onclick: onPower,
+      onVolume: null
     }
   ]
 
@@ -68,7 +76,10 @@ const Signals = ({ onIncrease, onDecrease, onPower }: Props) => {
           <div className={v.signalCircleLeft} />
           <div className={v.signalCircleRight} />
 
-          <button className={v.containerSignalImage} onClick={v.onclick}>
+          <button className={v.containerSignalImage} onClick={() => {
+            if (v.onclick) v.onclick()
+            if (v.onVolume) v.onVolume()
+          }}>
             <img className={v.imageSignal} src={v.icon} alt={v.alt} />
           </button>
         </div>

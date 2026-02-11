@@ -7,19 +7,17 @@ import picture2 from "../../../assets/Wallpapers/53219022025114.jpg"
 import picture3 from "../../../assets/Wallpapers/53219022025541.jpg"
 import picture4 from "../../../assets/Wallpapers/53419022025156.jpg"
 import picture5 from "../../../assets/Wallpapers/53519022025471.jpg"
-import picture6 from "../../../assets/Wallpapers/53619022025564.jpg"
 
 
 
 /* Render */
-type Props = {
-  onBack: () => void
-}
-const PhotoGalleryApp = ({ onBack }: Props) => {
+const PhotoGalleryApp = () => {
   const date = new Date()
-  
   const [photos, setPhotos] = useState<Photos[]>([])
+  
+  const [photoActive, setPhotoActive] = useState<Photos | null>(null)
 
+  /* Render Images */
   type Photos = {
     id: number
     src: string
@@ -31,8 +29,11 @@ const PhotoGalleryApp = ({ onBack }: Props) => {
     { id: 3, src: picture3, alt: "Fondo de pantalla arboles" },
     { id: 4, src: picture4, alt: "Fondo de pantalla solitario" },
     { id: 5, src: picture5, alt: "Fondo de pantalla paraiso" },
-    { id: 6, src: picture6, alt: "Fondo de pantalla mujer en el paraiso" },
   ]
+
+  const handleActiveImage = (photo: Photos | null) => {
+    setPhotoActive(photo)
+  }
 
   useEffect(() => {
     const loadPhotos = async () => {
@@ -42,6 +43,7 @@ const PhotoGalleryApp = ({ onBack }: Props) => {
 
     loadPhotos()
   }, [])
+
 
 
   return (
@@ -57,17 +59,30 @@ const PhotoGalleryApp = ({ onBack }: Props) => {
           <div className="contain-title-date-photogallery">
             <p>{String(date.getDay() + 1).padStart(2, "0")}/{String(date.getMonth() + 1).padStart(2, "0")}/{String(date.getFullYear()).padStart(2, "0")}</p>
           </div>
-          <div className="contain-photos-photogallery">
 
+          <div className="contain-photos-photogallery">
             {photos.map((v) => (
-              <button key={v.id} className="box-image-photogallery">
+              <button key={v.id} className="box-image-photogallery" onClick={() => handleActiveImage(v)}>
                 <img className="image-photogallery" src={v.src} alt={v.alt} />
               </button>
             ))}
-
           </div>
 
         </div>
+
+        {photoActive && (
+          <>  
+            <div className="box-app-screen-photogallery-c">
+              <button className="button-text-x-photogallery" onClick={() => handleActiveImage(null)}>
+                <p>X</p>
+              </button>
+
+              <div className="contain-image-photogallery">
+                <img src={photoActive.src} alt={photoActive.alt} />
+              </div>
+            </div>
+          </>
+        )}
 
       </div>
     </>

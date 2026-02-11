@@ -29,7 +29,6 @@ const statusBar = () => {
   return (
     <>
       <StatusBarIcons />
-
       <StatusBarSliding />
     </>
   )
@@ -52,7 +51,7 @@ const StatusBarIcons = () => {
     return () => clearInterval(id)
   }, [])
 
-
+  /* Class from icons in the status bar */
   type StatusBar = {
     id: string
     containerImage: string
@@ -71,15 +70,19 @@ const StatusBarIcons = () => {
   return (
     <>  
       <div className="container-status-bar">
+
         <div className="box-stats-barA">
           <span className="text-hour-status-bar">
             {String(hour.getHours()).padStart(2, "0")}:{String(hour.getMinutes()).padStart(2, "0")}
           </span>
+          
           <div className="divider-status-bar" />
+          
           <span className="text-download-network">
             {value}Kb/s
           </span>
         </div>
+
         <div className="box-stats-barB">
           {[StatusBarCss[0], ...StatusBarCss].map(v => (
             <div key={`${v.id}-${Math.random()}`} {...v} className={v.containerImage}>
@@ -87,6 +90,7 @@ const StatusBarIcons = () => {
             </div>
           ))}
         </div>
+
       </div>
     </>
   )
@@ -156,6 +160,7 @@ const StatusBarSliding = () => {
   return (
     <>
       <div className="container-sliding-status-bar" >
+
         <div
           onPointerDown={onDown}
           onPointerMove={onMove}
@@ -167,13 +172,18 @@ const StatusBarSliding = () => {
             transition: dragging ? "none" : "height .3s ease",
           }}
         >
+
           {isOpen ? <StatusBarApps /> : ""}
+
         </div>
+
       </div>
     </>
   )
 }
 
+
+/* Top applications by sliding on the status bar */
 const StatusBarApps = () => {
   /* Active and desactive class */
   const [activeId, setActiveId] = useState<number[]>([])
@@ -202,6 +212,7 @@ const StatusBarApps = () => {
   return (
     <>
       <div className="container-status-bar-Apps">
+
         <button className={`box-status-wifi ${activeWifi ? "on" : ""}`} onClick={() => setActiveWifi(prev => !prev)}>
           <div className="box-image-status-wifi">
             <img className="image-status-wifi" src={wifiLight} alt="Icon wifi" />
@@ -218,6 +229,8 @@ const StatusBarApps = () => {
           <p className="description">{activeData ? "Conectado" : "Desactivado"}</p>
         </button>
         
+
+
         {ButtonsOptions.reduce((acc: JSX.Element[], _, i) => {
           if (i % 4 !== 0) return acc
 
@@ -239,6 +252,7 @@ const StatusBarApps = () => {
 
           return acc
         }, [])}
+
       </div>
 
       <div className="divider-guide-status-bar">

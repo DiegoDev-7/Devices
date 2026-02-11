@@ -7,7 +7,7 @@ import calculator from "../../../assets/Apps/calculator.svg"
 import weater from "../../../assets/Apps/weather.svg"
 import calendar from "../../../assets/Apps/calendar.svg"
 import folder from "../../../assets/Apps/archive.svg"
-import music from "../../../assets/Apps/music.svg"
+import clock from "../../../assets/Apps/clock.svg"
 import notes from "../../../assets/Apps/notes.svg"
 import cash from "../../../assets/Apps/cash.svg"
 import simson from "../../../assets/Apps/simsons2.jpg"
@@ -38,6 +38,8 @@ import SecurityApp from "../Apps/SecurityApp"
 import PhotoGalleryApp from "../Apps/PhotoGalleryApp"
 import ContactApp from "../Apps/ContactApp"
 import SettingsApp from "../Apps/Settings"
+import SimpsonsApp from "../Apps/SimpsonsApp"
+import CalendarApp from "../Apps/CalendarApp"
 
 
 
@@ -45,45 +47,39 @@ import SettingsApp from "../Apps/Settings"
 const Apps = () => {
   type StatusBar = {
     id: string
-    classGrid: string
-    buttonApp: string
-    classText: string
-    classImage: string
     imageApp: string
     alt: string
   }
   const StatusBarCss: StatusBar[] = [
-    { id: "notes", classGrid: "box-cellPhone-Apps", buttonApp: "button-cellPhone-Apps", classText: "text-cellPhone-Apps", classImage:"image-cellPhone-Apps", imageApp: notes, alt: "Notas" },
-    { id: "calculator", classGrid: "box-cellPhone-Apps", buttonApp: "button-cellPhone-Apps", classText: "text-cellPhone-Apps", classImage:"image-cellPhone-Apps", imageApp: calculator, alt: "Calculadora" },
-    { id: "weater", classGrid: "box-cellPhone-Apps", buttonApp: "button-cellPhone-Apps", classText: "text-cellPhone-Apps", classImage:"image-cellPhone-Apps", imageApp: weater, alt: "Clima" },
-    { id: "settings", classGrid: "box-cellPhone-Apps", buttonApp: "button-cellPhone-Apps", classText: "text-cellPhone-Apps", classImage:"image-cellPhone-Apps", imageApp: settings, alt: "Ajustes" },
-    { id: "music", classGrid: "box-cellPhone-Apps", buttonApp: "button-cellPhone-Apps", classText: "text-cellPhone-Apps", classImage:"image-cellPhone-Apps", imageApp: music, alt: "Musica" },
-    { id: "folder", classGrid: "box-cellPhone-Apps", buttonApp: "button-cellPhone-Apps", classText: "text-cellPhone-Apps", classImage:"image-cellPhone-Apps", imageApp: folder, alt: "Carpeta" },
-    { id: "calendar", classGrid: "box-cellPhone-Apps", buttonApp: "button-cellPhone-Apps", classText: "text-cellPhone-Apps", classImage:"image-cellPhone-Apps", imageApp: calendar, alt: "Calendario" },
-    { id: "gallery", classGrid: "box-cellPhone-Apps", buttonApp: "button-cellPhone-Apps", classText: "text-cellPhone-Apps", classImage:"image-cellPhone-Apps", imageApp: gallery, alt: "Galeria" },
-    { id: "cash", classGrid: "box-cellPhone-Apps", buttonApp: "button-cellPhone-Apps", classText: "text-cellPhone-Apps", classImage:"image-cellPhone-Apps", imageApp: cash, alt: "Dinero" },
-    { id: "rewards", classGrid: "box-cellPhone-Apps", buttonApp: "button-cellPhone-Apps", classText: "text-cellPhone-Apps", classImage:"image-cellPhone-Apps", imageApp: rewards, alt: "Rewards" },
-    { id: "bank", classGrid: "box-cellPhone-Apps", buttonApp: "button-cellPhone-Apps", classText: "text-cellPhone-Apps", classImage:"image-cellPhone-Apps", imageApp: bank, alt: "Banco" },
-    { id: "security", classGrid: "box-cellPhone-Apps", buttonApp: "button-cellPhone-Apps", classText: "text-cellPhone-Apps", classImage:"image-cellPhone-Apps", imageApp: security, alt: "Seguridad" },
-    { id: "simsons", classGrid: "box-cellPhone-Apps", buttonApp: "button-cellPhone-Apps", classText: "text-cellPhone-Apps", classImage:"image-cellPhone-Apps", imageApp: simson, alt: "The Simpsons" },
+    { id: "notes", imageApp: notes, alt: "Notas" },
+    { id: "calculator", imageApp: calculator, alt: "Calculadora" },
+    { id: "weater", imageApp: weater, alt: "Clima" },
+    { id: "settings", imageApp: settings, alt: "Ajustes" },
+    { id: "clock", imageApp: clock, alt: "Reloj" },
+    { id: "folder", imageApp: folder, alt: "Carpeta" },
+    { id: "calendar", imageApp: calendar, alt: "Calendario" },
+    { id: "gallery", imageApp: gallery, alt: "Galeria" },
+    { id: "cash", imageApp: cash, alt: "Dinero" },
+    { id: "rewards", imageApp: rewards, alt: "Rewards" },
+    { id: "bank", imageApp: bank, alt: "Banco" },
+    { id: "security", imageApp: security, alt: "Seguridad" },
+    { id: "simpsons", imageApp: simson, alt: "The Simpsons" },
     
-    { id: "radio", classGrid: "box-cellPhone-Apps", buttonApp: "button-cellPhone-Apps", classText: "text-cellPhone-Apps", classImage:"image-cellPhone-Apps", imageApp: radio, alt: "Radio" },
-    { id: "sim", classGrid: "box-cellPhone-Apps", buttonApp: "button-cellPhone-Apps", classText: "text-cellPhone-Apps", classImage:"image-cellPhone-Apps", imageApp: simcard, alt: "Sim" },
-    { id: "tictactoe", classGrid: "box-cellPhone-Apps", buttonApp: "button-cellPhone-Apps", classText: "text-cellPhone-Apps", classImage:"image-cellPhone-Apps", imageApp: tictactoe, alt: "Tic Tac Toe" },
+    { id: "radio", imageApp: radio, alt: "Radio" },
+    { id: "sim", imageApp: simcard, alt: "Sim" },
+    { id: "tictactoe", imageApp: tictactoe, alt: "Tic Tac Toe" },
   ]
 
   type StatusBar2 = {
     id: string
     classGrid: string
-    buttonApp: string
-    classImage: string
     imageApp: string
     alt: string
   }
   const StatusBarCss2: StatusBar2[] = [
-    { id: "message", classGrid: "box-cellPhone-Apps", buttonApp: "button-cellPhone-Apps", classImage:"image-cellPhone-Apps", imageApp: message, alt: "Mensaje" },
-    { id: "phone", classGrid: "box-cellPhone-Apps", buttonApp: "button-cellPhone-Apps", classImage:"image-cellPhone-Apps", imageApp: phone, alt: "Telefono" },
-    { id: "contact", classGrid: "box-cellPhone-Apps", buttonApp: "button-cellPhone-Apps", classImage:"image-cellPhone-Apps", imageApp: contact, alt: "Contacto" },
+    { id: "message", classGrid: "box-cellPhone-Apps", imageApp: message, alt: "Mensaje" },
+    { id: "phone", classGrid: "box-cellPhone-Apps phone", imageApp: phone, alt: "Telefono" },
+    { id: "contact", classGrid: "box-cellPhone-Apps", imageApp: contact, alt: "Contacto" },
   ]
 
 
@@ -92,20 +88,22 @@ const Apps = () => {
     string,
     (onBack: () => void) => JSX.Element
   > = {
-    calculator: onBack => <CalculatorApp onBack={onBack} />,
-    folder: onBack => <FolderApp onBack={onBack} />,
-    notes: onBack => <NotesApp onBack={onBack} />,
-    radio: onBack => <RadioApp onBack={onBack} />,
-    sim: onBack => <SimApp onBack={onBack} />,
-    phone: onBack => <PhoneApp onBack={onBack} />,
-    rewards: onBack => <RewardsApp onBack={onBack} />,
-    cash: onBack => <CashApp onBack={onBack} />,
-    bank: onBack => <BankApp onBack={onBack} />,
-    message: onBack => <MessageApp onBack={onBack} />,
-    security: onBack => <SecurityApp onBack={onBack} />,
-    gallery: onBack => <PhotoGalleryApp onBack={onBack} />,
-    contact: onBack => <ContactApp onBack={onBack} />,
     settings: onBack => <SettingsApp onBack={onBack} />,
+    folder: onBack => <FolderApp onBack={onBack} />,
+    contact: onBack => <ContactApp onBack={onBack} />,
+    message: onBack => <MessageApp onBack={onBack} />,
+    notes: onBack => <NotesApp onBack={onBack} />,
+    calculator: () => <CalculatorApp />,
+    radio: () => <RadioApp />,
+    sim: () => <SimApp />,
+    phone: () => <PhoneApp />,
+    rewards: () => <RewardsApp />,
+    cash: () => <CashApp />,
+    bank: () => <BankApp />,
+    security: () => <SecurityApp />,
+    gallery: () => <PhotoGalleryApp />,
+    simpsons: () => <SimpsonsApp />,
+    calendar: () => <CalendarApp />
   }
 
   type AppKey = keyof typeof appScreens
@@ -119,6 +117,7 @@ const Apps = () => {
     setOpenApp(null)
   }
 
+  
 
   return (
     <>
@@ -131,18 +130,18 @@ const Apps = () => {
         <div className="container-screen-cellPhone-Apps">
           <div className="box-positions-cellPhone-Apps-A">
             {StatusBarCss.map(v => (
-              <div key={v.id} className={v.classGrid}>
+              <div key={v.id} className="box-cellPhone-Apps">
                 <button
-                  className={v.buttonApp}
+                  className="button-cellPhone-Apps"
                   onClick={() => setOpenApp(v.id)}
                 >
                   <img
-                    className={v.classImage}
+                    className="image-cellPhone-Apps"
                     src={v.imageApp}
                     alt={v.alt}
                     draggable={false}
                   />
-                  <p className={v.classText}>{v.alt}</p>
+                  <p className="text-cellPhone-Apps">{v.alt}</p>
                 </button>
               </div>
             ))}
@@ -155,9 +154,9 @@ const Apps = () => {
                 className={v.classGrid}
                 onClick={() => setOpenApp(v.id)}
               >
-                <button className={v.buttonApp}>
+                <button className="button-cellPhone-Apps">
                   <img
-                    className={v.classImage}
+                    className="image-cellPhone-Apps"
                     src={v.imageApp}
                     alt={v.alt}
                     draggable={false}

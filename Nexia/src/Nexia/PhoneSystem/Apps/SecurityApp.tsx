@@ -10,10 +10,7 @@ import cleaner from "../../../assets/Icons/cleaner_dark.svg"
 
 
 /* Render */
-type Props = {
-  onBack: () => void
-}
-const SecurityApp = ({ onBack }: Props) => {
+const SecurityApp = () => {
   /*  */
   let [randomNumber, setRandomNumber] = useState<number>(0)
   let [randomGb, setRandomGb] = useState<number>(0)

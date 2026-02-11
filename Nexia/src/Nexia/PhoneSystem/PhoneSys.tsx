@@ -9,6 +9,7 @@ import ScreenApps, { ButtonsVolumePower } from "./hardware/contentPhone"
 /* Hooks */
 import { usePower } from "../PhoneSystem/hooks/usePower"
 import { useVolume } from "../PhoneSystem/hooks/useVolume"
+import { AudioProvider } from "./core/AudioContext"
 
 
 
@@ -24,46 +25,50 @@ const CellPhone = () => {
     <>
       <div className="container-nexia-cellPhone">
         {/* CellPhone */}
-        <div className="container-cellPhone-border">
+        <AudioProvider>
+          <>
+            <div className="container-cellPhone-border">
+              {/* Screen */}
+                <>  
+                  <div className="display-cellPhone">
+                    <div className="screen-cellPhone-touch">
 
-          {/* Screen */}
-          <div className="display-cellPhone">
-            <div className="screen-cellPhone-touch">
+
+                      {/* Volume input and output */}
+                      <ScreenApps
+                        power={power}
+                        volume={volume}
+                        showVolume={showVolume}
+                        closingVolume={closingVolume}
+                      />
+
+                    </div>
+                  </div>
+
+                  {/* Camera */}
+                  <FrontCamera />
 
 
-              {/* Volume input and output */}
-              <ScreenApps
-                power={power}
-                volume={volume}
-                showVolume={showVolume}
-                closingVolume={closingVolume}
-              />
+                  {/* Side buttons of the cell phone */}
+                  <ButtonsVolumePower
+                    onIncrease={increase}
+                    onDecrease={decrease}
+                    onPower={togglePower}
+                  />
 
+                  {/* top and bottom edge of the cell phone */}
+                  <CellPhoneEdge />
+
+                  {/* Signal: Line, more, less, power */}
+                  <Signals
+                    onIncrease={increase}
+                    onDecrease={decrease}
+                    onPower={togglePower}
+                  />
+                </>
             </div>
-          </div>
-
-          {/* Camera */}
-          <FrontCamera />
-
-
-          {/* Side buttons of the cell phone */}
-          <ButtonsVolumePower
-            onIncrease={increase}
-            onDecrease={decrease}
-            onPower={togglePower}
-          />
-
-          {/* top and bottom edge of the cell phone */}
-          <CellPhoneEdge />
-
-          {/* Signal: Line, more, less, power */}
-          <Signals
-            onIncrease={increase}
-            onDecrease={decrease}
-            onPower={togglePower}
-          />
-
-        </div>
+          </>
+        </AudioProvider>
       </div>
     </>
   )

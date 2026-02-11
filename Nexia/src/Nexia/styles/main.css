@@ -767,7 +767,7 @@ main {
   position: relative;
 }
 
-.box-image-music-1C {
+.box-image-clock-1C {
   width: 125px;
   height: 125px;
   border-radius: 25px;
@@ -838,7 +838,7 @@ main {
 }
 
 /* Lines for the points */
-.line-music-1C {
+.line-clock-1C {
   width: 200px;
   height: 3px;
   background-color: #ffffff;
@@ -899,7 +899,7 @@ main {
 }
 
 /* Points */
-.point-music-1C {
+.point-clock-1C {
   width: 10px;
   height: 10px;
   background-color: #ffffff;
@@ -1270,7 +1270,7 @@ main {
   }
 }
 /* Card images apps */
-.card-image-music-1C {
+.card-image-clock-1C {
   width: 125px;
   height: 125px;
   background-color: #ffffff;
@@ -1895,7 +1895,10 @@ main {
 .image-app-folder {
   width: 75%;
   height: 75%;
+  user-select: none;
   object-fit: cover;
+  -webkit-user-drag: none;
+  pointer-events: none;
 }
 
 /* Importations */
@@ -1904,15 +1907,306 @@ main {
       Container
 =====================
 */
-.Container-app-screen-radio {
+/* Countries */
+.country-select-screen-radio {
+  width: 50px;
+  height: 35px;
+  position: absolute;
+  top: 360px;
+  right: 10px;
+}
+
+.button-select-app-radio {
   width: 100%;
-  height: 90%;
+  height: 100%;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.button-select-app-radio img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+.list-country-app-radio {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  list-style: none;
+  transform: translateY(-150px);
   position: relative;
-  top: 10%;
-  border: solid red;
+  z-index: 100;
+}
+.list-country-app-radio li {
+  width: 50px;
+  height: 35px;
+  margin: 7px 0;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  top: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.list-country-app-radio li img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* App Background */
+.Contain-app-screen-radio {
+  width: 100%;
+  height: 100%;
+  border-radius: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Contain-app-screen-radio.co {
+  background: radial-gradient(circle, #fb3f3f 0%, #8a4ab2 20%, #5967ff 62%, #e1be60 76%, #ffd342 100%);
+}
+
+.Contain-app-screen-radio.us {
+  background: radial-gradient(circle, #FF7D7D 0%, #ff4a4a 50%, #468cfc 100%);
+}
+
+.Contain-app-screen-radio.ja {
+  background: radial-gradient(circle, rgb(255, 255, 255) 0%, rgb(254, 163, 181) 65%, rgb(252, 70, 107) 100%);
+}
+
+/* Content text */
+.box-content-app-screen-radio {
+  width: 57%;
+  height: 90%;
+  background: rgba(51, 51, 51, 0.8078431373);
+  border-radius: 25px 0 0 25px;
+  position: absolute;
+  left: 5px;
+  overflow: hidden;
+}
+
+/* glow */
+.radio-glow {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  position: absolute;
+  right: -100px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: radial-gradient(circle, #313131 0%, #2b2b2b 40%, #000000 80%, #000000 100%);
+  filter: blur(25px);
+}
+
+/* Contain title */
+.contain-title-app-radio {
+  width: 70%;
+  height: 35px;
+  margin-top: 10px;
+  padding: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: solid 2px #ffffff;
+}
+.contain-title-app-radio h3 {
+  display: inline-block;
+  padding-left: 100%;
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-family: "Doto3", system-ui, -apple-system, sans-serif;
+  font-weight: 900;
+  animation: marquee 10s linear infinite;
+}
+.contain-title-app-radio {
+  display: inline-block;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+/* Contain image */
+.contain-image-station-app-radio {
+  width: 25%;
+  height: 35px;
+  position: absolute;
+  top: 10px;
+  right: 0;
+}
+.contain-image-station-app-radio img {
+  width: 100%;
+  height: 100%;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+.contain-image-station-app-radio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contain text */
+.contain-text-app-radio {
+  width: 100%;
+  height: 50%;
+  padding: 5px;
+  position: relative;
+  z-index: 100;
+}
+.contain-text-app-radio p {
+  color: #ffffff;
+  font-size: 1rem;
+  font-family: "Oxygen1", system-ui, -apple-system, sans-serif;
+  text-align: justify;
+}
+
+/* Contain tags */
+.contain-context-title-app-radio {
+  width: 100%;
+  height: 5%;
+  padding: 5px;
+  position: relative;
+  z-index: 100;
+}
+.contain-context-title-app-radio p {
+  color: #ffffff;
+  font-size: 1rem;
+  font-family: "Oxygen1", system-ui, -apple-system, sans-serif;
+  text-align: justify;
+}
+.contain-context-title-app-radio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contain context */
+.contain-context-app-radio {
+  width: 100%;
+  height: 12%;
+  padding: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 100;
+}
+.contain-context-app-radio p {
+  width: 50%;
+  height: 55%;
+  color: #ffffff;
+  font-size: 1rem;
+  font-family: "Oxygen1", system-ui, -apple-system, sans-serif;
+  text-align: justify;
+}
+.contain-context-app-radio p:nth-child(2), .contain-context-app-radio p:nth-child(4) {
+  text-align: end;
+}
+
+/* Controls */
+.box-controls-app-screen-radio {
+  width: 96%;
+  height: 20%;
+  background: #000000;
+  border-radius: 25px;
+  position: absolute;
+  bottom: 5%;
+  gap: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Buttons */
+.button-controls-back-radio, .button-controls-pause-radio, .button-controls-forward-radio {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 1ms ease;
+}
+.button-controls-back-radio:active, .button-controls-pause-radio:active, .button-controls-forward-radio:active {
+  transform: scale(0.95);
+}
+.button-controls-back-radio, .button-controls-pause-radio, .button-controls-forward-radio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Point decoration */
+.sound-controls-app-screen-radio-a, .sound-controls-app-screen-radio-b, .sound-controls-app-screen-radio-c {
+  width: 95%;
+  height: 5%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sound-controls-app-screen-radio-a li, .sound-controls-app-screen-radio-b li, .sound-controls-app-screen-radio-c li {
+  width: 5px;
+  height: 5px;
+  background: #747474;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sound-controls-app-screen-radio-a {
+  position: absolute;
+  bottom: 22px;
+}
+
+.sound-controls-app-screen-radio-b {
+  position: absolute;
+  bottom: 30px;
+}
+
+.sound-controls-app-screen-radio-c {
+  position: absolute;
+  bottom: 38px;
+}
+
+/* Text */
+.text-fm-app-radio {
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  font-size: 1.5rem;
+  font-family: "Doto3", system-ui, -apple-system, sans-serif;
+  user-select: none;
+}
+
+/* Images */
+.button-controls-back-radio .image-controls-radio {
+  transform: rotate(180deg);
+}
+
+.image-controls-radio {
+  width: 50%;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
 }
 
 /* Importations */
@@ -2962,7 +3256,7 @@ main {
 /* Text */
 .contain-title-date-photogallery {
   width: 100%;
-  height: 30px;
+  height: 10px;
 }
 .contain-title-date-photogallery p {
   color: #000000;
@@ -2977,11 +3271,68 @@ main {
 }
 
 .contain-photos-photogallery {
-  width: 98%;
+  width: 100%;
   height: 400px;
   display: flex;
   flex-wrap: wrap;
-  overflow-y: auto;
+  margin: 10px;
+}
+
+/* Box big image */
+.box-app-screen-photogallery-c {
+  width: 100%;
+  height: 100%;
+  border-radius: 35px;
+  background: rgba(77, 77, 77, 0.6901960784);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contain-image-photogallery {
+  width: 80%;
+  height: 80%;
+}
+.contain-image-photogallery img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+.contain-image-photogallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Button */
+.button-text-x-photogallery {
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border: none;
+  border-radius: 25px;
+  position: absolute;
+  top: 250px;
+  right: 0px;
+  z-index: 10010;
+  cursor: pointer;
+  transition: all 0.1ms ease;
+}
+.button-text-x-photogallery:hover {
+  transform: scale(1.1);
+}
+.button-text-x-photogallery:active {
+  transform: scale(1.05);
+}
+.button-text-x-photogallery p {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  font-weight: 500;
 }
 
 /* Images */
@@ -3301,6 +3652,407 @@ main {
 
 /* Importations */
 /* 
+=====================
+      Container
+=====================
+*/
+.Container-app-screen-simpsons {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-app-screen-simpsons-a {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  background: #fed420;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contain options sections */
+.box-app-screen-simpsons-b {
+  width: 100%;
+  height: 100%;
+}
+
+/* Section buttons Button */
+.contain-buttons-section-simpsons {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+}
+
+.contain-image-sections-simpsons {
+  width: 150px;
+  height: 60px;
+  position: absolute;
+  top: 32px;
+}
+
+.button-section-simpsons {
+  width: 80px;
+  height: 25px;
+  background: none;
+  border: none;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+  font-weight: 600;
+  transition: all 10ms ease;
+  cursor: pointer;
+}
+.button-section-simpsons:hover {
+  text-decoration: underline;
+}
+.button-section-simpsons:active {
+  transform: scale(0.95);
+}
+
+/* cards */
+.card-screen-simpsons {
+  width: 100%;
+  height: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contain-buttons-page-simpsons {
+  width: 100%;
+  position: absolute;
+  top: 130px;
+}
+.contain-buttons-page-simpsons span {
+  color: #000000;
+  font-family: "Oxygen3", system-ui, -apple-system, sans-serif;
+  text-align: center;
+}
+.contain-buttons-page-simpsons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Buttons */
+.button-simpsons {
+  width: 35px;
+  height: 30px;
+  background: #fab700;
+  border: 2px solid #000000;
+  border-radius: 25px;
+  position: absolute;
+  cursor: pointer;
+  transition: all 10ms ease;
+}
+.button-simpsons:active {
+  transform: scale(0.95);
+}
+.button-simpsons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Pages */
+.button-simpsons--page {
+  top: -3px;
+}
+
+.button-simpsons--page-less {
+  left: 30%;
+}
+
+.button-simpsons--page-more {
+  right: 30%;
+  transform: rotate(180deg);
+}
+.button-simpsons--page-more:active {
+  transform: rotate(180deg) scale(0.95);
+}
+
+/* Cards */
+.button-simpsons--inner-less {
+  left: 3px;
+}
+
+.button-simpsons--inner-more {
+  right: 3px;
+}
+
+/* Box card characteristics */
+.card-things-simpsons {
+  width: 70%;
+  height: 80%;
+  background: #ffffff;
+  border: solid 1px #d3d3d3;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+.card-things-simpsons:hover {
+  transform: scale(1.03);
+}
+
+.card-box-simpsons-a {
+  width: 100%;
+  height: 50%;
+  cursor: pointer;
+  transition: all 1ms ease;
+}
+.card-box-simpsons-a:active {
+  transform: scale(0.97);
+}
+.card-box-simpsons-a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card Text */
+.card-box-simpsons-b {
+  width: 100%;
+  height: 50%;
+  flex-wrap: wrap;
+}
+.card-box-simpsons-b h3 {
+  width: 100%;
+  margin: 3px 0;
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+}
+.card-box-simpsons-b p {
+  width: 100%;
+  margin: 3px 0;
+  text-align: center;
+  font-size: 1rem;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+}
+.card-box-simpsons-b div {
+  width: 100%;
+  margin: 3px 0;
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-box-simpsons-b span {
+  width: auto;
+  padding: 0 10px;
+  border-radius: 25px;
+  font-family: "Oxygen3", system-ui, -apple-system, sans-serif;
+  text-align: center;
+}
+.card-box-simpsons-b .status-alive {
+  background: rgba(24, 211, 24, 0.768627451);
+  border: solid 2px rgba(18, 114, 18, 0.937254902);
+}
+.card-box-simpsons-b .status-deceased {
+  background: rgba(255, 50, 50, 0.7137254902);
+  border: solid 2px rgba(214, 1, 1, 0.9450980392);
+}
+.card-box-simpsons-b {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Images */
+/* Logo face simpsons */
+.image-app-face-simpsons {
+  width: 100%;
+  height: 50%;
+  user-select: none;
+  animation: simpson 0.8s infinite alternate;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* Animation from face of homer */
+@keyframes simpson {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+/* Logo loading screen The Simpsons */
+.image-logo-app-simpsons {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: -15px;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* Logo sections The Simpsons */
+.image-sections-simpsons {
+  width: 100%;
+  height: 100%;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* Image */
+.card-image-simpsons {
+  width: 70%;
+  height: 90%;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* Arrow */
+.image-triangle-arrow-less-simpsons {
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
+  user-select: none;
+  transform: rotate(180deg);
+  opacity: 0.8;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+.image-triangle-arrow-more-simpsons {
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
+  user-select: none;
+  opacity: 0.8;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* Importations */
+/* 
+=====================
+      Container
+=====================
+*/
+.container-app-calendar {
+  width: 100%;
+  height: 100%;
+}
+
+.calendar {
+  background: #ffffff;
+  color: #1a1a1a;
+  height: 100%;
+  border-radius: 30px;
+  font-family: "Oxygen1", system-ui, -apple-system, sans-serif;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.box-calendar-app {
+  width: 100%;
+  border: solid #333333;
+  padding: 10px;
+  background: rgba(167, 167, 167, 0.3843137255);
+  border-radius: 25px;
+  position: relative;
+  top: -50px;
+  transform: scale(0.95);
+}
+
+/* Buttons */
+.calendar section {
+  width: 100%;
+  height: 40%;
+  margin-bottom: 14px;
+  gap: 30px;
+}
+.calendar section h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+.calendar section .button-calendar-a, .calendar section .button-calendar-b {
+  background: #222222;
+  border: none;
+  color: #ffffff;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  padding: 3px 12px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.calendar section .button-calendar-a:hover, .calendar section .button-calendar-b:hover {
+  background: #535353;
+}
+.calendar section .button-calendar-a {
+  position: absolute;
+  top: 90px;
+  left: 25px;
+}
+.calendar section .button-calendar-b {
+  position: absolute;
+  top: 90px;
+  right: 25px;
+}
+.calendar section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Name of the days*/
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  margin-bottom: 6px;
+}
+.weekdays div {
+  font-size: 13px;
+  font-family: "Oxygen1", system-ui, -apple-system, sans-serif;
+  font-weight: 500;
+  color: #000000;
+}
+
+/* Grid days */
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+}
+.days div {
+  padding: 10px 0;
+  margin: 4px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.days div:hover {
+  background: rgba(77, 77, 77, 0.6901960784);
+}
+
+/* Today */
+.today {
+  background: #535353;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* Empty days */
+.empty {
+  visibility: hidden;
+}
+
+/* Importations */
+/* 
 ====================
        Buttons
 ====================
@@ -3439,8 +4191,9 @@ main {
 /* Fill volume front white */
 .volume-bar-fill {
   height: 100%;
-  background: #ffffff;
+  border: none;
   border-radius: 5px;
+  background: #ffffff;
   transition: width 0.2s ease;
 }
 
@@ -3515,12 +4268,17 @@ main {
   height: 40px;
   border-radius: 12px;
   margin: 10px;
+  background-color: #ffffff;
+  transition: all 0.1s ease;
 }
 .box-cellPhone-Apps:hover {
-  background: #9e9e9e;
+  background: #d3d3d3;
 }
 .box-cellPhone-Apps:active {
   transform: scale(0.95);
+}
+.box-cellPhone-Apps:nth-child(13) {
+  background-color: #f6d526;
 }
 .box-cellPhone-Apps {
   display: flex;
@@ -3528,11 +4286,15 @@ main {
   align-items: center;
 }
 
+.box-cellPhone-Apps.phone {
+  transform: rotate(270deg);
+}
+
 /* BUTTONS */
 .button-cellPhone-Apps {
-  width: 100%;
-  height: 100%;
-  background: #ffffff;
+  width: 85%;
+  height: 85%;
+  background: transparent;
   border: none;
   border-radius: 10px;
   transition: all 0.2s ease;
@@ -3544,8 +4306,8 @@ main {
 
 /* IMAGES */
 .image-cellPhone-Apps {
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
   border-radius: 10px;
   object-fit: cover;
   user-select: none;
@@ -3733,8 +4495,8 @@ main {
 }
 
 .box-status-wifi.on {
-  border: solid #006cb4;
-  background: #006cb4;
+  border: solid #0b87ad;
+  background: #0b87ad;
 }
 
 .box-image-status-wifi {
@@ -4079,29 +4841,6 @@ main {
 /* Importations */
 /* 
 ====================
-       Camera
-====================
-*/
-/* Camera Image */
-.camera-cellPhone {
-  width: 20px;
-  height: 20px;
-  padding: 0;
-  border: none;
-  border-radius: 50%;
-  object-fit: cover;
-  user-select: none;
-  position: relative;
-  top: -530px;
-  left: 138.5px;
-  z-index: 100000;
-  filter: brightness(0.7);
-  -webkit-user-drag: none;
-  pointer-events: none;
-}
-
-/* 
-====================
    CellPhoneEdge
 ====================
 */
@@ -4139,6 +4878,31 @@ main {
   transform: scale(1.05);
 }
 
+/* Importations */
+/* 
+====================
+    Front Camera
+====================
+*/
+/* Camera Image */
+.camera-cellPhone {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  object-fit: cover;
+  user-select: none;
+  position: relative;
+  top: -530px;
+  left: 138.5px;
+  z-index: 100000;
+  filter: brightness(0.7);
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* Importations */
 /* 
 ====================
       Signals
@@ -4240,6 +5004,427 @@ main {
   height: 100%;
   user-select: none;
   object-fit: cover;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* Importations */
+/* 
+=====================
+       Vinyl
+=====================
+*/
+.loader {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  /* smooth background */
+  background: #000000;
+  overflow: hidden;
+  padding: 90px;
+}
+
+/* outside circle */
+.loader::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 5px solid transparent;
+  border-top-color: #ffffff;
+  animation: loader-spin 2s linear infinite;
+}
+
+/* rotating circle */
+.loader::after {
+  content: "";
+  position: absolute;
+  inset: 10%;
+  border-radius: 50%;
+  background: conic-gradient(from 90deg, rgba(255, 255, 255, 0.2), transparent);
+  filter: blur(2px);
+  animation: loader-spin-reverse 1.5s linear infinite;
+}
+
+/* center circle */
+.loader__inner {
+  width: 30px;
+  height: 30px;
+  background: #ffffff;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  animation: loader-pulse 1s ease-in-out infinite;
+}
+
+/* Container */
+.loader__orbit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: orbit-rotate 3s linear infinite;
+}
+
+/* dots */
+.loader__dot {
+  position: absolute;
+  left: 48%;
+  top: 48%;
+  width: 7px;
+  height: 7px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+}
+
+/* 4 dots */
+.loader__dot:nth-child(1) {
+  transform: rotate(0deg) translate(50px);
+}
+
+.loader__dot:nth-child(2) {
+  transform: rotate(90deg) translate(50px);
+}
+
+.loader__dot:nth-child(3) {
+  transform: rotate(180deg) translate(50px);
+}
+
+.loader__dot:nth-child(4) {
+  transform: rotate(270deg) translate(50px);
+}
+
+/* Animations */
+@keyframes loader-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loader-spin-reverse {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes loader-pulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+}
+@keyframes orbit-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* Importations */
+/* 
+====================
+      Cassete
+====================
+*/
+/* Container */
+.main-cassete {
+  width: 100%;
+  height: 100%;
+  background: rgba(77, 77, 77, 0.6901960784);
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contain-card-cassete {
+  width: 300px;
+  height: 200px;
+  background: #212121;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.9803921569) 0px 2px 4px, rgba(0, 0, 0, 0.3019607843) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  transform: scale(0.8);
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+.contain-card-cassete:hover {
+  transform: scale(0.82);
+}
+.contain-card-cassete:active {
+  transform: scale(0.81);
+}
+
+/* Boxes */
+/* Box 1 */
+.box-card-1-cassete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Box 2 */
+.box-card-2-cassete {
+  width: 230px;
+  height: 115px;
+  background-color: #FFFDD0;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-left: 30px;
+  clip-path: polygon(5% 0, 95% 0, 100% 10%, 100% 100%, 100% 100%, 0 100%, 0 100%, 0 10%);
+}
+
+/* Lines */
+.line-1-cassete {
+  position: relative;
+  width: 200px;
+  height: 1px;
+  background-color: #000000;
+  top: 16px;
+  left: 14px;
+}
+
+.line-2-cassete {
+  position: relative;
+  width: 200px;
+  height: 1px;
+  background-color: #000000;
+  top: 32px;
+  left: 14px;
+}
+
+/* Background */
+.background-line-3-cassete {
+  width: 228px;
+  height: 50px;
+  background-color: #f2bc00;
+  margin-top: 2.5em;
+  margin-left: 0.06em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.screen-view-cassete {
+  width: 125px;
+  height: 32px;
+  margin-left: 48px;
+  border-radius: 15px;
+  background-color: #0a0a0a;
+  display: flex;
+}
+
+.screen-tape-cassete {
+  width: 48px;
+  height: 20px;
+  position: relative;
+  left: 15px;
+  background-color: #252525;
+}
+
+/* Swheel */
+.screen-swheel-cassete-1 {
+  position: relative;
+  top: 4px;
+  left: 1px;
+  width: 25px;
+  height: 25px;
+  border: 2px dashed #ffffff;
+  box-shadow: 0 0 0 4.4px #ffffff;
+  border-radius: 50%;
+  animation: 2s run infinite linear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.screen-swheel-cassete-2 {
+  position: relative;
+  top: 4px;
+  left: 28px;
+  width: 25px;
+  height: 25px;
+  border: 2px dashed #fff;
+  box-shadow: 0 0 0 4.4px #fff;
+  border-radius: 50%;
+  animation: 2s run infinite linear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Animation for swheel */
+@keyframes run {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* Contain time */
+.contain-letter-time-cassete {
+  width: 230px;
+  height: 18px;
+  background-color: #f15a25;
+  margin-top: 3px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Box 3 */
+.box-card-3-cassete {
+  filter: drop-shadow(4px 4px 14px #000000);
+}
+
+.contain-decoration-cassete {
+  width: 150px;
+  height: 50px;
+  margin-left: 4.6em;
+  background-color: #252525;
+  clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+}
+
+/* Cirlce */
+.decoration-c1-cassete {
+  position: relative;
+  width: 0.5em;
+  height: 0.5em;
+  background-color: #bebebe;
+  border-radius: 50%;
+  left: 25px;
+  top: 35px;
+}
+
+.decoration-c2-cassete {
+  position: relative;
+  width: 0.5em;
+  height: 0.5em;
+  background-color: #bebebe;
+  border-radius: 50%;
+  left: 115px;
+  top: -2px;
+}
+
+/* Square */
+.decoration-t1-cassete {
+  position: relative;
+  width: 0.5em;
+  height: 0.5em;
+  background-color: #bebebe;
+  border-radius: 2px;
+  left: 48px;
+  top: 15px;
+}
+
+.decoration-t2-cassete {
+  position: relative;
+  width: 0.5em;
+  height: 0.5em;
+  background-color: #bebebe;
+  border-radius: 2px;
+  left: 95px;
+  top: -5px;
+}
+
+/* Box 4 */
+.box-card-4-cassete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Screews */
+.contain-screw1-cassete {
+  width: 15px;
+  height: 15px;
+  margin: 10px;
+  color: #000000;
+  background-color: lightgrey;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contain-screw2-cassete {
+  width: 15px;
+  height: 15px;
+  margin: 10px 10px 10px 230px;
+  color: #000000;
+  background-color: lightgrey;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contain-screw3-cassete {
+  width: 15px;
+  height: 15px;
+  margin: -50px 120px 0 0;
+  color: #000000;
+  background-color: lightgrey;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contain-screw4-cassete {
+  width: 15px;
+  height: 15px;
+  color: #000000;
+  margin: -50px 0 0 120px;
+  background-color: lightgrey;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contain-screw5-cassete {
+  position: relative;
+  color: #000000;
+  background-color: lightgrey;
+  height: 12px;
+  width: 12px;
+  left: 70px;
+  top: -0.5em;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Letters */
+.letter-time-cassete {
+  font-size: 0.7em;
+  user-select: none;
+}
+
+.letter-num-cassete {
+  margin-left: 1.5em;
+  align-self: center;
+  user-select: none;
+}
+
+/* Images */
+.screw-image-cassete {
+  width: 100%;
+  height: 100%;
+  user-select: none;
   -webkit-user-drag: none;
   pointer-events: none;
 }

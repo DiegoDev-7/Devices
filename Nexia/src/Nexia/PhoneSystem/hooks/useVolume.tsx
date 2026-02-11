@@ -1,13 +1,16 @@
 import { useState, useRef } from "react"
 
 export const useVolume = () => {
-  const [volume, setVolume] = useState(() => Math.floor(Math.random() * 100))
+  /* Volume */
+  const [volume, setVolume] = useState(50)
   const [showVolume, setShowVolume] = useState(false)
   const [closingVolume, setClosingVolume] = useState(false)
 
+  /* Timers */
   const hideTimer = useRef<number | null>(null)
   const closeTimer = useRef<number | null>(null)
 
+  /* Timer for the display volume indicator */
   const showTemporarily = () => {
     setShowVolume(true)
     setClosingVolume(false)
@@ -25,11 +28,13 @@ export const useVolume = () => {
     }, 2000)
   }
 
+  /* Increment volume */
   const increase = () => {
     setVolume(v => Math.min(100, v + 10))
     showTemporarily()
   }
 
+  /* Decrease volume */
   const decrease = () => {
     setVolume(v => Math.max(0, v - 10))
     showTemporarily()

@@ -7,7 +7,7 @@ import nexia from "../../../assets/Nexia/NexiaWhite.svg"
 import camera from "../../../assets/Icons/rearCamera.svg"
 import frontCamera from "../../../assets/Icons/Camera.svg"
 import flash from "../../../assets/Icons/flashCamera.svg"
-import music from "../../../assets/Apps/music.svg"
+import clock from "../../../assets/Apps/clock.svg"
 import calendar from "../../../assets/Apps/calendar.svg"
 import calculator from "../../../assets/Apps/calculator.svg"
 import settings from "../../../assets/Apps/settings_dark.svg"
@@ -91,6 +91,8 @@ const Home = () => {
     },
   ]
 
+  
+
   return (
     <>
       <div className="container-main-home">
@@ -153,7 +155,7 @@ const Home = () => {
               <p className="font-main-1B">
                 El sistema ofrece un entorno completamente interactivo donde es posible acceder a la configuracion del dispositivo, 
                 abrir y usar aplicaciones, y realizar tareas cotidianas. Incluye herramientas como calculadora, lista ToDo, juegos como sudoku, 
-                reproduccion de musica y otras funcionalidades comunes de un dispositivo real.
+                visualizar el reloj y otras funcionalidades comunes de un dispositivo real.
               </p>
 
               <br />
@@ -170,7 +172,7 @@ const Home = () => {
 
         {/* Third frame */}
         <section id="apps" className="box-main-c">
-          {/* Description + icons: music, calendar and calculator */}
+          {/* Description + icons: clock, calendar and calculator */}
           <div className="box-content-main-1C">
 
             <p className="font-main-1C">
@@ -179,11 +181,11 @@ const Home = () => {
             </p>
 
             <div className="card-apps-main-1C">  
-              <div className="box-image-music-1C">
-                <img className="card-image-music-1C" src={music} alt="Music app" />
-                <div className="line-music-1C">
-                  <div className="point-music-1C" />
-                  <div className="point-music-1C bubble" />
+              <div className="box-image-clock-1C">
+                <img className="card-image-clock-1C" src={clock} alt="Clock app" />
+                <div className="line-clock-1C">
+                  <div className="point-clock-1C" />
+                  <div className="point-clock-1C bubble" />
                 </div>
               </div>
               
@@ -230,7 +232,7 @@ const Home = () => {
             <p className="font-main-1C">
               El sistema ofrece un entorno completamente interactivo donde es posible acceder a la configuracion del dispositivo, 
               abrir y usar aplicaciones, y realizar tareas cotidianas. Incluye herramientas como calculadora, lista ToDo, juegos como sudoku, 
-              reproduccion de musica y otras funcionalidades comunes de un dispositivo real.
+              reloj y otras funcionalidades comunes de un dispositivo real.
             </p>
 
           </div>

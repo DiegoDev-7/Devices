@@ -9,12 +9,294 @@
       Container
 =====================
 */
-.Container-app-screen-radio {
+/* Countries */
+.country-select-screen-radio {
+  width: 50px;
+  height: 35px;
+  position: absolute;
+  top: 360px;
+  right: 10px;
+}
+.button-select-app-radio {
   width: 100%;
-  height: 90%;
+  height: 100%;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    user-select: none;
+
+    @include mixin.drag();
+  }
+}
+.list-country-app-radio {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  list-style: none;
+  transform: translateY(-150px);
   position: relative;
-  top: 10%;
-  border: solid red;
+  z-index: 100;
+
+  li {
+    width: 50px;
+    height: 35px;
+    margin: 7px 0;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    top: 15px;
+
+    @include mixin.flex-center(flex, center, center);
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;
+      user-select: none;
+
+      @include mixin.drag();
+    } 
+  }
+}
+
+
+/* App Background */
+.Contain-app-screen-radio {
+  width: 100%;
+  height: 100%;
+  border-radius: 35px;
 
   @include mixin.flex-center(flex, center, center);
+}
+.Contain-app-screen-radio.co {
+  background: radial-gradient(circle,#fb3f3f 0%, #8a4ab2 20%, #5967ff 62%, #e1be60 76%, #ffd342 100%)
+}
+.Contain-app-screen-radio.us {
+  background: radial-gradient(circle,#FF7D7D 0%, #ff4a4a 50%, #468cfc 100%);
+}
+.Contain-app-screen-radio.ja {
+  background: radial-gradient(circle,rgba(255, 255, 255, 1) 0%, rgba(254, 163, 181, 1) 65%, rgba(252, 70, 107, 1) 100%);
+}
+
+
+
+/* Content text */
+.box-content-app-screen-radio {
+  width: 57%;
+  height: 90%;
+  background: #333333ce;
+  border-radius: 25px 0 0 25px;
+  position: absolute;
+  left: 5px;
+  overflow: hidden;
+}
+/* glow */
+.radio-glow {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  position: absolute;
+  right: -100px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  background: radial-gradient(circle, #313131 0%, #2b2b2b 40%, #000000 80%, #000000 100%);
+  filter: blur(25px);
+}
+
+  /* Contain title */
+.contain-title-app-radio {
+  width: 70%;
+  height: 35px;
+  margin-top: 10px;
+  padding: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: solid 2px v.$color-w1;
+  
+  h3 {
+    display: inline-block;
+    padding-left: 100%;
+    color: v.$color-w1;
+    font-size: 1.2rem;
+    font-family: v.$font-mainD3;
+    font-weight: 900;
+    animation: marquee 10s linear infinite;
+  }
+
+  @include mixin.flex-center(inline-block, flex-start, center);
+}
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+  /* Contain image */
+.contain-image-station-app-radio {
+  width: 25%;
+  height: 35px;
+  position: absolute;
+  top: 10px;
+  right: 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    user-select: none;
+
+    @include mixin.drag();
+  }
+
+  @include mixin.flex-center(flex, center, center);
+}
+  /* Contain text */
+.contain-text-app-radio {
+  width: 100%;
+  height: 50%;
+  padding: 5px;
+  position: relative;
+  z-index: 100;
+
+  p {
+    color: v.$color-w1;
+    font-size: 1rem;
+    font-family: v.$font-mainO1;
+    text-align: justify;
+  }
+}
+  /* Contain tags */
+.contain-context-title-app-radio {
+  width: 100%;
+  height: 5%;
+  padding: 5px;
+  position: relative;
+  z-index: 100;
+
+  p {
+    color: v.$color-w1;
+    font-size: 1rem;
+    font-family: v.$font-mainO1;
+    text-align: justify;
+  }
+
+  @include mixin.flex-center(flex, center, center);
+}
+  /* Contain context */
+.contain-context-app-radio {
+  width: 100%;
+  height: 12%;
+  padding: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 100;
+
+  p {
+    width: 50%;
+    height: 55%;
+    color: v.$color-w1;
+    font-size: 1rem;
+    font-family: v.$font-mainO1;
+    text-align: justify;
+
+    &:nth-child(2), &:nth-child(4) {
+      text-align: end;
+    }
+  }
+}
+
+
+/* Controls */
+.box-controls-app-screen-radio {
+  width: 96%;
+  height: 20%;
+  background: #000000;
+  border-radius: 25px;
+  position: absolute;
+  bottom: 5%;
+  gap: 15px;
+
+  @include mixin.flex-center(flex, center, center);
+}
+/* Buttons */
+.button-controls-back-radio, .button-controls-pause-radio, .button-controls-forward-radio {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 1ms ease;
+
+  &:active {
+    transform: scale(.95)
+  }
+
+  @include mixin.flex-center(flex, center, center);
+}
+  /* Point decoration */
+.sound-controls-app-screen-radio-a, .sound-controls-app-screen-radio-b, .sound-controls-app-screen-radio-c {
+  width: 95%;
+  height: 5%;
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 5px;
+
+  @include mixin.flex-center(flex, center, center);
+
+  li {
+    width: 5px;
+    height: 5px;
+    background: v.$color-g3;
+    border-radius: 5px;
+
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.sound-controls-app-screen-radio-a {
+  position: absolute;
+  bottom: 22px;
+}
+.sound-controls-app-screen-radio-b {
+  position: absolute;
+  bottom: 30px;
+}
+.sound-controls-app-screen-radio-c {
+  position: absolute;
+  bottom: 38px;
+}
+
+
+/* Text */
+.text-fm-app-radio {
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  font-size: 1.5rem;
+  font-family: v.$font-mainD3;
+  user-select: none;
+}
+
+
+/* Images */
+.button-controls-back-radio {
+  .image-controls-radio {
+    transform: rotate(180deg);
+  }
+}
+.image-controls-radio {
+  width: 50%;
+  user-select: none;
+
+  @include mixin.drag();
 }

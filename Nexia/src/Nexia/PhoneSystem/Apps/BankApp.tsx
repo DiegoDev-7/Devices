@@ -9,10 +9,7 @@ import visa_light from "../../../assets/Icons/visa_light.svg"
 
 
 /* Render */
-type Props = {
-  onBack: () => void
-}
-const BankApp = ({ onBack }: Props) => {
+const BankApp = () => {
   const cash = 5000
   const [money, setMoney] = useState<boolean>(false)
   const [eyeb, setEyeb] = useState<boolean>(false)

@@ -5,10 +5,7 @@ import nexia from "../../../assets/Nexia/Nexia.svg"
 
 
 /* Render */
-type Props = {
-  onBack: () => void
-}
-const CalculatorApp = ({ onBack }: Props) => {
+const CalculatorApp = () => {
   return (
     <>
       <div className="Container-app-calculator">

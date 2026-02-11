@@ -4,12 +4,13 @@ import circle from "../../../assets/Icons/cirlce_light.svg"
 import triangle from "../../../assets/Icons/triangleArrow_light.svg"
 
 
+
+/* Virtual buttons */
+
 type Props = {
   onBack: () => void
   onHome: () => void
 }
-
-/* Virtual buttons */
 const ScreenButtons = ({ onBack, onHome }: Props) => {
   return (
     <>

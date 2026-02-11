@@ -79,5 +79,8 @@
 .image-app-folder {
   width: 75%;
   height: 75%;
+  user-select: none;
   object-fit: cover;
+
+  @include mixin.drag();
 }

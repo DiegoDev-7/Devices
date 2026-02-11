@@ -52,6 +52,8 @@
 @use "./PhoneSystem/Apps/PhotoGalleryApp";
 @use "./PhoneSystem/Apps/ContactApp";
 @use "./PhoneSystem/Apps/Settings";
+@use "./PhoneSystem/Apps/SimpsonsApp";
+@use "./PhoneSystem/Apps/CalendarApp";
 
 // hardware
 @use "./PhoneSystem/hardware/borderButtons";
@@ -66,4 +68,8 @@
 @use "./PhoneSystem/screens/screenUnlock";
 
 // ui
-@use "./PhoneSystem/ui/ui";
+@use "./PhoneSystem/ui/cellPhoneEdge";
+@use "./PhoneSystem/ui/frontCamera";
+@use "./PhoneSystem/ui/signals";
+@use "./PhoneSystem/ui/Vinyl";
+@use "./PhoneSystem/ui/Cassette";

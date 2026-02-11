@@ -41,22 +41,32 @@
   height: 40px;
   border-radius: 12px;
   margin: 10px;
+  background-color: v.$color-w1;
+  transition: all .1s ease;
 
   &:hover {
-    background: v.$color-w3;
+    background: v.$color-w2;
   }
   &:active {
     transform: scale(0.95);
   }
 
+  &:nth-child(13) {
+    background-color: #f6d526;
+  }
+
   @include mixin.flex-center(flex, center, center);
 }
+.box-cellPhone-Apps.phone {
+  transform: rotate(270deg);
+}
+
 
 /* BUTTONS */
 .button-cellPhone-Apps {
-  width: 100%;
-  height: 100%;
-  background: v.$color-w1;
+  width: 85%;
+  height: 85%;
+  background: transparent;
   border: none;
   border-radius: 10px;
   transition: all .2s ease;
@@ -67,8 +77,8 @@
 
 /* IMAGES */
 .image-cellPhone-Apps {
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
   border-radius: 10px;
   object-fit: cover;
   user-select: none;

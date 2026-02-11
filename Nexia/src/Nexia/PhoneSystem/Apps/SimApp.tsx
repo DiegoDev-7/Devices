@@ -8,10 +8,7 @@ import infoDark from "../../../assets/Icons/info_dark.svg"
 
 
 /* Render */
-type Props = {
-  onBack: () => void
-}
-const SimApp = ({ onBack }: Props) => {
+const SimApp = () => {
   const [num, setNum] = useState<boolean>(false)
   const [random, setRandom] = useState(0)
   

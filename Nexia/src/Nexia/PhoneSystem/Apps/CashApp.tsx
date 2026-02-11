@@ -4,10 +4,7 @@ import gold from "../../../assets/Icons/cash_gold.svg"
 
 
 /* Render */
-type Props = {
-  onBack: () => void
-}
-const CashApp = ({ onBack }: Props) => {
+const CashApp = () => {
   return (
     <>
       <div className="Container-app-screen-cash">

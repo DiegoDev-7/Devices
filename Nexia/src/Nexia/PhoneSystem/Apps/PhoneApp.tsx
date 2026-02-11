@@ -5,10 +5,7 @@ import user from "../../../assets/Icons/user_light.svg"
 
 
 /* Render */
-type Props = {
-  onBack: () => void
-}
-const PhoneApp = ({ onBack }: Props) => {
+const PhoneApp = () => {
   return (
     <>
       <div className="Container-app-screen-phone">

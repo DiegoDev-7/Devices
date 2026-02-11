@@ -1,9 +1,5 @@
 /* Render */
-type Props = {
-  onBack: () => void
-}
-const RewardsApp = ({ onBack }: Props) => {
-  
+const RewardsApp = () => {
   return (
     <>
       <div className="Container-app-screen-rewards">
