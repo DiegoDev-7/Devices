@@ -17,7 +17,7 @@ import { AudioProvider } from "./core/AudioContext"
 const CellPhone = () => {
   /* Phone power system status and actions and System status and volume control */
   const { power, togglePower } = usePower()
-  const { volume, showVolume, closingVolume, increase, decrease } = useVolume()
+  const { volume, setVolume, showVolume, closingVolume, increase, decrease } = useVolume()
   
 
 
@@ -38,6 +38,7 @@ const CellPhone = () => {
                       <ScreenApps
                         power={power}
                         volume={volume}
+                        setVolume={setVolume}
                         showVolume={showVolume}
                         closingVolume={closingVolume}
                       />

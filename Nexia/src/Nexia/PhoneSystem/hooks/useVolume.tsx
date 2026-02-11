@@ -40,5 +40,5 @@ export const useVolume = () => {
     showTemporarily()
   }
 
-  return { volume, showVolume, closingVolume, increase, decrease }
+  return { volume, setVolume, showVolume, closingVolume, increase, decrease }
 }

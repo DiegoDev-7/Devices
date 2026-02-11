@@ -17,12 +17,14 @@ const ScreenApps = ({
     volume,
     showVolume,
     closingVolume,
+    setVolume,
   }: 
   {
     power: boolean
     volume: number
     showVolume: boolean
     closingVolume: boolean
+    setVolume: any
   }) => {
   return (
     <>
@@ -43,6 +45,7 @@ const ScreenApps = ({
               <VolumeIndicator
                 volume={volume}
                 closing={closingVolume}
+                setVolume={setVolume}
               />
             )}
           </>
