@@ -1,0 +1,86 @@
+/* Importations */
+@use "../../../../mixin";
+@use "../../../../variables" as v;
+
+
+
+/* 
+=====================
+     Wifi Option
+=====================
+*/
+.box-card-red-wifi {
+  width: 100%;
+  height: 75px;
+  position: relative;
+  top: 35px;
+
+  @include mixin.flex-center(flex, center, center);
+}
+
+/* Option box */
+.box-option-red-wifi {
+  width: 100%;
+  height: 50px;
+  padding-right: 12px;
+
+  p {
+    width: 100%;
+    font-size: 1.1rem;
+    font-family: v.$font-mainO3;
+    padding-left: 12px;
+    
+    @include mixin.flex-center(flex, flex-start, center);
+  }
+
+  @include mixin.flex-center(flex, flex-end, center);
+}
+
+/* Card */
+.card-red-wifi {
+  width: 95%;
+  height: 95%;
+  background: linear-gradient(180deg,rgba(0, 129, 235, 1) 0%, rgba(0, 140, 255, 1) 55%, rgba(31, 147, 242, 1) 100%);
+  border-radius: 20px;
+  display: flex;
+}
+  /* Card for the image wifi */
+.card-wifi-red-wifi {
+  width: 25%;
+  height: 100%;
+
+  img {
+    width: 25px;
+    height: 25px;
+    user-select: none;
+
+    @include mixin.drag();
+  }
+
+  @include mixin.flex-center(flex, center, center);
+}
+  /* Card for the text wifi */
+.card-text-red-wifi {
+  width: 75%;
+  height: 100%;
+  flex-wrap: wrap;
+  position: relative;
+  top: 5px;
+
+  p:nth-child(1) {
+    width: 100%;
+    height: 50%;
+    color: v.$color-w1;
+    font-size: 1.1rem;
+    font-family: v.$font-mainO2;
+  }
+  p:nth-child(2) {
+    width: 100%;
+    height: 50%;
+    color: v.$color-w1;
+    font-size: .9rem;
+    font-family: v.$font-mainO2;
+  }
+
+  @include mixin.flex-center(flex, center, center);
+}

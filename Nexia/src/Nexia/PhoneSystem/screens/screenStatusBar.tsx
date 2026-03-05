@@ -101,7 +101,7 @@ const StatusBarIcons = () => {
 /* Sliding status bar */
 const StatusBarSliding = () => {
   /* Limits */
-  const MIN_HEIGHT = 100
+  const MIN_HEIGHT = 50
   const MAX_HEIGHT = 538
   const SNAP_LIMIT = 50
 

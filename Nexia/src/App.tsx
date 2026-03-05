@@ -1,13 +1,9 @@
-/* React */
+/* React - Hooks */
+import { Routes, Route, useLocation } from "react-router-dom"
 import { type ReactNode, type JSX, useEffect, useState } from "react"
 
-/* Hooks */
-import { Routes, Route, useLocation } from "react-router-dom"
-
-
-
 /* Home page */
-import Home from "./Nexia/pages/Home/MainHome"
+import HomeRender from "./Nexia/pages/Home/MainHome"
 
 /* Common page */
 import Header from "./Nexia/pages/Common/Header"
@@ -15,6 +11,7 @@ import Footer from "./Nexia/pages/Common/Footer"
 
 /* Phone */
 import DeviceRender from "./Nexia/pages/devices/devices"
+import TermsAndConditions from "./Nexia/pages/Common/TermsAndConditions"
 
 /* Components */
 import ReloadAnimation from "./Nexia/components/ReloadAnimation"
@@ -79,10 +76,12 @@ function App(): JSX.Element {
 
       <Routes>
         {/* Home */}
-        <Route path="/" element={<Layout><Home /></Layout>} />
+        <Route path="/" element={<Layout><HomeRender /></Layout>} />
 
         {/* Devices */}
         <Route path="/Phone" element={<Layout><DeviceRender /></Layout>} />
+        {/* Terminos y Condiciones */}
+        <Route path="/terminos" element={<Layout><TermsAndConditions /></Layout>} />
       </Routes>
     </>
   )

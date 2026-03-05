@@ -1,0 +1,69 @@
+/* Importations */
+@use "../../../../mixin";
+@use "../../../../variables" as v;
+
+
+
+/* 
+=====================
+    Security Option
+=====================
+*/
+.box-text-security {
+  width: 100%;
+  height: 90%;
+  position: relative;
+  top: 40px;
+  overflow-y: auto;
+  
+  h3 {
+    width: 92%;
+    margin: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: v.$font-mainO2;
+  }
+  p {
+    width: 92%;
+    margin: 10px;
+    text-align: justify;
+    font-family: v.$font-mainO2;
+    font-weight: 500;
+  }
+  ul {
+    padding-left: 25px;
+
+    li {
+      width: 92%;
+      margin: 10px;
+      font-family: v.$font-mainO2;
+      font-weight: 500;
+    }
+  }
+}
+
+/* Image */
+.contain-image-security {
+  width: 100%;
+  height: 150px;
+  animation: nexia 1s infinite alternate;
+
+  img {
+    width: 100%;
+    height: 100%;
+    user-select: none;
+
+    @include mixin.drag();
+  }
+
+  @include mixin.flex-center(flex, center, center);
+}
+
+@keyframes nexia {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: .5;
+  }
+}

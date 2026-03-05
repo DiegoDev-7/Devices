@@ -35,6 +35,8 @@ const FolderApp = () => {
     {id: 15, boxFolder: "box-app-folder", containImage: "contain-app-folder-image", folderImage: "image-app-folder", containText: "contain-app-text", alt: "Image folder", titles: "money", num: 1},
   ]
 
+
+
   return (
     <>
       <div className="Container-app-screen-folder">
@@ -53,7 +55,7 @@ const FolderApp = () => {
               </div>
               <div className={v.containText}>
                 <h4>{v.titles}</h4>
-                <p>{v.num} elementos | {String(dates.getFullYear()).padStart(2, "0")}/{String(dates.getMonth() + 1).padStart(2, "0")}/{String(dates.getDay()).padStart(2, "0")}</p>
+                <p>{v.num} elementos | {String(dates.getFullYear()).padStart(2, "0")}/{String(dates.getMonth() + 1).padStart(2, "0")}/{String(dates.getDate()).padStart(2, "0")}</p>
               </div>
             </div>
           ))}

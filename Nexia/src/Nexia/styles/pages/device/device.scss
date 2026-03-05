@@ -23,11 +23,18 @@
   position: relative;
   
   grid-area: 1 / 1 / 2 / 2;
-}
-.box-title-phone {
-  width: 33dvw;
 
+  
   @include mixin.flex-center(flex, center, center);
+}
+
+.box-title-phone {
+  width: 25%;
+  height: 100%;
+  user-select: none;
+
+
+  @include mixin.drag();
 }
 
   /* Second box */

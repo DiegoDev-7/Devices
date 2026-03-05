@@ -1,0 +1,147 @@
+/* Importations */
+@use "../../../mixin";
+@use "../../../variables" as v;
+
+
+
+/* 
+====================
+     Container
+====================
+*/
+.container-appsDescription {
+  width: 100dvw;
+  height: 100dvh;
+
+  @include mixin.flex-center(flex, center, center);
+}
+
+  /* Contain text and elements */
+.contain-appsDescription {
+  width: 75%;
+  height: auto;
+
+  h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+  }
+  p {
+    width: 80%;
+    text-align: justify;
+    font-size: 1.4rem;
+  }
+
+  flex-wrap: wrap;
+
+  @include mixin.flex-center(flex, center, center);
+}
+  /* Box elements */
+.box-grid-appsDescription {
+  width: 100%;
+  height: auto;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  flex-wrap: wrap;
+
+  @include mixin.flex-center(flex, center, center);
+}
+.grid-app-appsDescription {
+  width: 25%;
+  padding: 15px;
+  color: v.$color-w1;
+  background: v.$color-b4;
+  border: solid v.$color-b4;
+  border-radius: 12px;
+  transition: .3s ease;
+  text-align: center;
+  font-size: 1.2rem;
+
+  &:hover {
+    transform: scale(1.05);
+    border: solid #065fc5;
+  }
+
+  /* Image */
+  .contain-image-appsDescription {
+    width: 28px;
+    height: 28px;
+    display: inline-block;
+
+    img {
+      width: 100%;
+      height: 100%;
+      user-select: none;
+
+      @include mixin.drag();
+    }
+
+    @include mixin.flex-center(flex, center, center);
+  }
+
+  @include mixin.flex-center(flex, center, center);
+}
+  /* Animations from the images */
+.contain-image-appsDescription.in {
+  animation: image-in 0.5s ease forwards;
+}
+.contain-image-appsDescription.out {
+  animation: image-out 0.5s ease forwards;
+}
+  /* Keyframes */
+  /* Image .in */
+@keyframes image-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+  /* Image .out */
+@keyframes image-out {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(8px) scale(0.9);
+  }
+}
+
+  /* Animations from the text */
+.grid-app-appsDescription span {
+  display: inline-block;
+}
+.grid-app-appsDescription span.in {
+  animation: text-in 0.5s ease forwards;
+}
+.grid-app-appsDescription span.out {
+  animation: text-out 0.5s ease forwards;
+}
+  /* Keyframes */
+  /* Text .in */
+@keyframes text-in {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+  /* Text .out */
+@keyframes text-out {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+}

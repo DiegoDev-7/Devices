@@ -1,0 +1,160 @@
+/* Importations */
+@use "../../../mixin";
+@use "../../../variables" as v;
+
+
+
+/* 
+=====================
+  Container Home
+=====================
+*/
+.container-home {
+  width: 100dvw;
+  height: 100dvh;
+
+  @include mixin.flex-center(flex, center, center);
+}
+
+/* Contain divider with grid */
+.contain-home {
+  width: 90%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* Box - image and text */
+.box-home-a {
+  flex-wrap: wrap;
+
+  p {
+    width: 80%;
+    height: auto;
+    display: flex;
+    margin: -70px 0 100px 0;
+    font-size: 1.1rem;
+    font-family: v.$font-mainO1;
+    text-align: justify;
+  }
+
+  @include mixin.flex-center(flex, center, flex-start);
+}
+  /* Image */
+.contain-image-home {
+  width: 80%;
+  height: 60%;
+
+  img {
+    width: 100%;
+    height: 100%;
+    user-select: none;
+
+    @include mixin.drag();
+  }
+}
+  /* Other */
+  /* Line divider */
+.line-divider-home {
+  width: 100%;
+  height: 5px;
+  background: v.$color-b4;
+  border-radius: 50px;
+  position: relative;
+  top: -95px;
+}
+
+
+
+/* Box - Card and button */
+.box-home-b {
+  flex-wrap: wrap;
+
+  @include mixin.flex-center(flex, center, flex-start);
+}
+  /* Card */
+.card-home {
+  width: 100%;
+  height: 80%;
+
+  @include mixin.flex-center(flex, center, center);
+}
+.box-card-home {
+  width: 250px;
+  height: 300px;
+  background: v.$color-b4;
+  box-shadow: 0 0 15px 5px v.$color-g1;
+  border: solid 2px v.$color-w1;
+  border-radius: 15px;
+  transition: all .2s ease;
+
+  img {
+    width: 90%;
+    height: 90%;
+    padding-right: 10px;
+    user-select: none;
+    animation: blink 1.5s ease-in-out infinite alternate;
+
+    @include mixin.drag();
+  }
+  
+  @include mixin.flex-center(flex, center, center);
+}
+  /* Animation image */
+@keyframes blink {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+  /* Inclinations of cards */
+.box-card-home.a {
+  transform: rotate(-10deg);
+  position: relative;
+  left: 50px;
+  z-index: 2;
+
+  &:hover {
+    transform: scale(1.02) rotate(-10deg);
+    left: 45px;
+  }
+}
+.box-card-home.b {
+  transform: scale(0.9) rotate(5deg);
+  position: relative;
+  top: 10px;
+  left: -50px;
+  z-index: 1;
+
+  &:hover {
+    transform: scale(.95) rotate(5deg);
+    top: -10px;
+    left: -45px;
+  }
+}
+
+
+  /* Button */
+.button-home {
+  width: 60%;
+  height: 10%;
+  background: v.$color-b4;
+  border: none;
+  border-radius: 5px;
+  color: v.$color-w1;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-family: v.$font-mainD3;
+  transition: all .4s ease;
+
+  &:hover {
+    transform: scale(1.02);
+    background: v.$color-b3;
+    box-shadow: 0 0 15px 5px v.$color-g1;
+  }
+  &:active {
+    transform: scale(.98);
+  }
+}

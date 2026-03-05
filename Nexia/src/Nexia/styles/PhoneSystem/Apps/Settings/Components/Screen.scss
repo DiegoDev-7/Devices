@@ -1,0 +1,46 @@
+/* Importations */
+@use "../../../../mixin";
+@use "../../../../variables" as v;
+
+
+
+/* 
+=====================
+    Screen Option
+=====================
+*/
+.box-options-settings-screen {
+  width: 100%;
+  height: 90%;
+  position: relative;
+  top: 40px;
+}
+
+/* Box option settings */
+.options-settings-screen {
+  width: 100%;
+  height: 90px;
+  display: flex;
+}
+.option-text-settings-screen {
+  width: 70%;
+  height: 100%;
+  padding-left: 10px;
+
+  p:nth-child(1) {
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-family: v.$font-mainO2;
+  }
+  p:nth-child(2) {
+    font-size: .7rem;
+    font-family: v.$font-mainO2;
+    text-align: justify;
+  }
+}
+.option-button-settings-screen {
+  width: 30%;
+  height: 100%;
+
+  @include mixin.flex-center(flex, center, center);
+}

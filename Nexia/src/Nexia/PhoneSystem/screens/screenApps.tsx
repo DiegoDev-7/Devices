@@ -4,7 +4,6 @@ import { useState, type JSX } from "react"
 /* Image Apps */
 import settings from "../../../assets/Apps/settings_dark.svg"
 import calculator from "../../../assets/Apps/calculator.svg"
-import weater from "../../../assets/Apps/weather.svg"
 import calendar from "../../../assets/Apps/calendar.svg"
 import folder from "../../../assets/Apps/archive.svg"
 import clock from "../../../assets/Apps/clock.svg"
@@ -17,7 +16,6 @@ import rewards from "../../../assets/Apps/rewards.svg"
 import security from "../../../assets/Apps/security.svg"
 import simcard from "../../../assets/Apps/simcard.svg"
 import bank from "../../../assets/Apps/bank.svg"
-import tictactoe from "../../../assets/Apps/tic-tac-toe.svg"
 import message from "../../../assets/Apps/message.svg"
 import phone from "../../../assets/Apps/phone.svg"
 import contact from "../../../assets/Apps/contact.svg"
@@ -37,9 +35,10 @@ import MessageApp from "../Apps/MessageApp"
 import SecurityApp from "../Apps/SecurityApp"
 import PhotoGalleryApp from "../Apps/PhotoGalleryApp"
 import ContactApp from "../Apps/ContactApp"
-import SettingsApp from "../Apps/Settings"
+import SettingsApp from "../Apps/Settings/SettingsApp"
 import SimpsonsApp from "../Apps/SimpsonsApp"
 import CalendarApp from "../Apps/CalendarApp"
+import ClockApp from "../Apps/ClockApp"
 
 
 
@@ -53,21 +52,18 @@ const Apps = () => {
   const StatusBarCss: StatusBar[] = [
     { id: "notes", imageApp: notes, alt: "Notas" },
     { id: "calculator", imageApp: calculator, alt: "Calculadora" },
-    { id: "weater", imageApp: weater, alt: "Clima" },
+    { id: "folder", imageApp: folder, alt: "Carpeta" },
     { id: "settings", imageApp: settings, alt: "Ajustes" },
     { id: "clock", imageApp: clock, alt: "Reloj" },
-    { id: "folder", imageApp: folder, alt: "Carpeta" },
     { id: "calendar", imageApp: calendar, alt: "Calendario" },
     { id: "gallery", imageApp: gallery, alt: "Galeria" },
-    { id: "cash", imageApp: cash, alt: "Dinero" },
+    { id: "security", imageApp: security, alt: "Seguridad" },
     { id: "rewards", imageApp: rewards, alt: "Rewards" },
     { id: "bank", imageApp: bank, alt: "Banco" },
-    { id: "security", imageApp: security, alt: "Seguridad" },
-    { id: "simpsons", imageApp: simson, alt: "The Simpsons" },
-    
+    { id: "cash", imageApp: cash, alt: "Dinero" },
     { id: "radio", imageApp: radio, alt: "Radio" },
+    { id: "simpsons", imageApp: simson, alt: "The Simpsons" },
     { id: "sim", imageApp: simcard, alt: "Sim" },
-    { id: "tictactoe", imageApp: tictactoe, alt: "Tic Tac Toe" },
   ]
 
   type StatusBar2 = {
@@ -103,7 +99,8 @@ const Apps = () => {
     security: () => <SecurityApp />,
     gallery: () => <PhotoGalleryApp />,
     simpsons: () => <SimpsonsApp />,
-    calendar: () => <CalendarApp />
+    calendar: () => <CalendarApp />,
+    clock: () => <ClockApp />,
   }
 
   type AppKey = keyof typeof appScreens
@@ -113,7 +110,6 @@ const Apps = () => {
     setOpenApp(null)
   }
   const goBack = () => {
-    // por ahora ATRAS = volver al launcher
     setOpenApp(null)
   }
 

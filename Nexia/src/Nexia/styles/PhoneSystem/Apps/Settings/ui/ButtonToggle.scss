@@ -1,0 +1,39 @@
+/* Importations */
+@use "../../../../mixin";
+@use "../../../../variables" as v;
+
+
+
+/* 
+=====================
+    Button toggle
+=====================
+*/
+.toggle-container {
+  width: 40px;
+  height: 20px;
+  background-color: v.$color-g5;
+  border: none;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.toggle-container.active {
+  background-color: #008cff;
+}
+.toggle-knob {
+  width: 12px;
+  height: 12px;
+  background-color: v.$color-w1;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+.toggle-knob.move {
+  transform: translateX(18px);
+}

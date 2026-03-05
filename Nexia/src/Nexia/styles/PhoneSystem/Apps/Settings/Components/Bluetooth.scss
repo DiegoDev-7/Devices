@@ -1,0 +1,40 @@
+/* Importations */
+@use "../../../../mixin";
+@use "../../../../variables" as v;
+
+
+
+/* 
+=====================
+  Bluetooth Option
+=====================
+*/
+.box-option-bluetooth {
+  width: 100%;
+  height: 90%;
+  position: relative;
+  top: 40px;
+}
+.card-option-bluetooth {
+  width: 100%;
+  height: 50px;
+  display: flex;
+}
+
+.description-option-blueetooth {
+  width: 80%;
+
+  p {
+    padding-left: 10px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    font-family: v.$font-mainO2;
+  }
+
+  @include mixin.flex-center(flex, flex-start, center);
+}
+.button-option-blueetooth {
+  width: 20%;
+
+  @include mixin.flex-center(flex, center, center);
+}

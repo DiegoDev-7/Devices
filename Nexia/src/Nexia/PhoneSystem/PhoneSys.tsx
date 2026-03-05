@@ -24,6 +24,7 @@ const CellPhone = () => {
   return (
     <>
       <div className="container-nexia-cellPhone">
+        
         {/* CellPhone */}
         <AudioProvider>
           <>
@@ -32,7 +33,6 @@ const CellPhone = () => {
                 <>  
                   <div className="display-cellPhone">
                     <div className="screen-cellPhone-touch">
-
 
                       {/* Volume input and output */}
                       <ScreenApps
@@ -70,6 +70,7 @@ const CellPhone = () => {
             </div>
           </>
         </AudioProvider>
+        
       </div>
     </>
   )

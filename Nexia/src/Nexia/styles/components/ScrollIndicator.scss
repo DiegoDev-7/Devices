@@ -1,0 +1,67 @@
+/* Import mixin */
+@use "../mixin";
+@use "../variables" as v;
+
+
+
+/* 
+====================
+     Container
+====================
+*/
+/* Scroll spy */
+.scroll-progress {
+  position: fixed;
+  top: 50%;
+  left: 35px;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+  /* Spaces */
+.dots {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+.dot-item {
+  display: flex;
+  align-items: center;
+}
+
+  /* Icon */
+.dot {
+  width: 10px;
+  height: 10px;
+  background: #333;
+  border: solid 2px v.$color-g1;
+  box-shadow: 0 0 10px 3px v.$color-g1;
+  cursor: pointer;
+  position: absolute;
+  left: -15px;
+  transform: rotate(50deg);
+  transition: all .2s ease;
+
+  position: absolute;
+  right: 85px;
+}
+.dot-item.active .dot {
+  background: v.$color-w1;
+  border: solid 2px v.$color-w1;
+  transform: rotate(140deg) scale(1.7);
+}
+.font-dot-label {
+  padding-left: 10px;
+  opacity: 0.4;
+  color: v.$color-b2;
+  font-weight: 600;
+  font-family: v.$font-mainO2;
+}
+.dot-item.active .font-dot-label {
+  padding-left: 15px;
+  transform: scale(1.05);
+  color: v.$color-b2;
+  opacity: 0.8;
+  font-weight: 600;
+  font-family: v.$font-mainO2;
+}

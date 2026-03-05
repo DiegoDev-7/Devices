@@ -14,14 +14,14 @@
   min-height: 50px;
   border-bottom: solid 2px v.$color-b3;
   position: fixed;
+  top: 0;
+  left: 0;
   background-color: v.$color-w1;
-  z-index: 100000000;
-
+  z-index: 10000000000;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 50px;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  box-sizing: border-box;
 }
   /* Boxes */
 .boxHeaderA {
@@ -42,8 +42,6 @@
   width: 100%;
   height: 100%;
 
-  @include mixin.flex-center(flex, flex-end, center);
-
   .lnkheader {
     font-weight: 400;
     margin: 10px;
@@ -54,6 +52,8 @@
       color: v.$color-g3;
     }
   }
+
+  @include mixin.flex-center(flex, flex-end, center);
 }
 .contentHeader2 {
   width: 25%;
@@ -63,7 +63,6 @@
 }
 .contentHeader3 {
   width: 25%;
-  height: 100%;
   margin: 0 20px 0 0;
 
   @include mixin.flex-center(flex, flex-end, center);
@@ -76,56 +75,33 @@
       Images 
 ====================
 */
+/* Base styles for all header images */
+[class^="Image"] {
+  object-fit: cover;
+  transition: transform 0.15s ease-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
 .ImageNexia {
   width: 50px;
   height: 50px;
   border-radius: 10px;
-  object-fit: cover;
 }
-  /* Language */
-.ImageL {
-  height: 22px;
-  margin: 10px;
-  object-fit: cover;
-  transition: all .1s ease-in-out;
 
-  &:hover {
-    scale: 1.1;
-  }
-}
-  /* Discord */
-.ImageDc {
-  height: 17px;
-  margin: 0 10px 0 5px;
-  object-fit: cover;
-  transition: all .1s ease-in-out;
-
-  &:hover {
-    scale: 1.1;
-  }
-}
-  /* X */
-.ImageX {
-  height: 17px;
-  margin: 0 10px 0 5px;
-  object-fit: cover;
-  transition: all .1s ease-in-out;
-
-  &:hover {
-    scale: 1.1;
-  }
-}
-  /* GitHub */
+.ImageL,
+.ImageDc,
+.ImageX,
 .ImageGH {
-  height: 20px;
-  margin: 0 20px 0 5px;
-  object-fit: cover;
-  transition: all .1s ease-in-out;
-
-  &:hover {
-    scale: 1.1;
-  }
+  height: clamp(15px, 3vw, 20px);
 }
+
+.ImageL { margin: 10px; }
+.ImageDc { margin: 0 10px 0 5px; }
+.ImageX { margin: 0 10px 0 5px; }
+.ImageGH { margin: 0 20px 0 5px; }
 
 
 
@@ -134,8 +110,58 @@
       Links
 ====================
 */
+a.lnkheader,
 .lnkheader {
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  @include mixin.flex-center(flex, flex-end, center);
+
+
+
+/* 
+====================
+    Responsive
+====================
+*/
+@media (max-width: 768px) {
+  .cntnrHeader {
+    grid-template-columns: 1fr auto;
+  }
+
+  .contentHeader1 {
+    order: 3;
+    grid-column: 1 / -1;
+    width: 100%;
+    padding: 0 10px;
+    
+    .lnkheader {
+      font-size: 0.9rem;
+      margin: 5px;
+    }
+  }
+
+  .contentHeader2,
+  .contentHeader3 {
+    width: auto;
+    margin: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .cntnrHeader {
+    min-height: 45px;
+    grid-template-rows: 45px;
+  }
+
+  .ImageNexia {
+    width: 40px;
+    height: 40px;
+  }
+
+  .contentHeader1 .lnkheader {
+    display: none;
+  }
 }

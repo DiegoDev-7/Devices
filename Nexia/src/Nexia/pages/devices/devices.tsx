@@ -32,6 +32,8 @@ const DeviceRender = () => {
     { src: notes, alt: "Notas" }, 
   ]
 
+
+
   return (
     <>
       <div className="container-main-phone">
@@ -39,22 +41,14 @@ const DeviceRender = () => {
         {/* Nexia Rose, text */}
         <section className="box-phone-a">
           <div className="box-title-phone">
-            <h2 className="title-phone">Nexia</h2>
-          </div>
-          <div className="box-title-phone">
             <img className="rose-phone" src={rose} alt="Nexia rose" />
-          </div>
-          <div className="box-title-phone">
-            <h2 className="title-phone">Mobile</h2>
           </div>
         </section>
 
 
         {/* CellPhone */}
         <section className="box-phone-b">
-
           <PhoneSys />
-
         </section>
 
 
@@ -84,11 +78,13 @@ const DeviceRender = () => {
           {/* Icons */}
           <div className="box-phone-C2">
             <div className="box-contain-image-phone-C2">
+
               {apps.map((icon, i) => (
                 <div key={i} className="contain-image-phone-C2">
                   <img className="image-phone-C2" src={icon.src} alt={`Image of the ${icon.alt}`} />
                 </div>
               ))}
+
             </div>
           </div>
         </section>

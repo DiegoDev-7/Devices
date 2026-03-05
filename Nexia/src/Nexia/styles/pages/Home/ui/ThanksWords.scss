@@ -1,0 +1,59 @@
+/* Importations */
+@use "../../../mixin";
+@use "../../../variables" as v;
+
+
+
+/* 
+=====================
+ Container gratitude
+=====================
+*/
+.container-gratitude {
+  width: 100dvw;
+  height: 100dvh;
+
+  @include mixin.flex-center(flex, center, center);
+}
+
+  /* Container to gratitude */
+.contain-gratitude {
+  width: 75%;
+  height: auto;
+  flex-wrap: wrap;
+
+  h2 {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-size: 2rem;
+    font-family: v.$font-mainO2;
+    margin: 25px 0;
+  }
+  p {
+    width: 75%;
+    height: auto;
+    text-align: justify;
+    font-size: 1.4rem;
+    font-family: v.$font-mainO2;
+    margin: 25px
+  }
+
+  @include mixin.flex-center(flex, center, center);
+}
+
+  /* Box image */
+.box-gratitude {
+  width: 10%;
+  height: 10%;
+
+  img {
+    width: 100%;
+    height: 100%;
+    user-select: none;
+
+    @include mixin.drag();
+  }
+  
+  @include mixin.flex-center(flex, center, center);
+}

@@ -16,102 +16,145 @@
   @include mixin.flex-center(flex, center, center);
 }
 
-  /* SIM card design template container */
-.contain-image-app-simcard {
-  width: 120px;
-  height: 75px;
-  background: #333;
-  border: none;
-  border-radius: 3px;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%, 0 70%);
-  cursor: pointer;
-  
-  &:hover {
-    transform: scale(0.98);
-  }
-  &:active {
-    transform: scale(1);
-  }
-
-  @include mixin.flex-center(flex, flex-end, center);
-}
-.box-image-app-simcard {
-  width: 75px;
-  height: 75px;
-  box-shadow: 0 0 100px 55px v.$color-g1;
+  /* Screen of the content */
+.contain-app-screen-simcard {
+  width: 100%;
+  height: 85%;
+  flex-wrap: wrap;
 
   @include mixin.flex-center(flex, center, center);
 }
 
-.contain-number-app-simcard {
-  position: absolute;
-  top: 65%;
+/* Screen image box a */
+.box-app-screen-simcard-a {
+  width: 100%;
+  height: 15%;
 
-  p:first-child {
+  img {
+    width: 65%;
+    height: 65%;
     user-select: none;
+    animation: blink 1s ease-in-out infinite alternate;
+
+    @include mixin.drag();
   }
+  /* Animation from image Sim-Card */
+  @keyframes blink {
+    0% {
+      opacity: 0.7;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @include mixin.flex-center(flex, center, center);
 }
 
-  /* Contain information */
-.contain-app-simcard-info {
-  width: 30px;
-  height: 30px;
+
+
+/* Screen text box b */
+.box-app-screen-simcard-b {
+  width: 100%;
+  height: 90%;
+}
+  /* Content of text */
+.content-simcard {
+  width: 100%;
+  height: auto;
+  flex-wrap: wrap;
+  margin: 10px 0;
+
+  @include mixin.flex-center(flex, center, flex-start);
+}
+  /* Box button - text and image forward */
+.box-button-text-simcard {
+  width: 90%;
+  height: 100%;
+  background: fixed;
   border: none;
-  background: none;
-
-  position: absolute;
-  top: 48%;
-  left: 75%;
-  cursor: pointer;
-}
-.contain-app-info {
-  width: 250px;
-  height: 150px;
+  border-radius: 25px 25px 0 0;
+  border-bottom: solid 2px;
   padding: 10px;
-  background: v.$color-g3;
-  border: solid v.$color-g3;
-  border-radius: 25px;
-  
-  position: absolute;
-  top: 10%;
-  
-  p {
-    color: v.$color-w1;
-    text-align: justify;
-    font-family: v.$font-mainO2;
-    font-size: .5;
+  font-size: 1rem;
+  font-family: v.$font-mainO2;
+  cursor: pointer;
+  transition: all .3s ease;
+
+  &:hover {
+    background: v.$color-g4;
+  }
+
+  .image-button-simcard {
+    width: 20px;
+    height: 20px;
+    user-select: none;
+    transform: rotate(90deg);
+    position: absolute;
+    right: 30px;
+
+    @include mixin.drag();
+  }
+  .image-button-simcard.active {
+    transform: rotate(-90deg);
+  }
+
+  @include mixin.flex-center(flex, center, center);
+}
+  /* Content of the view screen ocult with text */
+.box-text-simcard {
+  width: 90%;
+  height: 100%;
+  height: auto;
+  padding: 5px;
+
+  .email-copy {
+    color: v.$color-b1;
+    font-weight: 500;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    transition: all .3s ease;
+    user-select: none;
+    cursor: pointer;
+
+    /* Visual feedback when copied */
+    &.copied {
+      color: #4ade80;
+      background: #4ade8026;
+      box-shadow: 0 0 8px #4ade804d;
+    }
+  }
+
+  @include mixin.flex-center(flex, center, center);
+}
+  /* Animations from the images */
+.box-text-simcard.in {
+  animation: image-in 0.5s ease forwards;
+}
+.box-text-simcard.out {
+  animation: image-out 0.5s ease forwards;
+  pointer-events: none;
+}
+/* Keyframes */
+  /* Image .in */
+@keyframes image-in {
+  from {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
   }
 }
-
-
-/* Image */
-  /* Sim */
-.image-app-simcard {
-  width: 70%;
-  height: 70%;
-  
-  user-select: none;
-  object-fit: cover;
-
-  @include mixin.drag();
-}
-
-  /* Info */
-.image-app-simcard-info {
-  width: 70%;
-  height: 70%;
-  
-  user-select: none;
-  object-fit: cover;
-
-  @include mixin.drag();
-}
-
-
-/* Text */
-.text-number-app-simcard {
-  margin: 10px;
-  font-family: v.$font-mainO2;
-  text-align: center;
-  font-size: 1.1rem;
+  /* Image .out */
+@keyframes image-out {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.9);
+  }
 }

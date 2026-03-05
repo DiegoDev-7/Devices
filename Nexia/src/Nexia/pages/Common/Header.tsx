@@ -1,4 +1,5 @@
 /* React */
+import { memo } from "react"
 import { Link } from "react-router-dom"
 
 /* Images */
@@ -10,7 +11,8 @@ import langauge from "../../../assets/Icons/language_light.svg"
 
 
 
-const Header = () => {
+/* Render header */
+const Header = memo(() => {
   return (
     <>
       <header className="cntnrHeader">
@@ -28,20 +30,17 @@ const Header = () => {
             <Link className="lnkheader" to="/">Versión</Link>
           </div>
 
-          <div className="contentHeader2">
-            <Link className="lnkheader" to="/">
+          <div className="contentHeader3">
+            <Link className="lnkheader" to="/" title="Language">
               <img className="ImageL" src={langauge} alt="Language" />
             </Link>
-          </div>
-
-          <div className="contentHeader3">
-            <Link className="lnkheader" to="/">
+            <Link className="lnkheader" to="https://discord.com" target="_blank" rel="noopener noreferrer">
               <img className="ImageDc" src={discord} alt="Discord" />
             </Link>
-            <Link className="lnkheader" to="https://x.com/dxvv07">
+            <Link className="lnkheader" to="https://x.com/dxvv07" target="_blank" rel="noopener noreferrer">
               <img className="ImageX" src={x} alt="X" />
             </Link>
-            <Link className="lnkheader" to="https://github.com/DiegoDev-7">
+            <Link className="lnkheader" to="https://github.com/DiegoDev-7" target="_blank" rel="noopener noreferrer">
               <img className="ImageGH" src={github} alt="Github" />
             </Link>
           </div>
@@ -50,6 +49,8 @@ const Header = () => {
       </header>
     </>
   )
-}
+})
+
+Header.displayName = "Header"
 
 export default Header

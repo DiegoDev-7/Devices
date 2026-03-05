@@ -10,6 +10,9 @@
 */
 // components
 @use "./components/ReloadAnimation";
+@use "./components/ScrollIndicator";
+
+
 
 /* 
 ======================
@@ -22,9 +25,16 @@
 // Common
 @use "./pages/Common/Header";
 @use "./pages/Common/Footer";
+@use "./pages/Common/TermsAndConditions";
 
 // Home
 @use "./pages/Home/MainHome";
+     /* Ui */
+     @use "./pages/Home/ui/StartHome";
+     @use "./pages/Home/ui/PhoneDescription";
+     @use "./pages/Home/ui/AppsDescription";
+     @use "./pages/Home/ui/SelectDevice";
+     @use "./pages/Home/ui/ThanksWords";
 
 
 
@@ -33,12 +43,11 @@
      Phone System
 ======================
 */
-
 // PhoneSystem
 @use "./PhoneSystem/PhoneSys";
 
 // Apps
-@use "./PhoneSystem/Apps/CaculatorApp";
+@use "./PhoneSystem/Apps/CalculatorApp";
 @use "./PhoneSystem/Apps/NotesApp";
 @use "./PhoneSystem/Apps/FolderApp";
 @use "./PhoneSystem/Apps/RadioApp";
@@ -51,9 +60,28 @@
 @use "./PhoneSystem/Apps/SecurityApp";
 @use "./PhoneSystem/Apps/PhotoGalleryApp";
 @use "./PhoneSystem/Apps/ContactApp";
-@use "./PhoneSystem/Apps/Settings";
 @use "./PhoneSystem/Apps/SimpsonsApp";
 @use "./PhoneSystem/Apps/CalendarApp";
+@use "./PhoneSystem/Apps/ClockApp";
+/* Settings */
+@use "./PhoneSystem/Apps/Settings/SettingsApp";
+     /* Components */
+     @use "./PhoneSystem/Apps/Settings/Components/AboutPhone";
+     @use "./PhoneSystem/Apps/Settings/Components/Bluetooth";
+     @use "./PhoneSystem/Apps/Settings/Components/ControlCenter";
+     @use "./PhoneSystem/Apps/Settings/Components/Privacy";
+     @use "./PhoneSystem/Apps/Settings/Components/Screen";
+     @use "./PhoneSystem/Apps/Settings/Components/Security";
+     @use "./PhoneSystem/Apps/Settings/Components/SecurityStatus";
+     @use "./PhoneSystem/Apps/Settings/Components/Services";
+     @use "./PhoneSystem/Apps/Settings/Components/SimCard";
+     @use "./PhoneSystem/Apps/Settings/Components/UpdateSystem";
+     @use "./PhoneSystem/Apps/Settings/Components/User";
+     @use "./PhoneSystem/Apps/Settings/Components/Wallpapper";
+     @use "./PhoneSystem/Apps/Settings/Components/Wifi";
+     /* ui */
+     @use "./PhoneSystem/Apps/Settings/ui/BackButton";
+     @use "./PhoneSystem/Apps/Settings/ui/ButtonToggle";
 
 // hardware
 @use "./PhoneSystem/hardware/borderButtons";

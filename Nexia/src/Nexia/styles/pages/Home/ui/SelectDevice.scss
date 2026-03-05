@@ -1,0 +1,91 @@
+/* Importations */
+@use "../../../mixin";
+@use "../../../variables" as v;
+
+
+
+/*
+====================
+     Container
+====================
+*/
+.container-devices {
+  width: 100dvw;
+  height: 100dvh;
+
+  @include mixin.flex-center(flex, center, center);
+}
+
+  /* Container device */
+.contain-devices {
+  width: 75%;
+  height: 75%;
+  flex-wrap: wrap;
+
+  h2 {
+    width: 90%;
+    text-align: center;
+    font-size: 2rem;
+    font-family: v.$font-mainO2;
+  }
+  p {
+    width: 80%;
+    height: auto;
+    text-align: justify;
+    font-size: 1.4rem;
+    font-family: v.$font-mainO2;
+  }
+
+  @include mixin.flex-center(flex, center, center);
+}
+
+  /* Box for select device and description text */
+.box-devices {
+  width: 100%;
+  height: 100%;
+  gap: 5%;
+  flex-wrap: wrap;
+
+  @include mixin.flex-center(flex, center, center);
+}
+.link-devices {
+  width: 45%;
+  height: 50%;
+  border: solid 2px;
+  background: v.$color-b4;
+  border-radius: 25px;
+  color: v.$color-w1;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  flex-direction: column;
+  overflow: hidden;
+  text-decoration: none;
+  transition: all .3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px 5px v.$color-g1;
+  }
+  &:active {
+    transform: scale(1);
+    box-shadow: 0 0 15px 5px v.$color-g1;
+  }
+
+  h3 {
+    width: 100%;
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    width: 100%;
+    font-size: 1.4rem;
+    text-align: justify;
+
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  @include mixin.flex-center(flex, none, center);
+}

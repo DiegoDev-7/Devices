@@ -1,0 +1,185 @@
+/* Importations */
+@use "../../../../mixin";
+@use "../../../../variables" as v;
+
+
+
+/* 
+=====================
+      AboutPhone
+=====================
+*/
+.contain-top-aboutPhone {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  top: 40px;
+  left: 3px;
+  row-gap: 5px;
+}
+
+/* Description view of the phone box top */
+  /* First box top left */
+.box-config-version-aboutPhone {
+  width: 50%;
+  height: 75%;
+  background: v.$color-g3;
+  border: solid 2px v.$color-g3;
+  border-radius: 25px;
+
+
+  /* Text inside */
+  .title-aboutPhone, .text-aboutPhone, .mobile-aboutPhone, .number-aboutPhone {
+    color: v.$color-w1;
+    font-size: 1rem;
+    font-family: v.$font-mainO1;
+    text-align: start;
+  }
+  .title-aboutPhone {
+    width: 100%;
+    height: 100px;
+    font-size: 4rem;
+    text-align: center;
+  }
+  .text-aboutPhone {
+    width: 100%;
+    height: 22px;
+    padding-left: 10px;
+  }
+  .mobile-aboutPhone {
+    width: 100%;
+    height: 22px;
+    font-weight: 500;
+    padding-top: 5px;
+    padding-left: 10px;
+    opacity: .7;
+  }
+  .number-aboutPhone {
+    width: 100%;
+    height: 22px;
+    font-weight: 500;
+    padding-top: 5px;
+    padding-left: 10px;
+    opacity: .7;
+  }
+}
+
+  /* Second box top right */
+.box-config-name-aboutPhone {
+  width: 45%;
+  height: 35%;
+  background: v.$color-g3;
+  border: solid 2px v.$color-g3;
+  border-radius: 25px;
+  flex-wrap: wrap;
+
+
+  /* Text */
+  .title-aboutPhone {
+    width: 100%;
+    height: 50%;
+    color: v.$color-w1;
+    margin: 5px;
+    padding-left: 5px;
+    font-size: .9rem;
+    font-weight: 500;
+  }
+  .text-aboutPhone {
+    width: 100%;
+    height: 50%;
+    color: v.$color-w1;
+    font-weight: 500;
+    text-align: start;
+    margin: 5px;
+    padding-left: 5px;
+    font-size: .9rem;
+    opacity: .7;
+  }
+
+  @include mixin.flex-center(flex, center, center);
+}
+
+  /* Third box top right bottom */
+.box-config-size-aboutPhone {
+  width: 45%;
+  height: 31%;
+  background: v.$color-g3;
+  border: solid 2px v.$color-g3;
+  border-radius: 25px;
+  display: flex;
+  flex-wrap: wrap;
+
+
+  /* Text */
+  .title-aboutPhone {
+    height: 50%;
+    color: v.$color-w1;
+    margin: 5px;
+    padding-left: 3px;
+    font-size: .9rem;
+    font-weight: 500;
+  }
+  .text, .text-size-a, .text-size-b {
+    font-size: .9rem;
+    color: v.$color-w1;
+  }
+  .text {
+    width: 100%;
+    padding-left: 5px;
+    opacity: .9;
+    font-size: .8rem;
+    position: relative;
+    top: -22px;
+  }
+  .text-size-a {
+    width: 55%;
+    font-size: 1.1rem;
+    position: relative;
+    top: -25px;
+    margin-left: 5px;
+  }
+  .text-size-b {
+    width: 40%;
+    font-size: .7rem;
+    position: relative;
+    top: -17px;
+    left: 1px;
+  }
+}
+
+/* Description view of the phone box bottom */
+.contain-bottom-aboutPhone {
+  width: 100%;
+  height: 50%;
+}
+.box-description-aboutPhone {
+  width: 100%;
+  height: 50px;
+  margin: 10px 0;
+  display: flex;
+
+  .text-description-a, .text-description-b {
+    height: 100%;
+
+    @include mixin.flex-center(flex, none, center);
+  }
+  .text-description-a {
+    width: 75%;
+    padding-left: 10px;
+    text-align: start;
+    font-weight: 600;
+    font-size: 1.1rem;
+    font-family: v.$font-mainO2;
+  }
+  .text-description-b {
+    width: auto;
+    padding-right: 10px;
+    text-align: end;
+    font-size: 1rem;
+    font-family: v.$font-mainO2;
+  }
+}

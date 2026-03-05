@@ -33,6 +33,8 @@ const SecurityApp = () => {
     let value = randomNumber
     let gb = randomGb
 
+    setActivateBttn(prev => !prev)
+
     const idRn = setInterval(() => {
       value++
       setRandomNumber(value)
@@ -101,6 +103,8 @@ const SecurityApp = () => {
     },
   ]
 
+
+  
   return (
     <>
       <div className="Container-app-screen-security">

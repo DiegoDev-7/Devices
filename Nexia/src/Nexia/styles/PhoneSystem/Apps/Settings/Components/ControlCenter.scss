@@ -1,0 +1,54 @@
+/* Importations */
+@use "../../../../mixin";
+@use "../../../../variables" as v;
+
+
+
+/* 
+======================
+ ControlCenter Option
+======================
+*/
+.box-options-controlCenter {
+  width: 100%;
+  height: 80%;
+  position: relative;
+  top: 50px;
+}
+
+
+/* Card */
+.card-controlCenter {
+  width: 100%;
+  height: 50px;
+  display: flex;
+}
+.contain-text-controlCenter {
+  width: 70%;
+  height: 100%;
+  padding-left: 10px;
+
+  p {
+    font-size: 1.1rem;
+    font-family: v.$font-mainO2;
+  }
+
+  @include mixin.flex-center(flex, flex-start, center);
+}
+.contain-button-controlCenter {
+  width: 30%;
+  height: 100%;
+
+  @include mixin.flex-center(flex, center, center);
+}
+
+
+/* Text */
+.title-controlCenter {
+  position: relative;
+  top: 50px;
+  font-size: 1.2rem;
+  font-family: v.$font-mainO2;
+  font-weight: 600;
+  padding-left: 5px;
+}

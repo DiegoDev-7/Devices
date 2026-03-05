@@ -39,7 +39,7 @@
   height: 90%;
 
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   position: relative;
 
   overflow-y: auto;
@@ -51,6 +51,7 @@
     font-weight: 500;
     margin-right: 5px;
     user-select: none;
+    margin-right: 10px;
   }
 }
   /* Bottom container for text */
@@ -63,12 +64,25 @@
 .box-text-screen-calculator {
   width: 90%;
   height: 70%;
-  border-bottom: solid 2px v.$color-b2;
+  border: none;
+  border-bottom: solid 2px;
   font-family: v.$font-mainO1;
   font-size: 2.2rem;
   position: relative;
   top: 110px;
   user-select: none;
+  outline: none;
+  background: transparent;
+  text-align: right;
+  padding-right: 10px;
+
+  &:focus,
+  &:active,
+  &:hover {
+    outline: none;
+    box-shadow: none;
+    border-bottom: solid 2px;
+  }
 
   @include mixin.flex-center(flex, flex-end, center);
 }

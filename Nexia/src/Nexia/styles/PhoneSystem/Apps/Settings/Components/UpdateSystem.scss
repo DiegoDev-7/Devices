@@ -1,0 +1,45 @@
+/* Importations */
+@use "../../../../mixin";
+@use "../../../../variables" as v;
+
+
+
+/* 
+=====================
+    UpdateSystem
+=====================
+*/
+.contain-updateSystem {
+  @include mixin.flex-center(flex, center, center);
+}
+
+  /* Box alert */
+.box-alert-updatesystem {
+  width: 45px;
+  height: 45px;
+  background: v.$color-g1;
+  border-radius: 10px;
+  opacity: .7;
+  position: absolute;
+  top: 40%;
+  z-index: 100;
+
+  span {
+    color: v.$color-w1;
+    font-size: 2rem;
+    user-select: none
+  }
+
+  @include mixin.flex-center(flex, center, center);
+}
+
+/* Text */
+  /* Description */
+.text-alert-updatesystem {
+  width: 270px;
+  height: 100%;
+  position: absolute;
+  top: 55px;
+  text-align: center;
+  font-size: .9rem;
+}

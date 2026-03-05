@@ -1,78 +1,94 @@
 /* Hooks */
-import { useEffect, useState } from "react"
+import { useState } from "react"
 
 /* Images */
-import simcard from "../../../assets/Apps/simcard_light.svg"
-import infoDark from "../../../assets/Icons/info_dark.svg"
+import sim from "../../../assets/Apps/simcard.svg"
+import forward from "../../../assets/Icons/forward_dark.svg"
 
 
 
 /* Render */
 const SimApp = () => {
-  const [num, setNum] = useState<boolean>(false)
-  const [random, setRandom] = useState(0)
-  
-  const [info, setInfo] = useState<boolean>(false)
-
-
-  const viewNum = () => {
-    setNum(!num)
+  type Description = {
+    id: number
+    title: string
+    content: string | number
   }
-
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setRandom(Math.floor(Math.random() * 12345678910))
-    }, 1000)
-
-    return () => clearTimeout(timeout)
-  }, [])
-
-
-  /* Handle view info to view text */
-  const handleViewInfo = () => {
-    setInfo(!info)
-  }
+  const description: Description[] = [
+    { id: 1, title: "Número telefonico", content: 415653212 },
+    { id: 2, title: "Nombre y apellido", content: "Rubius" },
+    { id: 3, title: "Provedor de la sim", content: "Clara" },
+    { id: 4, title: "Versión", content: "1.0V" },
+  ]
 
   
+  // Open screen and Copy text
+  const [openId, setOpenId] = useState<number | null>(null)
+  const [copied, setCopied] = useState(false)
+
+  // Handle screen view
+  const handleToggle = (id: number) => {
+    setOpenId(prev => (prev === id ? null : id))
+  }
+
+  // Copy phone number
+  const handleCopy = (value: string | number) => {
+    navigator.clipboard.writeText(String(value))
+    setCopied(true)
+    setTimeout(() => setCopied(false), 2000)
+  }
+
+
 
   return (
     <>
       <div className="Container-app-screen-simcard">
-        <button className="contain-image-app-simcard" onClick={viewNum}>
+        <div className="contain-app-screen-simcard">
 
-          <div className="box-image-app-simcard">
-
-            <img className="image-app-simcard" src={simcard} alt="simcard" />
-
+          <div className="box-app-screen-simcard-a">
+            <img src={sim} alt="Sim card" />
           </div>
 
-        </button>
+          <div className="box-app-screen-simcard-b">
+            {description.map(v => {
+              const isOpen = openId === v.id
 
-        {num ? (
-          <>
-            <div className="contain-number-app-simcard">
-              <p className="text-number-app-simcard">Numero telefónico</p>
-              <p className="text-number-app-simcard">
-                {random}
-              </p>
-            </div> 
-          </>
-          ) : (
-            <>
-              <button className="contain-app-simcard-info" onMouseEnter={handleViewInfo} onMouseOut={handleViewInfo}>
-                <img className="image-app-simcard-info" src={infoDark} alt="information" />
-              </button>
+              return (
+                <div key={v.id} className="content-simcard">
 
-              {info && (
-                <>
-                  <div className="contain-app-info">
-                    <p>Para ver tu número teléfonico haz click encima de la tarjeta sim. Este número lo puede utilizar para hablar con otras personas.</p>
-                  </div>
-                </>
-              )}
-            </>
-          )
-        }
+                  <button 
+                    className="box-button-text-simcard" 
+                    onClick={() => handleToggle(v.id)}
+                  >
+                    <p>{v.title}</p>
+                    <img 
+                      className={`image-button-simcard ${isOpen ? "active" : ""}`} 
+                      src={forward} 
+                      alt="Flecha" 
+                    />
+                  </button>
+
+                  {isOpen && (
+                    <div className="box-text-simcard in">
+                      <span
+                        className={`
+                          ${v.id === 1 ? "email-copy" : ""}
+                          ${copied && v.id === 1 ? "copied" : ""}
+                        `}
+                        onClick={v.id === 1 ? () => handleCopy(v.content) : undefined}
+                        style={{ cursor: v.id === 1 ? "pointer" : "text" }}
+                      >
+                        {v.content}
+                      </span>
+                    </div>
+                  )}
+
+                </div>
+              )
+            })}
+          </div>
+
+        </div>
       </div>
     </>
   )
