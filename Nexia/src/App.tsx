@@ -81,7 +81,7 @@ function App(): JSX.Element {
         {/* Devices */}
         <Route path="/Phone" element={<Layout><DeviceRender /></Layout>} />
         {/* Terminos y Condiciones */}
-        <Route path="/terminos" element={<Layout><TermsAndConditions /></Layout>} />
+        <Route path="/terms" element={<Layout><TermsAndConditions /></Layout>} />
       </Routes>
     </>
   )

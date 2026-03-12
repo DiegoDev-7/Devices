@@ -9,7 +9,7 @@
       Container
 ====================
 */
-.cntnrHeader {
+.container-header {
   width: 100dvw;
   min-height: 50px;
   border-bottom: solid 2px v.$color-b3;
@@ -23,145 +23,242 @@
   grid-template-rows: 50px;
   box-sizing: border-box;
 }
-  /* Boxes */
-.boxHeaderA {
-  grid-area: 1 / 1 / 2 / 2;
+  /* Box A: Image */
+.box-header-a {
+  width: 100%;
+  height: 100%;
+}
+.contain-image-header-a {
+  width: 100%;
+  height: 100%;
+
+  img {
+    width: auto;
+    height: 100%;
+    cursor: pointer;
+  }
 
   @include mixin.flex-center(flex, flex-start, center);
 }
-.boxHeaderB {
+
+
+  /* Box B: Content, links, text */
+.box-header-b {
   width: 100%;
   height: 100%;
-  grid-area: 1 / 2 / 2 / 3;
   display: flex;
-}
+  gap: 3%;
 
-
-  /* Content of the boxes */
-.contentHeader1 {
-  width: 100%;
-  height: 100%;
-
-  .lnkheader {
-    font-weight: 400;
-    margin: 10px;
-    color: v.$color-g1;
-    transition: all .1s ease-in;
-
-    &:hover {
-      color: v.$color-g3;
-    }
+  .card-icon-header:nth-child(5) {
+    width: 75px;
+    padding-right: 25px;
+    background: none;
+    border: none;
   }
 
   @include mixin.flex-center(flex, flex-end, center);
 }
-.contentHeader2 {
-  width: 25%;
+
+  /* Card icons */
+.card-icon-header {
+  width: auto;
   height: 100%;
-  
-  @include mixin.flex-center(flex, center, center);
-}
-.contentHeader3 {
-  width: 25%;
-  margin: 0 20px 0 0;
+  border-radius: 50px;
 
-  @include mixin.flex-center(flex, flex-end, center);
-}
+  animation: panelEnter 0.35s ease forwards;
 
-
-
-/* 
-====================
-      Images 
-====================
-*/
-/* Base styles for all header images */
-[class^="Image"] {
-  object-fit: cover;
-  transition: transform 0.15s ease-out;
+  transition: all .1s ease;
 
   &:hover {
-    transform: scale(1.1);
+    transform: scale(.92);
   }
+
+  @include mixin.flex-center(flex, center, center);
+}
+  /* Animations */
+  /* enter */
+.card-icon-header.enter {
+  animation: panelEnter 0.35s ease forwards;
+}
+  /* exit */
+.card-icon-header.exit {
+  animation: panelExit 0.30s ease forwards;
 }
 
-.ImageNexia {
-  width: 50px;
-  height: 50px;
-  border-radius: 10px;
-}
 
-.ImageL,
-.ImageDc,
-.ImageX,
-.ImageGH {
-  height: clamp(15px, 3vw, 20px);
-}
-
-.ImageL { margin: 10px; }
-.ImageDc { margin: 0 10px 0 5px; }
-.ImageX { margin: 0 10px 0 5px; }
-.ImageGH { margin: 0 20px 0 5px; }
-
-
-
-/* 
-====================
-      Links
-====================
-*/
-a.lnkheader,
-.lnkheader {
-  text-decoration: none;
+  /* Icons */
+.icon-image-header-b {
+  width: 45%;
+  height: 45%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  cursor: pointer;
+
+  img {
+    width: auto;
+    height: 100%;
+    user-select: none;
+
+    @include mixin.drag();
+  }
+
+  @include mixin.flex-center(flex, center, center);
 }
 
 
 
+/* Interfaz */
+.contain-interfaz-header {
+  width: 40vw;
+  height: 100vh;
 
-/* 
-====================
-    Responsive
-====================
-*/
-@media (max-width: 768px) {
-  .cntnrHeader {
-    grid-template-columns: 1fr auto;
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  background: v.$color-w1;
+
+  border-left: solid 2px v.$color-b3;
+  flex-direction: column;
+
+  padding: 1rem 0;
+  z-index: 1000;
+
+  @include mixin.flex-center(flex, space-between, center);
+}
+  /* Animations */
+  /* enter */
+.contain-interfaz-header.enter {
+  animation: panelEnter 0.35s ease forwards;
+}
+  /* exit */
+.contain-interfaz-header.exit {
+  animation: panelExit 0.30s ease forwards;
+}
+
+
+  /* Icon */
+.box-interfaz-header {
+  width: 50%;
+
+  border: none;
+  position: relative;
+  transition: all .2s ease;
+  
+  background: transparent;
+  cursor: pointer;
+
+  @include mixin.flex-center(flex, center, center);
+}
+.icon-interfaz-header {
+  width: 10%;
+  height: 50%;
+  cursor: pointer;
+
+  img {
+    width: auto;
+    height: 100%;
+    user-select: none;
+
+    @include mixin.drag();
+  }
+}
+
+  /* Text for login or register */
+.account-interfaz {
+  width: 65%;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  p {
+    font-size: 0.85rem;
+    color: #555;
   }
 
-  .contentHeader1 {
-    order: 3;
-    grid-column: 1 / -1;
-    width: 100%;
-    padding: 0 10px;
-    
-    .lnkheader {
-      font-size: 0.9rem;
-      margin: 5px;
+  button {
+    border: none;
+    padding: 8px 10px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    border-radius: 4px;
+    transition: all .2s ease;
+  }
+
+  .login {
+    background: v.$color-b4;
+    color: white;
+
+    &:hover {
+      background: v.$color-b3;
     }
   }
 
-  .contentHeader2,
-  .contentHeader3 {
-    width: auto;
-    margin: 0;
+  .register {
+    background: v.$color-w2;
+
+    &:hover {
+      background: v.$color-w3;
+    }
+  }
+}
+  /* Animation */
+  /* enter */
+.account-interfaz.enter {
+  animation: panelHomeEnter 0.35s ease forwards;
+}
+
+
+  /* Privacy */
+.interfaz-terms-privacy {
+  width: 80%;
+  height: 10%;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+
+  p {
+    font-size: 0.85rem;
+    color: #555;
+    text-align: center;
   }
 }
 
-@media (max-width: 480px) {
-  .cntnrHeader {
-    min-height: 45px;
-    grid-template-rows: 45px;
+/* Animations */
+  /* Animation enter */
+@keyframes panelExit {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+  /* Animation exit */
+@keyframes panelEnter {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
   }
 
-  .ImageNexia {
-    width: 40px;
-    height: 40px;
+  to {
+    transform: translateX(0);
+    opacity: 1;
   }
+}
 
-  .contentHeader1 .lnkheader {
-    display: none;
+  /* Panel in the interface */
+@keyframes panelHomeEnter {
+  from {
+    opacity: 0;
+  }
+  
+  to {
+    opacity: 1;
   }
 }
