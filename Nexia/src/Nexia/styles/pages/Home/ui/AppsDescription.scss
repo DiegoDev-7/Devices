@@ -51,11 +51,16 @@
   padding: 15px;
   color: v.$color-w1;
   background: v.$color-b4;
-  border: solid v.$color-b4;
+  border: solid transparent;
   border-radius: 12px;
   transition: .3s ease;
   text-align: center;
   font-size: 1.2rem;
+  background: linear-gradient(
+    142deg, #131415, #131718, #2a2c2c, #333333, #202222
+  );
+  background-size: 400% 400%;
+  animation: gradient-animation 16s ease infinite;
 
   &:hover {
     transform: scale(1.05);

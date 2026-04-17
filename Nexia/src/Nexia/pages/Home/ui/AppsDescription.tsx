@@ -16,9 +16,9 @@ import cash from "../../../../assets/Apps/cash.svg"
 import radio from "../../../../assets/Apps/radio.svg"
 import simpsons2 from "../../../../assets/Apps/simsons2.jpg"
 import simcard_light from "../../../../assets/Apps/simcard_light.svg"
-import message from "../../../../assets/Apps/message.svg"
+import message from "../../../../assets/Apps/message_light.svg"
 import phone_blue from "../../../../assets/Apps/phone_blue.svg"
-import contact from "../../../../assets/Apps/contact.svg"
+import contact from "../../../../assets/Apps/contact_light.svg"
 
 
 

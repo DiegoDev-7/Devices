@@ -1,4 +1,6 @@
+/* Hooks */
 import { useState } from "react";
+
 
 
 /* Render tempsAndConditions */

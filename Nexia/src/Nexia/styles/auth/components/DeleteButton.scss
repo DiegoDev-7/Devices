@@ -1,0 +1,51 @@
+@use "../../mixin";
+@use "../../variables" as v;
+
+
+
+/* 
+====================
+    Button login
+====================
+*/
+.container-delete-account {
+  @include mixin.flex-center(flex, center, none);
+}
+
+.delete-account-btn {  
+  width: 100%;
+  padding: .7rem;
+
+  background-color: v.$color-b3;
+  color: v.$color-w1;
+
+  border: 1px solid v.$color-b3;
+  border-radius: 8px;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  span {
+    pointer-events: none;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+    background: #ea2525;
+    border-color: #ea2525;
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  @include mixin.flex-center(flex, center, center);
+}

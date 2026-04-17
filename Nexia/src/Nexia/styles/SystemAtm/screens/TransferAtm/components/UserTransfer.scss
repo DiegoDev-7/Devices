@@ -1,0 +1,94 @@
+@use "../../../../mixin";
+@use "../../../../variables" as v;
+
+
+
+/* 
+====================
+ Container contacts
+====================
+*/
+.box-contacts-atm {
+  margin-top: 12px;
+
+  h4 {
+    font-size: 11px;
+    color: v.$color-w2;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+  }
+}
+
+.transfer-user .header svg {
+  color: #7cffb2;
+}
+
+.contacts-list-atm {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 100px;
+  padding-right: 4px;
+
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #ffffff2e transparent;
+  overscroll-behavior: contain;
+
+  p {
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 13px;
+    color: v.$color-w1;
+    font-family: v.$font-mainO1;
+  }
+  
+  .contact-item {
+    padding: 10px 12px;
+    border-radius: 10px;
+    background: #00000033;
+    border: 1px solid #ffffff14;
+    cursor: pointer;
+    transition: 0.15s ease;
+  
+    span {
+      font-size: 13px;
+      color: v.$color-w1;
+    }
+    span:nth-child(3) {
+      color: #7cffb3cf;
+    }
+    span:nth-child(4) {
+      position: absolute;
+      left: -250px;
+      color: #ff7c7ccf;
+    }
+    span.in:nth-child(4) {
+      position: absolute;
+      left: -240px;
+      color: #ff7c7ccf;
+      animation: atmAnimationIn 1s ease alternate forwards;
+    }
+    span.out:nth-child(4) {
+      position: absolute;
+      left: -240px;
+      color: #ff7c7ccf;
+      animation: atmAnimationOut 1s ease alternate forwards;
+    }
+    
+    small {
+      font-size: 11px;
+      color: v.$color-w2;
+    }
+  
+    &:hover {
+      border-color: #7cffb240;
+    }
+    &:active {
+      transform: scale(0.98);
+    }
+  
+    @include mixin.flex-center(flex, space-between, center);
+  }
+}

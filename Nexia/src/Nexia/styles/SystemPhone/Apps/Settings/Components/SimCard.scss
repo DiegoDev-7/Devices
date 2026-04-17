@@ -1,0 +1,48 @@
+/* Importations */
+@use "../../../../mixin";
+@use "../../../../variables" as v;
+
+
+
+/* 
+=====================
+      SimCard
+=====================
+*/
+.box-content-simcard {
+  width: 100%;
+  height: 90%;
+  position: relative;
+  top: 40px;
+  gap: 5px;
+}
+
+  /* Second box */
+.box-data-simcard {
+  width: 100%;
+  height: 70%;
+}
+.box-options-simcard {
+  width: 100%;
+  height: 50px;
+
+  @include mixin.flex-center(flex, center, center);
+}
+.contain-text-data-simcard {
+  width: 80%;
+  height: 50px;
+
+  p {
+    width: 95%;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+
+  @include mixin.flex-center(flex, center, center);
+}
+.contain-button-data-simcard {
+  width: 20%;
+  height: 50px;
+
+  @include mixin.flex-center(flex, center, center);
+}

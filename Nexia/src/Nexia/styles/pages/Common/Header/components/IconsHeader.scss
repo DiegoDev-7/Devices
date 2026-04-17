@@ -1,0 +1,85 @@
+@use "../../../../mixin";
+@use "../../../../variables" as v;
+
+
+
+/* 
+====================
+      Container
+====================
+*/
+.icon-image-header-b.menu {
+  width: 75px;
+  padding-right: 25px;
+}
+
+  /* Card icons */
+.card-icon-header {
+  width: auto;
+  height: 100%;
+  background: none;
+  border: none;
+  border-radius: 50px;
+
+  animation: panelEnter 0.35s ease forwards;
+  transition: all .1s ease;
+
+  @include mixin.flex-center(flex, center, center);
+}
+  /* Animations */
+  /* enter */
+.card-icon-header.enter {
+  animation: panelEnterRight 0.35s ease forwards;
+}
+  /* exit */
+.card-icon-header.exit {
+  animation: panelExitRight 0.35s ease forwards;
+}
+
+
+  /* Icons */
+.icon-image-header-b {
+  width: 45%;
+  height: 45%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  img {
+    width: auto;
+    height: 100%;
+    user-select: none;
+
+    @include mixin.drag();
+  }
+
+  @include mixin.flex-center(flex, center, center);
+}
+
+
+
+/* Animations */
+  /* Animation screen enter right */
+@keyframes panelExitRight {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+  /* Animation exit */
+@keyframes panelEnterRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

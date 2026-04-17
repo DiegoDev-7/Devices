@@ -1,0 +1,54 @@
+@use "../../mixin";
+@use "../../variables" as v;
+
+
+
+/* 
+====================
+     Container
+====================
+*/
+.container-welcome-atm {
+  width: 100%;
+  height: 100%;
+}
+
+  /* Box image */
+.box-image-welcome-atm {
+  height: 40%;
+  
+  img {
+    width: 100%;
+    height: 100%;
+    user-select: none;
+    animation: imageFlicker ease 1s infinite alternate;
+
+    @include mixin.drag();
+  }
+}
+
+  /* Box text */
+.box-text-welcome-atm {
+  width: 100%;
+  height: 20%;
+
+  span {
+    font-family: v.$font-mainD3;
+    font-weight: 400;
+    font-size: 2rem;
+    user-select: none;
+  }
+
+  @include mixin.flex-center(flex, center, center);
+}
+
+/* Animations */
+  /* Flicker */
+@keyframes imageFlicker {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: .5;
+  }
+}

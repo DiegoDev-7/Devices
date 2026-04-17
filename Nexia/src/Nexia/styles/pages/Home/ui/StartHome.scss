@@ -82,11 +82,14 @@
 .box-card-home {
   width: 250px;
   height: 300px;
-  background: v.$color-b4;
   box-shadow: 0 0 15px 5px v.$color-g1;
   border: solid 2px v.$color-w1;
   border-radius: 15px;
   transition: all .2s ease;
+
+  background: linear-gradient(142deg, #131415, #131718, #2a2c2c, #333333, #202222);
+  background-size: 400% 400%;
+  animation: gradient-animation 13s ease infinite;
 
   img {
     width: 90%;
@@ -148,11 +151,21 @@
   font-size: 1.2rem;
   font-family: v.$font-mainD3;
   transition: all .4s ease;
+  background: linear-gradient(
+    142deg, #131415, #131718, #2a2c2c, #333333, #202222
+  );
+  background-size: 400% 400%;
+  animation: gradient-animation 13s ease infinite;
 
   &:hover {
     transform: scale(1.02);
-    background: v.$color-b3;
     box-shadow: 0 0 15px 5px v.$color-g1;
+
+    background: linear-gradient(
+      142deg, #131415, #131718, #2a2c2c, #333333, #202222
+    );
+    background-size: 400% 400%;
+    animation: gradient-animation 13s ease infinite;
   }
   &:active {
     transform: scale(.98);

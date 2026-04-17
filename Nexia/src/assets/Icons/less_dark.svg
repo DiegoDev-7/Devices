@@ -7,7 +7,7 @@
    width="66.666664"
    height="66.666664"
    viewBox="0 0 66.666664 66.666664"
-   sodipodi:docname="less.svg"
+   sodipodi:docname="less_dark.svg"
    inkscape:version="1.4.3 (fcd0343856, 2026-01-01)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -102,7 +102,7 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="8"
-     inkscape:cx="24.75"
+     inkscape:cx="44.6875"
      inkscape:cy="31.9375"
      inkscape:window-width="1920"
      inkscape:window-height="1011"
@@ -116,16 +116,18 @@
      id="g1">
     <path
        id="path2501"
-       style="fill:#000000;fill-opacity:1;stroke-width:1.00459;filter:url(#filter28)"
-       d="M 33.796875 6.2597656 A 27.476261 26.997078 0 0 0 6.3203125 33.257812 A 27.476261 26.997078 0 0 0 33.796875 60.253906 A 27.476261 26.997078 0 0 0 61.271484 33.257812 A 27.476261 26.997078 0 0 0 33.796875 6.2597656 z M 34.337891 10.611328 A 22.99975 22.3965 0 0 1 57.337891 33.007812 A 22.99975 22.3965 0 0 1 34.337891 55.404297 A 22.99975 22.3965 0 0 1 11.337891 33.007812 A 22.99975 22.3965 0 0 1 34.337891 10.611328 z " />
+       style="fill:#5a5a5a;fill-opacity:1;stroke-width:1.00459;filter:url(#filter28)"
+       d="M 33.796875,6.2597656 C 18.621652,6.259602 6.3197682,18.347244 6.3203125,33.257812 6.3208656,48.167618 18.622428,60.25407 33.796875,60.253906 48.970559,60.25301 61.270931,48.166868 61.271484,33.257812 61.272028,18.347993 48.971335,6.260662 33.796875,6.2597656 Z m -0.0422,4.1218784 c 12.702503,-1.35e-4 23.583205,10.256834 23.583214,22.626168 -9e-6,12.369335 -10.880711,23.200514 -23.583214,23.200379 -12.702502,1.35e-4 -22.999991,-10.716202 -23,-23.085537 10e-6,-12.369334 10.297498,-22.741145 23,-22.74101 z"
+       transform="matrix(1.0929495,0,0,1.0982795,-3.7663122,-3.518465)"
+       sodipodi:nodetypes="cccscccccc" />
     <rect
-       style="fill:#000000;fill-opacity:1;stroke-width:1.03092;filter:url(#filter30)"
+       style="fill:#5a5a5a;fill-opacity:1;stroke-width:1.03092;filter:url(#filter30)"
        id="rect2504"
        width="4.2692041"
        height="26.714781"
        x="29.055845"
        y="-47.679176"
        ry="0.72736037"
-       transform="matrix(0.00119595,0.99999928,-0.99999929,0.00118898,0,0)" />
+       transform="matrix(0.00133514,1.4388581,-1.116375,0.00171076,-5.208214,-12.73168)" />
   </g>
 </svg>

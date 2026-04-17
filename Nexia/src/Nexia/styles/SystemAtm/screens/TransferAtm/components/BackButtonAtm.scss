@@ -1,0 +1,61 @@
+@use "../../../../mixin";
+@use "../../../../variables" as v;
+
+
+
+/* 
+====================
+      Button
+====================
+*/
+.atm-back-button {
+  height: 36px;
+  color: v.$color-w2;
+  cursor: pointer;
+  transition: 0.2s ease;
+  margin-bottom: 12px;
+
+  border: 1px solid #ffffff0d;
+  border-radius: 18px;
+  padding: 14px;
+
+  background: linear-gradient(142deg, #131415cf, #161a1acf, #0d0e0ecf, #1e1e1ecf, #0b0c0ccf);
+  background-size: 400% 400%;
+  animation: transferAtm 13s ease infinite;
+
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  align-items: center;
+  gap: 8px;
+
+  position: absolute;
+  top: 25px;
+  left: 25px;
+
+  &:hover {
+    border-color: #7cffb266;
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: scale(0.97);
+  }
+
+  @include mixin.flex-center(flex, center, center);
+}
+
+
+
+/* Animations */
+  /* Background animation */
+@keyframes transferAtm {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

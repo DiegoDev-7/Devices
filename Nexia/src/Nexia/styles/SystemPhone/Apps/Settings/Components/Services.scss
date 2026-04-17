@@ -1,0 +1,212 @@
+/* Importations */
+@use "../../../../mixin";
+@use "../../../../variables" as v;
+
+
+
+/* 
+=====================
+  Serviveces Option
+=====================
+*/
+.services-container {
+  width: 100%;
+  height: 100%;
+  padding: 25px 15px;
+  margin-top: 35px;
+
+  position: absolute;
+  
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.services-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Section */
+.services-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Item */
+.service-item {
+  padding: 7px;
+  border-radius: 15px;
+  margin-top: 15px;
+
+  background: v.$color-w1;
+  box-shadow: 0 5px 15px #0000000d;
+
+  transition: transform 0.1s ease;
+
+  &:hover {
+    transform: scale(0.98);
+  }
+
+  h4 {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 0.8rem;
+    opacity: 0.6;
+  }
+}
+
+/* Feedback */
+.services-feedback {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  h4 {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  textarea {
+    min-height: 100px;
+    border-radius: 10px;
+    border: 1px solid v.$color-w2;
+    padding: 10px;
+    resize: none;
+    font-size: 0.9rem;
+
+    &:focus {
+      outline: none;
+      border-color: v.$color-w3;
+    }
+  }
+
+  button {
+    height: 45px;
+    border-radius: 5px;
+    border: none;
+
+    background: linear-gradient(135deg, #1d1e1f, #020303);
+    color: v.$color-w1;
+
+    font-weight: 600;
+    cursor: pointer;
+
+    transition: all .2s ease;
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+}
+
+
+
+/* 
+=======================
+  Success phone data
+=======================
+*/
+.success-message-phone {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: auto;
+  height: 40px;
+
+  font-family: v.$font-mainO3;
+  text-align: center;
+  background: #28a745;
+  color: v.$color-w1;
+
+  border-radius: 20px;
+  border: none;
+  padding: 20px 16px;
+
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  z-index: 1000;
+
+  animation: fadeInUpMessagePhone 0.3s ease forwards;
+
+  /* Exit */
+  &.exit {
+    animation: fadeInOutMessagePhone 0.3s ease forwards;
+  }
+  
+  @include mixin.flex-center(flex, center, center);
+}
+
+
+
+/* 
+====================
+    Error message
+====================
+*/
+.error-message-phone {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: auto;
+  min-width: 200px;
+  max-width: 300px;
+  height: 40px;
+
+  font-family: v.$font-mainO3;
+  text-align: center;
+
+  background: #ea2525;
+  color: v.$color-w1;
+
+  border-radius: 20px;
+  border: none;
+
+  font-size: 14px;
+  padding: 0 16px;
+
+  box-shadow: 0 4px 15px #0000004d;
+  z-index: 1000;
+
+  animation: fadeInUpMessagePhone 0.3s ease forwards;
+
+  &.exit {
+   animation: fadeInOutMessagePhone 0.3s ease forwards;
+  }
+
+  @include mixin.flex-center(flex, center, center);
+}
+
+
+
+/* Animations */
+  /* enter */
+@keyframes fadeInUpMessagePhone {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 20px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+  /* out */
+@keyframes fadeInOutMessagePhone {
+  from {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  to {
+    opacity: 0;
+    transform: translate(-50%, 20px);
+  }
+}

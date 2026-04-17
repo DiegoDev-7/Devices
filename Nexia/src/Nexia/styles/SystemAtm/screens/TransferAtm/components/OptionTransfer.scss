@@ -1,0 +1,77 @@
+@use "../../../../mixin";
+@use "../../../../variables" as v;
+
+
+
+/* 
+====================
+ Container transfer
+====================
+*/
+.atm-transfer-card {
+  gap: 16px;
+  padding: 18px;
+  border-radius: 18px;
+  background: #14141ea6;
+  border: 1px solid #ffffff0f;
+  cursor: pointer;
+  transition: 0.25s ease;
+  backdrop-filter: blur(12px);
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    transform: translateY(-4px);
+    border-color: #00ffb44d;
+  }
+  &:active {
+    transform: scale(0.97);
+  }
+
+  /* Bank */
+  &.bank {
+    &:hover {
+      box-shadow: 0 0 20px #0096ff26;
+    }
+    .icon {
+      color: #4da3ff;
+    }
+  }
+  /* User */
+  &.user {
+    &:hover {
+      box-shadow: 0 0 20px #00ffb426;
+    }
+    .icon {
+      color: #00ffb4;
+    }
+  }
+
+  /* Icon */
+  .icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: #ffffff0d;
+    color: #00ffb4;
+
+    @include mixin.flex-center(flex, center, center);
+  }
+
+  /* Content */
+  .content {
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+      font-size: 15px;
+      color: v.$color-w1;
+    }
+    p {
+      font-size: 12px;
+      opacity: 0.6;
+    }
+  }
+
+  @include mixin.flex-center(flex, none, center);
+}

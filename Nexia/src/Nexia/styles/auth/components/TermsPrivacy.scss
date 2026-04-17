@@ -1,0 +1,23 @@
+@use "../../mixin";
+@use "../../variables" as v;
+
+
+
+/* 
+====================
+     Container
+====================
+*/
+.interfaz-terms-privacy {
+  width: 80%;
+  height: 10%;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+
+  p {
+    font-size: 0.85rem;
+    color: #555;
+    text-align: center;
+  }
+}

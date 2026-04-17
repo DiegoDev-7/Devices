@@ -1,0 +1,37 @@
+@use "../../mixin";
+@use "../../variables" as v;
+
+
+
+/* 
+====================
+ Constainer Screen
+====================
+*/
+.container-screen-atm {
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+
+  @include mixin.flex-center(flex, center, center);
+}
+
+  /* Background */
+.box-screen-background-atm {
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  border: solid v.$color-b1;
+
+  box-shadow: inset 0 0 25px 5px #272727;
+
+  transition: all .8s ease;
+
+  &.in {
+    opacity: 1;
+  }
+
+  &.out {
+    opacity: 0;
+  }
+}

@@ -1,0 +1,84 @@
+/* Importations */
+@use "../../mixin";
+@use "../../variables" as v;
+
+
+
+/* 
+====================
+     Container
+====================
+*/
+.container-main-atm {
+  background-color: v.$color-w1;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+}
+
+  /* First box */
+.box-atm-a {
+  height: 100dvh;
+  display: flex;
+  position: relative;
+  
+  grid-area: 1 / 1 / 2 / 2;
+
+  .box-image-atm-rose {
+    width: auto;
+    height: 100%;
+    user-select: none;
+    
+    img {
+      width: 100%;
+      height: 100%;
+      user-select: none;
+      object-fit: cover;
+      
+      @include mixin.drag();
+    }
+  }
+  
+  @include mixin.flex-center(flex, center, center);
+}
+
+  /* Second box */
+.box-atm-b {
+  min-height: 100dvh;
+  grid-area: 2 / 1 / 3 / 2;
+}
+
+  /* Third box */
+.box-atm-c {
+  grid-area: 3 / 1 / 4 / 2;
+  min-height: 100dvh;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 1fr;
+
+
+  .atm-info {
+    max-width: 500px;
+    text-align: center;
+    padding: 20px;
+
+    h3 {
+      color: v.$color-g1;
+      margin-bottom: 16px;
+      font-size: 1.6rem;
+      font-weight: 600;
+      font-family: v.$font-mainD3;
+    }
+
+    p {
+      margin-bottom: 12px;
+      opacity: 0.8;
+      font-size: 1.2rem;
+      line-height: 1.7;
+      font-weight: 800;
+      font-family: v.$font-mainD3;
+    }
+  }
+
+  @include mixin.flex-center(flex, center, center);
+}

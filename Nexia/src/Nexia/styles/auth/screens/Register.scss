@@ -1,0 +1,218 @@
+/* Import mixin */
+@use "../../mixin";
+@use "../../variables" as v;
+
+
+
+/* 
+====================
+     Container
+====================
+*/
+.register-panel {
+  width: 90%;
+  padding: .5rem 1rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+/* Animation */
+  /* enter */
+.register-panel.enter {
+  animation: panelLoginEnter 0.35s ease forwards;
+}
+
+
+/* Error */
+.contain-error-register {
+  position: relative;
+  width: 100%;
+  margin-top: 4px;
+
+  .error {
+    display: block;
+    color: #842029;
+    background-color: #f8d7da;
+    border: 1px solid #f5c2c7;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+}
+
+
+  /* Title */
+.register-title {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+  /* Form */
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.register-row {
+  display: flex;
+  gap: 8px;
+}
+.register-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+  position: relative;
+
+  label {
+    font-size: 0.8rem;
+    color: v.$color-g2;
+  }
+
+  input {
+    border: 1px solid v.$color-w2;
+    padding: 8px;
+    padding-right: 32px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  input:focus {
+    border-color: v.$color-b1;
+  }
+
+  img {
+    position: absolute;
+    right: 10px;
+    top: 52.5%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    user-select: none;
+    opacity: .5;
+  }
+}
+
+  /* Checkbox */
+.register-options {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.option {
+  font-size: 0.8rem;
+  color: v.$color-g2;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+
+  input {
+    cursor: pointer;
+    accent-color: v.$color-b1;
+    width: 14px;
+    height: 14px;
+  }
+}
+.terms-check {
+  font-size: 0.85rem;
+  color: v.$color-b1;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+
+  input {
+    cursor: pointer;
+    accent-color: v.$color-b1;
+    width: 14px;
+    height: 14px;
+  }
+}
+
+  /* Button */
+.register-submit {
+  width: 65%;
+  height: 35px;
+  border: none;
+  cursor: pointer;
+  background: v.$color-b4;
+  border-radius: 4px;
+  color: white;
+  font-size: .9rem;
+
+  margin: 0 auto;
+  display: block;
+
+  &:hover {
+    background: v.$color-b3;
+  }
+}
+
+
+
+  /* Button back */
+.button-back-register-panel {
+  width: 36px;
+  height: 36px;
+
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 6px;
+
+  &:hover {
+    background: v.$color-g4;
+  }
+  
+  &:active {
+    transform: scale(.97);
+  }
+
+  img {
+    height: 60%;
+    width: auto;
+    user-select: none;
+    transform: rotate(180deg);
+
+    @include mixin.drag();
+  }
+}
+
+
+
+  /* Divider of register with google */
+.register-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: .1rem 0;
+
+  span {
+    font-size: .8rem;
+    color: v.$color-g3;
+  }
+}
+
+
+
+/* Animations */
+  /* Panel in the interface */
+@keyframes panelRegisterEnter {
+  from {
+    opacity: 0;
+  }
+  
+  to {
+    opacity: 1;
+  }
+}

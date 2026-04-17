@@ -1,0 +1,135 @@
+@use "../../../mixin";
+@use "../../../variables" as v;
+
+
+
+/* 
+====================
+      Container
+====================
+*/
+.container-header {
+  width: 100dvw;
+  min-height: 50px;
+  border-bottom: solid 2px v.$color-b3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: v.$color-w1;
+  z-index: 10000000000;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 50px;
+  box-sizing: border-box;
+}
+  /* Box A */
+.box-header-a {
+  width: 100%;
+  height: 100%;
+}
+  /* Contain Image */
+.contain-image-header {
+  width: 100%;
+  height: 100%;
+
+  .image-header-nexia {
+    width: auto;
+    height: 100%;
+    cursor: pointer;
+    user-select: none;
+
+    @include mixin.drag();
+  }
+
+  /* Animations */
+    /* enter */
+  .image-header-nexia.enter {
+    animation: iconEnterLeft 0.35s ease forwards;
+  }
+    /* exit */
+  .image-header-nexia.exit {
+    animation: iconExitLeft 0.35s ease forwards;
+  }
+
+  @include mixin.flex-center(flex, flex-start, center);
+}
+
+
+  /* Box B: Content, links, text */
+.box-header-b {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 3%;
+
+  @include mixin.flex-center(flex, flex-end, center);
+}
+
+
+  /* Text for login or register */
+.account-interfaz {
+  width: 65%;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  p {
+    font-size: 0.85rem;
+    color: #555;
+  }
+
+  button {
+    border: none;
+    padding: 8px 10px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    border-radius: 4px;
+    transition: all .2s ease;
+  }
+
+  .login {
+    background: v.$color-b4;
+    color: v.$color-w1;
+
+    &:hover {
+      background: v.$color-b3;
+    }
+  }
+
+  .register {
+    background: v.$color-w2;
+
+    &:hover {
+      background: v.$color-w3;
+    }
+  }
+}
+
+
+/* Animations */
+  /* Animation screen enter left */
+@keyframes iconEnterLeft {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+  /* Animation exit */
+@keyframes iconExitLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

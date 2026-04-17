@@ -1,0 +1,64 @@
+@use "../../mixin";
+@use "../../variables" as v;
+
+
+
+/* 
+====================
+ Constainer Screen
+====================
+*/
+  /* Display screen */
+.display-atm {
+  width: 99%;
+  height: 97%;
+  background: v.$color-b5;
+  border: solid v.$color-b1;
+  border-radius: 40px;
+
+  position: relative;
+  z-index: 10;
+}
+
+  /* Screen touch */
+.screen-atm-touch {
+  width: 100%;
+  height: 100%;
+  background: v.$color-g1;
+  border: solid v.$color-b1;
+  border-radius: 35px;
+  position: relative;
+  z-index: 100;
+
+  @include mixin.flex-center(flex, center, center);
+}
+
+
+
+  /* View screen */
+.screen-atm-open {
+  width: 100%;
+  border-radius: 30px;
+
+  @include mixin.flex-center(flex, center, center);
+}
+.screen-atm-open.on {
+  height: 100%;
+  
+  animation: screenOn .7s ease-in-out forwards alternate;
+}
+
+
+
+/* Animations */
+  /* On */
+@keyframes screenOn {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+    border: solid v.$color-b1;
+    box-shadow: inset 0 0 25px 5px #272727;
+  }
+}

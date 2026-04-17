@@ -1,0 +1,56 @@
+@use "../../mixin";
+@use "../../variables" as v;
+
+
+
+/* 
+====================
+   Contaienr Card
+====================
+*/
+  /* Access card with shadow */
+.access-card-atm {
+  width: 20px;
+  height: 250px;
+  background: #0000006b;
+  border-radius: 0 10px 10px 0;
+
+  position: absolute;
+  z-index: 100;
+
+  transform: translateX(435px);
+  clip-path: polygon(
+    0% 5%,
+    100% 0%,
+    100% 100%,
+    0% 95%
+  );
+
+  .light-access-atm {
+    height: 250px;
+    border: solid #30b5272f;
+    transform: translateX(-15px);
+    transition: all .2s ease;
+
+    &.green {
+      box-shadow: 0 0 25px 10px #28d83496;
+    }
+    &.red {
+      box-shadow: 0 0 25px 10px #d8282896;
+    }
+  }
+
+  @include mixin.flex-center(flex, center, center);
+}
+
+  /* Border decoration */
+.border-access-card-atm {
+  width: 10px;
+  height: 260px;
+  background: v.$color-b1;
+  border-radius: 0 3px 3px 0;
+
+  transform: translateX(424px);
+  position: absolute;
+  z-index: 100;
+}

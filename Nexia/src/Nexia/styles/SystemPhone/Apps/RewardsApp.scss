@@ -1,0 +1,161 @@
+/* Importations */
+@use "../../mixin";
+@use "../../variables" as v;
+
+
+
+/* 
+=====================
+      Container
+=====================
+*/
+.rewards-container {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+  /* Header */
+.rewards-header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  h2 {
+    font-size: 1.2rem;
+    opacity: 0.6;
+  }
+
+  .info {
+    font-size: 0.85rem;
+    opacity: 0.6;
+  }
+}
+
+
+  /* Balance */
+.balance-box {
+  height: 70px;
+  position: relative;
+  
+  @include mixin.flex-center(flex, flex-start, center);
+}
+
+.balance {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+
+  /* Float Reward (+4584) */
+.reward-float {
+  position: absolute;
+  top: 25%;
+  right: 15%;
+
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #18b740;
+
+  animation: floatRewardUp 0.6s ease forwards;
+}
+.reward-float.exit {
+  animation: fadeRewardOut 0.3s ease forwards;
+}
+
+
+  /* Button */
+.rewards-action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  button {
+    width: 180px;
+    height: 55px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: v.$color-w1;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  
+    transition: transform .1s ease, box-shadow 0.1s ease;
+  
+    background: linear-gradient(135deg, v.$color-b1, v.$color-g1, #2563eb);
+    background-size: 200% 200%;
+    background-position: left;
+  
+    transition: background-position 0.4s ease;
+  
+    &:hover {
+      background-position: right;
+    }
+  
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+}
+
+
+  /* Error */
+.rewards-error {
+  display: flex;
+  justify-content: center;
+}
+.reward-error-box {
+  padding: 10px 20px;
+  border-radius: 10px;
+  background: #ea2525;
+  color: v.$color-w1;
+
+  position: absolute;
+  bottom: 5%;
+
+  animation: fadeRewardIn 0.3s ease forwards;
+}
+.reward-error-box.exit {
+  animation: fadeRewardOut 0.3s ease forwards;
+}
+
+
+  /* Animations */
+  /* Enter */
+@keyframes floatRewardUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-20px);
+  }
+}
+  /* In */
+@keyframes fadeRewardIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+  /* Out - Exit */
+@keyframes fadeRewardOut {
+  from {
+    opacity: 1;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(0);
+  }
+}

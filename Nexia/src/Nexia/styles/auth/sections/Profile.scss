@@ -1,0 +1,53 @@
+@use "../../mixin";
+@use "../../variables" as v;
+
+
+
+/* 
+====================
+  Section profile
+====================
+*/
+.profile-section {
+  width: 95%;
+
+  h2 {
+    text-align: center;
+  }
+
+  .profile-intro {
+    p {
+      color: v.$color-g2;
+      line-height: 1.4;
+    }
+  }
+
+  .profile-features {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+  }
+
+  .profile-feature {
+    padding: .9rem;
+    border-radius: 10px;
+    background: v.$color-g4;
+
+    transition: all .2s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 14px v.$color-g5;
+    }
+
+    h4 {
+      margin-bottom: .2rem;
+    }
+
+    p {
+      font-size: .9rem;
+      color: v.$color-g1;
+    }
+  }
+
+}

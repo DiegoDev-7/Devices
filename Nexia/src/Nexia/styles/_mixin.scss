@@ -1,3 +1,6 @@
+@use "./variables" as v;
+
+
 /* Flex center */
 @mixin flex-center($display, $justify, $align) {
   display: $display;
@@ -9,4 +12,21 @@
 @mixin drag() {
   -webkit-user-drag: none;
   pointer-events: none;
+}
+
+@mixin scrollbar($background) {
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  &::-webkit-scrollbar-track {
+    background: $background;
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: v.$color-w3;
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: v.$color-g2;
+  }
 }

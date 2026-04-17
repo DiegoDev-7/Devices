@@ -1,0 +1,198 @@
+@use "../../mixin";
+@use "../../variables" as v;
+
+
+
+/* 
+====================
+     Container
+====================
+*/
+.cfg {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  color: v.$color-w1;
+  font-family: v.$font-mainO3;
+
+  @include mixin.flex-center(flex, center, flex-start);
+}
+.cfg__container {
+  width: 100%;
+  max-width: 900px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* Card */
+.cfg__card {
+  background: #00000033;
+  border: 1px solid #ffffff14;
+  border-radius: 14px;
+
+  padding: 16px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  h2 {
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: v.$color-w2;
+  }
+
+  p {
+    width: 100%;
+    font-family: v.$font-mainO2;
+  }
+}
+  /* Profile with google */
+.box-profile-google {
+  flex-wrap: wrap;
+
+  img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: solid 1px #ffffff1f;
+    user-select: none;
+  
+    @include mixin.drag();
+  }
+  p {
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+    font-family: v.$font-mainO2;
+    letter-spacing: 1px;
+  }
+
+  @include mixin.flex-center(flex, center, center);
+}
+
+/* Colors */
+.cfg__colors {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.cfg__color {
+  width: 100%;
+  aspect-ratio: 1;
+
+  border-radius: 10px;
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 5px 1px v.$color-w4;
+  }
+  &:active {
+    transform: scale(.98);
+  }
+}
+
+
+
+  /* Success update data */
+.success-update {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: auto;
+  height: 40px;
+
+  font-family: v.$font-mainO3;
+  text-align: center;
+
+  background: #28a745;
+  color: v.$color-w1;
+
+  border-radius: 20px;
+  border: none;
+
+  
+  padding: 20px 16px;
+
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  z-index: 1000;
+
+  animation: fadeInUp 0.3s ease forwards;
+
+  &.exit {
+    animation: fadeOutDown 0.3s ease forwards;
+  }
+
+  @include mixin.flex-center(flex, center, center);
+}
+
+
+/* Error message */
+.error-update {
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: auto;
+  min-width: 200px;
+  max-width: 300px;
+  height: 40px;
+
+  font-family: v.$font-mainO3;
+  text-align: center;
+
+  background: #ea2525;
+  color: v.$color-w1;
+
+  border-radius: 20px;
+  border: none;
+
+  font-size: 14px;
+  padding: 0 16px;
+
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  z-index: 1000;
+
+  animation: fadeInUpConfigAtm 0.3s ease forwards;
+
+  &.exit {
+    animation: fadeOutDownConfigAtm 0.3s ease forwards;
+  }
+
+  @include mixin.flex-center(flex, center, center);
+}
+
+
+
+/* Animations */
+  /* enter */
+@keyframes fadeInUpConfigAtm {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 20px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+  /* out */
+@keyframes fadeOutDownConfigAtm {
+  from {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  to {
+    opacity: 0;
+    transform: translate(-50%, 20px);
+  }
+}

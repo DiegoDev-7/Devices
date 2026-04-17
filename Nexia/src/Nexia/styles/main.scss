@@ -3,17 +3,44 @@
 @use "./mixin";
 
 
+
 /* 
 ======================
       Components
 ======================
 */
 // components
+@use "./components/Loading.ldrs";
 @use "./components/ReloadAnimation";
 @use "./components/ScrollIndicator";
-@use "./components/Login";
-@use "./components/Register";
+@use "./components/SoundAnimation";
 
+
+
+/* 
+======================
+        Auth
+======================
+*/
+@use "./auth/PanelsAuth";
+     /* Components */
+     @use "./auth/components/DeleteButton";
+     @use "./auth/components/LoginButton";
+     @use "./auth/components/RegisterButton";
+     @use "./auth/components/TermsPrivacy";
+
+     /* Screens */
+     @use "./auth/screens/ForgotPassword";
+     @use "./auth/screens/Login";
+     @use "./auth/screens/Register";
+     @use "./auth/screens/Header_Interface";
+
+     /* Sections */
+     @use "./auth/sections/Configuration";
+     @use "./auth/sections/Profile";
+     @use "./auth/sections/Support";
+
+     
 
 
 /* 
@@ -21,11 +48,15 @@
         Pages
 ======================
 */
-// Phone
-@use "./pages/device/device";
+// Devices
+@use "./pages/devices/DevicePhone";
+@use "./pages/devices/DeviceAtm";
 
 // Common
-@use "./pages/Common/Header";
+@use "./pages/Common/Header/Header";
+     /* Components */
+     @use "./pages/Common/Header/components/IconsHeader";
+
 @use "./pages/Common/Footer";
 @use "./pages/Common/TermsAndConditions";
 
@@ -45,61 +76,108 @@
      Phone System
 ======================
 */
-// PhoneSystem
-@use "./PhoneSystem/PhoneSys";
+// SystemPhone
+@use "./SystemPhone/PhoneSys";
 
 // Apps
-@use "./PhoneSystem/Apps/CalculatorApp";
-@use "./PhoneSystem/Apps/NotesApp";
-@use "./PhoneSystem/Apps/FolderApp";
-@use "./PhoneSystem/Apps/RadioApp";
-@use "./PhoneSystem/Apps/SimApp";
-@use "./PhoneSystem/Apps/PhoneApp";
-@use "./PhoneSystem/Apps/RewardsApp";
-@use "./PhoneSystem/Apps/CashApp";
-@use "./PhoneSystem/Apps/BankApp";
-@use "./PhoneSystem/Apps/MessageApp";
-@use "./PhoneSystem/Apps/SecurityApp";
-@use "./PhoneSystem/Apps/PhotoGalleryApp";
-@use "./PhoneSystem/Apps/ContactApp";
-@use "./PhoneSystem/Apps/SimpsonsApp";
-@use "./PhoneSystem/Apps/CalendarApp";
-@use "./PhoneSystem/Apps/ClockApp";
-/* Settings */
-@use "./PhoneSystem/Apps/Settings/SettingsApp";
+@use "./SystemPhone/Apps/CalculatorApp";
+@use "./SystemPhone/Apps/NotesApp";
+@use "./SystemPhone/Apps/FolderApp";
+@use "./SystemPhone/Apps/RadioApp";
+@use "./SystemPhone/Apps/SimApp";
+@use "./SystemPhone/Apps/PhoneApp";
+@use "./SystemPhone/Apps/RewardsApp";
+@use "./SystemPhone/Apps/CashApp";
+@use "./SystemPhone/Apps/MessageApp";
+@use "./SystemPhone/Apps/SecurityApp";
+@use "./SystemPhone/Apps/PhotoGalleryApp";
+@use "./SystemPhone/Apps/ContactApp";
+@use "./SystemPhone/Apps/SimpsonsApp";
+@use "./SystemPhone/Apps/CalendarApp";
+@use "./SystemPhone/Apps/ClockApp";
+
+/* Bank */
      /* Components */
-     @use "./PhoneSystem/Apps/Settings/Components/AboutPhone";
-     @use "./PhoneSystem/Apps/Settings/Components/Bluetooth";
-     @use "./PhoneSystem/Apps/Settings/Components/ControlCenter";
-     @use "./PhoneSystem/Apps/Settings/Components/Privacy";
-     @use "./PhoneSystem/Apps/Settings/Components/Screen";
-     @use "./PhoneSystem/Apps/Settings/Components/Security";
-     @use "./PhoneSystem/Apps/Settings/Components/SecurityStatus";
-     @use "./PhoneSystem/Apps/Settings/Components/Services";
-     @use "./PhoneSystem/Apps/Settings/Components/SimCard";
-     @use "./PhoneSystem/Apps/Settings/Components/UpdateSystem";
-     @use "./PhoneSystem/Apps/Settings/Components/User";
-     @use "./PhoneSystem/Apps/Settings/Components/Wallpapper";
-     @use "./PhoneSystem/Apps/Settings/Components/Wifi";
+     @use "./SystemPhone/Apps/Bank/components/CardBank";
+     @use "./SystemPhone/Apps/Bank/components/CreateBank";
+     @use "./SystemPhone/Apps/Bank/components/InterfaceBank";
+     @use "./SystemPhone/Apps/Bank/components/Transactions";
+     @use "./SystemPhone/Apps/Bank/components/Transfers";
+
+/* Settings */
+@use "./SystemPhone/Apps/Settings/SettingsApp";
+     /* Components */
+     @use "./SystemPhone/Apps/Settings/Components/AboutPhone";
+     @use "./SystemPhone/Apps/Settings/Components/Bluetooth";
+     @use "./SystemPhone/Apps/Settings/Components/ControlCenter";
+     @use "./SystemPhone/Apps/Settings/Components/Privacy";
+     @use "./SystemPhone/Apps/Settings/Components/Screen";
+     @use "./SystemPhone/Apps/Settings/Components/Security";
+     @use "./SystemPhone/Apps/Settings/Components/SecurityStatus";
+     @use "./SystemPhone/Apps/Settings/Components/Services";
+     @use "./SystemPhone/Apps/Settings/Components/SimCard";
+     @use "./SystemPhone/Apps/Settings/Components/UpdateSystem";
+     @use "./SystemPhone/Apps/Settings/Components/User";
+     @use "./SystemPhone/Apps/Settings/Components/Wallpapper";
+     @use "./SystemPhone/Apps/Settings/Components/Wifi";
      /* ui */
-     @use "./PhoneSystem/Apps/Settings/ui/BackButton";
-     @use "./PhoneSystem/Apps/Settings/ui/ButtonToggle";
+     @use "./SystemPhone/Apps/Settings/ui/BackButton";
+     @use "./SystemPhone/Apps/Settings/ui/ButtonToggle";
 
 // hardware
-@use "./PhoneSystem/hardware/borderButtons";
-@use "./PhoneSystem/hardware/contentPhone";
-@use "./PhoneSystem/hardware/volumeIndicator";
+@use "./SystemPhone/hardware/borderButtons";
+@use "./SystemPhone/hardware/contentPhone";
+@use "./SystemPhone/hardware/volumeIndicator";
 
 // screens
-@use "./PhoneSystem/screens/screens";
-@use "./PhoneSystem/screens/screenApps";
-@use "./PhoneSystem/screens/screenButtons";
-@use "./PhoneSystem/screens/screenStatusBar";
-@use "./PhoneSystem/screens/screenUnlock";
+@use "./SystemPhone/screens/screens";
+@use "./SystemPhone/screens/screenApps";
+@use "./SystemPhone/screens/screenButtons";
+@use "./SystemPhone/screens/screenStatusBar";
+@use "./SystemPhone/screens/screenUnlock";
 
 // ui
-@use "./PhoneSystem/ui/cellPhoneEdge";
-@use "./PhoneSystem/ui/frontCamera";
-@use "./PhoneSystem/ui/signals";
-@use "./PhoneSystem/ui/Vinyl";
-@use "./PhoneSystem/ui/Cassette";
+@use "./SystemPhone/ui/cellPhoneEdge";
+@use "./SystemPhone/ui/frontCamera";
+@use "./SystemPhone/ui/signals";
+@use "./SystemPhone/ui/Vinyl";
+@use "./SystemPhone/ui/Cassette";
+
+
+
+/* 
+======================
+      Atm System
+======================
+*/
+@use "./SystemAtm/AtmSys";
+     /* Components */
+     @use "./SystemAtm/components/CardAtm";
+     
+     /* Hardware */
+     @use "./SystemAtm/hardware/ContentAtm";
+
+     /* screens */
+     @use "./SystemAtm/screens/AuthAtm";
+     @use "./SystemAtm/screens/HistoryAtm";
+     @use "./SystemAtm/screens/HomeAtm";
+     @use "./SystemAtm/screens/Leaderboard";
+     @use "./SystemAtm/screens/MenuAtm";
+     @use "./SystemAtm/screens/ScreenManager";
+     @use "./SystemAtm/screens/LoadingAtm";
+     @use "./SystemAtm/screens/WelcomeAtm";
+     @use "./SystemAtm/screens/Information";
+     @use "./SystemAtm/screens/ConfigurationAtm";
+     
+     @use "./SystemAtm/screens/TransferAtm/TransfersAtm";
+          /* Components */
+          @use "./SystemAtm/screens/TransferAtm/components/BackButtonAtm";
+          @use "./SystemAtm/screens/TransferAtm/components/BankTransfer";
+          @use "./SystemAtm/screens/TransferAtm/components/OptionTransfer";
+          @use "./SystemAtm/screens/TransferAtm/components/UserTransfer";
+
+     /* ui */
+     @use "./SystemAtm/ui/EnterCardAtm";
+     
+     /* core */
+     @use "./SystemAtm/core/BiosAtm";

@@ -13,24 +13,24 @@
   min-height: 100dvh;
   background-color: v.$color-b4;
 
+  img {
+    width: 600px;
+    height: 600px;
+    margin-top: 25px;
+    object-fit: cover;
+    user-select: none;
+    animation: reload 0.5s ease-in-out alternate infinite;
+    
+    @include mixin.drag();
+  }
+
   @include mixin.flex-center(flex, center, center);
 }
 
 
 
-/* 
-====================
-      Images
-====================
-*/
-.image-reload-animation-nexia {
-  width: 600px;
-  height: 600px;
-  margin-top: 25px;
-  object-fit: cover;
-
-  animation: reload 0.5s ease-in-out alternate infinite;
-}
+/* Animations */
+  /* Reload */
 @keyframes reload {
   to {
     opacity: 0;

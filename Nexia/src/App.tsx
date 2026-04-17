@@ -6,12 +6,13 @@ import { type ReactNode, type JSX, useEffect, useState } from "react"
 import HomeRender from "./Nexia/pages/Home/MainHome"
 
 /* Common page */
-import Header from "./Nexia/pages/Common/Header"
+import Header from "./Nexia/pages/Common/Header/Header"
 import Footer from "./Nexia/pages/Common/Footer"
+import TermsAndConditions from "./Nexia/pages/Common/TermsAndConditions"
 
 /* Phone */
-import DeviceRender from "./Nexia/pages/devices/devices"
-import TermsAndConditions from "./Nexia/pages/Common/TermsAndConditions"
+import DevicePhoneRender from "./Nexia/pages/devices/devicePhone"
+import DeviceATMRender from "./Nexia/pages/devices/deviceAtm"
 
 /* Components */
 import ReloadAnimation from "./Nexia/components/ReloadAnimation"
@@ -75,13 +76,20 @@ function App(): JSX.Element {
       <ScrollToTop />
 
       <Routes>
+
         {/* Home */}
         <Route path="/" element={<Layout><HomeRender /></Layout>} />
 
+
         {/* Devices */}
-        <Route path="/Phone" element={<Layout><DeviceRender /></Layout>} />
+        <Route path="/Phone" element={<Layout><DevicePhoneRender /></Layout>} />
+
+        <Route path="/ATM" element={<Layout><DeviceATMRender /></Layout>} />
+
+
         {/* Terminos y Condiciones */}
         <Route path="/terms" element={<Layout><TermsAndConditions /></Layout>} />
+        
       </Routes>
     </>
   )

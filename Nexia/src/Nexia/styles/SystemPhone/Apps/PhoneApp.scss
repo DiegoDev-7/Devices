@@ -1,0 +1,380 @@
+/* Importations */
+@use "../../mixin";
+@use "../../variables" as v;
+
+
+
+/* 
+=====================
+      Container
+=====================
+*/
+.Container-app-screen-phone {
+  width: 100%;
+  height: 100%;
+  border-radius: 35px;
+  
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2fr, 1fr);
+}
+  /* Top contact phone grid */
+.contain-app-phone-a {
+  width: 101%;
+  height: 175px;
+  
+  position: relative;
+  top: 15%;
+  left: -2px;
+  flex-wrap: wrap;
+
+  z-index: 50;
+  overflow-y: auto;
+
+  @include mixin.flex-center(flex, center, flex-start);
+}
+  /* Content of the contact */
+.box-app-phone-contact {
+  width: 80%;
+  height: 75px;
+  background: v.$color-w3;
+  border-radius: 15px;
+  margin: 15px 0;
+  display: flex;
+
+  .app-phone-image {
+    width: 30%;
+    height: 100%;
+    border-left: solid v.$color-g1;
+    border-radius: 15px;
+    
+    img {
+      width: 75%;
+      height: 75%;
+      user-select: none;
+
+      @include mixin.drag();
+    }
+
+    @include mixin.flex-center(flex, center, center);
+  }
+
+  &.in {
+    opacity: 0;
+    animation: phoneCardIn .25s ease forwards;
+  }
+  &.out {
+    opacity: 1;
+    animation: phoneCardOut .25s ease forwards;
+  }
+}
+
+  /* Contact description */
+.app-phone-contact {
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
+
+  span {
+    width: 90%;
+    height: 40%;
+    color: v.$color-w1;
+    font-size: .9rem;
+    font-family: v.$font-mainO2;
+    letter-spacing: 1px;
+    transform: translateY(5px) translateX(5px);
+  }
+  input {
+    width: 90%;
+    height: 60%;
+    padding: 10px;
+    border-radius: 12px;
+    background: transparent;
+    border: none;
+    border-bottom: solid;
+    outline: none;
+
+    color: v.$color-w1;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-align: start;
+    font-family: v.$font-mainO1;
+  
+    &::placeholder {
+      color: v.$color-w1;
+    }
+  }
+
+  @include mixin.flex-center(flex, center, center);
+}
+
+  /* Bottom contact phone grid numbers */
+.contain-app-phone-b {
+  width: 101%;
+  height: 350px;
+  background: v.$color-w1;
+  border: solid 2px;
+  border-radius: 37px;
+  z-index: 100;
+  position: relative;
+  top: 2.2%;
+  left: -1px;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2fr, 1fr);
+}
+  /* Input numbers */
+.box-app-text-phone {
+  width: 90%;
+  height: 100%;
+  border-bottom: solid v.$color-b1;
+  position: relative;
+  left: 5%;
+
+  input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 12px;
+    background: transparent;
+    border: none;
+    outline: none;
+
+    font-size: 22px;
+    letter-spacing: 4px;
+    text-align: center;
+    font-family: v.$font-mainO1;
+  }
+  
+  @include mixin.flex-center(flex, center, center);
+}
+
+  /* X - Delete number */
+.box-delete-phone {
+  width: 30px;
+  height: 30px;
+  color: v.$color-w1;
+  font-size: 1.1rem;
+  background: #e70000;
+  border: solid 2px #be0000d7;
+  border-radius: 25px;
+
+  position: absolute;
+  left: 90%;
+  
+  user-select: none;
+  cursor: pointer;
+
+  &:active {
+    transform: scale(.95);
+    background: #f11616d0;
+    border: solid 2px #b12a2a9f;
+  }
+
+  @include mixin.flex-center(flex, center, center);
+}
+  /* Buttons */
+.box-app-buttons-phone {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0%;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+.contain-app-button-phone {
+  width: 100%;
+  height: 100%;
+
+  @include mixin.flex-center(flex, center, center);
+}
+  /* Numbers */
+.button-app-phone {
+  width: 70px;
+  height: 45px;
+  color: v.$color-w1;
+  background: v.$color-b3;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: all .2s ease;
+  cursor: pointer;
+  position: relative;
+  top: 25%;
+  user-select: none;
+
+  &:hover {
+    background: v.$color-g1;
+  }
+  &:active {
+    transform: scale(.95);
+  }
+}
+  /* Button call */
+.button-app-phone-call {
+  width: 100px;
+  height: 45px;
+  color: v.$color-w1;
+  background: #25d425;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all .2s ease;
+  cursor: pointer;
+  position: relative;
+  top: 10%;
+
+  &:hover {
+    background: #2fc02ffd;
+  }
+  &:active {
+    transform: scale(.95);
+  }
+
+  img {
+    width: 80%;
+    height: 80%;
+    transform: rotate(270deg);
+    user-select: none;
+
+    @include mixin.drag();
+  }
+
+  @include mixin.flex-center(flex, center, center);
+}
+
+
+
+/* 
+=======================
+  Success phone data
+=======================
+*/
+.success-phone {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: auto;
+  height: 40px;
+
+  font-family: v.$font-mainO3;
+  text-align: center;
+  background: #28a745;
+  color: v.$color-w1;
+
+  border-radius: 20px;
+  border: none;
+  padding: 20px 16px;
+
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  z-index: 1000;
+
+  animation: fadeInUpPhone 0.3s ease forwards;
+
+  /* Exit */
+  &.exit {
+    animation: fadeOutDownPhone 0.3s ease forwards;
+  }
+  
+  @include mixin.flex-center(flex, center, center);
+}
+
+
+
+/* 
+====================
+    Error message
+====================
+*/
+.error-phone {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: auto;
+  min-width: 200px;
+  max-width: 300px;
+  height: 40px;
+
+  font-family: v.$font-mainO3;
+  text-align: center;
+
+  background: #ea2525;
+  color: v.$color-w1;
+
+  border-radius: 20px;
+  border: none;
+
+  font-size: 14px;
+  padding: 0 16px;
+
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  z-index: 1000;
+
+  animation: fadeInUpPhone 0.3s ease forwards;
+
+  &.exit {
+   animation: fadeOutDownPhone 0.3s ease forwards;
+  }
+
+  @include mixin.flex-center(flex, center, center);
+}
+
+
+/* 
+=======================
+      Animations 
+=======================
+*/
+  /* Enter */
+@keyframes phoneCardIn {
+  to {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  from {
+    opacity: 1;
+    transform: translateY(5px);
+  }
+}
+  /* Exit */
+@keyframes phoneCardOut {
+  to {
+    opacity: 1;
+    transform: translateY(5px);
+  }
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+}
+  /* Alters */
+  /* enter */
+@keyframes fadeInUpPhone {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 20px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+  /* out */
+@keyframes fadeOutDownPhone {
+  from {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  to {
+    opacity: 0;
+    transform: translate(-50%, 20px);
+  }
+}
