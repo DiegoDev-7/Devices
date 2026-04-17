@@ -11,7 +11,7 @@ import { getUserById } from "../../services/external/user/user.service"
 import { TransfersPanel } from "./TransfersAtm/TransfersAtm"
 import { HistoryPanel } from "./HistoryAtm"
 import { WelcomePanel } from "./WelcomeAtm"
-import { LeaderboardPanel } from "./Leaderboard"
+import { LeaderboardPanel } from "./leaderboard/Leaderboard"
 import { InformationPanel } from "./InformationAtm"
 import { ConfigurationPanel } from "./ConfigurationAtm"
 
@@ -19,7 +19,6 @@ import { ConfigurationPanel } from "./ConfigurationAtm"
 
 /* Render home */
 type Section = "welcome" | "history" | "leaderboard" | "transfers" | "settings" | "BadgeInfo" | "bank" | "user"
-
 type UserData = {
   name: string
   lastname: string
@@ -27,7 +26,6 @@ type UserData = {
   avatar: string | null
   phone: string
 }
-
 export const HomeAtm = () => {
   // Config to views
   const [view, setView] = useState<Section>("welcome")

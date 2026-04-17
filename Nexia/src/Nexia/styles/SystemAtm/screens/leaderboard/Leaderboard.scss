@@ -1,0 +1,136 @@
+@use "../../../mixin";
+@use "../../../variables" as v;
+
+
+
+/* 
+====================
+     Container
+====================
+*/
+.container-leaderboard-atm {
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
+
+  @include mixin.flex-center(flex, center, center);
+}
+
+  /* Table leaderboard */
+.table-leaderboard {
+  width: 70%;
+  height: 80%;
+
+  background: linear-gradient(142deg, #131415aa, #161a1aaa, #0d0e0eaa, #1e1e1eaa, #0b0c0caa);
+  background-size: 400% 400%;
+  animation: leaderboard 13s ease infinite;
+  
+  border-radius: 35px;
+  box-shadow: 0 0 20px 5px #0b0c0c67, 0 0 25px 5px #0b0c0c6d;
+
+  transform: translateY(-10px);
+}
+
+  /* Header leaderboard */
+.header-top-leaderboard {
+  position: relative;
+  height: 35%;
+  transform: translateY(10px);
+  
+  .top-leaderboard:nth-child(1) {
+    width: 85px;
+    height: 85px;
+    transform: translateX(-25px);
+
+    background: linear-gradient(142deg, #dcdcdce1, #b4b4b4e1, #8c8c8ce1, #c8c8c8, #000000e1);      
+    background-size: 400% 400%;
+    animation: leaderboard 13s ease infinite;
+    
+    box-shadow: 0 0 18px #c8c8c82e;
+    border: 1px solid #dcdcdc40;
+  }
+  .top-leaderboard:nth-child(2) {
+    width: 100px;
+    height: 100px;
+
+    background: linear-gradient(142deg, #ffd900e1, #ffb700e1, #ff8c00e1, #ffd900e1, #000000e1);
+    background-size: 400% 400%;
+    animation: leaderboard 13s ease infinite;
+
+    box-shadow: 0 0 25px #ffc800;
+    border: 1px solid #ffd700;
+  }
+  .top-leaderboard:nth-child(3) {
+    width: 85px;
+    height: 85px;
+    transform: translateX(25px);
+
+    background: linear-gradient(142deg, #cd7f32e1, #a0522de1, #783c1ee1, #d2691ee1, #000000e1);      
+    background-size: 400% 400%;
+    animation: leaderboard 13s ease infinite;
+
+    box-shadow: 0 0 18px #cd7f322e;
+    border: 1px solid #cd8032;
+  }
+
+  @include mixin.flex-center(flex, center, center);
+}
+
+
+
+/* Animations */
+  /* Background animation */
+@keyframes leaderboard {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+  /* Animation to select */
+@keyframes fadeSelect {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+  /* Alter Animation */
+@keyframes fadeInLeaderboard {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeOutLeaderboard {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+  /* Colors */
+@keyframes colorChange {
+  0%   { color: #007a00; }
+  10%  { color: #008800; }
+  25%  { color: #009400; }
+  35%  { color: #00a100; }
+  50% { color: #00b100; }
+  65% { color: #00a100; }
+  80% { color: #009400; }
+  95% { color: #008800; }
+  100% { color: #007a00; }
+}

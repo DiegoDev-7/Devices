@@ -1,0 +1,51 @@
+@use "../../../../mixin";
+@use "../../../../variables" as v;
+
+
+
+/* Footer leaderboard */
+.footer-bottom-leaderboard {
+  width: 100%;
+  height: 65%;
+
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #ffffff2e transparent;
+  overscroll-behavior: contain;
+
+  background: linear-gradient(142deg, #131415aa, #161a1aaa, #0d0e0eaa, #1e1e1eaa, #0b0c0caa);
+  border-radius: 0 0 25px 25px;
+
+  /* Title */
+  .title-table-leaderboard {
+    width: 100%;
+    height: 20%;
+    flex-wrap: wrap;
+
+    span {
+      width: 33%;
+      text-align: center;
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+      font-family: v.$font-mainD3;
+      user-select: none;
+    }
+    
+    /* Divisor */
+    .divisor-leaderboard {
+      width: 85%;
+      height: 2px;
+
+      background: v.$color-w1;
+      border-radius: 25px;
+
+      position: static;
+      transform: translateX(50px) translateY(-5px);
+
+      box-shadow: 0 0 25px 1px #ffffff8a;
+    }
+
+    @include mixin.flex-center(flex, flex-start, center);
+  }
+}

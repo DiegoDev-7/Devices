@@ -52,13 +52,17 @@
 @use "./pages/devices/DevicePhone";
 @use "./pages/devices/DeviceAtm";
 
+
 // Common
 @use "./pages/Common/Header/Header";
+     
      /* Components */
      @use "./pages/Common/Header/components/IconsHeader";
 
+
 @use "./pages/Common/Footer";
 @use "./pages/Common/TermsAndConditions";
+
 
 // Home
 @use "./pages/Home/MainHome";
@@ -79,6 +83,7 @@
 // SystemPhone
 @use "./SystemPhone/PhoneSys";
 
+
 // Apps
 @use "./SystemPhone/Apps/CalculatorApp";
 @use "./SystemPhone/Apps/NotesApp";
@@ -96,7 +101,9 @@
 @use "./SystemPhone/Apps/CalendarApp";
 @use "./SystemPhone/Apps/ClockApp";
 
+
 /* Bank */
+     
      /* Components */
      @use "./SystemPhone/Apps/Bank/components/CardBank";
      @use "./SystemPhone/Apps/Bank/components/CreateBank";
@@ -104,8 +111,10 @@
      @use "./SystemPhone/Apps/Bank/components/Transactions";
      @use "./SystemPhone/Apps/Bank/components/Transfers";
 
+
 /* Settings */
 @use "./SystemPhone/Apps/Settings/SettingsApp";
+     
      /* Components */
      @use "./SystemPhone/Apps/Settings/Components/AboutPhone";
      @use "./SystemPhone/Apps/Settings/Components/Bluetooth";
@@ -120,14 +129,17 @@
      @use "./SystemPhone/Apps/Settings/Components/User";
      @use "./SystemPhone/Apps/Settings/Components/Wallpapper";
      @use "./SystemPhone/Apps/Settings/Components/Wifi";
+     
      /* ui */
      @use "./SystemPhone/Apps/Settings/ui/BackButton";
      @use "./SystemPhone/Apps/Settings/ui/ButtonToggle";
+
 
 // hardware
 @use "./SystemPhone/hardware/borderButtons";
 @use "./SystemPhone/hardware/contentPhone";
 @use "./SystemPhone/hardware/volumeIndicator";
+
 
 // screens
 @use "./SystemPhone/screens/screens";
@@ -135,6 +147,7 @@
 @use "./SystemPhone/screens/screenButtons";
 @use "./SystemPhone/screens/screenStatusBar";
 @use "./SystemPhone/screens/screenUnlock";
+
 
 // ui
 @use "./SystemPhone/ui/cellPhoneEdge";
@@ -154,14 +167,14 @@
      /* Components */
      @use "./SystemAtm/components/CardAtm";
      
+
      /* Hardware */
      @use "./SystemAtm/hardware/ContentAtm";
 
+
      /* screens */
-     @use "./SystemAtm/screens/AuthAtm";
      @use "./SystemAtm/screens/HistoryAtm";
      @use "./SystemAtm/screens/HomeAtm";
-     @use "./SystemAtm/screens/Leaderboard";
      @use "./SystemAtm/screens/MenuAtm";
      @use "./SystemAtm/screens/ScreenManager";
      @use "./SystemAtm/screens/LoadingAtm";
@@ -169,12 +182,26 @@
      @use "./SystemAtm/screens/Information";
      @use "./SystemAtm/screens/ConfigurationAtm";
      
+     /* Auth */
+     @use "./SystemAtm/screens/auth/AuthAtm";
+     
+     /* Leaderboard */
+     @use "./SystemAtm/screens/leaderboard/Leaderboard";
+          /* Components */
+          @use "./SystemAtm/screens/leaderboard/components/DropdownLeaderboard";
+          @use "./SystemAtm/screens/leaderboard/components/ErrorLeaderboard";
+          @use "./SystemAtm/screens/leaderboard/components/HeaderLeaderboard";
+          @use "./SystemAtm/screens/leaderboard/components/TableLeaderboard";
+          @use "./SystemAtm/screens/leaderboard/components/TopLeaderboard";
+
+     /* Transfers */
      @use "./SystemAtm/screens/TransferAtm/TransfersAtm";
           /* Components */
           @use "./SystemAtm/screens/TransferAtm/components/BackButtonAtm";
           @use "./SystemAtm/screens/TransferAtm/components/BankTransfer";
           @use "./SystemAtm/screens/TransferAtm/components/OptionTransfer";
           @use "./SystemAtm/screens/TransferAtm/components/UserTransfer";
+
 
      /* ui */
      @use "./SystemAtm/ui/EnterCardAtm";

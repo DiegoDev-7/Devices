@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react"
 
 /* Screens */
-import { AuthAtm } from "./AuthAtm"
+import { AuthAtm } from "./auth/AuthAtm"
 import { LoadingAtm } from "./LoadingAtm"
 import { HomeAtm } from "./HomeAtm"
 
@@ -45,11 +45,7 @@ export const MenuAtm = ({
 
   return (
     <>
-      <div 
-        className="container-screen-atm" 
-        style={{ background: theme }}
-      >
-
+      <div className="container-screen-atm" style={{ background: theme }}>
 
         {/* First render authentication */}
         {phase === "auth" && (
@@ -68,18 +64,15 @@ export const MenuAtm = ({
           </>
         )}
 
-
         {/* Second render loader */}
         {phase === "loading" && (
           <LoadingAtm />
         )}
 
-
         {/* Third render  */}
         {phase === "home" && (
           <HomeAtm />
         )}
-
 
       </div>
     </>

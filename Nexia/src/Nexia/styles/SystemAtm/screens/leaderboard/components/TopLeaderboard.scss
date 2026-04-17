@@ -1,0 +1,118 @@
+@use "../../../../mixin";
+@use "../../../../variables" as v;
+
+
+
+/* Leaderboard top 3 */
+.top-leaderboard {
+  border-radius: 50%;
+
+  /* Box */
+  .box-title-leaderboard-top1, .box-title-leaderboard-top2, .box-title-leaderboard-top3 {
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
+
+    color: v.$color-b1;
+    font-size: 1rem;
+    font-family: v.$font-mainO3;
+    user-select: none;
+
+    position: absolute;
+
+    @include mixin.flex-center(flex, center, center);
+  }
+
+  /* Title */
+  .box-title-leaderboard-top1 {
+    width: 120px;
+    height: 25px;
+    border-radius: 25px;
+
+    background: linear-gradient(142deg, #ffd900, #ffb700, #ff8c00, #ffd900, #000000);
+    background-size: 400% 400%;
+    animation: leaderboard 10s ease infinite;
+
+    transform: translateY(40px);
+
+    box-shadow: 0 0 25px #ffc80040;
+    border: 1px solid #ffd70059;
+  }
+  .box-title-leaderboard-top2 {
+    width: 120%;
+    height: 27%;
+    border-radius: 25px;
+
+    background: linear-gradient(142deg, #dcdcdc, #b4b4b4, #8c8c8c, #c8c8c8, #000000);      
+    background-size: 400% 400%;
+    animation: leaderboard 10s ease infinite;
+
+    font-size: .9rem;
+
+    transform: translateY(33px);
+
+    box-shadow: 0 0 18px #c8c8c82e;
+    border: 1px solid #dcdcdc40;
+  }
+  .box-title-leaderboard-top3 {
+    width: 120%;
+    height: 27%;
+    border-radius: 25px;
+
+    background: linear-gradient(142deg, #cd7f32, #a0522d, #783c1e, #d2691e, #000000);      
+    background-size: 400% 400%;
+    animation: leaderboard 10s ease infinite;
+
+    font-size: .9rem;
+
+    transform: translateY(33px);
+
+    box-shadow: 0 0 18px #cd7f322e;
+    border: 1px solid #cd7f3247;
+  }
+
+  /* Icons */
+  .icon-leaderboard-top1 {
+    position: absolute;
+    top: -5px;
+  }
+  .icon-leaderboard-top2 {
+    position: absolute;
+    top: -25px;
+  }
+  .icon-leaderboard-top3 {
+    position: absolute;
+    top: -25px;
+  }
+
+  /* Images */
+  img {
+    width: 90%;
+    border-radius: 50px;
+    user-select: none;
+    
+    @include mixin.drag();
+  }
+
+  @include mixin.flex-center(flex, center, center);
+}
+
+
+  /* Letters */
+.balance-balance-leaderboard, .balance-name-leaderboard {
+  position: absolute;
+  width: 110%;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+
+  &.in {
+    opacity: 1;
+  }
+  &.out {
+    opacity: 0;
+  }
+}
+.balance-balance-leaderboard {
+  animation: colorChange 2s ease infinite;
+}

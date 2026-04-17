@@ -1,0 +1,72 @@
+@use "../../../../mixin";
+@use "../../../../variables" as v;
+
+
+
+/* Header leaderboard */
+.header-leaderboard {
+  flex-wrap: wrap;
+  user-select: none;
+
+  color: #00ff9f;
+  font-family: v.$font-mainD3;
+  padding: 20px;
+
+  p {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+  }
+  span {
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    letter-spacing: 2px;
+  }
+
+    /* Button */
+  button {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(145deg,rgba(255, 255, 255, 0.06),rgba(0, 0, 0, 0.25));
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 14px;
+
+    color: v.$color-w1;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+
+    position: absolute;
+    right: 125px;
+    top: 30px;
+
+
+    &:hover {
+      transform: scale(1.02);
+      border-color: rgba(124, 255, 178, 0.35);
+      box-shadow: 0 6px 18px rgba(124, 255, 178, 0.15);
+    }
+
+    &:active {
+      transform: scale(0.97);
+    }
+
+    @include mixin.flex-center(flex, center, center);
+  }
+  button.asc {
+    border: solid rgba(124, 255, 178, 0.5);
+    background: #7cffb343;
+    box-shadow: inset 0 0 15px #7cffb362, 0 0 15px #7cffb362;
+  }
+  button.desc {
+    border: solid rgba(255, 120, 120, 0.4);
+    background: #ff787843;
+    box-shadow: inset 0 0 15px #ff787862, 0 0 15px #ff787862;
+  }
+
+  @include mixin.flex-center(flex, center, center);
+}
