@@ -24,6 +24,10 @@ export default function DeleteAccountButton() {
       localStorage.removeItem("token")
       localStorage.removeItem("notes")
       localStorage.removeItem("atm_boot_done")
+      localStorage.removeItem("bank_account")
+      localStorage.removeItem("privacity_option")
+      localStorage.removeItem("wallpapper")
+      localStorage.removeItem("atmTheme")
 
       logout({
         logoutParams: {

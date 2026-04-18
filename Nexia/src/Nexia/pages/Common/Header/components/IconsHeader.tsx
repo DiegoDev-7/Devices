@@ -1,9 +1,9 @@
-/* Hooks */
-import { useState } from "react"
 import { Link } from "react-router-dom"
 
+/* Hooks */
+import { useState } from "react"
+
 /* Images */
-import x from "../../../../../assets/Apps/x.svg"
 import github from "../../../../../assets/Apps/github_light.svg"
 import discord from "../../../../../assets/Apps/discord.svg"
 import language from "../../../../../assets/Icons/language_light.svg"
@@ -24,9 +24,8 @@ export function IconsContain({ clickOption }: ImageContainProps) {
   }
   const icons: Icons[] = [
     { type: "div", src: language, to: "" },
-    { type: "link", src: github, to: "https://github.com/DiegoDev-7" },
     { type: "link", src: discord, to: "/" },
-    { type: "link", src: x, to: "https://x.com/dxvv07" }
+    { type: "link", src: github, to: "https://github.com/DiegoDev-7" },
   ]
 
   const [open, setOpen] = useState(true)

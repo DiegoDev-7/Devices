@@ -129,7 +129,7 @@ function RegisterForm({ createBank, setCreateBank, createAtm, setCreateAtm }: Pr
 
     } catch (error: any) {
 
-      setError(error.response?.data?.message || "Error en el registro")
+      setError(error?.message || "Error al registrar cuenta")
       
     } finally {
 

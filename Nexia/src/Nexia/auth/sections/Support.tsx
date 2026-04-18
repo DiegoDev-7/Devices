@@ -33,7 +33,7 @@ export default function Support() {
       if (!emailRegex.test(email)) return
 
 
-      const res = await sendSupport(name, email, message)
+      await sendSupport(name, email, message)
 
       setName("")
       setEmail("")

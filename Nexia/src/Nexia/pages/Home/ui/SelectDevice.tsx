@@ -8,29 +8,33 @@ import danger from "../../../../assets/Wallpappers/danger.png"
 
 /* Frame */
 export const SelectDevice = () => {
+  const token = localStorage.getItem("token")
+  const bankAccount = localStorage.getItem("bank_account")
+
   // Render text and link
   type Description = {
     id: number
     title: string
     text: string
     link: string
+    requiresBank: boolean
   }
-  const selectDevice: Description[] = [
-    { id: 1, 
-      title: "Dispositivo móvil", 
-      text: "Sistema operativo interactivo con aplicaciones conectadas y comportamiento dinámico.", 
-      link: "/Phone" 
+  const devices: Description[] = [
+    {
+      id: 1,
+      title: "Dispositivo móvil",
+      text: "Sistema operativo interactivo con aplicaciones conectadas y comportamiento dinámico.",
+      link: "/Phone",
+      requiresBank: false
     },
-    { id: 2, 
-      title: "ATM", 
-      text: "Interfaz externa vinculada al sistema bancario interno del teléfono, permitiendo sincronización de datos en tiempo real.", 
-      link: "/ATM" 
-    },
+    {
+      id: 2,
+      title: "ATM",
+      text: "Interfaz externa vinculada al sistema bancario interno del teléfono, permitiendo sincronización de datos en tiempo real.",
+      link: "/ATM",
+      requiresBank: true
+    }
   ]
-
-  const token = localStorage.getItem("token")
-  
-  const dangerTape = !token
 
   
 
@@ -47,28 +51,53 @@ export const SelectDevice = () => {
 
             <p>Nexia no se limita al entorno móvil. El sistema incluye un ATM conectado directamente con la aplicación bancaria del dispositivo.</p>
 
-            {selectDevice.map(v => (
-              <Link key={v.id} className="link-devices" to={dangerTape ? "" : v.link}>
+            {devices.map((device) => {
+              const isLogged = !!token
+              const hasBank = !!bankAccount
 
-                <div className={dangerTape ? "blur-layer" : ""}>
-                  <h3>{v.title}</h3>
-                  <p>{v.text}</p>
-                </div>
+              const blockedByAuth = !isLogged
+              const blockedByBank = device.requiresBank && !hasBank
 
-                {dangerTape && (
-                  <div className="container-danger">
-                    <img
-                      className="image-danger"
-                      src={danger}
-                      alt="¡Peligro! Sin acceso a la interfaz"
-                    />
+              const isBlocked = blockedByAuth || blockedByBank
 
-                    <p>Necesitas iniciar sesión o registrarte para usar los dispositivos</p>
+              let message = ""
+
+              if (blockedByAuth) {
+                message = "Necesitas iniciar sesión o registrarte para usar los dispositivos"
+              } else if (blockedByBank) {
+                message = "Debes crear una cuenta bancaria para usar el ATM"
+              }
+
+              return (
+                <Link
+                  key={device.id}
+                  className="link-devices"
+                  to={isBlocked ? "#" : device.link}
+                  onClick={(e) => {
+                    if (isBlocked) e.preventDefault()
+                  }}
+                >
+
+                  <div className={isBlocked ? "blur-layer" : ""}>
+                    <h3>{device.title}</h3>
+                    <p>{device.text}</p>
                   </div>
-                )}
 
-              </Link>
-            ))}
+                  {isBlocked && (
+                    <div className="container-danger">
+                      <img
+                        className="image-danger"
+                        src={danger}
+                        alt="bloqueado"
+                      />
+
+                      <p>{message}</p>
+                    </div>
+                  )}
+
+                </Link>
+              )
+            })}
 
           </div>
         </div>

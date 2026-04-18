@@ -117,7 +117,7 @@ export const Wallpapper = ({ back }: any) => {
             </button>
           </div>
 
-          {/* Wallpapers */}
+          {/* Wallpappers */}
           <div className="contain-view-select-Wallpapper">
             {Pictures.map(v => (
               <button 

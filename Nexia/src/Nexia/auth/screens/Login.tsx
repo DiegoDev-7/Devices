@@ -17,6 +17,7 @@ import { loginEmail } from "../../services/external/auth/auth.service"
 
 /* ldrs (loading icon) */
 import { LoadingIcon } from "../../components/loading.ldrs"
+import { ResetFlow } from "../sections/ResetFlow"
 import { getBank } from "../../services/external/bank/bank.service"
 
 
@@ -30,10 +31,12 @@ export function LoginPanel({ onBack }: LoginProps) {
   const [error, setError] = useState("")
   const [loading, setLoading] = useState(false)
 
+  // control reset flow
+  const [showReset, setShowReset] = useState(false)
+
   // Close the header panel
   const closePanel = () => {
     setOpen(prev => !prev)
-
     onBack()
   }
 
@@ -47,21 +50,35 @@ export function LoginPanel({ onBack }: LoginProps) {
           <img src={forwardBack} alt="Go back" />
         </button>
 
-        <h2 className="login-title">Iniciar sesion</h2>
+        {!showReset ? (
+          <>
+            <h2 className="login-title">Iniciar sesion</h2>
 
-        {/* Form */}
-        <LoginForm />
+            {/* Form */}
+            <LoginForm />
 
-        <button className="login-recover">
-          ¿Olvidaste tu contraseña?
-        </button>
+            <button 
+              className="login-recover"
+              onClick={() => setShowReset(true)}
+            >
+              ¿Olvidaste tu contraseña?
+            </button>
 
-        <div className="login-divider">
-          <span>o</span>
-        </div>
+            <div className="login-divider">
+              <span>o</span>
+            </div>
 
-        {/* Login button */}
-        <GoogleLoginButton error={error} setError={setError} loading={loading} setLoading={setLoading} />
+            {/* Login button */}
+            <GoogleLoginButton 
+              error={error} 
+              setError={setError} 
+              loading={loading} 
+              setLoading={setLoading} 
+            />
+          </>
+        ) : (
+          <ResetFlow onExit={() => setShowReset(false)} />
+        )}
 
       </div>
 
@@ -89,12 +106,21 @@ function LoginForm() {
   // Send api for create user
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    
+    if (loading) return
+
     setLoading(true)
     setError("")
 
     try {
 
-      await loginEmail(email, password)
+      const data = await loginEmail(email, password)
+
+      localStorage.setItem("token", data.token)
+
+      if (data.user) {
+        localStorage.setItem("user", JSON.stringify(data.user))
+      }
 
       try {
 
@@ -107,16 +133,22 @@ function LoginForm() {
       } catch (error: any) {
         
         if (error.message === "Bank not created") {
+          
           localStorage.removeItem("bank_account")
+          
         } else {
+          
           throw error
+          
         }
         
       }
 
+      window.location.reload()
+
     } catch (error: any) {
 
-      setError(error.response?.data?.message || "Error al iniciar sesión")
+      setError(error?.response?.data?.message || error?.response?.data?.error || error?.message || "Error al iniciar sesión")
       
     } finally {
 

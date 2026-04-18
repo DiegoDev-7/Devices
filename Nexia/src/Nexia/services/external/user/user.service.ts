@@ -58,11 +58,13 @@ export const updateAvatar = async (formData: FormData) => {
 
 // POST
 // Send request to reset password
-export const requestReset = async () => {
+export const requestReset = async (email: string) => {
 
   try {
 
-    const requestReset = await axios.post("/api/users/request-reset")
+    const requestReset = await axios.post("/api/users/request-reset", {
+      email
+    })
 
     return requestReset
     
@@ -75,11 +77,13 @@ export const requestReset = async () => {
 }
 // POST
 // Verify the code received in the email
-export const verifyCode = async () => {
+export const verifyCode = async (email: string, code: string) => {
 
   try {
 
-    const verifyCode = await axios.post("/api/users/verify-code")
+    const verifyCode = await axios.post("/api/users/verify-code", {
+      email, code
+    })
 
     return verifyCode
     
@@ -92,11 +96,13 @@ export const verifyCode = async () => {
 }
 // POST
 // New password
-export const resetPassword = async () => {
+export const resetPassword = async (email: string, code: string, password: string) => {
 
   try {
 
-    const verifyCode = await axios.post("/api/users/reset-password")
+    const verifyCode = await axios.post("/api/users/reset-password", {
+      email, code, password
+    })
 
     return verifyCode
     

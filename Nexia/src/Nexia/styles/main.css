@@ -688,6 +688,190 @@ main {
   text-align: center;
 }
 
+/* 
+====================
+  Reset Password UI
+====================
+*/
+.reset-container {
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+}
+.reset-container h2 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
+}
+.reset-container {
+  /* Default input */
+}
+.reset-container input {
+  width: 75%;
+  border: 1px solid #d3d3d3;
+  padding: 8px;
+  padding-right: 32px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  outline: none;
+  box-sizing: border-box;
+}
+.reset-container input:focus {
+  border-color: #000000;
+}
+.reset-container {
+  /* Inputs */
+}
+.reset-container .otp-container {
+  width: 65%;
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+.reset-container .otp-container input {
+  width: 75%;
+  height: 75%;
+  border: 1px solid rgba(77, 77, 77, 0.6901960784);
+  border-radius: 4px;
+  font-size: 0.85rem;
+  outline: none;
+  box-sizing: border-box;
+  flex: 1;
+  text-align: center;
+  padding: 0;
+}
+.reset-container .otp-container input:focus {
+  border-color: #000000;
+}
+.reset-container .otp-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.reset-container {
+  /* Reset password input */
+  /* Box */
+}
+.reset-container .box-update-password {
+  width: 75%;
+  position: relative;
+}
+.reset-container .box-update-password input {
+  width: 1050%;
+  height: 42px;
+  padding: 0 45px 0 12px;
+  border: 1px solid #747474;
+  border-radius: 6px;
+  outline: none;
+  box-sizing: border-box;
+}
+.reset-container .box-update-password button {
+  position: absolute;
+  right: 7px;
+  top: 50%;
+  transform: translateY(-95%);
+  width: 30px;
+  height: 30px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.reset-container .box-update-password button:hover {
+  background: none;
+}
+.reset-container .box-update-password button:active {
+  background: none;
+}
+.reset-container .box-update-password button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.08);
+}
+.reset-container .box-update-password button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.reset-container .box-update-password button img {
+  width: 18px;
+  opacity: 0.7;
+  user-select: none;
+  transition: all 0.2s ease;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+.reset-container .box-update-password button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.reset-container .box-update-password {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.reset-container button {
+  width: 75%;
+  height: 35px;
+  cursor: pointer;
+  background: #1a1a1a;
+  border: none;
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  gap: 8px;
+  margin: 15px 0;
+  display: block;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.reset-container button:hover {
+  background: #222222;
+}
+.reset-container button:active {
+  background: #222222;
+}
+.reset-container button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.08);
+}
+.reset-container button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.reset-container button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.reset-container {
+  /* Error */
+}
+.reset-container .contain-error-reset-password {
+  position: absolute;
+  bottom: 100px;
+  width: 75%;
+  margin-top: 4px;
+}
+.reset-container .contain-error-reset-password .error {
+  display: block;
+  color: #842029;
+  background-color: #f8d7da;
+  border: 1px solid #f5c2c7;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  text-align: center;
+}
+.reset-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Screens */
 /* 
 ====================
@@ -788,7 +972,7 @@ main {
   cursor: pointer;
   background: #1a1a1a;
   border-radius: 4px;
-  color: white;
+  color: #ffffff;
   font-size: 0.9rem;
   margin: 0 auto;
   display: block;
@@ -1179,8 +1363,10 @@ main {
 }
 .settings-section .settings-row .settings-item {
   flex: 1;
+  width: 50%;
 }
 .settings-section .settings-item {
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -1857,21 +2043,16 @@ main {
   height: 100%;
   cursor: pointer;
   user-select: none;
-  -webkit-user-drag: none;
-  pointer-events: none;
-}
-.contain-image-header {
-  /* Animations */
-  /* enter */
 }
 .contain-image-header .image-header-nexia.enter {
   animation: iconEnterLeft 0.35s ease forwards;
 }
-.contain-image-header {
-  /* exit */
-}
 .contain-image-header .image-header-nexia.exit {
   animation: iconExitLeft 0.35s ease forwards;
+}
+.contain-image-header .image-header-nexia {
+  -webkit-user-drag: none;
+  pointer-events: none;
 }
 .contain-image-header {
   display: flex;
@@ -1884,7 +2065,8 @@ main {
   width: 100%;
   height: 100%;
   display: flex;
-  gap: 3%;
+  gap: 2px;
+  transform: translateX(-40px);
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -1948,52 +2130,53 @@ main {
   }
 }
 /* Components */
-/* 
-====================
-      Container
-====================
-*/
-.icon-image-header-b.menu {
-  width: 75px;
-  padding-right: 25px;
-}
-
-/* Card icons */
+/* Card */
 .card-icon-header {
-  width: auto;
+  width: 50px;
   height: 100%;
   background: none;
   border: none;
-  border-radius: 50px;
+  margin: 0 -5px;
   animation: panelEnter 0.35s ease forwards;
   transition: all 0.1s ease;
+}
+.card-icon-header.enter {
+  animation: panelEnterRight 0.35s ease forwards;
+}
+.card-icon-header.exit {
+  animation: panelExitRight 0.35s ease forwards;
+}
+.card-icon-header {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* Animations */
-/* enter */
-.card-icon-header.enter {
-  animation: panelEnterRight 0.35s ease forwards;
-}
-
-/* exit */
-.card-icon-header.exit {
-  animation: panelExitRight 0.35s ease forwards;
-}
-
-/* Icons */
+/* Icon container */
 .icon-image-header-b {
-  width: 45%;
-  height: 45%;
-  display: flex;
-  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
   cursor: pointer;
+  transition: all 0.2s ease;
+}
+.icon-image-header-b:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.0784313725);
+}
+.icon-image-header-b.menu {
+  width: 100%;
+  height: 100%;
+  transform: translateX(10px);
+}
+.icon-image-header-b.menu:hover {
+  transform: scale(1.05) translateX(10px);
+  background: rgba(255, 255, 255, 0.0784313725);
 }
 .icon-image-header-b img {
-  width: auto;
-  height: 100%;
+  width: 50%;
+  height: 50%;
+  pointer-events: none;
   user-select: none;
   -webkit-user-drag: none;
   pointer-events: none;
@@ -8631,7 +8814,7 @@ main {
 
 /* TEXT */
 /* Text hour */
-.text-hour-cellPhone-wallpaper {
+.text-hour-cellPhone-wallpapper {
   color: #ffffff;
   font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
   font-size: 4rem;
@@ -8645,7 +8828,7 @@ main {
 }
 
 /* Text date */
-.text-date-cellPhone-wallpaper {
+.text-date-cellPhone-wallpapper {
   color: #ffffff;
   font-family: "Oxygen2", system-ui, -apple-system, sans-serif;
   font-size: 1rem;

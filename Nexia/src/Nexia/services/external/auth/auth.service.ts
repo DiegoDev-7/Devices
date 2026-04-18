@@ -34,14 +34,22 @@ export const registerEmail = async (
 
 // POST
 // Login user by email and password
-export async function loginEmail(email: string, password: string) {
-
+interface LoginResponse {
+  token: string
+  user?: any
+}
+export const loginEmail = async (
+  email: string,
+  password: string
+): Promise<LoginResponse> => {
   try {
 
-    await axios.post("/api/auth/login", {
+    const { data } = await axios.post("/api/auth/login", {
       email,
       password
     })
+
+    return data
     
   } catch (error: any) {
     

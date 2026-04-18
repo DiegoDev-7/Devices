@@ -1,5 +1,6 @@
 /* Hooks */
 import { useState } from "react"
+import { useUser } from "../sections/Settings/hooks/useUser"
 
 /* Sections */
 import Profile from "../sections/Profile"
@@ -9,7 +10,8 @@ import Sopport from "../sections/Support"
 import { TermsPrivacy } from "../components/TermsPrivacy"
 
 /* Sections */
-import Configuration from "../sections/Configuration"
+import ConfigAccount from "../sections/Settings/Settings"
+import { LoadingIcon } from "../../components/loading.ldrs"
 
 
 
@@ -44,6 +46,10 @@ type Section = "profile" | "sopport" | "config"
 export function InterfacePanel() {
   const [section, setSection] = useState<Section>("profile")
 
+  const { user } = useUser()
+
+
+
   return (
     <div className="interfaz-panel">
 
@@ -59,11 +65,19 @@ export function InterfacePanel() {
 
       <div className="interfaz-content">
 
-        {section === "profile" && <Profile />}
+        {user ? (
+          <>
+            {section === "profile" && <Profile />}
 
-        {section === "sopport" && <Sopport />}
+            {section === "sopport" && <Sopport />}
 
-        {section === "config" && <Configuration />}
+            {section === "config" && <ConfigAccount user={user} />}
+          </>
+        ) : (
+          <div style={{ width: "100%", height: "100%", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <LoadingIcon color="black" />
+          </div>
+        )}
 
       </div>
 

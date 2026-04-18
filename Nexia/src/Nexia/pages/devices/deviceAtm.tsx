@@ -11,9 +11,9 @@ import rose_light from "../../../assets/Nexia/rose_light.svg"
 /* Render */
 const DeviceatmRender = () => {
   // If the user has a token, enter the page; otherwise not
-  const token = localStorage.getItem("token")
-
-  if (!token) return <Navigate to="/" />
+  const bankAccount = localStorage.getItem("bank_account")
+  
+  if (!bankAccount) return <Navigate to="/" />
 
 
 

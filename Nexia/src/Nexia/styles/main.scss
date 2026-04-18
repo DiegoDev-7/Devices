@@ -28,6 +28,7 @@
      @use "./auth/components/LoginButton";
      @use "./auth/components/RegisterButton";
      @use "./auth/components/TermsPrivacy";
+     @use "./auth/components/reset_password";
 
      /* Screens */
      @use "./auth/screens/ForgotPassword";

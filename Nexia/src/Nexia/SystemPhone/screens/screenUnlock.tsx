@@ -65,9 +65,9 @@ const ScreenUnlock = () => {
       {!unlocked ? 
         <div className="container-cellPhone-lock">
 
-          <p className="text-hour-cellPhone-wallpaper">{String(hour.getHours()).padStart(2, "0")}:{String(hour.getMinutes()).padStart(2, "0")}</p>
+          <p className="text-hour-cellPhone-wallpapper">{String(hour.getHours()).padStart(2, "0")}:{String(hour.getMinutes()).padStart(2, "0")}</p>
           
-          <p className="text-date-cellPhone-wallpaper">
+          <p className="text-date-cellPhone-wallpapper">
             {String(hour.getDate()).padStart(2, "0")}/
             {String(hour.getMonth() + 1).padStart(2, "0")}/
             {String(hour.getFullYear())}
