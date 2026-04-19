@@ -1,3 +1,6 @@
+/* i18n */
+import { useLang } from "../../../../i18n/LangContext"
+
 /* Images */
 import heart from "../../../../assets/Icons/heart.svg"
 
@@ -5,6 +8,8 @@ import heart from "../../../../assets/Icons/heart.svg"
 
 /* Frame */
 export const ThanksWords = () => {
+  const { t } = useLang()
+
   return (
     <>
       <section id="gratitude" className="container-gratitude">
@@ -14,19 +19,16 @@ export const ThanksWords = () => {
             <img src={heart} alt="Imagen corazón" />
           </div>
           
-          <h2>Gracias por explorar Nexia</h2>
+          <h2>{t("home.thanks.title")}</h2>
 
           <p>
-            Nexia es un proyecto de uso completamente gratuito. Todas sus funcionalidades estan disponibles sin costos ocultos, 
-            suscripciones ni pagos obligatorios.
+            {t("home.thanks.text1")}
           </p>
           
-          <p>Este proyecto representa diseño, arquitectura y ejecución técnica. Un sistema completo desarrollado en la web.</p>
+          <p>{t("home.thanks.text2")}</p>
 
           <p>
-            El objetivo del proyecto es ofrecer una herramienta accesible para cualquier persona, permitiendo el uso libre de los dispositivos 
-            virtuales directamente desde el navegador. Nexia siempre sera gratuito y estara enfocado en brindar una experiencia abierta, 
-            simple y sin barreras para los usuarios.
+            {t("home.thanks.text3")}
           </p>
           
         </div>

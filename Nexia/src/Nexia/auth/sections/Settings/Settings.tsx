@@ -1,6 +1,9 @@
 /* Hooks */
 import { useEffect, useState } from "react"
 
+/* i18n */
+import { useLang } from "../../../../i18n/LangContext"
+
 /* Services */
 import { deleteAccount, updateUserById } from "../../../services/external/user/user.service"
 
@@ -11,7 +14,7 @@ import { type User } from "./types/user.type"
 
 /* Render config account */
 const ConfigAccount = ({ user }: { user: User }) => {
-
+  const { t } = useLang()
   const [success, setSuccess] = useState(false)
   const [visible, setVisible] = useState(false)
 
@@ -73,7 +76,7 @@ const ConfigAccount = ({ user }: { user: User }) => {
         error?.response?.data?.message ||
         error?.response?.data?.error ||
         error?.message ||
-        "Error inesperado"
+        t("auth.settings.errorMessage")
 
       setErrorMsg(message)
       setError(true)
@@ -117,7 +120,7 @@ const ConfigAccount = ({ user }: { user: User }) => {
         error?.response?.data?.message ||
         error?.response?.data?.error ||
         error?.message ||
-        "Error inesperado"
+        t("auth.settings.errorMessage")
 
       setErrorMsg(message)
       setError(true)
@@ -145,52 +148,52 @@ const ConfigAccount = ({ user }: { user: User }) => {
     <>
       <div className="panel-section settings-section">
 
-        <h2>Configuración</h2>
+        <h2>{t("auth.settings.title")}</h2>
 
         <div className="settings-group">
 
-          <h3 className="settings-title">Información de la cuenta</h3>
+          <h3 className="settings-title">{t("auth.settings.accountInfo")}</h3>
 
           <div className="settings-row">
 
             <div className="settings-item">
-              <label>Nombre</label>
+              <label>{t("auth.settings.name")}</label>
               <input name="name" value={form.name} onChange={handleChange} />
             </div>
 
             <div className="settings-item">
-              <label>Apellido</label>
+              <label>{t("auth.settings.lastname")}</label>
               <input name="lastname" value={form.lastname} onChange={handleChange} />
             </div>
 
           </div>
 
           <div className="settings-item">
-            <label>Correo</label>
+            <label>{t("auth.settings.email")}</label>
             <input name="email" value={form.email} onChange={handleChange} />
           </div>
 
           <div className="settings-item">
-            <label>Nueva contraseña</label>
+            <label>{t("auth.settings.newPassword")}</label>
             <input name="password" type="password" value={form.password} onChange={handleChange} />
           </div>
 
-          <button className="settings-primary" onClick={handleUpdate}>Actualizar datos</button>
+          <button className="settings-primary" onClick={handleUpdate}>{t("auth.settings.updateData")}</button>
 
         </div>
 
         <div className="settings-group danger-zone">
 
-          <h3 className="settings-title">Cerrar sesión</h3>
+          <h3 className="settings-title">{t("auth.settings.logout")}</h3>
 
           <button className="settings-close" onClick={removeSesion}>
-            Cerrar sesión
+            {t("auth.settings.logoutButton")}
           </button>
 
-          <h3 className="settings-title">Eliminar cuenta</h3>
+          <h3 className="settings-title">{t("auth.settings.deleteAccountSection")}</h3>
 
           <button className="settings-delete" onClick={handleDelete}>
-            Eliminar cuenta
+            {t("auth.settings.deleteAccountButton")}
           </button>
 
         </div>

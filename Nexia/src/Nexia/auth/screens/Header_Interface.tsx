@@ -1,5 +1,8 @@
 /* Hooks */
 import { useState } from "react"
+import { useLang } from "../../../i18n/LangContext"
+
+/* i18n */
 import { useUser } from "../sections/Settings/hooks/useUser"
 
 /* Sections */
@@ -8,27 +11,30 @@ import Sopport from "../sections/Support"
 
 /* Components */
 import { TermsPrivacy } from "../components/TermsPrivacy"
+import { LoadingIcon } from "../../components/loading.ldrs"
 
 /* Sections */
 import ConfigAccount from "../sections/Settings/Settings"
-import { LoadingIcon } from "../../components/loading.ldrs"
+import { ConfigWithGoogle } from "../sections/Settings/components/ConfigWithGoogle"
 
 
 
 /* Home panel for login */
 export function HomePanel({ open, setView }: any) {
+  const { t } = useLang()
+
   return (
     <>
       <div className={`account-interfaz ${open ? "enter" : "exit"}`}>
 
-        <p>Accede para guardar preferencias y poder usar Nexia.</p>
+        <p>{t("auth.header.intro")}</p>
 
         <button className="login" onClick={() => setView("login")}>
-          Iniciar sesion
+          {t("auth.header.login")}
         </button>
 
         <button className="register" onClick={() => setView("register")}>
-          Registrarse
+          {t("auth.header.register")}
         </button>
 
       </div>
@@ -44,6 +50,7 @@ export function HomePanel({ open, setView }: any) {
 /* Render interfaz panel - login nexia */
 type Section = "profile" | "sopport" | "config"
 export function InterfacePanel() {
+  const { t } = useLang()
   const [section, setSection] = useState<Section>("profile")
 
   const { user } = useUser()
@@ -55,11 +62,11 @@ export function InterfacePanel() {
 
       <nav className="interfaz-menu">
 
-        <button onClick={() => setSection("profile")}>Perfil</button>
+        <button onClick={() => setSection("profile")}>{t("auth.header.menu.profile")}</button>
 
-        <button onClick={() => setSection("sopport")}>Soporte</button>
+        <button onClick={() => setSection("sopport")}>{t("auth.header.menu.support")}</button>
 
-        <button onClick={() => setSection("config")}>Configuración</button>
+        <button onClick={() => setSection("config")}>{t("auth.header.menu.config")}</button>
         
       </nav>
 
@@ -71,7 +78,11 @@ export function InterfacePanel() {
 
             {section === "sopport" && <Sopport />}
 
-            {section === "config" && <ConfigAccount user={user} />}
+            {section === "config" && (
+              user.provider?.toLowerCase() === "google"
+                ? <ConfigWithGoogle user={user} />
+                : <ConfigAccount user={user} />
+            )}
           </>
         ) : (
           <div style={{ width: "100%", height: "100%", display: "flex", justifyContent: "center", alignItems: "center" }}>

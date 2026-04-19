@@ -1,5 +1,8 @@
 /* React */
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"
+
+/* i18n */
+import { useLang } from "../../../../i18n/LangContext"
 
 /* Images */
 import danger from "../../../../assets/Wallpappers/danger.png"
@@ -8,6 +11,8 @@ import danger from "../../../../assets/Wallpappers/danger.png"
 
 /* Frame */
 export const SelectDevice = () => {
+  const { t } = useLang()
+
   const token = localStorage.getItem("token")
   const bankAccount = localStorage.getItem("bank_account")
 
@@ -22,15 +27,15 @@ export const SelectDevice = () => {
   const devices: Description[] = [
     {
       id: 1,
-      title: "Dispositivo móvil",
-      text: "Sistema operativo interactivo con aplicaciones conectadas y comportamiento dinámico.",
+      title: t("home.devices.mobile.title"),
+      text: t("home.devices.mobile.text"),
       link: "/Phone",
       requiresBank: false
     },
     {
       id: 2,
-      title: "ATM",
-      text: "Interfaz externa vinculada al sistema bancario interno del teléfono, permitiendo sincronización de datos en tiempo real.",
+      title: t("home.devices.atm.title"),
+      text: t("home.devices.atm.text"),
       link: "/ATM",
       requiresBank: true
     }
@@ -45,11 +50,13 @@ export const SelectDevice = () => {
         <div className="contain-devices">
           <div className="box-devices">
 
-            <h2>Dispositivos</h2>
+            <h2>{t("home.devices.title")}</h2>
 
             <br />
 
-            <p>Nexia no se limita al entorno móvil. El sistema incluye un ATM conectado directamente con la aplicación bancaria del dispositivo.</p>
+            <p>
+              {t("home.devices.description")}
+            </p>
 
             {devices.map((device) => {
               const isLogged = !!token
@@ -63,9 +70,9 @@ export const SelectDevice = () => {
               let message = ""
 
               if (blockedByAuth) {
-                message = "Necesitas iniciar sesión o registrarte para usar los dispositivos"
+                message = t("home.devices.authRequired")
               } else if (blockedByBank) {
-                message = "Debes crear una cuenta bancaria para usar el ATM"
+                message = t("home.devices.bankRequired")
               }
 
               return (

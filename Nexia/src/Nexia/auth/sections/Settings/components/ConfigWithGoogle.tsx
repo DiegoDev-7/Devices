@@ -42,7 +42,7 @@ export const ConfigWithGoogle = ({ user }: { user: User }) => {
 
               <img 
                 className="profile-card__avatar"
-                src={user?.avatar} 
+                src={user?.avatar || user.avatar} 
                 alt="profile"
               />
 

@@ -1,23 +1,27 @@
-/* Images */
-/* import nexia from "../../../../assets/Nexia/NexiaWhite.svg"
-import camera from "../../../../assets/Icons/rearCamera.svg"
-import flash from "../../../../assets/Icons/flashCamera.svg" */
+/* i18n */
+import { useLang } from "../../../../i18n/LangContext"
 
 
 
 /* Frame */
 export const PhoneDescription = () => {
+  const { t } = useLang()
+
   return (
     <>
       <section id="description" className="container-phoneDescription">
         <div className="contain-phoneDescription">
-          <h2>Descripción</h2>
+          <h2>{t("home.description.title")}</h2>
 
-          <p>Nexia fue diseñado como una representación funcional de un teléfono real, construido desde cero como aplicación web estructurada.</p>
+          <p>
+            {t("home.description.text1")}
+          </p>
 
-          <p>El sistema integra gestión de estado global, comunicación entre módulos, simulación de hardware lógico y conexión con APIs externas.</p>
+          <p>
+            {t("home.description.text2")}
+          </p>
           
-          <p>No es solo interfaz. Es arquitectura, lógica y coherencia sistémica.</p>
+          <p>{t("home.description.text3")}</p>
         </div>
       </section>
     </>

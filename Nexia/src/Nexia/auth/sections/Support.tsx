@@ -1,11 +1,13 @@
 /* Hooks */
 import { useState } from "react"
+import { useLang } from "../../../i18n/LangContext"
 import { sendSupport } from "../../services/external/support/support.service"
 
 
 
 /* Support option */
 export default function Support() {
+  const { t } = useLang()
   const [copy, setCopy] = useState(false)
 
   // Send data
@@ -55,7 +57,7 @@ export default function Support() {
         error?.response?.data?.message || 
         error?.response?.data?.error || 
         error?.message || 
-        "Error inesperado"
+        t("auth.support.errorMessage")
 
       setErrorMsg(message)
       setError(true)
@@ -89,12 +91,10 @@ export default function Support() {
     <div className="container-settings-section">
       <div className="panel-section support-section">
 
-        <h2>Soporte</h2>
+        <h2>{t("auth.support.title")}</h2>
 
         <p className="support-description">
-          Si experimenta algún problema al usar Nexia, 
-          puede ponerse en contacto con el equipo de soporte 
-          técnico enviando el formulario a continuación.
+          {t("auth.support.description")}
         </p>
 
         <form 
@@ -107,38 +107,38 @@ export default function Support() {
 
           <input
             type="text"
-            placeholder="Nombre completo"
+            placeholder={t("auth.support.fullName")}
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
 
           <input
             type="email"
-            placeholder="Correo"
+            placeholder={t("auth.support.email")}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
 
           <textarea
-            placeholder="Describe tu problema..."
+            placeholder={t("auth.support.message")}
             value={message}
             onChange={(e) => setMessage(e.target.value)}
           />
 
           <button type="submit">
-            Enviar
+            {t("auth.support.send")}
           </button>
 
         </form>
 
         <div className="support-divider">
-          <span>o</span>
+          <span>{t("auth.support.divider")}</span>
         </div>
 
         <div className={`support-mail ${copy ? "green" : ""}`}>
 
           <div className="support-mail-info">
-            <span>Correo de soporte</span>
+            <span>{t("auth.support.supportEmail")}</span>
             <p>dxvvdev@gmail.com</p>
           </div>
 
@@ -146,7 +146,7 @@ export default function Support() {
             className={`support-copy ${copy ? "green" : ""}`}
             onClick={copyEmail}
           >
-            {copy ? "✔" : "Copiar"}
+            {copy ? t("auth.support.copied") : t("auth.support.copy")}
           </button>
 
         </div>

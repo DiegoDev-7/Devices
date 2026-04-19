@@ -1,5 +1,6 @@
 /* Hooks */
 import { useState } from "react"
+import { useLang } from "../../../i18n/LangContext"
 
 /* Services */
 import { requestReset } from "../../services/external/user/user.service"
@@ -12,6 +13,7 @@ export const RequestResetScreen = ({
 }: {
   onNext: (email: string) => void
 }) => {
+  const { t } = useLang()
   const [email, setEmail] = useState("")
   const [error, setError] = useState("")
   const [loading, setLoading] = useState(false)
@@ -43,11 +45,11 @@ export const RequestResetScreen = ({
   return (
     <div className="reset-container">
       
-      <h2>Recuperar contraseña</h2>
+      <h2>{t("auth.reset.request.title")}</h2>
 
       <input
         type="email"
-        placeholder="Correo"
+        placeholder={t("auth.reset.request.email")}
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
@@ -57,7 +59,7 @@ export const RequestResetScreen = ({
       </div>
 
       <button onClick={handleSubmit} disabled={loading}>
-        {loading ? "Enviando..." : "Enviar código"}
+        {loading ? t("auth.reset.request.sending") : t("auth.reset.request.submit")}
       </button>
     </div>
   )

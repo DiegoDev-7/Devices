@@ -1,5 +1,6 @@
 /* Auth */
 import { useAuth0 } from "@auth0/auth0-react"
+import { useLang } from "../../../i18n/LangContext"
 
 /* Services */
 import { deleteGoogle } from "../../services/external/auth/auth.service"
@@ -10,6 +11,7 @@ import { deleteGoogle } from "../../services/external/auth/auth.service"
 export default function DeleteAccountButton() {
   // Auth
   const { isAuthenticated, logout } = useAuth0()
+  const { t } = useLang()
 
 
   // Delete account 
@@ -37,7 +39,7 @@ export default function DeleteAccountButton() {
 
     } catch (error: any) {
       
-      throw new Error(error.response?.data?.error || "Error al iniciar sesión con google")
+      throw new Error(error.response?.data?.error || t("auth.components.deleteButton.error"))
       
     }
 

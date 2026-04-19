@@ -1,21 +1,26 @@
 /* Hooks */
 import { useEffect, useState } from "react"
 
+/* i18n */
+import { useLang } from "../../i18n/LangContext"
+
 
 
 /* Scroll indicator in the part left window */
 export const ScrollIndicator = () => {
+  const { t } = useLang()
+
   // Render text
   type Section = {
     id: string;
     label: string;
   }
   const sections: Section[] = [
-    { id: "start", label: "Inicio" },
-    { id: "description", label: "Descripción" },
-    { id: "apps", label: "Aplicaciones" },
-    { id: "devices", label: "Dispositivos" },
-    { id: "gratitude", label: "Nexia" },
+    { id: "start", label: t("navigation.start") },
+    { id: "description", label: t("navigation.description") },
+    { id: "apps", label: t("navigation.apps") },
+    { id: "devices", label: t("navigation.devices") },
+    { id: "gratitude", label: t("navigation.gratitude") },
   ]
 
   

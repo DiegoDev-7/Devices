@@ -82,7 +82,7 @@
 .box-card-home {
   width: 250px;
   height: 300px;
-  box-shadow: 0 0 15px 5px v.$color-g1;
+  box-shadow: 0 0 15px 1px v.$color-g1;
   border: solid 2px v.$color-w1;
   border-radius: 15px;
   transition: all .2s ease;
@@ -102,15 +102,6 @@
   }
   
   @include mixin.flex-center(flex, center, center);
-}
-  /* Animation image */
-@keyframes blink {
-  0% {
-    opacity: 0.2;
-  }
-  100% {
-    opacity: 1;
-  }
 }
   /* Inclinations of cards */
 .box-card-home.a {
@@ -159,7 +150,7 @@
 
   &:hover {
     transform: scale(1.02);
-    box-shadow: 0 0 15px 5px v.$color-g1;
+    box-shadow: 0 0 15px 1px v.$color-g1;
 
     background: linear-gradient(
       142deg, #131415, #131718, #2a2c2c, #333333, #202222
@@ -169,5 +160,18 @@
   }
   &:active {
     transform: scale(.98);
+  }
+}
+
+
+
+/* Animations */
+  /* Animation image */
+@keyframes blink {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
   }
 }

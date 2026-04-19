@@ -1,6 +1,9 @@
 /* Images */
 import { useState } from "react"
 
+/* i18n */
+import { useLang } from "../../../i18n/LangContext"
+
 /* Images */
 import forwardBack from "../../../assets/Icons/forward_dark.svg"
 import eye_open from "../../../assets/Icons/eye.svg"
@@ -27,6 +30,7 @@ type LoginProps = {
   onBack: () => void
 }
 export function LoginPanel({ onBack }: LoginProps) {
+  const { t } = useLang()
   const [open, setOpen] = useState(false)
   const [error, setError] = useState("")
   const [loading, setLoading] = useState(false)
@@ -52,7 +56,7 @@ export function LoginPanel({ onBack }: LoginProps) {
 
         {!showReset ? (
           <>
-            <h2 className="login-title">Iniciar sesion</h2>
+            <h2 className="login-title">{t("auth.login.title")}</h2>
 
             {/* Form */}
             <LoginForm />
@@ -61,11 +65,11 @@ export function LoginPanel({ onBack }: LoginProps) {
               className="login-recover"
               onClick={() => setShowReset(true)}
             >
-              ¿Olvidaste tu contraseña?
+              {t("auth.login.forgotPassword")}
             </button>
 
             <div className="login-divider">
-              <span>o</span>
+              <span>{t("auth.login.divider")}</span>
             </div>
 
             {/* Login button */}
@@ -92,6 +96,7 @@ export function LoginPanel({ onBack }: LoginProps) {
 
 /* Login form */
 function LoginForm() {
+  const { t } = useLang()
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
 
@@ -148,7 +153,7 @@ function LoginForm() {
 
     } catch (error: any) {
 
-      setError(error?.response?.data?.message || error?.response?.data?.error || error?.message || "Error al iniciar sesión")
+      setError(error?.response?.data?.message || error?.response?.data?.error || error?.message || t("auth.login.error"))
       
     } finally {
 
@@ -176,10 +181,10 @@ function LoginForm() {
       <form className="login-form" onSubmit={handleSubmit}>
 
         <div className="login-field">
-          <label>Correo</label>
+          <label>{t("auth.login.email")}</label>
           <input
             type="email"
-            placeholder="correo@ejemplo.com"
+            placeholder={t("auth.login.emailPlaceholder")}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
@@ -188,11 +193,11 @@ function LoginForm() {
 
         <div className="login-field">
 
-          <label>Contraseña</label>
+          <label>{t("auth.login.password")}</label>
 
           <input
             type={alter ? "text" : "password"}
-            placeholder="********"
+            placeholder={t("auth.login.passwordPlaceholder")}
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
@@ -200,14 +205,14 @@ function LoginForm() {
 
           <img 
             src={alter ? eye_open : eye_close }
-            alt={alter ? "Ver" : "Cerrar" } 
+            alt={alter ? t("auth.login.show") : t("auth.login.hide")} 
             onClick={handleEye} 
           />
 
         </div>
 
         <button className="login-submit">
-          {loading ? <LoadingIcon color="white" /> : "Acceder"}
+          {loading ? <LoadingIcon color="white" /> : t("auth.login.submit")}
         </button>
 
       </form>

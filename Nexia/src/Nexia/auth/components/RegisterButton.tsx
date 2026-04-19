@@ -1,5 +1,6 @@
 /* Auth0 */
 import { useAuth0 } from "@auth0/auth0-react"
+import { useLang } from "../../../i18n/LangContext"
 
 /* Images */
 import google from "../../../assets/Apps/google.svg"
@@ -22,6 +23,7 @@ type Props = {
 export default function GoogleRegisterButton({ error, setError, loading, setLoading }: Props) {
 
   const { loginWithPopup, getIdTokenClaims } = useAuth0()
+  const { t } = useLang()
 
 
   // Register user
@@ -45,7 +47,7 @@ export default function GoogleRegisterButton({ error, setError, loading, setLoad
       const claims = await getIdTokenClaims()
 
       if (!claims?.email || !claims?.sub) {
-        setError("No se completó el registro con google")
+        setError(t("auth.components.registerButton.incompleteRegister"))
         return
       }
 
@@ -68,7 +70,7 @@ export default function GoogleRegisterButton({ error, setError, loading, setLoad
       // Cancel automatic login when closing the registration tab
       if (error.error === "popup_closed") return
       
-      setError(error.response?.data?.error || "Error al iniciar sesión con google")
+      setError(error.response?.data?.error || t("auth.components.registerButton.error"))
 
       return
       
@@ -95,7 +97,7 @@ export default function GoogleRegisterButton({ error, setError, loading, setLoad
             <>
               <img src={google} alt="Google" />
     
-              <span>Crear cuenta con Google</span>
+              <span>{t("auth.components.registerButton.createGoogle")}</span>
             </>
           }
 

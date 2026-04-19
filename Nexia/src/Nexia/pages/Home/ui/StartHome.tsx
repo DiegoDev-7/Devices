@@ -1,3 +1,6 @@
+/* i18n */
+import { useLang } from "../../../../i18n/LangContext"
+
 /* Images */
 import NexiaWord from "../../../../assets/Nexia/NexiaWord.webp"
 import Nexia from "../../../../assets/Nexia/NexiaWhite.svg"
@@ -6,6 +9,8 @@ import Nexia from "../../../../assets/Nexia/NexiaWhite.svg"
 
 /* Frame */
 export const StartHome = () => {
+  const { t } = useLang()
+
   // Access the devices by clicking on the model view
   const goTo: any = (id: string) => {
     document.getElementById(id)?.scrollIntoView({
@@ -32,11 +37,10 @@ export const StartHome = () => {
             </div>
 
             <p>
-              Un sistema operativo móvil recreado completamente en la web. Nexia no es una maqueta visual. 
-              Es un entorno interactivo que simula el comportamiento real de un smartphone moderno.
+              {t("home.start.description1")}
             </p>
 
-            <p>Desbloqueo de pantalla, barra de estado dinámica, panel deslizante, navegación inferior y aplicaciones conectadas entre sí.</p>
+            <p>{t("home.start.description2")}</p>
 
           </div>
 
@@ -57,7 +61,7 @@ export const StartHome = () => {
             </div>
 
             <button className="button-home" onClick={() => goTo("devices")}>
-              Seleccionar dispositivo
+              {t("home.start.selectDevice")}
             </button>
 
           </div>

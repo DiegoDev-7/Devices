@@ -1,5 +1,8 @@
 import { Navigate } from "react-router-dom"
 
+/* i18n */
+import { useLang } from "../../../i18n/LangContext"
+
 /* Phone */
 import PhoneSys from "../../SystemPhone/PhoneSys"
 
@@ -23,6 +26,8 @@ import phone from "../../../assets/Apps/phone.svg"
 
 /* Render */
 const DevicePhoneRender = () => {
+  const { t } = useLang()
+
   /* Apps icons */
   type Apps = {
     src: string,
@@ -44,7 +49,7 @@ const DevicePhoneRender = () => {
     { src: simcard, alt: "App SIM" },
   ]
 
-  // If the user has a token, enter the page; otherwise not
+  // If the user has a token, enter the page otherwise not
   const token = localStorage.getItem("token")
 
   if (!token) return <Navigate to="/" />
@@ -77,19 +82,16 @@ const DevicePhoneRender = () => {
 
             <div className="box-text-phone-left">
 
-              <h3>Aplicaciones disponibles</h3>
+              <h3>{t("devices.phone.appsTitle")}</h3>
               
               <p>
-                El dispositivo movil de Nexia cuenta con un conjunto de aplicaciones integradas que simulan las funciones esenciales de un telefono real. 
-                Entre ellas se incluyen calculadora, ToDo, notas, configuracion, clima, archivos, reloj y otras utilidades del sistema.
+                {t("devices.phone.appsDescription1")}
               </p>
               
               <br />
               
               <p>
-                Cada una de estas aplicaciones es completamente funcional y permite al usuario interactuar de forma realista, ya sea gestionando tareas, 
-                creando notas, explorando archivos, consultar el reloj o ajustar la configuracion del dispositivo. Todo el entorno esta diseñado 
-                para ofrecer una experiencia coherente e intuitiva, similar al uso de un dispositivo movil fisico.
+                {t("devices.phone.appsDescription2")}
               </p>
 
             </div>

@@ -1,6 +1,9 @@
 /* Hooks */
 import { useState } from "react"
 
+/* i18n */
+import { useLang } from "../../../../i18n/LangContext"
+
 /* Images */
 import notes from "../../../../assets/Apps/notes.svg"
 import calculator from "../../../../assets/Apps/calculator.svg"
@@ -24,6 +27,8 @@ import contact from "../../../../assets/Apps/contact_light.svg"
 
 /* Frame */
 export const AppsDescription = () => {
+  const { t } = useLang()
+
   // Change option for view the images or text
   const [optionTI, setOptionTI] = useState<any>(null)
 
@@ -31,26 +36,26 @@ export const AppsDescription = () => {
   type Images = {
     id: number
     src: string
-    alt: string
+    altKey: string
   }
   const ContentImage: Images[] = [
-    { id: 1, src: archive, alt: "Archivos" },
-    { id: 2, src: bank, alt: "Banco" },
-    { id: 3, src: calculator, alt: "Calculadora" },
-    { id: 4, src: calendar, alt: "Calendario" },
-    { id: 5, src: cash, alt: "Dinero" },
-    { id: 6, src: clock, alt: "Reloj" },
-    { id: 7, src: contact, alt: "Contacto" },
-    { id: 8, src: message, alt: "Mensajes" },
-    { id: 9, src: gallery, alt: "Galeria" },
-    { id: 10, src: notes, alt: "Notas" },
-    { id: 11, src: radio, alt: "Radio" },
-    { id: 12, src: phone_blue, alt: "Teléfono" },
-    { id: 13, src: rewards, alt: "Recompensas" },
-    { id: 14, src: security, alt: "Seguridad" },
-    { id: 15, src: settings_light, alt: "Ajustes" },
-    { id: 16, src: simcard_light, alt: "Sim" },
-    { id: 17, src: simpsons2, alt: "Simpsons" },
+    { id: 1, src: archive, altKey: "apps.files" },
+    { id: 2, src: bank, altKey: "apps.bank" },
+    { id: 3, src: calculator, altKey: "apps.calculator" },
+    { id: 4, src: calendar, altKey: "apps.calendar" },
+    { id: 5, src: cash, altKey: "apps.money" },
+    { id: 6, src: clock, altKey: "apps.clock" },
+    { id: 7, src: contact, altKey: "apps.contact" },
+    { id: 8, src: message, altKey: "apps.messages" },
+    { id: 9, src: gallery, altKey: "apps.gallery" },
+    { id: 10, src: notes, altKey: "apps.notes" },
+    { id: 11, src: radio, altKey: "apps.radio" },
+    { id: 12, src: phone_blue, altKey: "apps.phone" },
+    { id: 13, src: rewards, altKey: "apps.rewards" },
+    { id: 14, src: security, altKey: "apps.security" },
+    { id: 15, src: settings_light, altKey: "apps.settings" },
+    { id: 16, src: simcard_light, altKey: "apps.sim" },
+    { id: 17, src: simpsons2, altKey: "apps.simpsons" },
   ]
 
 
@@ -61,21 +66,23 @@ export const AppsDescription = () => {
 
         <div className="contain-appsDescription">
           <div className="box-grid-appsDescription">
-            <h2>Aplicaciones</h2>
+            <h2>{t("home.apps.title")}</h2>
 
             <br />
 
-            <p>Cada aplicación fue diseñada y desarrollada de forma independiente, pero todas comparten estado y reaccionan a eventos del sistema.</p>
+            <p>
+              {t("home.apps.description")}
+            </p>
 
             {ContentImage.map(v => (
               <div key={v.id} className="grid-app-appsDescription" onMouseEnter={() => setOptionTI(v.id)} onMouseLeave={() => setOptionTI(null)}>
                 {optionTI === v.id ? (
                   <div className={`contain-image-appsDescription ${optionTI ? "in" : "out"}`}>
-                    <img src={v.src} alt={v.alt} /> 
+                    <img src={v.src} alt={t(v.altKey)} /> 
                   </div>
                   ) : (
                     <span className={optionTI === v.id ? "out" : "in"}>
-                      {v.alt}
+                      {t(v.altKey)}
                     </span>
                   )
                 }

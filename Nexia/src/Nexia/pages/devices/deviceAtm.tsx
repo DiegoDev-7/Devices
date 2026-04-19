@@ -1,5 +1,8 @@
 import { Navigate } from "react-router-dom"
 
+/* i18n */
+import { useLang } from "../../../i18n/LangContext"
+
 /* Phone */
 import AtmSys from "../../SystemAtm/AtmSys"
 
@@ -10,7 +13,9 @@ import rose_light from "../../../assets/Nexia/rose_light.svg"
 
 /* Render */
 const DeviceatmRender = () => {
-  // If the user has a token, enter the page; otherwise not
+  const { t } = useLang()
+
+  // If the user has a token, enter the page otherwise not
   const bankAccount = localStorage.getItem("bank_account")
   
   if (!bankAccount) return <Navigate to="/" />
@@ -42,20 +47,18 @@ const DeviceatmRender = () => {
 
           <div className="atm-info">
 
-            <h3>ATM Inteligente</h3>
+            <h3>{t("devices.atm.title")}</h3>
 
             <p>
-              Este dispositivo permite autenticarte mediante tu tarjeta bancaria para acceder de forma segura a tu cuenta.
+              {t("devices.atm.description1")}
             </p>
 
             <p>
-              Una vez dentro, podrás enviar dinero de regreso al banco, transferir fondos a otros usuarios utilizando su número telefónico, 
-              y gestionar tus operaciones financieras de manera directa desde el dispositivo.
+              {t("devices.atm.description2")}
             </p>
 
             <p>
-              También tendrás acceso a la consulta de saldo tanto en tu cuenta bancaria como en el ATM, 
-              así como un historial detallado de todas las transacciones realizadas.
+              {t("devices.atm.description3")}
             </p>
 
           </div>

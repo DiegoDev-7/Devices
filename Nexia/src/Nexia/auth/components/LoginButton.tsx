@@ -1,4 +1,8 @@
+
 import { useAuth0 } from "@auth0/auth0-react"
+
+/* i18n */
+import { useLang } from "../../../i18n/LangContext"
 
 /* Services */
 import { loginGoogle } from "../../services/external/auth/auth.service"
@@ -22,6 +26,7 @@ type Props = {
 export default function GoogleLoginButton({ error, setError, loading, setLoading }: Props) {
 
   const { loginWithPopup, user, isAuthenticated } = useAuth0()
+  const { t } = useLang()
 
   
   // Login user
@@ -71,7 +76,7 @@ export default function GoogleLoginButton({ error, setError, loading, setLoading
       
     } catch (error: any) {
 
-      setError(error.response?.data?.error || "Error al iniciar sesión con google")
+      setError(error.response?.data?.error || t("auth.components.loginButton.error"))
       
     } finally {
 
@@ -96,7 +101,7 @@ export default function GoogleLoginButton({ error, setError, loading, setLoading
             <>
               <img src={google} alt="Google" />
 
-              <span>Continuar con Google</span>
+              <span>{t("auth.components.loginButton.continueGoogle")}</span>
             </>
           }
 

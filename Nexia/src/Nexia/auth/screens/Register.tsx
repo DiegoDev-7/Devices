@@ -1,6 +1,9 @@
 /* Images */
 import { useState } from "react"
 
+/* i18n */
+import { useLang } from "../../../i18n/LangContext"
+
 /* Images */
 import forwardBack from "../../../assets/Icons/forward_dark.svg"
 import eye_open from "../../../assets/Icons/eye.svg"
@@ -25,6 +28,7 @@ type RegisterProps = {
   onBack: () => void
 }
 export function RegisterPanel({ onBack }: RegisterProps) {
+  const { t } = useLang()
   const [open, setOpen] = useState(false)
   const [error, setError] = useState("")
   const [loading, setLoading] = useState(false)
@@ -51,7 +55,7 @@ export function RegisterPanel({ onBack }: RegisterProps) {
           <img src={forwardBack} alt="Go back" />
         </button>
 
-        <h2 className="register-title">Crear cuenta</h2>
+        <h2 className="register-title">{t("auth.register.title")}</h2>
 
         {/* Form */}
         <RegisterForm 
@@ -62,7 +66,7 @@ export function RegisterPanel({ onBack }: RegisterProps) {
         />
 
         <div className="register-divider">
-          <span>o</span>
+          <span>{t("auth.register.divider")}</span>
         </div>
 
         <GoogleRegisterButton 
@@ -90,6 +94,7 @@ type Props = {
   setCreateAtm: (v: boolean) => void
 }
 function RegisterForm({ createBank, setCreateBank, createAtm, setCreateAtm }: Props) {
+  const { t } = useLang()
   const [name, setName] = useState("")
   const [lastName, setLastName] = useState("")
   const [email, setEmail] = useState("")
@@ -129,7 +134,7 @@ function RegisterForm({ createBank, setCreateBank, createAtm, setCreateAtm }: Pr
 
     } catch (error: any) {
 
-      setError(error?.message || "Error al registrar cuenta")
+      setError(error?.message || t("auth.register.error"))
       
     } finally {
 
@@ -167,10 +172,10 @@ function RegisterForm({ createBank, setCreateBank, createAtm, setCreateAtm }: Pr
         <div className="register-row">
 
           <div className="register-field">
-            <label>Nombre</label>
+            <label>{t("auth.register.name")}</label>
             <input
               type="text"
-              placeholder="Nombre"
+              placeholder={t("auth.register.namePlaceholder")}
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
@@ -178,10 +183,10 @@ function RegisterForm({ createBank, setCreateBank, createAtm, setCreateAtm }: Pr
           </div>
 
           <div className="register-field">
-            <label>Apellido</label>
+            <label>{t("auth.register.lastname")}</label>
             <input
               type="text"
-              placeholder="Apellido"
+              placeholder={t("auth.register.lastnamePlaceholder")}
               value={lastName}
               onChange={(e) => setLastName(e.target.value)}
               required
@@ -191,10 +196,10 @@ function RegisterForm({ createBank, setCreateBank, createAtm, setCreateAtm }: Pr
         </div>
 
         <div className="register-field">
-          <label>Correo</label>
+          <label>{t("auth.register.email")}</label>
           <input
             type="email"
-            placeholder="correo@ejemplo.com"
+            placeholder={t("auth.register.emailPlaceholder")}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
@@ -203,11 +208,11 @@ function RegisterForm({ createBank, setCreateBank, createAtm, setCreateAtm }: Pr
 
         <div className="register-field">
 
-          <label>Contraseña</label>
+          <label>{t("auth.register.password")}</label>
 
           <input
             type={alter ? "text" : "password"}
-            placeholder="********"
+            placeholder={t("auth.register.passwordPlaceholder")}
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
@@ -215,7 +220,7 @@ function RegisterForm({ createBank, setCreateBank, createAtm, setCreateAtm }: Pr
 
           <img 
             src={alter ? eye_open : eye_close }
-            alt={alter ? "Ver" : "Cerrar" } 
+            alt={alter ? t("auth.register.show") : t("auth.register.hide")} 
             onClick={handleEye}
           />
 
@@ -225,26 +230,26 @@ function RegisterForm({ createBank, setCreateBank, createAtm, setCreateAtm }: Pr
 
           <label className="option">
             <input type="checkbox" checked={createBank} onChange={handleCheckboxBank} />
-            Crear cuenta en la app del banco (Opcional)
+            {t("auth.register.bankOptional")}
           </label>
 
           <label className="option">
             <input type="checkbox" checked={createAtm} onChange={handleCheckboxAtm} />
-            Crear cuenta para el ATM (Opcional)
+            {t("auth.register.atmOptional")}
           </label>
 
         </div>
 
         <label className="terms-check">
           <input type="checkbox" required />
-          Acepto los terminos y condiciones
+          {t("auth.register.acceptTerms")}
         </label>
 
         <button className="register-submit">
           {loading ? 
             <LoadingIcon color="white" />
             : 
-            "Registrarse"
+            t("auth.register.submit")
           }
         </button>
 

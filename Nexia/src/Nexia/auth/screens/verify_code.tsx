@@ -1,5 +1,6 @@
 /* Hooks */
 import { useRef, useState } from "react"
+import { useLang } from "../../../i18n/LangContext"
 
 /* Services */
 import { verifyCode } from "../../services/external/user/user.service"
@@ -16,6 +17,7 @@ export const VerifyCodeScreen = ({
   onNext: (code: string) => void
   length?: number
 }) => {
+  const { t } = useLang()
   const [values, setValues] = useState<string[]>(Array(length).fill(""))
   const inputsRef = useRef<(HTMLInputElement | null)[]>([])
 
@@ -70,7 +72,7 @@ export const VerifyCodeScreen = ({
   // Verify code
   const handleVerify = async () => {
     if (code.length < length) {
-      setError("Código incompleto")
+      setError(t("auth.reset.verify.incompleteCode"))
       return
     }
 
@@ -86,7 +88,7 @@ export const VerifyCodeScreen = ({
 
     } catch (error: any) {
 
-      setError(error?.response?.data?.message || error?.response?.data?.error || error?.message || "Código inválido")
+      setError(error?.response?.data?.message || error?.response?.data?.error || error?.message || t("auth.reset.verify.invalidCode"))
 
     } finally {
 

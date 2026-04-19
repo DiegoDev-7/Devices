@@ -1,6 +1,9 @@
 /* Hooks */
 import { useState } from "react"
 
+/* i18n */
+import { useLang } from "../../../i18n/LangContext"
+
 /* Images */
 import eye from "../../../assets/Icons/eye.svg"
 import eye_close from "../../../assets/Icons/eye_close.svg"
@@ -20,6 +23,7 @@ export const ResetPasswordScreen = ({
   code: string
   onFinish: () => void
 }) => {
+  const { t } = useLang()
   const [password, setPassword] = useState("")
   const [error, setError] = useState("")
   const [loading, setLoading] = useState(false)
@@ -52,12 +56,12 @@ export const ResetPasswordScreen = ({
 
   return (
     <div className="reset-container">
-      <h2>Nueva contraseña</h2>
+      <h2>{t("auth.reset.newPassword.title")}</h2>
 
       <div className="box-update-password">
         <input
           type={showPassword ? "text" : "password"}
-          placeholder="Nueva contraseña"
+          placeholder={t("auth.reset.newPassword.placeholder")}
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
@@ -75,7 +79,7 @@ export const ResetPasswordScreen = ({
       </div>
 
       <button onClick={handleReset} disabled={loading}>
-        {loading ? "Cambiando..." : "Cambiar contraseña"}
+        {loading ? t("auth.reset.newPassword.changing") : t("auth.reset.newPassword.submit")}
       </button>
     </div>
   )
