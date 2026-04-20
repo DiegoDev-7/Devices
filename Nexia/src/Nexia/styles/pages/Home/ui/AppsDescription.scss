@@ -20,22 +20,42 @@
 .contain-appsDescription {
   width: 75%;
   height: auto;
-
+  flex-wrap: wrap;
+  
   h2 {
     width: 100%;
+    font-family: v.$font-mainO3;
     text-align: center;
-    font-size: 2rem;
+
+
+    @include mixin.font-xl;
+
+    @include mixin.mobile {
+      margin: -25px 0;
+    }
   }
+
   p {
     width: 80%;
-    text-align: justify;
-    font-size: 1.4rem;
+    text-align: center;
+
+
+    @include mixin.font-lg;
+
+    @include mixin.mobile {
+      width: 100%;
+      margin: -5px 0;
+    }
   }
 
-  flex-wrap: wrap;
 
   @include mixin.flex-center(flex, center, center);
+
+  @include mixin.mobile {
+    width: 90%;
+  }
 }
+
   /* Box elements */
 .box-grid-appsDescription {
   width: 100%;
@@ -44,21 +64,28 @@
   gap: 20px;
   flex-wrap: wrap;
 
+
   @include mixin.flex-center(flex, center, center);
+
+  @include mixin.mobile {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+  }
 }
+
+  /* Grid apps */
 .grid-app-appsDescription {
   width: 25%;
+  height: 60px;
   padding: 15px;
   color: v.$color-w1;
   background: v.$color-b4;
   border: solid transparent;
-  border-radius: 12px;
+  border-radius: 10px;
   transition: .3s ease;
   text-align: center;
-  font-size: 1.2rem;
-  background: linear-gradient(
-    142deg, #131415, #131718, #2a2c2c, #333333, #202222
-  );
+
+  background: linear-gradient(142deg, #131415, #131718, #2a2c2c, #333333, #202222);
   background-size: 400% 400%;
   animation: gradient-animation 16s ease infinite;
 
@@ -80,18 +107,45 @@
       @include mixin.drag();
     }
 
+    /* Animations from the images */
+    &.in {
+      animation: image-in 0.5s ease forwards;
+    }
+    &.out {
+      animation: image-out 0.5s ease forwards;
+    }
+
+
     @include mixin.flex-center(flex, center, center);
+
+    @include mixin.mobile {
+      width: 24px;
+      height: 24px;
+    }
   }
 
+
   @include mixin.flex-center(flex, center, center);
+  
+  @include mixin.font-md;
+
+  @include mixin.mobile {
+    padding: 10px;
+  }
 }
-  /* Animations from the images */
-.contain-image-appsDescription.in {
-  animation: image-in 0.5s ease forwards;
+  /* Animations from the text */
+.grid-app-appsDescription span {
+  display: inline-block;
 }
-.contain-image-appsDescription.out {
-  animation: image-out 0.5s ease forwards;
+.grid-app-appsDescription span.in {
+  animation: text-in 0.5s ease forwards;
 }
+.grid-app-appsDescription span.out {
+  animation: text-out 0.5s ease forwards;
+}
+
+
+
   /* Keyframes */
   /* Image .in */
 @keyframes image-in {
@@ -114,17 +168,6 @@
     opacity: 0;
     transform: translateY(8px) scale(0.9);
   }
-}
-
-  /* Animations from the text */
-.grid-app-appsDescription span {
-  display: inline-block;
-}
-.grid-app-appsDescription span.in {
-  animation: text-in 0.5s ease forwards;
-}
-.grid-app-appsDescription span.out {
-  animation: text-out 0.5s ease forwards;
 }
   /* Keyframes */
   /* Text .in */

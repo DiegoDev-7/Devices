@@ -1,4 +1,3 @@
-/* Importations */
 @use "../../mixin";
 @use "../../variables" as v;
 
@@ -21,18 +20,30 @@
   position: relative;
   top: -625px;
   left: 315px;
+
+  @include mixin.mobile {
+    width: 50px;
+  }
 }
 .signal-line-cellPhone-less {
   width: 100px;
   position: relative;
   top: -585px;
   left: 315px;
+
+  @include mixin.mobile {
+    width: 50px;
+  }
 }
 .signal-line-cellPhone-power {
   width: 50px;
   position: relative;
   top: -540px;
   left: 315px;
+
+  @include mixin.mobile {
+    width: 50px;
+  }
 }
 
   /* Container of Signals from the buttons on the right of the image */
@@ -64,21 +75,37 @@
   }
 
   @include mixin.flex-center(flex, center, center);
+
+  @include mixin.mobile {
+    transform: translateX(20px);
+  }
 }
 .container-signal-image-more {
   position: relative;
   top: -11px;
   left: 110%;
+
+  @include mixin.mobile {
+    left: 100%;
+  }
 }
 .container-signal-image-less {
   position: relative;
   top: -11px;
   left: 115%;
+
+  @include mixin.mobile {
+    left: 100%;
+  }
 }
 .container-signal-image-power {
   position: relative;
   top: -11px;
   left: 130%;
+
+  @include mixin.mobile {
+    left: 100%;
+  }
 }
 
   /* Circles */

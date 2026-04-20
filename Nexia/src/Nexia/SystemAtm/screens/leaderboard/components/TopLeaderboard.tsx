@@ -1,6 +1,9 @@
 /* Icons */
 import { Crown } from "lucide-react";
 
+/* Images */
+import user from "../../../../../assets/Icons/user_light.svg"
+
 /* Utils */
 import { formatValue, getMetricValue } from "../utils/leaderboard.utils";
 
@@ -10,7 +13,11 @@ export const TopLeaderboard = ({ top3, balance, metric }: any) => (
   <>
     {[1, 0, 2].map((pos, idx) => (
       <div className="top-leaderboard" key={idx}>
-        {top3[pos]?.avatar && <img src={top3[pos].avatar} alt="User" />}
+        {top3[pos]?.avatar ? 
+          <img src={top3[pos].avatar} alt="User" /> 
+          : 
+          <img src={user} alt="User" />
+        }
 
         <div className={`box-title-leaderboard-top${pos === 0 ? 1 : pos === 1 ? 2 : 3}`}>
           <span className={`balance-name-leaderboard ${balance ? "in" : "out"}`}>

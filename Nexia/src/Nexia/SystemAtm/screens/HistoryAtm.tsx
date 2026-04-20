@@ -14,16 +14,11 @@ type transaction = {
   amount: string,
   type: string
 }
-type user = {
-  name: string,
-  lastname: string
-}
 export const HistoryPanel = () => {
   const [transferBank, setTransferBank] = useState<transaction[]>([])
   const [transferUser, setTransferUser] = useState<transaction[]>([])
-  const [user, setUser] = useState<user | null>(null)
 
-  const [page, setPage] = useState(1)
+  const page = useState(1)
 
   // Error message
   const [errorMsg, setErrorMsg] = useState<string | null>(null)
@@ -34,14 +29,12 @@ export const HistoryPanel = () => {
   // Get transfers
   const fetchTransfer = async () => {
     try {
-      const [resAtmBank, resAtmUser, resUser] = await Promise.all([
+      const [resAtmBank, resAtmUser] = await Promise.all([
         getTransferHistory({
-          page,
           limit: 10,
           type: "atm_to_bank"
         }),
         getTransferHistory({
-          page,
           limit: 10,
           type: "atm_to_user"
         }),
@@ -50,7 +43,6 @@ export const HistoryPanel = () => {
 
       setTransferBank(resAtmBank.data)
       setTransferUser(resAtmUser.data)
-      setUser(resUser.data)
       
     } catch (error: any) {
       
@@ -75,7 +67,7 @@ export const HistoryPanel = () => {
   }
   useEffect(() => {
     fetchTransfer()
-  }, [])
+  }, [page])
 
 
 

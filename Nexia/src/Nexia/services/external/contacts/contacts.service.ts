@@ -55,7 +55,7 @@ export async function updateContact(contact_id: number, name_contact: string) {
     const token = localStorage.getItem("token")
 
     const res = await axios.patch(
-      `/api/contacts/${contact_id}`,
+      `/api/contact/${contact_id}`,
       { name_contact },
       {
         headers: { Authorization: `Bearer ${token}` }
@@ -73,13 +73,13 @@ export async function updateContact(contact_id: number, name_contact: string) {
 
 
 
-/* Update contact */
+/* Delete contact */
 export async function deleteContact(contact_id: number) {
   try {
 
     const token = localStorage.getItem("token")
 
-    const res = await axios.delete(`/api/contacts/${contact_id}`, {
+    const res = await axios.delete(`/api/contact/${contact_id}`, {
       headers: { Authorization: `Bearer ${token}` }
     })
 

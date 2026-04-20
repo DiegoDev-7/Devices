@@ -64,6 +64,8 @@ export const ConfigurationPanel = () => {
     fetchUser()
   }, [])
 
+
+  // Set theme
   const handleSetTheme = (gradient: string) => {
     localStorage.setItem("atmTheme", gradient)
     window.dispatchEvent(new Event("themeChange"))
@@ -83,7 +85,7 @@ export const ConfigurationPanel = () => {
         <div className="cfg__card">
         {!user ? (
           <LoadingIcon color="white" />
-        ) : !isGoogleUser ? (
+        ) : isGoogleUser ? (
           <>
             <h2>Perfil</h2>
 

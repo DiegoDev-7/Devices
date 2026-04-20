@@ -1,5 +1,5 @@
 /* Hooks */
-import { useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { useLeaderboard } from "./hooks/useLeaderboard"
 
 /* Components */
@@ -22,7 +22,7 @@ export const LeaderboardPanel = () => {
 
   const dropdownRef = useRef<HTMLDivElement | null>(null)
 
-  const { data, page, setPage, meRank } = useLeaderboard(metric, order)
+  const { data, page, meRank } = useLeaderboard(metric, order)
 
   const top3 = data.slice(0, 3)
   const rest = data.slice(6)
@@ -31,6 +31,25 @@ export const LeaderboardPanel = () => {
     setVisible(prev => !prev)
     setOrder(order === "DESC" ? "ASC" : "DESC")
   }
+
+  // Alternate animation letters
+  useEffect(() => {
+    let timeout: any
+
+    const loop = () => {
+      setBalance(true)
+
+      timeout = setTimeout(() => {
+        setBalance(false)
+
+        timeout = setTimeout(loop, 5000)
+      }, 5000)
+    }
+
+    loop()
+
+    return () => clearTimeout(timeout)
+  }, [])
 
 
 

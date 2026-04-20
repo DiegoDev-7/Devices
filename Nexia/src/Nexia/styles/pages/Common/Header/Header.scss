@@ -5,32 +5,52 @@
 
 /* 
 ====================
-      Container
-====================
+     Container
+==================== 
 */
 .container-header {
-  width: 100dvw;
-  min-height: 50px;
+  width: 100%;
+  height: 50px;
+  background-color: v.$color-w1;
   border-bottom: solid 2px v.$color-b3;
+
   position: fixed;
   top: 0;
   left: 0;
-  background-color: v.$color-w1;
-  z-index: 10000000000;
+  z-index: 100000000000;
+
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 50px;
   box-sizing: border-box;
+
+
+  @include mixin.mobile {
+    height: 50px;
+  }
 }
-  /* Box A */
+
+
+/* 
+====================
+       Box A
+==================== 
+*/
 .box-header-a {
   width: 100%;
   height: 100%;
 }
-  /* Contain Image */
+
+
+/* 
+====================
+  Image Container
+==================== 
+*/
 .contain-image-header {
   width: 100%;
   height: 100%;
+  transform: translateX(5px);
 
   .image-header-nexia {
     width: auto;
@@ -41,18 +61,26 @@
     &.enter {
       animation: iconEnterLeft 0.35s ease forwards;
     }
+
     &.exit {
       animation: iconExitLeft 0.35s ease forwards;
     }
 
     @include mixin.drag();
+
+    
+    @include mixin.mobile {
+      transform: scale(0.9);
+    }
   }
 
   @include mixin.flex-center(flex, flex-start, center);
 }
 
 
-  /* Box B: Content, links, text */
+/* ====================
+        Box B
+==================== */
 .box-header-b {
   width: 100%;
   height: 100%;
@@ -61,30 +89,51 @@
   transform: translateX(-40px);
 
   @include mixin.flex-center(flex, flex-end, center);
+
+
+  @include mixin.tablet {
+    transform: translateX(-30px);
+  }
+  @include mixin.mobile {
+    transform: translateX(-30px);
+  }
 }
 
 
-  /* Text for login or register */
+/* 
+====================
+     Account UI
+==================== 
+*/
 .account-interfaz {
   width: 65%;
   text-align: center;
-
   display: flex;
   flex-direction: column;
   gap: 10px;
 
   p {
-    font-size: 0.85rem;
     color: #555;
+    @include mixin.font-sm;
   }
 
   button {
     border: none;
     padding: 8px 10px;
     cursor: pointer;
-    font-size: 0.85rem;
     border-radius: 4px;
     transition: all .2s ease;
+
+    @include mixin.font-sm;
+
+    /* Ajuste fino, no agresivo */
+    @include mixin.tablet {
+      padding: 7px 9px;
+    }
+
+    @include mixin.mobile {
+      padding: 6px 8px;
+    }
   }
 
   .login {
@@ -95,7 +144,6 @@
       background: v.$color-b3;
     }
   }
-
   .register {
     background: v.$color-w2;
 
@@ -103,29 +151,36 @@
       background: v.$color-w3;
     }
   }
+
+
+  @include mixin.tablet {
+    width: 70%;
+    gap: 8px;
+  }
+  @include mixin.mobile {
+    width: 75%;
+    gap: 6px;
+  }
 }
 
 
+
 /* Animations */
-  /* Animation screen enter left */
 @keyframes iconEnterLeft {
   from {
     transform: translateX(0);
     opacity: 1;
   }
-  
   to {
     transform: translateX(-100%);
     opacity: 0;
   }
 }
-  /* Animation exit */
 @keyframes iconExitLeft {
   from {
     transform: translateX(-100%);
     opacity: 0;
   }
-
   to {
     transform: translateX(0);
     opacity: 1;

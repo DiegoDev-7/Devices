@@ -39,7 +39,7 @@ export const LanguagesHeader = () => {
       {language.map(v => (
         <div 
           key={v.id} 
-          className="box-languages-image"
+          className={`box-languages-image ${current === v.key ? "" : ""}`}
           onClick={() => handleSelect(v.key as Lang)}
         >
           <img src={v.img} alt={v.alt} />

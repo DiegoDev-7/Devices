@@ -181,6 +181,14 @@ export const UserTransferScreen = ({ onBack }: any) => {
 
       </div>
 
+
+      {/* Errors */}
+      {error && (
+        <div className={`error-update ${exitError ? "exit" : ""}`}>
+          {errorMsg}
+        </div>
+      )}
+
     </div>
   )
 }

@@ -10,7 +10,7 @@
 */
 /* Interfaz left */
 .contain-interfaz-header-left {
-  width: 60%;
+  width: 50%;
   height: 100vh;
 
   position: fixed;
@@ -33,8 +33,17 @@
       height: 100%;
       user-select: none;
 
+
       @include mixin.drag();
+
+      @include mixin.mobile {
+        width: 100%;
+        height: 55%;
+        transform: translateX(15px);
+      }
     }
+
+    @include mixin.flex-center(flex, center, center);
   }
 
   @include mixin.flex-center(flex, center, center);
@@ -53,7 +62,7 @@
 
 /* Interfaz right */
 .contain-interfaz-header-right {
-  width: 40%;
+  width: 50%;
   height: 100vh;
 
   position: fixed;

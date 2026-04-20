@@ -24,8 +24,8 @@ type LeaderboardUser = {
 export const InformationPanel = () => {
   // Leaderboard
   const [data, setData] = useState<LeaderboardUser | null>(null)
-  const [metric, setMetric] = useState("total_balance")
-  const [order, setOrder] = useState<"ASC" | "DESC">("DESC")
+  const metric = "total_balance"
+  const order = "ASC"
 
   // Get user
   const [user, setUser] = useState<any>(null)
@@ -100,7 +100,7 @@ export const InformationPanel = () => {
     }
   
     fetchLeaderboard()
-  }, [metric, order])
+  }, [metric])
 
   const isGoogleUser = user?.provider === "google"
 

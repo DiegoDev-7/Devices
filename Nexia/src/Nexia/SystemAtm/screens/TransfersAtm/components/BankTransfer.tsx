@@ -139,6 +139,13 @@ export const BankTransferScreen = ({ onBack }: any) => {
       </div>
 
 
+      {/* Errors */}
+      {error && (
+        <div className={`error-update ${exitError ? "exit" : ""}`}>
+          {errorMsg}
+        </div>
+      )}
+
     </div>
   )
 }

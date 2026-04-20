@@ -1,11 +1,11 @@
 /* Hooks */
 import { useState } from "react"
-import { useLang } from "../../../i18n/LangContext"
 
 /* i18n */
-import { useUser } from "../sections/Settings/hooks/useUser"
+import { useLang } from "../../../i18n/LangContext"
 
 /* Sections */
+import { useUser } from "../sections/Settings/hooks/useUser"
 import Profile from "../sections/Profile"
 import Sopport from "../sections/Support"
 

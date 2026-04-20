@@ -5,7 +5,7 @@ import { useEffect, useState, useRef } from "react"
 import arrow from "../../../assets/Icons/forward_light.svg"
 
 /* Screens */
-import Aplications from "./screenApps"
+import Apps from "./screenApps"
 
 
 
@@ -94,7 +94,7 @@ const ScreenUnlock = () => {
           
         </div>
         : (
-          <Aplications />
+          <Apps />
         )
       }
     </>
