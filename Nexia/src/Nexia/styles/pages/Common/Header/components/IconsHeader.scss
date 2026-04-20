@@ -23,6 +23,12 @@
   }
 
   @include mixin.flex-center(flex, center, center);
+
+  
+  @include mixin.mobile {
+    width: 40px;
+    margin: 0 -3px;
+  }
 }
 
 
@@ -62,13 +68,16 @@
   @include mixin.flex-center(flex, center, center);
 }
 
-  /* Wrapper */
+
+/* Wrapper */
 .lang-wrapper {
   position: relative;
   width: 100%;
   height: 100%;
 }
-  /* Dropdown */
+
+
+/* Dropdown */
 .lang-dropdown {
   position: absolute;
   top: 110%;
@@ -104,8 +113,8 @@
     transition: background 0.15s ease;
 
     span {
-      font-size: 13px;
       color: v.$color-w2;
+      @include mixin.font-sm;
     }
 
     img {
@@ -117,8 +126,13 @@
       background: v.$color-g4;
     }
   }
-}
 
+
+  @include mixin.mobile {
+    width: 120px;
+    padding: 4px;
+  }
+}
 
 
 /* Container of discord and language in inside */
@@ -143,35 +157,29 @@
 }
 
 
-
-
 /* Animations */
-  /* Animation enter */
 @keyframes panelEnterRight {
   from {
     transform: translateX(100%);
     opacity: 0;
   }
-
   to {
     transform: translateX(0);
     opacity: 1;
   }
 }
-  /* Animation exit */
+
 @keyframes panelExitRight {
   from {
     transform: translateX(0);
     opacity: 1;
   }
-  
   to {
     transform: translateX(100%);
     opacity: 0;
   }
 }
 
-  /* Animación sutil */
 @keyframes fadeIn {
   from {
     opacity: 0;

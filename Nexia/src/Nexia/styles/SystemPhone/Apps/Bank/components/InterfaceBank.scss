@@ -47,6 +47,7 @@
 
     img {
       width: 20px;
+      opacity: .6;
       user-select: none;
 
       @include mixin.drag();

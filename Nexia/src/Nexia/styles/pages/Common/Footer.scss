@@ -6,7 +6,7 @@
 /* 
 ====================
      Container
-====================
+==================== 
 */
 .cntnrFooter {
   min-height: 60px;
@@ -22,7 +22,14 @@
   p {
     color: v.$color-w1;
     margin: 0;
-    font-size: 0.9em;
+
+    @include mixin.font-sm;
+  }
+
+  @include mixin.mobile {
+    min-height: 50px;
+    padding: 6px 0;
+    gap: 3px;
   }
 }
 
@@ -30,18 +37,19 @@
 
 /* 
 ====================
-       Links
-====================
+      Links
+==================== 
 */
 .lnkFooter {
   color: v.$color-w1;
-  font-size: 0.9em;
   text-decoration: none;
   transition: all .1s ease;
-
-  @include mixin.flex-center(flex, flex-end, center);
-
+  
   &:hover {
     text-decoration: underline;
   }
+
+  @include mixin.flex-center(flex, flex-end, center);
+  
+  @include mixin.font-sm;
 }

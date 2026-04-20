@@ -1,14 +1,25 @@
 @use "./variables" as v;
 
 
-/* Flex center */
+
+/* 
+====================
+        Flex
+==================== 
+*/
 @mixin flex-center($display, $justify, $align) {
   display: $display;
   justify-content: $justify;
   align-items: $align;
 }
 
-/* No drag */
+
+
+/* 
+====================
+        Drag
+==================== 
+*/
 @mixin drag() {
   -webkit-user-drag: none;
   pointer-events: none;
@@ -28,5 +39,97 @@
   }
   &::-webkit-scrollbar-thumb:hover {
     background: v.$color-g2;
+  }
+}
+
+
+
+/* 
+====================
+    Resolutions
+==================== 
+*/
+@mixin mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 769px) and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1025px) {
+    @content;
+  }
+}
+
+
+
+/* 
+====================
+     Font sizes
+==================== 
+*/
+@mixin font-xs {
+  font-size: 0.75rem;
+
+  @media (max-width: 1024px) {
+    font-size: 0.7rem;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 0.65rem;
+  }
+}
+
+@mixin font-sm {
+  font-size: 0.85rem;
+
+  @media (max-width: 1024px) {
+    font-size: 0.8rem;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 0.75rem;
+  }
+}
+
+@mixin font-md {
+  font-size: 1rem;
+
+  @media (max-width: 1024px) {
+    font-size: 0.95rem;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+  }
+}
+
+@mixin font-lg {
+  font-size: 1.2rem;
+
+  @media (max-width: 1024px) {
+    font-size: 1.1rem;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+}
+
+@mixin font-xl {
+  font-size: 1.5rem;
+
+  @media (max-width: 1024px) {
+    font-size: 1.3rem;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 1.1rem;
   }
 }

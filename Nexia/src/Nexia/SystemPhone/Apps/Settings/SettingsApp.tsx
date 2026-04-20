@@ -45,6 +45,9 @@ const SettingsApp = () => {
   // Screens configuration render
   const [options, setOptions] = useState<string>("settings")
 
+  // Search options
+  const [searchValue, setSearchValue] = useState("")
+
   // Container from icons
   type Options = {
     id: number
@@ -70,6 +73,11 @@ const SettingsApp = () => {
     { id: 15, containImage: "settings-comments", src: comment, alt: "Comentarios", description: "Servicios y comentarios", optionRender: "services" },
   ]
 
+  // Filter menu options
+  const filteredOptions = optionsSettings.filter(v =>
+    v.description.toLowerCase().includes(searchValue.toLowerCase())
+  )
+
 
 
   return (
@@ -88,11 +96,13 @@ const SettingsApp = () => {
                 className="input-app-settings"
                 type="text"
                 placeholder="Buscar en Ajustes"
+                value={searchValue}
+                onChange={(e) => setSearchValue(e.target.value)}
               />
             </div>
 
             <div className="box-app-screen-settings">
-              {optionsSettings.map((v, i) => (
+              {filteredOptions.map((v, i) => (
                 <>
                   <button key={v.id} className="button-app-settings-options" onClick={() => setOptions(v.optionRender)}>
 
@@ -122,6 +132,8 @@ const SettingsApp = () => {
           </>
         )}
 
+
+        {/* Menu options */}
         {options === "aboutPhone" && <AboutPhone back={() => setOptions("settings")} />}
         {options === "updateSystem" && <UpdateSystem back={() => setOptions("settings")} />}
         {options === "securityStatus" && <SecurityStatus back={() => setOptions("settings")} />}

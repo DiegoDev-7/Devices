@@ -90,7 +90,6 @@ export default function GoogleLoginButton({ error, setError, loading, setLoading
 
   return (
     <>
-
       <div className="container-google-login">
 
         <button onClick={handleLogin} className="google-login-btn">
@@ -112,7 +111,6 @@ export default function GoogleLoginButton({ error, setError, loading, setLoading
       <div className={error ? "contain-error-login" : ""}>
         {error && <span className="error">{error}</span>}
       </div>
-
     </>
   )
 }

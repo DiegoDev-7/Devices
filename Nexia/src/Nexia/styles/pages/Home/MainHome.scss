@@ -1,4 +1,3 @@
-/* Importations */
 @use "../../mixin";
 @use "../../variables" as v;
 
@@ -14,6 +13,8 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto auto;
+
+  @include mixin.font-md;
 }
 
 

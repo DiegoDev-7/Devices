@@ -1,5 +1,5 @@
 /* Hooks */
-import { useState, type JSX } from "react"
+import { useEffect, useState, type JSX } from "react"
 
 /* Image Apps */
 import settings from "../../../assets/Apps/settings_dark.svg"
@@ -107,12 +107,37 @@ const Apps = () => {
   // Buttons to go back
   type AppKey = keyof typeof appScreens
   const [openApp, setOpenApp] = useState<AppKey | null>(null)
+  const [visible, setVisible] = useState(false)
+
+
+  // Animation open and close App
+  useEffect(() => {
+    if (openApp) {
+      setVisible(false)
+
+      const id = setTimeout(() => {
+        setVisible(true)
+      }, 1)
+
+      return () => clearTimeout(id)
+    }
+  }, [openApp])
+
 
   const goHome = () => {
-    setOpenApp(null)
+    setVisible(false)
+
+    setTimeout(() => {
+      setOpenApp(null)
+    }, 300)
   }
+
   const goBack = () => {
-    setOpenApp(null)
+    setVisible(false)
+
+    setTimeout(() => {
+      setOpenApp(null)
+    }, 300)
   }
   
 
@@ -134,7 +159,7 @@ const Apps = () => {
 
       {/* Screen apps */}
       {openApp ? (
-        <div className="Container-apps-screens">
+        <div className={`container-apps-screens ${!visible ? "enter" : "exit"}`}>
           {appScreens[openApp](goHome)}
         </div>
       ) : (
